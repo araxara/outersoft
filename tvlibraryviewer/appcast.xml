@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>TV Library Viewer</title>
+        <item>
+            <title>1.2</title>
+            <pubDate>Mon, 02 Nov 2026 09:48:57 -0700</pubDate>
+            <sparkle:version>96</sparkle:version>
+            <sparkle:shortVersionString>1.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://github.com/araxara/TVLibraryViewer/releases/download/mac/TVLibraryViewer-1.2.zip" length="8569331" type="application/octet-stream" sparkle:edSignature="DQ8Ucr976E59WUvp/TW/xsomnhIOKS/hCsxs3+bhzkoScVXjBfNx3Q5giOwJjA1pHlwmTTRHJ3jQ8opvAmfVCA=="/>
+        </item>
+    </channel>
+</rss>
