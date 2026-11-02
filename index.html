@@ -3,16 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Outersoft.com — Under Development</title>
+  <title>Outersoft</title>
   <style>
-    body { font-family: system-ui, sans-serif; max-width: 600px; margin: 4rem auto; padding: 1rem; text-align: center; }
-    h1 { font-size: 1.5rem; }
+    body { font-family: system-ui, -apple-system, sans-serif; max-width: 620px; margin: 4rem auto; padding: 1rem; line-height: 1.55; color: #1a1a1a; }
+    header, section { text-align: center; }
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.3rem; margin-top: 3rem; }
+    .download { display: inline-block; margin: 1.2rem 0 0.6rem; padding: 0.7rem 1.5rem; background: #0066cc; color: #fff; border-radius: 9px; text-decoration: none; font-weight: 600; }
+    .download:hover { background: #0055b0; }
+    .note { color: #666; font-size: 0.9rem; }
     a { color: #0066cc; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #111; color: #e8e8e8; }
+      .note { color: #9a9a9a; }
+      a, .download { color: #5aa7ff; }
+      .download { background: #0a66c2; color: #fff; }
+    }
   </style>
 </head>
 <body>
-  <h1>Outersoft.com</h1>
-  <p>This website is under development.</p>
-  <p>Contact: <a href="mailto:alex@outersoft.com">alex@outersoft.com</a></p>
+  <header>
+    <h1>Outersoft</h1>
+  </header>
+
+  <section>
+    <h2>TV Library Viewer</h2>
+    <p>Browse and play your Apple&nbsp;TV app library on your Mac, and share it with your iPad, iPhone, Apple&nbsp;TV and CarPlay over your own network.</p>
+    <!-- release-mac.sh updates the version in this link on each release -->
+    <a class="download" href="https://github.com/araxara/TVLibraryViewer/releases/download/mac/TVLibraryViewer-1.2.zip">Download for Mac</a>
+    <p class="note">Requires macOS&nbsp;14 or later. Unzip it and move&nbsp;TV&nbsp;Library&nbsp;Viewer to your Applications folder. It keeps itself up to date.</p>
+  </section>
+
+  <section>
+    <p class="note" style="margin-top: 3.5rem">Contact: <a href="mailto:alex@outersoft.com">alex@outersoft.com</a></p>
+  </section>
 </body>
 </html>
