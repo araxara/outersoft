@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Status and state</title>
+<meta name="description" content="The Status box shows what the connection is doing, its tunnel process and how long it&#x27;s been up." />
+<meta name="keywords" content="status, state, running, connecting, uptime, tunnel, PID" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="status"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI Help</a> › Using It</nav>
+<h1>Status and state</h1>
+<p class="lead">The Status box is where you Start and Stop, and watch what's happening.</p>
+
+<h2>What the state means</h2>
+<table>
+<tr><th>State</th><th>What's happening</th></tr>
+<tr><td>IDLE</td><td>Not connected. Press <span class="ui">Start</span> to begin.</td></tr>
+<tr><td>CONNECTING</td><td>Opening the SSH tunnel to the remote Mac.</td></tr>
+<tr><td>NEEDS PASSWORD</td><td>Key login didn't work; enter the password in <span class="ui">SSH Authentication</span>.</td></tr>
+<tr><td>QUERYING</td><td>Asking the remote Mac which Home Sharing library it advertises.</td></tr>
+<tr><td>REGISTERING</td><td>Publishing that library here over Bonjour.</td></tr>
+<tr><td>RUNNING</td><td>Live. The library is available in the Apple TV / Music app.</td></tr>
+<tr><td>RECONNECTING</td><td>The connection dropped; it's retrying on its own.</td></tr>
+<tr><td>STOPPING</td><td>Closing the tunnel and removing the local advertisement.</td></tr>
+<tr><td>ERROR</td><td>Something went wrong; the Log says what. See <a href="troubleshooting.html">If it won't connect</a>.</td></tr>
+</table>
+
+<h2>The other rows</h2>
+<ul>
+<li><span class="ui">Tunnel PID</span> — the process id of the background <code>ssh</code> tunnel, used to
+sample <a href="traffic-log.html">traffic</a> and to close it cleanly.</li>
+<li><span class="ui">Uptime</span> — how long the current connection has been up.</li>
+</ul>
+<p>The buttons at the bottom change with the state: <span class="ui">Start</span> when idle, <span class="ui">Stop</span> while
+connected, and <span class="ui">Cancel</span> while it's still connecting.</p>
+<div class="see"><h3>See also</h3><ul><li><a href="libraries.html">Choosing which libraries to publish</a></li><li><a href="reconnecting.html">Reconnecting and sleep</a></li><li><a href="traffic-log.html">Traffic and the log</a></li></ul></div>
+</body>
+</html>

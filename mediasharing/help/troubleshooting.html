@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>If it won&#x27;t connect</title>
+<meta name="description" content="The common errors Media Sharing GUI reports and what to do about them." />
+<meta name="keywords" content="troubleshooting, error, cannot connect, no library, authentication, asleep, help" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="troubleshooting"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI Help</a> › Reference</nav>
+<h1>If it won&#x27;t connect</h1>
+<p class="lead">Read the <span class="ui">Log</span> box — the line starting <span class="ui">ERROR:</span> usually says what's
+wrong. Here are the common ones.</p>
+
+<h2>It can't log in</h2>
+<ul>
+<li><b>Authentication keeps failing.</b> Check <span class="ui">Remote login</span> and <span class="ui">Remote SSH port</span>, and
+that Remote Login is on at the far end. Try the same from Terminal:
+<code>ssh user@host -p PORT</code>. If you changed the remote password, click
+<span class="ui">Forget Saved Password</span> and enter the new one.</li>
+<li><b>The tunnel dies right after connecting.</b> The remote Mac may be asleep — waking only
+briefly for each connection — or dropping connections. Set it to stay awake, or to allow network
+access on sleep.</li>
+</ul>
+
+<h2>It connects, but finds no library</h2>
+<ul>
+<li><b>“No _home-sharing record found.”</b> Home Sharing (or Media Sharing) isn't turned
+on, or no Apple TV / Music / iTunes library is online on that network. Turn Home Sharing on, signed in
+with your Apple Account, and make sure a library there is awake. See
+<a href="remote-setup.html">On the Mac at home</a>.</li>
+<li><b>Libraries were found but none could be published.</b> The Log lists a reason per library;
+usually a local port was unavailable. Try again, or change the <span class="ui">Local forwarded port</span>.</li>
+</ul>
+
+<h2>When all else fails</h2>
+<p>Stopping and starting the connection (or <span class="ui">Restart</span> from its sidebar menu) clears most
+transient trouble. The <a href="traffic-log.html">log file</a> captures the detail if you want to
+look closer.</p>
+<div class="see"><h3>See also</h3><ul><li><a href="authentication.html">SSH keys and passwords</a></li><li><a href="remote-setup.html">On the Mac at home</a></li><li><a href="reconnecting.html">Reconnecting and sleep</a></li></ul></div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Configuration reference</title>
+<meta name="description" content="What every field in the Configuration box does, and when you&#x27;d change it." />
+<meta name="keywords" content="settings, configuration, fields, port, control socket, keepalive, compression, reference" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI Help</a> › Reference</nav>
+<h1>Configuration reference</h1>
+<p class="lead">Click the <span class="ui">(i)</span> beside any field in the app for the same notes. Most fields can
+be left at their defaults.</p>
+
+<h2>Where to connect</h2>
+<ul>
+<li><b><span class="ui">Connection name</span></b> — a label shown in the sidebar, for your reference only. It
+doesn't affect how the connection works.</li>
+<li><b><span class="ui">Remote login (user@host)</span></b> — the SSH username and host (or dynamic-DNS name) of
+the remote Mac, e.g. <code>alex@myhome.example.com</code> — the same <code>user@host</code>
+you'd give <code>ssh</code>.</li>
+<li><b><span class="ui">Remote SSH port</span></b> — the TCP port the remote Mac's SSH server is reached on.
+Often not 22, because routers commonly forward a custom outside port (like 22022) to the Mac's SSH
+port inside the home network.</li>
+</ul>
+
+<h2>Ports</h2>
+<ul>
+<li><b><span class="ui">Local forwarded port</span></b> — a free port on <i>this</i> Mac. The remote library's
+Home Sharing port is tunneled to here, so an app looking at <code>localhost</code> on this port
+reaches the remote library.</li>
+<li><b><span class="ui">Remote Media Sharing port</span></b> — the port Home Sharing listens on over on the
+remote Mac — normally 3689, the standard DAAP / Home Sharing port. Change it only for an unusual
+setup.</li>
+</ul>
+
+<h2>Tunnel behaviour</h2>
+<ul>
+<li><b><span class="ui">SSH control socket path</span></b> — a local file path for <code>ssh</code>'s background
+control socket, which lets the app close the tunnel cleanly (<code>ssh -O exit</code>) instead of
+killing the process.</li>
+<li><b><span class="ui">Server Alive Interval</span></b> — how often, in seconds, <code>ssh</code> pings the
+remote end to keep the tunnel alive through routers and firewalls and to notice quickly if it dies.</li>
+<li><b><span class="ui">Traffic poll interval</span></b> — how often, in seconds, the Traffic panel re-samples
+<code>nettop</code>. Each sample takes a few seconds; a shorter interval just runs them back to back.</li>
+<li><b><span class="ui">SSH compression</span></b> — turns on <code>ssh</code>'s compression (<code>-C</code>).
+It trades a little CPU for a smaller data stream, which can noticeably smooth playback over a slow or
+high-latency home connection. Safe to leave on.</li>
+</ul>
+<div class="see"><h3>See also</h3><ul><li><a href="connect.html">Set up and start a connection</a></li><li><a href="traffic-log.html">Traffic and the log</a></li></ul></div>
+</body>
+</html>

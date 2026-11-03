@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Sharing GUI — OuterSoft</title>
+  <meta name="description" content="Make a Home Sharing library on a Mac somewhere else appear on this Mac's own network, to browse and stream over a secure SSH tunnel.">
+  <link rel="stylesheet" href="/site.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="/">OuterSoft</a>
+    <nav>
+      <a href="/products.html" class="active">Products</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <div class="apphead">
+      <img src="/mediasharing/shared/icon.png" alt="">
+      <h1>Media Sharing GUI</h1>
+    </div>
+    <p class="lead">A library on a Mac somewhere else, right here on your network.</p>
+
+    <p>Home Sharing lets the <b>Apple&nbsp;TV</b> app, <b>Music</b> and <b>iTunes</b> stream from another
+    computer &mdash; but only one on the same local network. Media Sharing GUI removes that limit. Point
+    it at a Mac at home (or anywhere you can reach by SSH) and the library it shares appears in your
+    Apple&nbsp;TV or Music source list here, as if that Mac were in the next room.</p>
+
+    <h3>What it does</h3>
+    <ul>
+      <li>Opens a secure <b>SSH tunnel</b> from this Mac to the remote one.</li>
+      <li>Asks the remote Mac which Home Sharing library it's broadcasting, and <b>re-publishes it here
+      over Bonjour</b>, so the Apple&nbsp;TV and Music apps see it on your own network.</li>
+      <li>Keeps the connection alive through sleep and dropouts, reconnecting on its own.</li>
+      <li>Runs several remote libraries at once, each in the sidebar. Nothing leaves your Macs &mdash;
+      no cloud service, no account.</li>
+    </ul>
+
+    <h2>Download for Mac</h2>
+    <div class="panel">
+      <p><a class="btn" href="https://github.com/araxara/TVLibraryViewer-releases/releases/download/mediasharing/MediaSharingGUI-1.3.zip">Download for Mac</a></p>
+      <p class="note">Requires macOS&nbsp;12 or later. Unzip it and move <b>Media&nbsp;Sharing&nbsp;(Apple&nbsp;TV)&nbsp;GUI</b>
+      to your Applications folder. It keeps itself up to date.</p>
+    </div>
+
+    <h2>Help</h2>
+    <p>The full help book &mdash; the same one built into the app &mdash; is here on the web:</p>
+    <ul>
+      <li><a href="/mediasharing/help/overview.html">How Media Sharing GUI works</a></li>
+      <li><a href="/mediasharing/help/remote-setup.html">On the Mac at home</a></li>
+      <li><a href="/mediasharing/help/connect.html">Set up and start a connection</a></li>
+      <li><a href="/mediasharing/help/troubleshooting.html">If it won't connect</a></li>
+      <li><a href="/mediasharing/help/privacy.html">What Media Sharing GUI reads, changes and keeps</a></li>
+    </ul>
+    <p><a class="btn secondary" href="/mediasharing/help/index.html">Browse all help topics</a></p>
+  </main>
+  <footer>
+    <p>© 2026 OuterSoft · <a href="/products.html">Products</a> · <a href="/about.html">About</a> · <a href="mailto:alex@outersoft.com">Contact</a></p>
+  </footer>
+</body>
+</html>

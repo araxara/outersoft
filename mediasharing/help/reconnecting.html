@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Reconnecting and sleep</title>
+<meta name="description" content="How Media Sharing GUI keeps the connection up: keep-alives, automatic reconnect and surviving sleep." />
+<meta name="keywords" content="reconnect, sleep, wake, keepalive, health check, drop, automatic" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="reconnecting"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI Help</a> › Reference</nav>
+<h1>Reconnecting and sleep</h1>
+<p class="lead">A home connection isn't always steady. The app rides out the bumps for you.</p>
+
+<h2>Staying alive</h2>
+<p>While connected, <code>ssh</code> pings the remote end every <span class="ui">Server Alive Interval</span> seconds
+(see <a href="settings.html">Configuration reference</a>). That keeps routers and firewalls from
+dropping an idle tunnel and lets the app notice quickly when a connection really has died.</p>
+
+<h2>Automatic reconnect</h2>
+<p>If the connection drops, the state turns to <span class="ui">RECONNECTING</span> and Media Sharing GUI retries on
+its own, waiting a little longer between attempts, logging each one. Press <span class="ui">Stop</span> to call off
+the retries.</p>
+
+<h2>After the Mac sleeps</h2>
+<p>When this Mac wakes from sleep, the app checks whether the tunnel survived. If it did, it carries
+on; if not, it does a full reset — the same as Stop then Start — and brings the library
+back by itself.</p>
+<div class="see"><h3>See also</h3><ul><li><a href="status.html">Status and state</a></li><li><a href="troubleshooting.html">If it won't connect</a></li></ul></div>
+</body>
+</html>

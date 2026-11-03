@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>How Media Sharing GUI works</title>
+<meta name="description" content="Makes a Home Sharing library on a Mac somewhere else appear on this Mac&#x27;s own network, to stream over an SSH tunnel." />
+<meta name="keywords" content="overview, home sharing, media sharing, SSH, tunnel, Bonjour, Apple TV, Music, remote" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="overview"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI Help</a> › Getting Started</nav>
+<h1>How Media Sharing GUI works</h1>
+<p class="lead">It makes a library on a Mac somewhere else look like it's right here on your network.</p>
+
+<p>Home Sharing (Media Sharing) lets the <span class="ui">Apple TV</span> app, <span class="ui">Music</span> and <span class="ui">iTunes</span> stream
+from another computer — but only one that's on the <b>same local network</b>. Media Sharing GUI
+removes that limit. Point it at a Mac at home (or anywhere you can reach by SSH) and the library it
+shares appears in your <span class="ui">Apple TV</span> or <span class="ui">Music</span> source list here, as if that Mac were in the
+next room.</p>
+
+<h2>What it does, step by step</h2>
+<ol>
+<li>Opens an <b>SSH tunnel</b> from this Mac to the remote one.</li>
+<li>Asks the remote Mac, over that tunnel, which Home Sharing service it is broadcasting on its own
+local network.</li>
+<li><b>Re-publishes that same service here</b>, over Bonjour, pointed back through the tunnel —
+so apps on this Mac see the library as if it were nearby on the LAN.</li>
+</ol>
+<p>While it runs, streaming from that library travels encrypted inside the SSH tunnel. Turn it on and
+off with <span class="ui">Start</span> and <span class="ui">Stop</span> in the Status box.</p>
+
+<h2>What you need</h2>
+<ul>
+<li><b>On the Mac at home:</b> Home Sharing (or Media Sharing) turned on in the <span class="ui">Apple TV</span> or
+<span class="ui">Music</span> app, and Remote Login (SSH) enabled. See <a href="remote-setup.html">On the Mac at home</a>.</li>
+<li><b>A way to reach it:</b> its address or dynamic-DNS name, and the SSH port your router forwards
+to it.</li>
+<li><b>On this Mac:</b> nothing special — Media Sharing GUI drives the built-in <code>ssh</code>
+and Bonjour tools for you.</li>
+</ul>
+
+<h2>Getting started</h2>
+<ol>
+<li>Set up the <a href="remote-setup.html">Mac at home</a> once.</li>
+<li><a href="connect.html">Fill in a connection and press Start</a>.</li>
+<li><a href="libraries.html">Choose which libraries</a> to publish here.</li>
+</ol>
+<div class="see"><h3>See also</h3><ul><li><a href="remote-setup.html">On the Mac at home</a></li><li><a href="connect.html">Set up and start a connection</a></li><li><a href="privacy.html">What Media Sharing GUI reads, changes and keeps</a></li></ul></div>
+</body>
+</html>

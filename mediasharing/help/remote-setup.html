@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>On the Mac at home</title>
+<meta name="description" content="Turn on Home Sharing and Remote Login on the remote Mac, and make it reachable from outside." />
+<meta name="keywords" content="home sharing, media sharing, remote login, SSH, port forwarding, dynamic DNS, router" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="remote-setup"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI Help</a> › Getting Started</nav>
+<h1>On the Mac at home</h1>
+<p class="lead">Do this once on the Mac whose library you want to reach.</p>
+
+<h2>Turn on the library's sharing</h2>
+<ul>
+<li>In the <span class="ui">Apple TV</span> app or <span class="ui">Music</span>, turn on <b>Home Sharing</b> (older systems call it
+<b>Media Sharing</b>), signed in with your Apple Account.</li>
+<li>Leave that Mac awake, or set it to allow network access while asleep, so it can answer when you
+connect.</li>
+</ul>
+
+<h2>Turn on Remote Login (SSH)</h2>
+<ol>
+<li>On the remote Mac, open <span class="ui">System Settings</span> › <span class="ui">General</span> › <span class="ui">Sharing</span>.</li>
+<li>Turn on <span class="ui">Remote Login</span>. Note the user account that's allowed to log in.</li>
+</ol>
+<div class="note"><b>Tip:</b> Set up an SSH key so you don't need a password every time. Copy this
+Mac's public key to the remote one (<code>ssh-copy-id user@host</code>). Media Sharing GUI still
+accepts a password as a fallback — see <a href="authentication.html">SSH keys and passwords</a>.</div>
+
+<h2>Make it reachable from outside</h2>
+<ul>
+<li><b>Port forwarding:</b> on the home router, forward an external port to the remote Mac's SSH port
+(22). Many people forward an unusual outside port, such as 22022, to avoid noise — that outside
+port is what you put in <a href="settings.html">Remote SSH port</a>.</li>
+<li><b>A name that follows the home IP:</b> home internet addresses change, so a dynamic-DNS name
+(like <code>myhome.example.com</code>) that tracks it saves you from chasing numbers.</li>
+</ul>
+<p>Once Remote Login works from outside — test with <code>ssh user@host -p PORT</code>
+in Terminal — Media Sharing GUI can use it.</p>
+<div class="see"><h3>See also</h3><ul><li><a href="connect.html">Set up and start a connection</a></li><li><a href="authentication.html">SSH keys and passwords</a></li><li><a href="settings.html">Configuration reference</a></li></ul></div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SSH keys and passwords</title>
+<meta name="description" content="Media Sharing GUI logs in with your SSH key when it can, and falls back to a password it saves in the Keychain." />
+<meta name="keywords" content="authentication, SSH, key, password, Keychain, forget, login" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="authentication"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI Help</a> › Using It</nav>
+<h1>SSH keys and passwords</h1>
+<p class="lead">Key-based login is best; a saved password is the fallback.</p>
+
+<h2>With an SSH key</h2>
+<p>If the remote Mac already trusts this Mac's SSH key, Media Sharing GUI logs in silently —
+nothing to type. Setting up a key once (<code>ssh-copy-id user@host</code>) is the smoothest way to
+use the app. See <a href="remote-setup.html">On the Mac at home</a>.</p>
+
+<h2>With a password</h2>
+<p>If key login fails, the state turns to <span class="ui">NEEDS PASSWORD</span>:</p>
+<ol>
+<li>Type the account's password in the <span class="ui">SSH Authentication</span> box and press <span class="ui">Submit</span>.</li>
+<li>Once it works, the password is saved to this Mac's <b>Keychain</b>, so you won't be asked again.</li>
+</ol>
+<p>You can also type a password into <span class="ui">Configuration</span> ahead of time; it's only ever used if key
+login fails, and it, too, is moved to the Keychain on first success.</p>
+
+<h2>Forget a saved password</h2>
+<p>Click <span class="ui">Forget Saved Password</span> to remove the Keychain entry for the current login — for
+example after you change the password on the remote Mac. The next connection will ask for it again.</p>
+<div class="see"><h3>See also</h3><ul><li><a href="remote-setup.html">On the Mac at home</a></li><li><a href="connect.html">Set up and start a connection</a></li><li><a href="privacy.html">What Media Sharing GUI reads, changes and keeps</a></li></ul></div>
+</body>
+</html>
