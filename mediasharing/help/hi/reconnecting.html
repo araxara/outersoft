@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>फिर से कनेक्ट होना और स्लीप</title>
+<meta name="description" content="Media Sharing GUI कनेक्शन को कैसे बनाए रखता है: keep-alive, स्वतः फिर से कनेक्ट होना, और स्लीप को झेलना।" />
+<meta name="keywords" content="फिर से कनेक्ट, स्लीप, जागना, keep-alive, स्वास्थ्य जाँच, टूटना, स्वतः" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="reconnecting"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI मदद</a> › संदर्भ</nav>
+<h1>फिर से कनेक्ट होना और स्लीप</h1>
+<p class="lead">घर का कनेक्शन हमेशा स्थिर नहीं होता। ऐप झटकों को आपके लिए झेल लेता है।</p>
+
+<h2>जीवित बने रहना</h2>
+<p>कनेक्ट रहते समय, <code>ssh</code> रिमोट छोर को हर <span class="ui">Server Alive Interval</span> सेकंड में पिंग करता है
+(<a href="settings.html">कॉन्फ़िगरेशन संदर्भ</a> देखें)। यह राउटर और फ़ायरवॉल को निष्क्रिय टनल गिराने से रोकता है
+और ऐप को जल्दी पता चलने देता है कि कब कोई कनेक्शन वास्तव में मर गया।</p>
+
+<h2>स्वतः फिर से कनेक्ट होना</h2>
+<p>अगर कनेक्शन टूटता है, तो हालत <span class="ui">फिर से कनेक्ट हो रहा है</span> में बदलती है और Media Sharing GUI कोशिशों के बीच
+थोड़ी देर और रुककर, हर कोशिश दर्ज करते हुए, खुद फिर कोशिश करता है। कोशिशें रोकने के लिए <span class="ui">रोकें</span> दबाएँ।</p>
+
+<h2>Mac के स्लीप के बाद</h2>
+<p>जब यह Mac स्लीप से जागता है, ऐप जाँचता है कि टनल बची रही या नहीं। अगर बची, तो जारी रहता है;
+अगर नहीं, तो पूरा रीसेट करता है — रोकें फिर शुरू करें के समान — और खुद लाइब्रेरी वापस ले आता है।</p>
+<div class="see"><h3>यह भी देखें</h3><ul><li><a href="status.html">स्थिति और हालत</a></li><li><a href="troubleshooting.html">अगर कनेक्ट न हो</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

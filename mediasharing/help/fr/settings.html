@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Référence de la configuration</title>
+<meta name="description" content="Ce que fait chaque champ de la zone Configuration, et quand le modifier." />
+<meta name="keywords" content="réglages, configuration, champs, port, socket de contrôle, keep-alive, compression, référence" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings"></a>
+<nav class="crumbs"><a href="index.html">Aide de Media Sharing GUI</a> › Référence</nav>
+<h1>Référence de la configuration</h1>
+<p class="lead">Cliquez sur le <span class="ui">(i)</span> à côté d'un champ dans l'app pour les mêmes notes. La plupart des champs peuvent
+rester à leurs valeurs par défaut.</p>
+
+<h2>Où se connecter</h2>
+<ul>
+<li><b><span class="ui">Nom de la connexion</span></b> — une étiquette affichée dans la barre latérale, pour votre repère seulement. Elle
+n'influe pas sur le fonctionnement de la connexion.</li>
+<li><b><span class="ui">Identifiant distant (utilisateur@hôte)</span></b> — le nom d'utilisateur SSH et l'hôte (ou nom DNS dynamique) du
+Mac distant, p. ex. <code>alex@myhome.example.com</code> — le même <code>user@host</code>
+que vous donneriez à <code>ssh</code>.</li>
+<li><b><span class="ui">Port SSH distant</span></b> — le port TCP sur lequel le serveur SSH du Mac distant est joint.
+Souvent pas 22, car les routeurs redirigent fréquemment un port externe personnalisé (comme 22022) vers le port SSH du Mac
+dans le réseau domestique.</li>
+</ul>
+
+<h2>Ports</h2>
+<ul>
+<li><b><span class="ui">Port local redirigé</span></b> — un port libre sur <i>ce</i> Mac. Le port de partage à domicile de la bibliothèque
+distante est tunnelisé jusqu'ici, de sorte qu'une app regardant <code>localhost</code> sur ce port
+atteint la bibliothèque distante.</li>
+<li><b><span class="ui">Port Media Sharing distant</span></b> — le port sur lequel le partage à domicile écoute là-bas, sur le
+Mac distant — normalement 3689, le port DAAP / partage à domicile standard. Ne le modifiez que pour une configuration
+inhabituelle.</li>
+</ul>
+
+<h2>Comportement du tunnel</h2>
+<ul>
+<li><b><span class="ui">Chemin du socket de contrôle SSH</span></b> — un chemin de fichier local pour le socket de contrôle d'arrière-plan de <code>ssh</code>,
+qui permet à l'app de fermer le tunnel proprement (<code>ssh -O exit</code>) au lieu de
+tuer le processus.</li>
+<li><b><span class="ui">Server Alive Interval</span></b> — à quelle fréquence, en secondes, <code>ssh</code> envoie un ping à
+l'extrémité distante pour maintenir le tunnel à travers routeurs et pare-feu et remarquer vite s'il meurt.</li>
+<li><b><span class="ui">Intervalle d'interrogation du trafic</span></b> — à quelle fréquence, en secondes, le panneau Trafic ré-échantillonne
+<code>nettop</code>. Chaque échantillon prend quelques secondes ; un intervalle plus court les enchaîne simplement.</li>
+<li><b><span class="ui">Compression SSH</span></b> — active la compression de <code>ssh</code> (<code>-C</code>).
+Elle échange un peu de CPU contre un flux de données plus petit, ce qui peut nettement lisser la lecture sur une
+connexion domestique lente ou à forte latence. On peut la laisser activée sans souci.</li>
+</ul>
+<div class="see"><h3>Voir aussi</h3><ul><li><a href="connect.html">Configurer et démarrer une connexion</a></li><li><a href="traffic-log.html">Trafic et journal</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

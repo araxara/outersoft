@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yeniden bağlanma ve uyku</title>
+<meta name="description" content="Media Sharing GUI bağlantıyı nasıl ayakta tutar: keep-alive, otomatik yeniden bağlanma ve uykuyu atlatma." />
+<meta name="keywords" content="yeniden bağlanma, uyku, uyanma, keep-alive, sağlık denetimi, düşme, otomatik" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="reconnecting"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI Yardımı</a> › Başvuru</nav>
+<h1>Yeniden bağlanma ve uyku</h1>
+<p class="lead">Bir ev bağlantısı her zaman istikrarlı değildir. Uygulama sarsıntıları sizin için atlatır.</p>
+
+<h2>Canlı kalma</h2>
+<p>Bağlıyken, <code>ssh</code> uzak uca her <span class="ui">Server Alive Interval</span> saniyede bir ping gönderir
+(<a href="settings.html">Yapılandırma başvurusu</a>'na bakın). Bu, yönlendiricilerin ve güvenlik duvarlarının
+boştaki bir tüneli düşürmesini engeller ve bir bağlantı gerçekten öldüğünde uygulamanın hızlıca fark etmesini sağlar.</p>
+
+<h2>Otomatik yeniden bağlanma</h2>
+<p>Bağlantı düşerse hâl <span class="ui">YENİDEN BAĞLANIYOR</span>'a döner ve Media Sharing GUI denemeler arasında biraz daha
+bekleyip her birini kaydederek kendi kendine yeniden dener. Denemeleri iptal etmek için <span class="ui">Durdur</span>'a basın.</p>
+
+<h2>Mac uyuduktan sonra</h2>
+<p>Bu Mac uykudan uyandığında, uygulama tünelin hayatta kalıp kalmadığını denetler. Kaldıysa devam eder;
+kalmadıysa tam bir sıfırlama yapar — Durdur sonra Başlat ile aynı — ve kitaplığı kendi kendine geri getirir.</p>
+<div class="see"><h3>Ayrıca bakın</h3><ul><li><a href="status.html">Durum ve hâl</a></li><li><a href="troubleshooting.html">Bağlanmazsa</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

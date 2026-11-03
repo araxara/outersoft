@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nb">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Koble til et delt bibliotek</title>
+<meta name="description" content="Koble en annen Mac, en iPad, iPhone eller Apple TV til Macen som deler biblioteket sitt." />
+<meta name="keywords" content="koble til, Bonjour, nettverk, SSH, adresse, sertifikat, fingeravtrykk, stol på, logg inn, passord" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer Hjelp</a> › Kom i gang</nav>
+<h1>Koble til et delt bibliotek</h1>
+<p class="lead">Hver enhet kobler til én gang. Deretter åpner den det samme biblioteket på egen hånd.</p>
+
+<h2>Åpne Koble til delt bibliotek</h2>
+<ul>
+<li><b>Mac:</b> Velg <span class="ui">Arkiv › Koble til delt bibliotek …</span> (<kbd>⌘K</kbd>).</li>
+<li><b>iPad og iPhone:</b> Trykk på <span class="ui">Koble til delt bibliotek …</span> i sidepanelet (<kbd>⌘K</kbd> med tastatur).</li>
+<li><b>Apple TV:</b> Første gang kobler TV Library til den første Macen på nettverket som deler
+uten passord. Ellers går du til <span class="ui">Biblioteker › Koble til et annet bibliotek …</span>.</li>
+</ul>
+
+<h2>Velg hvordan du når Macen</h2>
+<h3>Dette nettverket</h3>
+<p>Maskiner på samme nettverk med deling slått på vises etter navn. Velg én.</p>
+<h3>Ekstern (SSH)</h3>
+<p>For en Mac på et annet nettverk, for eksempel i et annet hjem. Skriv inn adressen du bruker for å koble til den
+Macen med SSH (eller en annen datamaskin på samme nettverk), og brukernavnet hvis det er et annet. TV Library Viewer logger
+inn, finner biblioteket på det nettverket og kobler til gjennom SSH-tilkoblingen.</p>
+<ul>
+<li>Første gang vises vertens nøkkel, slik at du kan sammenligne og bekrefte den.</li>
+<li>På en Mac brukes din egen SSH-nøkkel når verten godtar den; ellers blir du bedt om passordet,
+som lagres i nøkkelringen.</li>
+<li>En iPad, iPhone eller Apple TV har sin egen nøkkel. Etter første innlogging med passord tilbyr den å
+installere nøkkelen på verten, så passordet ikke trengs igjen.</li>
+</ul>
+<h3>Adresse</h3>
+<p>For en Mac denne enheten kan nå direkte: via et VPN som Tailscale, eller en port ruteren
+videresender til den. Skriv inn adressen og porten (port 47100 hvis den ikke er endret), og et kontonavn
+og passord hvis biblioteket har kontoer.</p>
+
+<h2>Stol på bibliotekets sertifikat</h2>
+<p>Første tilkobling viser fingeravtrykket til bibliotekets sertifikat. Sammenlign det med det i
+<span class="ui">Innstillinger › Deling</span> på Macen med biblioteket, og velg deretter <span class="ui">Stol på og koble til</span>. Fra
+da av kontrollerer enheten sertifikatet hver gang, og avviser et bibliotek der sertifikatet er
+endret.</p>
+
+<h2>Logg inn</h2>
+<p>Hvis biblioteket har kontoer, skriver du inn navnet og passordet til kontoen din på den Macen. Enheten
+lagrer dem i nøkkelringen. Uten kontoer lar du navnet stå tomt og bruker bibliotekpassordet,
+hvis det finnes et.</p>
+<div class="see"><h3>Se også</h3><ul><li><a href="away.html">Se når du er borte</a></li><li><a href="sidebar-libraries.html">Bytt mellom biblioteker</a></li><li><a href="settings-accounts.html">Kontoinnstillinger</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

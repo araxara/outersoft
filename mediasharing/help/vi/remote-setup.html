@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Trên máy Mac ở nhà</title>
+<meta name="description" content="Bật Chia sẻ Trong nhà và đăng nhập từ xa trên máy Mac ở xa, và làm cho nó có thể tới được từ bên ngoài." />
+<meta name="keywords" content="chia sẻ trong nhà, media sharing, đăng nhập từ xa, SSH, chuyển tiếp cổng, DNS động, router" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="remote-setup"></a>
+<nav class="crumbs"><a href="index.html">Trợ giúp Media Sharing GUI</a> › Bắt đầu</nav>
+<h1>Trên máy Mac ở nhà</h1>
+<p class="lead">Làm việc này một lần trên máy Mac mà bạn muốn tới thư viện của nó.</p>
+
+<h2>Bật chia sẻ thư viện</h2>
+<ul>
+<li>Trong app <span class="ui">Apple TV</span> hoặc <span class="ui">Nhạc</span>, bật <b>Chia sẻ Trong nhà</b> (các hệ thống cũ gọi là
+<b>Media Sharing</b>), đã đăng nhập bằng Tài khoản Apple của bạn.</li>
+<li>Để máy Mac đó thức, hoặc đặt nó cho phép truy cập mạng khi ngủ, để nó có thể trả lời khi bạn
+kết nối.</li>
+</ul>
+
+<h2>Bật đăng nhập từ xa (SSH)</h2>
+<ol>
+<li>Trên máy Mac ở xa, mở <span class="ui">Cài đặt Hệ thống</span> › <span class="ui">Cài đặt chung</span> › <span class="ui">Chia sẻ</span>.</li>
+<li>Bật <span class="ui">Đăng nhập từ xa</span>. Ghi lại tài khoản người dùng được phép đăng nhập.</li>
+</ol>
+<div class="note"><b>Mẹo:</b> Thiết lập một khóa SSH để không cần mật khẩu mỗi lần. Sao chép khóa
+công khai của máy Mac này sang máy ở xa (<code>ssh-copy-id user@host</code>). Media Sharing GUI vẫn
+chấp nhận mật khẩu làm phương án dự phòng — xem <a href="authentication.html">Khóa và mật khẩu SSH</a>.</div>
+
+<h2>Làm cho nó có thể tới được từ bên ngoài</h2>
+<ul>
+<li><b>Chuyển tiếp cổng:</b> trên router ở nhà, chuyển tiếp một cổng bên ngoài tới cổng SSH của máy Mac ở xa
+(22). Nhiều người chuyển tiếp một cổng bên ngoài khác thường, như 22022, để tránh nhiễu — cổng bên ngoài
+đó là cổng bạn điền vào <a href="settings.html">Cổng SSH ở xa</a>.</li>
+<li><b>Một tên đi theo IP nhà:</b> địa chỉ internet gia đình thay đổi, nên một tên DNS động
+(như <code>myhome.example.com</code>) đi theo nó giúp bạn khỏi phải đuổi theo các con số.</li>
+</ul>
+<p>Khi đăng nhập từ xa hoạt động từ bên ngoài — thử bằng <code>ssh user@host -p PORT</code>
+trong Terminal — Media Sharing GUI có thể dùng nó.</p>
+<div class="see"><h3>Xem thêm</h3><ul><li><a href="connect.html">Thiết lập và bắt đầu một kết nối</a></li><li><a href="authentication.html">Khóa và mật khẩu SSH</a></li><li><a href="settings.html">Tham khảo cấu hình</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Katselu kodin ulkopuolella</title>
+<meta name="description" content="Kolme tapaa käyttää kirjastoa toisesta verkosta: SSH, VPN tai uudelleenohjattu portti." />
+<meta name="keywords" content="etä, poissa, matka, SSH, VPN, Tailscale, porttiohjaus, reititin, 47100, offline" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="away"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer -ohje</a> › Aloittaminen</nav>
+<h1>Katselu kodin ulkopuolella</h1>
+<p class="lead">Kirjastosi pysyy kotona Macissa. Valitse yksi tapa käyttää sitä muualta.</p>
+
+<h2>SSH:n kautta</h2>
+<p>Paras, jos voit jo kirjautua kyseiseen Maciin tai johonkin sen verkon tietokoneeseen SSH:lla. Muuta
+ei tarvitse määrittää. Käytä Jaettuun kirjastoon yhdistämisen kohtaa <span class="ui">Etä (SSH)</span>. Kaikki kulkee
+SSH-yhteyden kautta.</p>
+
+<h2>VPN:n kautta</h2>
+<p>Kun molemmissa laitteissa on VPN, kuten Tailscale, käytä kohtaa <span class="ui">Osoite</span> Macin VPN-osoitteella ja
+portilla 47100.</p>
+
+<h2>Uudelleenohjatun portin kautta</h2>
+<ol>
+<li>Ohjaa reitittimessä portti 47100 (tai kohdan <span class="ui">Asetukset › Jakaminen</span> portti) Maciin, jossa
+kirjasto on.</li>
+<li>Lisää tilit vahvoilla salasanoilla kohdassa <span class="ui">Asetukset › Tilit</span>.</li>
+<li>Käytä toisessa laitteessa kohtaa <span class="ui">Osoite</span> kotisi julkisella osoitteella ja portilla.</li>
+</ol>
+<div class="note"><b>Huomaa:</b> Yhteydet ovat aina salattuja, ja laitteet tarkistavat kirjaston
+varmenteen, mistä tahansa ne yhdistävätkin. Kymmenen väärää salasanaa samasta osoitteesta 5 minuutin sisällä
+hylätään tarkistamatta.</div>
+
+<h2>Täysin ilman yhteyttä</h2>
+<p>Lataa jaksot ennen lähtöä (Mac, iPad ja iPhone). Kun kirjastoon ei saada yhteyttä,
+appi avaa sen sellaisena kuin se viimeksi nähtiin, näyttää <span class="ui">Offline</span> ja toistaa lataukset. Katselusi lähetetään
+Maciin, kun siihen saadaan taas yhteys.</p>
+<div class="see"><h3>Katso myös</h3><ul><li><a href="connect.html">Jaettuun kirjastoon yhdistäminen</a></li><li><a href="downloads.html">Lataukset ja offline-katselu</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

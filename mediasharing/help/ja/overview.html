@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Media Sharing GUI のしくみ</title>
+<meta name="description" content="別の場所にある Mac 上のホームシェアリングのライブラリを、この Mac のネットワークに表示し、SSH トンネル経由で再生します。" />
+<meta name="keywords" content="概要, ホームシェアリング, メディア共有, SSH, トンネル, Bonjour, Apple TV, ミュージック, リモート" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="overview"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI ヘルプ</a> › はじめに</nav>
+<h1>Media Sharing GUI のしくみ</h1>
+<p class="lead">別の場所にある Mac のライブラリを、まるでこのネットワークにあるかのように見せます。</p>
+
+<p>ホームシェアリング（メディア共有）を使うと、<span class="ui">Apple TV</span> App、<span class="ui">ミュージック</span>、<span class="ui">iTunes</span> は
+別のコンピュータからストリーミングできますが、対象は<b>同じローカルネットワーク</b>上のものに限られます。Media Sharing GUI は
+この制限を取り除きます。自宅の Mac（または SSH で届く任意の Mac）を指定すると、その Mac が共有するライブラリが、まるでその Mac が
+隣の部屋にあるかのように、ここで <span class="ui">Apple TV</span> や <span class="ui">ミュージック</span> のソースリストに表示されます。</p>
+
+<h2>動作の流れ</h2>
+<ol>
+<li>この Mac からリモートの Mac へ <b>SSH トンネル</b>を開きます。</li>
+<li>そのトンネル越しに、リモートの Mac が自分のローカルネットワークで広告しているホームシェアリングサービスを問い合わせます。</li>
+<li><b>同じサービスをここで再公開</b>し、トンネル経由に向けて Bonjour で広告します。これにより、この Mac の App は
+そのライブラリが LAN の近くにあるかのように認識します。</li>
+</ol>
+<p>実行中、そのライブラリからのストリーミングは SSH トンネル内を暗号化されて流れます。状況ボックスの <span class="ui">開始</span> と
+<span class="ui">停止</span> でオン・オフを切り替えます。</p>
+
+<h2>必要なもの</h2>
+<ul>
+<li><b>自宅の Mac で：</b> <span class="ui">Apple TV</span> App または <span class="ui">ミュージック</span> App でホームシェアリング（またはメディア共有）を
+オンにし、リモートログイン（SSH）を有効にします。<a href="remote-setup.html">自宅の Mac で</a>を参照。</li>
+<li><b>到達する手段：</b> そのアドレスまたはダイナミック DNS 名と、ルーターが転送する SSH ポート。</li>
+<li><b>この Mac で：</b> 特別なものは不要です。Media Sharing GUI が内蔵の <code>ssh</code> と Bonjour のツールを
+代わりに操作します。</li>
+</ul>
+
+<h2>はじめかた</h2>
+<ol>
+<li><a href="remote-setup.html">自宅の Mac</a>を一度設定します。</li>
+<li><a href="connect.html">接続を入力して開始を押します</a>。</li>
+<li>ここで<a href="libraries.html">公開するライブラリを選びます</a>。</li>
+</ol>
+<div class="see"><h3>関連項目</h3><ul><li><a href="remote-setup.html">自宅の Mac で</a></li><li><a href="connect.html">接続を設定して開始する</a></li><li><a href="privacy.html">Media Sharing GUI が読み取り・変更・保存するもの</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

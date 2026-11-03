@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ट्रैफ़िक और लॉग</title>
+<meta name="description" content="देखें कि टनल कितना डेटा ले जा रही है, और वह जो कुछ करती है उसका लॉग पढ़ें (या सेव करें)।" />
+<meta name="keywords" content="ट्रैफ़िक, nettop, बाइट, इन, आउट, पीक, लॉग, फ़ाइल, Finder" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="traffic-log"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI मदद</a> › उपयोग</nav>
+<h1>ट्रैफ़िक और लॉग</h1>
+<p class="lead">दो बॉक्स दिखाते हैं कि कनेक्शन कैसा चल रहा है: वह कितना ले जा रहा है, और उसने क्या किया।</p>
+
+<h2>SSH सत्र ट्रैफ़िक</h2>
+<ul>
+<li><span class="ui">इन</span> और <span class="ui">आउट</span> टनल प्रक्रिया से बहते बाइट दिखाते हैं, सबसे व्यस्त पल के लिए एक <span class="ui">पीक</span>
+आँकड़े के साथ।</li>
+<li>संख्याएँ कच्चे पैकेट कैप्चर से नहीं, बल्कि सिस्टम उपकरण <code>nettop</code> से नमूनित होती हैं, इसलिए
+ये सटीक मीटर के बजाय एक करीबी मार्गदर्शन हैं।</li>
+<li>यह कितनी बार दोबारा नमूना लेता है, यह <a href="settings.html">कॉन्फ़िगरेशन</a> में <span class="ui">ट्रैफ़िक पोल अंतराल</span>
+तय करता है। हर नमूने में कुछ सेकंड लगते हैं; इससे छोटा अंतराल नमूनों को बस एक के बाद एक चलाता है।</li>
+</ul>
+
+<h2>लॉग</h2>
+<p><span class="ui">लॉग</span> बॉक्स हर चरण दर्ज करता है — टनल खोलना, लाइब्रेरी ढूँढना, उन्हें प्रकाशित करना,
+फिर से कनेक्ट होना, और कोई भी त्रुटि। यह डिस्क पर एक फ़ाइल में भी लिखा जाता है; बॉक्स
+<span class="ui">यहाँ सेव किया गया:</span> उसका पथ दिखाता है। उस पथ पर क्लिक करके <b>लॉग को Finder में दिखाएँ</b>, जब आप किसी समस्या को
+सुलझाते हुए उसे भेजना चाहें तो सुविधाजनक।</p>
+<div class="see"><h3>यह भी देखें</h3><ul><li><a href="status.html">स्थिति और हालत</a></li><li><a href="troubleshooting.html">अगर कनेक्ट न हो</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

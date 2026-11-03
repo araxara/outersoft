@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nastavení úložiště</title>
+<meta name="description" content="Jak velká je knihovna a kolik místa zabírá databáze a mezipaměti TV Library Viewer." />
+<meta name="keywords" content="nastavení, úložiště, databáze, velikost, místo, seriály, epizody, obsazení, fotky herců, mezipaměť, TVmaze, TMDb" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings-storage"></a>
+<nav class="crumbs"><a href="index.html">Nápověda k TV Library Viewer</a> › Nastavení</nav>
+<h1>Nastavení úložiště</h1>
+<p class="lead">Vyberte <span class="ui">TV Library Viewer › Nastavení</span> a pak klikněte na <span class="ui">Úložiště</span>.</p>
+
+<h2>Knihovna TV na tomto Macu</h2>
+<p>Počet seriálů a epizod v knihovně aplikace TV a velikost její databáze. Videosoubory
+se nezapočítávají.</p>
+
+<h2>Databáze TV Library Viewer</h2>
+<p>Vlastní databáze TV Library Viewer na tomto Macu, sdílená se všemi zařízeními, která knihovnu zobrazují.</p>
+<table>
+<tr><th>Část</th><th>Co obsahuje</th></tr>
+<tr><td><span class="ui">Informace o pořadech</span></td><td>Úplné popisy zadané přes AppleScript a obsazení
+každého seriálu: jména herců a jejich role.</td></tr>
+<tr><td><span class="ui">Překlady</span></td><td>Názvy a popisy epizod přeložené do jazyků nastavených v aplikacích.</td></tr>
+<tr><td><span class="ui">Obsazení a štáb</span></td><td>Jednu malou fotku každé osoby a adresy jejích
+stránek na TVmaze a TMDb.</td></tr>
+<tr><td><span class="ui">Účty a sledování</span></td><td>Účty, sledování všech účtů kromě
+hlavního a protokoly účtů.</td></tr>
+<tr><td><span class="ui">Struktura databáze a volné místo</span></td><td>Vlastní záznamy SQLite a místo, které znovu využívá.</td></tr>
+<tr><td><span class="ui">Nedávné změny</span></td><td>Změny, které ještě nebyly začleněny do databáze. To se děje
+čas od času.</td></tr>
+</table>
+<p>Obsazení a štáb seriálu se vyhledají na TVmaze a TMDb při prvním otevření jeho stránky, zde nebo
+na libovolném zařízení. Údaje o osobách se načítají při každém jejich otevření, takže nikdy nejsou zastaralé,
+a neukládají se. Klikněte na <span class="ui">Zobrazit ve Finderu</span> a uvidíte soubor databáze.</p>
+
+<h2><a name="tmdb"></a>Podrobnosti o obsazení a štábu: token TMDb</h2>
+<p>TVmaze nevyžaduje žádné nastavení. TMDb (The Movie Database) přidává režiséry a scenáristy, herce,
+které TVmaze nemá, a životopisy, často ve vašem jazyce. Potřebuje váš vlastní token: TMDb
+ho zdarma poskytne každému, kdo má účet, pro osobní, nekomerční použití. TV Library Viewer
+žádný token nemá.</p>
+<ol>
+<li>Vytvořte si bezplatný účet na themoviedb.org a přihlaste se.</li>
+<li>Klikněte na ikonu svého účtu, vyberte <span class="ui">Settings</span> a pak klikněte na <span class="ui">API</span>.</li>
+<li>Požádejte o klíč API: vyberte <span class="ui">Developer</span>, přijměte podmínky a popište použití jako osobní
+a nekomerční (například „Show cast and biographies in my own TV library app“).</li>
+<li>Až bude klíč připravený, zkopírujte <span class="ui">API Read Access Token</span> (ten dlouhý, ne kratší API Key).</li>
+<li>Na Macu s knihovnou vyberte <span class="ui">TV Library Viewer › Nastavení</span>, klikněte na <span class="ui">Úložiště</span> a
+vložte ho do pole <span class="ui">TMDb API Read Access Token</span>.</li>
+<li>Klikněte na <span class="ui">Otestovat</span>. „TMDb tento token přijímá“ znamená, že funguje.</li>
+</ol>
+<p>Token se uchovává v Klíčence Macu. Používá ho jen Mac s knihovnou; vaše další
+zařízení dostávají obsazení a podrobnosti z tohoto Macu. Seriály, které už byly vyhledány, dostanou obsazení a štáb z TMDb
+při příštím otevření jejich stránky. Pokud zavřete Nastavení bez otestování nového tokenu, otestuje se v tu chvíli
+a dozvíte se, pokud ho TMDb odmítne.</p>
+<div class="note"><b>Poznámka:</b> Tento produkt používá rozhraní TMDB API, ale není podporován ani certifikován společností TMDB.</div>
+
+<h2><a name="google"></a>Překlad: klíč Google</h2>
+<p>Názvy a popisy epizod se na tomto Macu zdarma překládají do jazyka každého zařízení
+pomocí překladu od Applu. Ten neumí překládat do řečtiny, češtiny, maďarštiny, rumunštiny, perštiny, urdštiny
+ani bengálštiny. Pro tyto jazyky přidejte vlastní klíč Google Cloud Translation API. Potřebuje ho jen Mac
+s knihovnou, zařízení, která ji sledují, ne. Prvních 500 000 znaků měsíčně je zdarma a každý
+text se překládá jen jednou.</p>
+<ol>
+<li>Přejděte na console.cloud.google.com a přihlaste se svým účtem Google.</li>
+<li>Vytvořte projekt: klikněte na nabídku projektů nahoře, pak na <span class="ui">New Project</span> a pojmenujte ho
+třeba „TV Library Viewer“.</li>
+<li>Zapněte fakturaci: v nabídce ☰ vyberte <span class="ui">Billing</span> a propojte fakturační účet. Google ho vyžaduje
+i při bezplatném používání. Pro jistotu přidejte rozpočet, třeba 1 $, v části <span class="ui">Budgets &amp; alerts</span>.</li>
+<li>Vyberte ☰ › <span class="ui">APIs &amp; Services › Library</span>, vyhledejte <span class="ui">Cloud Translation API</span> a klikněte na
+<span class="ui">Enable</span>.</li>
+<li>Vyberte ☰ › <span class="ui">APIs &amp; Services › Credentials</span>, pak <span class="ui">Create credentials › API key</span> a
+zkopírujte klíč (začíná na „AIza“).</li>
+<li>Doporučeno: klikněte na název klíče, v části API restrictions vyberte <span class="ui">Restrict key</span>, zaškrtněte
+<span class="ui">Cloud Translation API</span> a klikněte na <span class="ui">Save</span>, aby klíč fungoval jen pro překlad.</li>
+<li>Na Macu s knihovnou vyberte <span class="ui">TV Library Viewer › Nastavení</span>, klikněte na <span class="ui">Úložiště</span>,
+vložte klíč do pole <span class="ui">Klíč Google Cloud Translation API</span> a klikněte na <span class="ui">Otestovat</span>.</li>
+</ol>
+<p>Klíč je uložen v klíčence Macu a používá se jen pro těchto sedm jazyků. Nikomu ho
+nedávejte: vše, co se s ním přeloží, se účtuje na váš účet Google.</p>
+
+<h2>Mezipaměti</h2>
+<p>Obrázky a knihovny, které tento Mac zobrazoval z jiných Maců. Mezipaměti se podle potřeby vytvoří znovu
+a macOS je vyprázdní, když dochází místo.</p>
+<div class="see"><h3>Viz také</h3><ul><li><a href="show-page.html">Stránka seriálu a obsazení</a></li><li><a href="privacy.html">Co TV Library Viewer čte, mění a uchovává</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

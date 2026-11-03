@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Riconnessione e stop</title>
+<meta name="description" content="Come Media Sharing GUI mantiene attiva la connessione: keep-alive, riconnessione automatica e sopravvivenza allo stop." />
+<meta name="keywords" content="riconnettere, stop, risveglio, keep-alive, controllo di salute, caduta, automatico" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="reconnecting"></a>
+<nav class="crumbs"><a href="index.html">Aiuto di Media Sharing GUI</a> › Riferimento</nav>
+<h1>Riconnessione e stop</h1>
+<p class="lead">Una connessione domestica non è sempre stabile. L'app assorbe gli scossoni per te.</p>
+
+<h2>Restare vivi</h2>
+<p>Durante la connessione, <code>ssh</code> invia un ping all'estremità remota ogni <span class="ui">Server Alive Interval</span> secondi
+(vedi <a href="settings.html">Riferimento della configurazione</a>). Questo impedisce a router e firewall di
+lasciar cadere un tunnel inattivo e consente all'app di accorgersi presto quando una connessione è davvero morta.</p>
+
+<h2>Riconnessione automatica</h2>
+<p>Se la connessione cade, la situazione passa a <span class="ui">RICONNESSIONE</span> e Media Sharing GUI riprova da
+sola, aspettando un po' di più tra i tentativi e registrando ciascuno. Premi <span class="ui">Ferma</span> per
+annullare i tentativi.</p>
+
+<h2>Dopo lo stop del Mac</h2>
+<p>Quando questo Mac si risveglia dallo stop, l'app controlla se il tunnel è sopravvissuto. Se sì, continua;
+in caso contrario, esegue un ripristino completo — lo stesso di Ferma poi Avvia — e riporta la libreria
+da sola.</p>
+<div class="see"><h3>Vedi anche</h3><ul><li><a href="status.html">Stato e situazione</a></li><li><a href="troubleshooting.html">Se non si connette</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>配置参考</title>
+<meta name="description" content="“配置”框中每个字段的作用，以及何时更改它。" />
+<meta name="keywords" content="设置, 配置, 字段, 端口, 控制套接字, keep-alive, 压缩, 参考" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI 帮助</a> › 参考</nav>
+<h1>配置参考</h1>
+<p class="lead">在 App 中点按任一字段旁的 <span class="ui">(i)</span> 可看到相同的说明。大多数字段都可保持默认值。</p>
+
+<h2>连接到何处</h2>
+<ul>
+<li><b><span class="ui">连接名称</span></b>——显示在边栏中的标签，仅供你参考。它不影响连接的工作方式。</li>
+<li><b><span class="ui">远程登录（用户@主机）</span></b>——远程 Mac 的 SSH 用户名和主机（或动态 DNS 名称），
+例如 <code>alex@myhome.example.com</code>——与你给 <code>ssh</code> 的相同的 <code>user@host</code>。</li>
+<li><b><span class="ui">远程 SSH 端口</span></b>——到达远程 Mac SSH 服务器所用的 TCP 端口。通常不是 22，因为路由器常把一个自定义的外部端口
+（如 22022）转发到家庭网络内 Mac 的 SSH 端口。</li>
+</ul>
+
+<h2>端口</h2>
+<ul>
+<li><b><span class="ui">本地转发端口</span></b>——<i>这台</i> Mac 上的一个空闲端口。远程资料库的“家庭共享”端口会被隧道到这里，
+因此查看该端口 <code>localhost</code> 的 App 便可到达远程资料库。</li>
+<li><b><span class="ui">远程媒体共享端口</span></b>——“家庭共享”在远程 Mac 那头监听的端口——通常是 3689，标准的 DAAP /“家庭共享”端口。
+仅在设置不寻常时才更改它。</li>
+</ul>
+
+<h2>隧道行为</h2>
+<ul>
+<li><b><span class="ui">SSH 控制套接字路径</span></b>——<code>ssh</code> 后台控制套接字的本地文件路径，
+它让 App 能干净地关闭隧道（<code>ssh -O exit</code>），而不是强行杀死进程。</li>
+<li><b><span class="ui">Server Alive Interval</span></b>——<code>ssh</code> 每隔多少秒向远端发送一次 ping，
+以便穿过路由器和防火墙保持隧道存活，并在它中断时迅速察觉。</li>
+<li><b><span class="ui">流量轮询间隔</span></b>——流量面板每隔多少秒重新采样 <code>nettop</code>。
+每次采样需要几秒；更短的间隔只会让采样一个接一个地进行。</li>
+<li><b><span class="ui">SSH 压缩</span></b>——开启 <code>ssh</code> 的压缩（<code>-C</code>）。
+它以少量 CPU 换取更小的数据流，在缓慢或高延迟的家庭连接上可以明显地使播放更流畅。保持开启即可。</li>
+</ul>
+<div class="see"><h3>另请参阅</h3><ul><li><a href="connect.html">设置并启动连接</a></li><li><a href="traffic-log.html">流量与日志</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

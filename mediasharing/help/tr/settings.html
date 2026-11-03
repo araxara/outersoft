@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yapılandırma başvurusu</title>
+<meta name="description" content="Yapılandırma kutusundaki her alanın ne yaptığı ve ne zaman değiştirileceği." />
+<meta name="keywords" content="ayarlar, yapılandırma, alanlar, bağlantı noktası, kontrol soketi, keep-alive, sıkıştırma, başvuru" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI Yardımı</a> › Başvuru</nav>
+<h1>Yapılandırma başvurusu</h1>
+<p class="lead">Aynı notlar için uygulamada herhangi bir alanın yanındaki <span class="ui">(i)</span>'ye tıklayın. Çoğu alan
+öntanımlı değerinde bırakılabilir.</p>
+
+<h2>Nereye bağlanılacağı</h2>
+<ul>
+<li><b><span class="ui">Bağlantı adı</span></b> — kenar çubuğunda gösterilen bir etiket, yalnızca sizin başvurunuz için. Bağlantının
+çalışmasını etkilemez.</li>
+<li><b><span class="ui">Uzak oturum açma (kullanıcı@host)</span></b> — uzaktaki Mac'in SSH kullanıcı adı ve ana makinesi (ya da dinamik DNS adı),
+örn. <code>alex@myhome.example.com</code> — <code>ssh</code>'ye vereceğiniz <code>user@host</code>'un aynısı.</li>
+<li><b><span class="ui">Uzak SSH bağlantı noktası</span></b> — uzaktaki Mac'in SSH sunucusuna ulaşılan TCP bağlantı noktası.
+Yönlendiriciler genellikle özel bir dış bağlantı noktasını (22022 gibi) ev ağındaki Mac'in SSH bağlantı
+noktasına ilettiği için çoğu zaman 22 değildir.</li>
+</ul>
+
+<h2>Bağlantı noktaları</h2>
+<ul>
+<li><b><span class="ui">Yerel yönlendirilen bağlantı noktası</span></b> — <i>bu</i> Mac'te boş bir bağlantı noktası. Uzaktaki kitaplığın Ev Paylaşımı
+bağlantı noktası buraya tünellenir, böylece bu bağlantı noktasındaki <code>localhost</code>'a bakan bir uygulama
+uzaktaki kitaplığa ulaşır.</li>
+<li><b><span class="ui">Uzak Media Sharing bağlantı noktası</span></b> — Ev Paylaşımı'nın uzaktaki Mac tarafında dinlediği bağlantı noktası —
+normalde 3689, standart DAAP / Ev Paylaşımı bağlantı noktası. Yalnızca sıra dışı bir kurulum için değiştirin.</li>
+</ul>
+
+<h2>Tünel davranışı</h2>
+<ul>
+<li><b><span class="ui">SSH kontrol soketi yolu</span></b> — <code>ssh</code>'nin arka plandaki kontrol soketi için yerel bir dosya yolu;
+bu, uygulamanın süreci öldürmek yerine tüneli temiz biçimde kapatmasını (<code>ssh -O exit</code>) sağlar.</li>
+<li><b><span class="ui">Server Alive Interval</span></b> — <code>ssh</code>'nin tüneli yönlendiriciler ve güvenlik duvarları üzerinden
+canlı tutmak ve öldüğünde hızlıca fark etmek için uzak uca kaç saniyede bir ping gönderdiği.</li>
+<li><b><span class="ui">Trafik sorgulama aralığı</span></b> — Trafik panelinin <code>nettop</code>'u kaç saniyede bir yeniden
+örneklediği. Her örnek birkaç saniye sürer; daha kısa bir aralık onları yalnızca art arda çalıştırır.</li>
+<li><b><span class="ui">SSH sıkıştırma</span></b> — <code>ssh</code>'nin sıkıştırmasını (<code>-C</code>) açar.
+Biraz CPU'yu daha küçük bir veri akışıyla takas eder; bu, yavaş ya da yüksek gecikmeli bir ev bağlantısında
+yürütmeyi gözle görülür biçimde yumuşatabilir. Açık bırakmak güvenlidir.</li>
+</ul>
+<div class="see"><h3>Ayrıca bakın</h3><ul><li><a href="connect.html">Bir bağlantı kurma ve başlatma</a></li><li><a href="traffic-log.html">Trafik ve günlük</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

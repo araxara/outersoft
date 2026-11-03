@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>कॉन्फ़िगरेशन संदर्भ</title>
+<meta name="description" content="कॉन्फ़िगरेशन बॉक्स का हर फ़ील्ड क्या करता है, और उसे कब बदलें।" />
+<meta name="keywords" content="सेटिंग्स, कॉन्फ़िगरेशन, फ़ील्ड, पोर्ट, कंट्रोल सॉकेट, keep-alive, कम्प्रेशन, संदर्भ" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI मदद</a> › संदर्भ</nav>
+<h1>कॉन्फ़िगरेशन संदर्भ</h1>
+<p class="lead">वही नोट देखने के लिए ऐप में किसी फ़ील्ड के बगल में <span class="ui">(i)</span> पर क्लिक करें। अधिकांश फ़ील्ड
+अपने डिफ़ॉल्ट पर छोड़े जा सकते हैं।</p>
+
+<h2>कहाँ कनेक्ट करना है</h2>
+<ul>
+<li><b><span class="ui">कनेक्शन नाम</span></b> — साइडबार में दिखा एक लेबल, सिर्फ़ आपके संदर्भ के लिए। यह कनेक्शन के
+काम करने को प्रभावित नहीं करता।</li>
+<li><b><span class="ui">रिमोट लॉगिन (user@host)</span></b> — रिमोट Mac का SSH उपयोक्ता नाम और होस्ट (या डायनेमिक-DNS नाम),
+उदा. <code>alex@myhome.example.com</code> — वही <code>user@host</code> जो आप <code>ssh</code> को देते।</li>
+<li><b><span class="ui">रिमोट SSH पोर्ट</span></b> — वह TCP पोर्ट जिस पर रिमोट Mac का SSH सर्वर पहुँचा जाता है।
+अक्सर 22 नहीं, क्योंकि राउटर आम तौर पर एक कस्टम बाहरी पोर्ट (जैसे 22022) को घर के नेटवर्क के भीतर Mac के
+SSH पोर्ट पर अग्रेषित करते हैं।</li>
+</ul>
+
+<h2>पोर्ट</h2>
+<ul>
+<li><b><span class="ui">लोकल फ़ॉरवर्डेड पोर्ट</span></b> — <i>इस</i> Mac पर एक खाली पोर्ट। रिमोट लाइब्रेरी का होम शेयरिंग पोर्ट
+यहाँ टनल किया जाता है, ताकि इस पोर्ट पर <code>localhost</code> देखने वाला ऐप रिमोट लाइब्रेरी तक पहुँचे।</li>
+<li><b><span class="ui">रिमोट Media Sharing पोर्ट</span></b> — वह पोर्ट जिस पर होम शेयरिंग उस ओर, रिमोट Mac पर सुनती है —
+सामान्यतः 3689, मानक DAAP / होम शेयरिंग पोर्ट। इसे सिर्फ़ किसी असामान्य सेटअप के लिए बदलें।</li>
+</ul>
+
+<h2>टनल का व्यवहार</h2>
+<ul>
+<li><b><span class="ui">SSH कंट्रोल-सॉकेट पथ</span></b> — <code>ssh</code> के पृष्ठभूमि कंट्रोल सॉकेट के लिए एक लोकल फ़ाइल पथ,
+जो ऐप को प्रक्रिया मारने के बजाय टनल को सफ़ाई से बंद करने देता है (<code>ssh -O exit</code>)।</li>
+<li><b><span class="ui">Server Alive Interval</span></b> — <code>ssh</code> कितनी-कितनी सेकंड में रिमोट छोर को पिंग करता है,
+ताकि राउटर और फ़ायरवॉल के पार टनल बनी रहे और मरने पर जल्दी पता चले।</li>
+<li><b><span class="ui">ट्रैफ़िक पोल अंतराल</span></b> — ट्रैफ़िक पैनल कितनी-कितनी सेकंड में <code>nettop</code> को दोबारा
+नमूनित करता है। हर नमूने में कुछ सेकंड लगते हैं; इससे छोटा अंतराल उन्हें बस एक के बाद एक चलाता है।</li>
+<li><b><span class="ui">SSH कम्प्रेशन</span></b> — <code>ssh</code> का कम्प्रेशन (<code>-C</code>) चालू करता है।
+यह थोड़ा CPU देकर छोटा डेटा स्ट्रीम लेता है, जो किसी धीमे या उच्च-विलंब वाले घरेलू कनेक्शन पर प्लेबैक को उल्लेखनीय रूप से
+सहज कर सकता है। चालू छोड़ना सुरक्षित है।</li>
+</ul>
+<div class="see"><h3>यह भी देखें</h3><ul><li><a href="connect.html">कनेक्शन सेट करना और शुरू करना</a></li><li><a href="traffic-log.html">ट्रैफ़िक और लॉग</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

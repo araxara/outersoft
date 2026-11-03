@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ver fuera de casa</title>
+<meta name="description" content="Tres formas de acceder a tu biblioteca desde otra red: SSH, una VPN o un puerto redirigido." />
+<meta name="keywords" content="remoto, fuera de casa, viaje, SSH, VPN, Tailscale, redirección de puertos, router, 47100, sin conexión" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="away"></a>
+<nav class="crumbs"><a href="index.html">Ayuda de TV Library Viewer</a> › Primeros pasos</nav>
+<h1>Ver fuera de casa</h1>
+<p class="lead">Tu biblioteca se queda en el Mac de casa. Elige una forma de acceder a ella desde otro sitio.</p>
+
+<h2>Mediante SSH</h2>
+<p>Lo mejor si ya puedes iniciar sesión por SSH en ese Mac, o en un ordenador de su red. No hay que configurar
+nada más. Usa <span class="ui">Remoto (SSH)</span> en “Conectar a una biblioteca compartida”. Todo pasa por la
+conexión SSH.</p>
+
+<h2>Mediante una VPN</h2>
+<p>Con una VPN como Tailscale en ambos dispositivos, usa <span class="ui">Dirección</span> con la dirección VPN del Mac y el
+puerto 47100.</p>
+
+<h2>Mediante un puerto redirigido</h2>
+<ol>
+<li>En tu router, redirige el puerto 47100 (o el de <span class="ui">Ajustes › Compartir</span>) al Mac que tiene
+la biblioteca.</li>
+<li>Añade cuentas con contraseñas seguras en <span class="ui">Ajustes › Cuentas</span>.</li>
+<li>En el otro dispositivo, usa <span class="ui">Dirección</span> con la dirección pública de tu casa y el puerto.</li>
+</ol>
+<div class="note"><b>Nota:</b> Las conexiones siempre están cifradas, y los dispositivos comprueban el certificado
+de la biblioteca, se conecten desde donde se conecten. Diez contraseñas incorrectas desde una misma dirección en 5 minutos se
+rechazan sin comprobarlas.</div>
+
+<h2>Sin ninguna conexión</h2>
+<p>Descarga episodios antes de irte (Mac, iPad y iPhone). Cuando no se puede acceder a la biblioteca, la
+app la abre tal como la viste por última vez, muestra <span class="ui">Sin conexión</span> y reproduce tus descargas. Lo que ves se envía
+al Mac en cuanto vuelve a estar accesible.</p>
+<div class="see"><h3>Consulta también</h3><ul><li><a href="connect.html">Conectarse a una biblioteca compartida</a></li><li><a href="downloads.html">Descargas y visualización sin conexión</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

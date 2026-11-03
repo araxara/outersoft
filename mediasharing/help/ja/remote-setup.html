@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>自宅の Mac で</title>
+<meta name="description" content="リモートの Mac でホームシェアリングとリモートログインをオンにし、外部から到達できるようにします。" />
+<meta name="keywords" content="ホームシェアリング, メディア共有, リモートログイン, SSH, ポート転送, ダイナミック DNS, ルーター" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="remote-setup"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI ヘルプ</a> › はじめに</nav>
+<h1>自宅の Mac で</h1>
+<p class="lead">ライブラリに到達したい Mac で、これを一度だけ行います。</p>
+
+<h2>ライブラリの共有をオンにする</h2>
+<ul>
+<li><span class="ui">Apple TV</span> App または <span class="ui">ミュージック</span> で、Apple アカウントにサインインした状態で
+<b>ホームシェアリング</b>をオンにします（古いシステムでは<b>メディア共有</b>と呼ばれます）。</li>
+<li>その Mac を起動したままにするか、スリープ中もネットワークアクセスを許可するよう設定します。接続したときに応答できるようにするためです。</li>
+</ul>
+
+<h2>リモートログイン（SSH）をオンにする</h2>
+<ol>
+<li>リモートの Mac で <span class="ui">システム設定</span> › <span class="ui">一般</span> › <span class="ui">共有</span> を開きます。</li>
+<li><span class="ui">リモートログイン</span>をオンにします。ログインを許可するユーザアカウントを控えておきます。</li>
+</ol>
+<div class="note"><b>ヒント：</b> 毎回パスワードを入力しなくて済むよう、SSH 鍵を設定しましょう。この Mac の公開鍵をリモートの Mac に
+コピーします（<code>ssh-copy-id user@host</code>）。Media Sharing GUI はフォールバックとしてパスワードも
+受け付けます。<a href="authentication.html">SSH の鍵とパスワード</a>を参照。</div>
+
+<h2>外部から到達できるようにする</h2>
+<ul>
+<li><b>ポート転送：</b> 自宅のルーターで、外部ポートをリモートの Mac の SSH ポート（22）に転送します。多くの人はノイズを避けるために
+22022 のような珍しい外部ポートを転送します。その外部ポートが <a href="settings.html">リモート SSH ポート</a> に入力する値です。</li>
+<li><b>自宅の IP に追従する名前：</b> 自宅のインターネットアドレスは変わるため、それに追従するダイナミック DNS 名
+（<code>myhome.example.com</code> など）があれば、番号を追いかけずに済みます。</li>
+</ul>
+<p>外部からリモートログインが機能するようになったら（ターミナルで <code>ssh user@host -p PORT</code> を試します）、
+Media Sharing GUI はそれを使えます。</p>
+<div class="see"><h3>関連項目</h3><ul><li><a href="connect.html">接続を設定して開始する</a></li><li><a href="authentication.html">SSH の鍵とパスワード</a></li><li><a href="settings.html">構成リファレンス</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

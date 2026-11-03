@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>مرجع الإعداد</title>
+<meta name="description" content="ماذا يفعل كل حقل في مربّع الإعداد، ومتى تغيّره." />
+<meta name="keywords" content="إعدادات, إعداد, حقول, منفذ, مقبس التحكم, keep-alive, ضغط, مرجع" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings"></a>
+<nav class="crumbs"><a href="index.html">مساعدة ⁨⁨Media Sharing⁩ GUI⁩</a> › مرجع</nav>
+<h1>مرجع الإعداد</h1>
+<p class="lead">انقر <span class="ui">(i)</span> بجانب أي حقل في التطبيق لرؤية الملاحظات نفسها. يمكن ترك معظم الحقول
+على قيمها الافتراضية.</p>
+
+<h2>إلى أين تتّصل</h2>
+<ul>
+<li><b><span class="ui">اسم الاتصال</span></b> — تسمية تظهر في الشريط الجانبي، لمرجعك وحدك. لا
+تؤثّر في طريقة عمل الاتصال.</li>
+<li><b><span class="ui">تسجيل الدخول البعيد (user@host)</span></b> — اسم مستخدم ⁨SSH⁩ والمضيف (أو اسم ⁨DNS⁩ ديناميكي) للـ⁨Mac⁩
+البعيد، مثل <code>alex@myhome.example.com</code> — نفس <code>user@host</code>
+الذي تعطيه لـ<code>ssh</code>.</li>
+<li><b><span class="ui">منفذ ⁨SSH⁩ البعيد</span></b> — منفذ TCP الذي يُوصَل عبره خادم ⁨SSH⁩ للـ⁨Mac⁩ البعيد.
+غالباً ليس 22، لأن الموجّهات كثيراً ما تحوّل منفذاً خارجياً مخصّصاً (مثل 22022) إلى منفذ ⁨SSH⁩ للـ⁨Mac⁩
+داخل الشبكة المنزلية.</li>
+</ul>
+
+<h2>المنافذ</h2>
+<ul>
+<li><b><span class="ui">المنفذ المحلي الموجَّه</span></b> — منفذ حرّ على <i>هذا</i> الـ⁨Mac⁩. يُنفَق منفذ المشاركة المنزلية للمكتبة
+البعيدة إلى هنا، فيصل تطبيقٌ ينظر إلى <code>localhost</code> على هذا المنفذ
+إلى المكتبة البعيدة.</li>
+<li><b><span class="ui">منفذ ⁨Media Sharing⁩ البعيد</span></b> — المنفذ الذي تستمع عليه المشاركة المنزلية هناك، على
+الـ⁨Mac⁩ البعيد — عادةً 3689، منفذ ⁨DAAP⁩ / المشاركة المنزلية القياسي. غيّره فقط لإعداد غير
+معتاد.</li>
+</ul>
+
+<h2>سلوك النفق</h2>
+<ul>
+<li><b><span class="ui">مسار مقبس التحكم لـ ⁨SSH⁩</span></b> — مسار ملف محلي لمقبس التحكم الخلفي لـ<code>ssh</code>،
+الذي يتيح للتطبيق إغلاق النفق بنظافة (<code>ssh -O exit</code>) بدلاً من
+قتل العملية.</li>
+<li><b><span class="ui">Server Alive Interval</span></b> — كم مرة، بالثواني، يرسل <code>ssh</code> إشارة ping إلى
+الطرف البعيد لإبقاء النفق عبر الموجّهات والجدران النارية ولملاحظة موته بسرعة.</li>
+<li><b><span class="ui">فاصل استطلاع حركة البيانات</span></b> — كم مرة، بالثواني، تعيد لوحة حركة البيانات معاينة
+<code>nettop</code>. تستغرق كل معاينة بضع ثوانٍ؛ والفاصل الأقصر يُجريها تباعاً فحسب.</li>
+<li><b><span class="ui">ضغط ⁨SSH⁩</span></b> — يفعّل ضغط <code>ssh</code> (<code>-C</code>).
+يبادل قليلاً من المعالج بتدفّق بيانات أصغر، وهو ما قد يجعل التشغيل أكثر سلاسة بوضوح على
+اتصال منزلي بطيء أو عالي الكُمون. يمكن تركه مفعّلاً بأمان.</li>
+</ul>
+<div class="see"><h3>انظر أيضاً</h3><ul><li><a href="connect.html">إعداد اتصال وبدؤه</a></li><li><a href="traffic-log.html">حركة البيانات والسجل</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

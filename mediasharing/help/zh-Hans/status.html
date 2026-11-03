@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>状态与情况</title>
+<meta name="description" content="状态框显示连接正在做什么、它的隧道进程，以及已运行多久。" />
+<meta name="keywords" content="状态, 情况, 运行中, 正在连接, 运行时长, 隧道, PID" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="status"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI 帮助</a> › 使用</nav>
+<h1>状态与情况</h1>
+<p class="lead">状态框是你开始和停止、并观察发生了什么的地方。</p>
+
+<h2>各状态的含义</h2>
+<table>
+<tr><th>状态</th><th>正在发生的事</th></tr>
+<tr><td>空闲</td><td>未连接。按 <span class="ui">开始</span> 以开始。</td></tr>
+<tr><td>正在连接</td><td>正在打开到远程 Mac 的 SSH 隧道。</td></tr>
+<tr><td>需要密码</td><td>密钥登录未成功；在 <span class="ui">SSH 身份验证</span> 中输入密码。</td></tr>
+<tr><td>正在查询</td><td>询问远程 Mac 它广播的是哪个“家庭共享”资料库。</td></tr>
+<tr><td>正在注册</td><td>通过 Bonjour 在这里发布该资料库。</td></tr>
+<tr><td>运行中</td><td>已上线。资料库在 Apple TV / 音乐 App 中可用。</td></tr>
+<tr><td>正在重新连接</td><td>连接已中断；正在自动重试。</td></tr>
+<tr><td>正在停止</td><td>正在关闭隧道并移除本地广告。</td></tr>
+<tr><td>错误</td><td>出了问题；日志会说明原因。请参阅<a href="troubleshooting.html">如果无法连接</a>。</td></tr>
+</table>
+
+<h2>其他行</h2>
+<ul>
+<li><span class="ui">隧道 PID</span>——后台 <code>ssh</code> 隧道的进程 ID，用于采样<a href="traffic-log.html">流量</a>并干净地关闭它。</li>
+<li><span class="ui">运行时长</span>——当前连接已建立多久。</li>
+</ul>
+<p>底部的按钮随状态而变：空闲时为 <span class="ui">开始</span>，连接时为 <span class="ui">停止</span>，仍在连接时为 <span class="ui">取消</span>。</p>
+<div class="see"><h3>另请参阅</h3><ul><li><a href="libraries.html">选择要发布哪些资料库</a></li><li><a href="reconnecting.html">重新连接与睡眠</a></li><li><a href="traffic-log.html">流量与日志</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

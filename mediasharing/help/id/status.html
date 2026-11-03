@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Status dan keadaan</title>
+<meta name="description" content="Kotak Status menunjukkan apa yang dilakukan koneksi, proses terowongannya, dan sudah berapa lama berjalan." />
+<meta name="keywords" content="status, keadaan, aktif, menghubungkan, waktu aktif, terowongan, PID" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="status"></a>
+<nav class="crumbs"><a href="index.html">Bantuan Media Sharing GUI</a> › Penggunaan</nav>
+<h1>Status dan keadaan</h1>
+<p class="lead">Kotak Status adalah tempat Anda Mulai dan Berhenti, serta mengamati apa yang terjadi.</p>
+
+<h2>Arti keadaan</h2>
+<table>
+<tr><th>Keadaan</th><th>Yang sedang terjadi</th></tr>
+<tr><td>DIAM</td><td>Tidak tersambung. Tekan <span class="ui">Mulai</span> untuk memulai.</td></tr>
+<tr><td>MENGHUBUNGKAN</td><td>Membuka terowongan SSH ke Mac jarak jauh.</td></tr>
+<tr><td>PERLU KATA SANDI</td><td>Login kunci tidak berhasil; masukkan kata sandi di <span class="ui">Autentikasi SSH</span>.</td></tr>
+<tr><td>MENGKUERI</td><td>Menanyakan ke Mac jarak jauh pustaka Berbagi Rumah mana yang diiklankannya.</td></tr>
+<tr><td>MENDAFTARKAN</td><td>Menerbitkan pustaka itu di sini lewat Bonjour.</td></tr>
+<tr><td>AKTIF</td><td>Tayang. Pustaka tersedia di app Apple TV / Musik.</td></tr>
+<tr><td>MENYAMBUNGKAN ULANG</td><td>Koneksi terputus; mencoba lagi dengan sendirinya.</td></tr>
+<tr><td>MENGHENTIKAN</td><td>Menutup terowongan dan menghapus iklan lokal.</td></tr>
+<tr><td>GALAT</td><td>Ada yang salah; log menjelaskan apa. Lihat <a href="troubleshooting.html">Jika tidak tersambung</a>.</td></tr>
+</table>
+
+<h2>Baris lainnya</h2>
+<ul>
+<li><span class="ui">PID tunnel</span> — ID proses terowongan <code>ssh</code> latar belakang, dipakai untuk
+mengukur <a href="traffic-log.html">lalu lintas</a> dan menutupnya dengan rapi.</li>
+<li><span class="ui">Waktu aktif</span> — sudah berapa lama koneksi saat ini terjalin.</li>
+</ul>
+<p>Tombol di bawah berubah sesuai keadaan: <span class="ui">Mulai</span> saat diam, <span class="ui">Berhenti</span> saat
+tersambung, dan <span class="ui">Batal</span> selagi masih menyambung.</p>
+<div class="see"><h3>Lihat juga</h3><ul><li><a href="libraries.html">Memilih pustaka mana yang diterbitkan</a></li><li><a href="reconnecting.html">Menyambung ulang dan tidur</a></li><li><a href="traffic-log.html">Lalu lintas dan log</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

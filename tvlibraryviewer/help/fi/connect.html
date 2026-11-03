@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jaettuun kirjastoon yhdistäminen</title>
+<meta name="description" content="Yhdistä toinen Mac, iPad, iPhone tai Apple TV Maciin, joka jakaa kirjastonsa." />
+<meta name="keywords" content="yhdistä, Bonjour, verkko, SSH, osoite, varmenne, sormenjälki, luota, kirjaudu, salasana" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer -ohje</a> › Aloittaminen</nav>
+<h1>Jaettuun kirjastoon yhdistäminen</h1>
+<p class="lead">Jokainen laite yhdistetään kerran. Sen jälkeen se avaa saman kirjaston itsestään.</p>
+
+<h2>Avaa Yhdistä jaettuun kirjastoon</h2>
+<ul>
+<li><b>Mac:</b> valitse <span class="ui">Arkisto › Yhdistä jaettuun kirjastoon…</span> (<kbd>⌘K</kbd>).</li>
+<li><b>iPad ja iPhone:</b> napauta sivupalkissa <span class="ui">Yhdistä jaettuun kirjastoon…</span> (näppäimistöllä <kbd>⌘K</kbd>).</li>
+<li><b>Apple TV:</b> ensimmäisellä kerralla TV Library yhdistää verkon ensimmäiseen Maciin, joka jakaa
+ilman salasanaa. Muussa tapauksessa siirry kohtaan <span class="ui">Kirjastot › Yhdistä toiseen kirjastoon…</span>.</li>
+</ul>
+
+<h2>Valitse, miten Maciin otetaan yhteys</h2>
+<h3>Tämä verkko</h3>
+<p>Samassa verkossa olevat Macit, joissa jakaminen on päällä, näkyvät nimellä. Valitse yksi.</p>
+<h3>Etä (SSH)</h3>
+<p>Toisessa verkossa olevalle Macille, esimerkiksi toisessa kodissa. Kirjoita osoite, jolla otat SSH-yhteyden kyseiseen
+Maciin (tai mihin tahansa sen verkon tietokoneeseen), ja käyttäjänimi, jos se on eri. TV Library Viewer kirjautuu
+sisään, etsii kirjaston siitä verkosta ja yhdistää SSH-yhteyden kautta.</p>
+<ul>
+<li>Ensimmäisellä kerralla se näyttää isännän avaimen vertailtavaksi ja vahvistettavaksi.</li>
+<li>Macissa käytetään omaa SSH-avaintasi, jos isäntä hyväksyy sen; muuten salasanaa kysytään,
+ja se säilytetään Avainnipussa.</li>
+<li>iPadilla, iPhonella ja Apple TV:llä on oma avaimensa. Ensimmäisen salasanakirjautumisen jälkeen laite tarjoutuu
+asentamaan avaimen isäntään, jotta salasanaa ei tarvita uudelleen.</li>
+</ul>
+<h3>Osoite</h3>
+<p>Macille, johon tämä laite saa suoran yhteyden: VPN:n, kuten Tailscalen, kautta tai portin kautta, jonka reititin
+ohjaa siihen. Kirjoita osoite ja portti (portti 47100, ellei sitä ole muutettu) sekä tilin nimi
+ja salasana, jos kirjastossa on tilejä.</p>
+
+<h2>Luota kirjaston varmenteeseen</h2>
+<p>Ensimmäinen yhteys näyttää kirjaston varmenteen sormenjäljen. Vertaa sitä kirjaston sisältävän Macin kohdassa
+<span class="ui">Asetukset › Jakaminen</span> näkyvään, ja valitse sitten <span class="ui">Luota ja yhdistä</span>. Siitä
+lähtien laite tarkistaa varmenteen joka kerta ja hylkää kirjaston, jonka varmenne on
+muuttunut.</p>
+
+<h2>Kirjautuminen</h2>
+<p>Jos kirjastossa on tilejä, anna kyseisen Macin tilisi nimi ja salasana. Laite
+säilyttää ne Avainnipussaan. Jos tilejä ei ole, jätä nimi tyhjäksi ja käytä kirjaston salasanaa,
+jos sellainen on.</p>
+<div class="see"><h3>Katso myös</h3><ul><li><a href="away.html">Katselu kodin ulkopuolella</a></li><li><a href="sidebar-libraries.html">Kirjastojen välillä vaihtaminen</a></li><li><a href="settings-accounts.html">Tilit-asetukset</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

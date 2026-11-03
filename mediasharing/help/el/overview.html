@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="el">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Πώς λειτουργεί το Media Sharing GUI</title>
+<meta name="description" content="Κάνει μια βιβλιοθήκη Κοινής χρήσης στο σπίτι σε έναν Mac κάπου αλλού να εμφανίζεται στο δίκτυο αυτού του Mac, για αναπαραγωγή μέσω σήραγγας SSH." />
+<meta name="keywords" content="επισκόπηση, κοινή χρήση στο σπίτι, media sharing, SSH, σήραγγα, Bonjour, Apple TV, Μουσική, απομακρυσμένο" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="overview"></a>
+<nav class="crumbs"><a href="index.html">Βοήθεια Media Sharing GUI</a> › Έναρξη</nav>
+<h1>Πώς λειτουργεί το Media Sharing GUI</h1>
+<p class="lead">Κάνει μια βιβλιοθήκη σε έναν Mac κάπου αλλού να φαίνεται σαν να είναι ακριβώς εδώ, στο δίκτυό σας.</p>
+
+<p>Η Κοινή χρήση στο σπίτι (Media Sharing) επιτρέπει στην εφαρμογή <span class="ui">Apple TV</span>, στη <span class="ui">Μουσική</span> και στο <span class="ui">iTunes</span> να αναπαράγουν
+από άλλον υπολογιστή — αλλά μόνο από έναν στο <b>ίδιο τοπικό δίκτυο</b>. Το Media Sharing GUI
+αίρει αυτόν τον περιορισμό. Στρέψτε το σε έναν Mac στο σπίτι (ή σε οποιονδήποτε μπορείτε να φτάσετε μέσω SSH) και η βιβλιοθήκη
+που μοιράζεται εμφανίζεται εδώ στη λίστα πηγών του <span class="ui">Apple TV</span> ή της <span class="ui">Μουσικής</span>, σαν αυτός ο Mac να ήταν στο
+διπλανό δωμάτιο.</p>
+
+<h2>Τι κάνει, βήμα βήμα</h2>
+<ol>
+<li>Ανοίγει μια <b>σήραγγα SSH</b> από αυτόν τον Mac στον απομακρυσμένο.</li>
+<li>Ρωτά τον απομακρυσμένο Mac, μέσω αυτής της σήραγγας, ποια υπηρεσία Κοινής χρήσης στο σπίτι εκπέμπει στο δικό του
+τοπικό δίκτυο.</li>
+<li><b>Αναδημοσιεύει την ίδια υπηρεσία εδώ</b>, μέσω Bonjour, στραμμένη πίσω μέσα από τη σήραγγα —
+ώστε οι εφαρμογές σε αυτόν τον Mac να βλέπουν τη βιβλιοθήκη σαν να ήταν κοντά στο LAN.</li>
+</ol>
+<p>Ενώ εκτελείται, η αναπαραγωγή από εκείνη τη βιβλιοθήκη ταξιδεύει κρυπτογραφημένη μέσα στη σήραγγα SSH. Ενεργοποιήστε και απενεργοποιήστε
+με <span class="ui">Έναρξη</span> και <span class="ui">Διακοπή</span> στο πλαίσιο Κατάσταση.</p>
+
+<h2>Τι χρειάζεστε</h2>
+<ul>
+<li><b>Στον Mac στο σπίτι:</b> την Κοινή χρήση στο σπίτι (ή το Media Sharing) ενεργοποιημένη στην εφαρμογή <span class="ui">Apple TV</span> ή
+<span class="ui">Μουσική</span>, και την απομακρυσμένη σύνδεση (SSH) ενεργή. Δείτε <a href="remote-setup.html">Στον Mac στο σπίτι</a>.</li>
+<li><b>Έναν τρόπο να τον φτάσετε:</b> τη διεύθυνσή του ή το όνομα δυναμικού DNS, και τη θύρα SSH που ο δρομολογητής σας
+προωθεί σε αυτόν.</li>
+<li><b>Σε αυτόν τον Mac:</b> τίποτα ιδιαίτερο — το Media Sharing GUI χειρίζεται για εσάς τα ενσωματωμένα εργαλεία <code>ssh</code>
+και Bonjour.</li>
+</ul>
+
+<h2>Έναρξη</h2>
+<ol>
+<li>Ρυθμίστε μία φορά τον <a href="remote-setup.html">Mac στο σπίτι</a>.</li>
+<li><a href="connect.html">Συμπληρώστε μια σύνδεση και πατήστε Έναρξη</a>.</li>
+<li><a href="libraries.html">Επιλέξτε ποιες βιβλιοθήκες</a> θα δημοσιευτούν εδώ.</li>
+</ol>
+<div class="see"><h3>Δείτε επίσης</h3><ul><li><a href="remote-setup.html">Στον Mac στο σπίτι</a></li><li><a href="connect.html">Ρύθμιση και έναρξη μιας σύνδεσης</a></li><li><a href="privacy.html">Τι διαβάζει, αλλάζει και κρατά το Media Sharing GUI</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

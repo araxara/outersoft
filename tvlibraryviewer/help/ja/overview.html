@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>TV Library Viewerの仕組み</title>
+<meta name="description" content="ライブラリのあるMacがライブラリを共有し、ほかのMac、iPad、iPhone、Apple TV、CarPlayがそれを表示します。" />
+<meta name="keywords" content="概要, サーバ, クライアント, Mac, iPad, iPhone, Apple TV, CarPlay, 共有, ライブラリ" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="overview"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer ヘルプ</a> › はじめに</nav>
+<h1>TV Library Viewerの仕組み</h1>
+<p class="lead">テレビ番組は1台のMacに保管します。ほかのデバイスはすべて、そのMacから番組を表示します。</p>
+
+<h2>ライブラリのあるMac</h2>
+<p>Apple TVアプリにテレビ番組が入っているMacでTV Library Viewerを実行し、ライブラリを共有します。そのMacでTV Library Viewerは次のことを行います：</p>
+<ul>
+<li>TVアプリのライブラリとアートワークを直接読み取るので、すばやく開き、TVアプリで何かが変わっても常に最新の状態に保たれます。</li>
+<li>エピソードを視聴済みにする、再生位置、エピソードの削除など、すべての変更をTVアプリを通じて行います。ライブラリの記録はTVアプリだけが持ちます。</li>
+<li><span class="ui">設定 › 共有</span>がオンのときにほかのデバイスとライブラリを共有し、それらのアカウント、視聴状況、詳しい説明、キャストを独自のデータベースに保存します。</li>
+<li>ほかのデバイスから接続するには、電源が入っていてスリープしていない必要があります。共有中は自動的にスリープしないようにします（オフにすることもできます）。</li>
+</ul>
+<div class="note"><b>注記：</b>ビデオファイルが削除されることはありません。エピソードを削除しても、TVアプリのライブラリから項目が削除されるだけで、ファイルはそのままの場所に残ります。</div>
+
+<h2>ライブラリを表示するデバイス</h2>
+<p>ほかのデバイスはすべて閲覧用です。独自のライブラリは持たず、共有ライブラリを表示し、エピソードをネットワーク経由で再生して、視聴した内容をライブラリのあるMacに送り返します。</p>
+<table>
+<tr><th>デバイス</th><th>アプリ</th><th>追加される機能</th></tr>
+<tr><td>別のMac</td><td>TV Library Viewer</td><td>独自のライブラリがあればそれも表示。オフライン視聴用のダウンロード。</td></tr>
+<tr><td>iPadとiPhone</td><td>TV Library</td><td>ダウンロード、スマートダウンロード、オフライン視聴。ピクチャ・イン・ピクチャ。</td></tr>
+<tr><td>Apple TV</td><td>TV Library</td><td>大画面、Top Shelf、ユーザごとのプロフィール。ダウンロードはありません。</td></tr>
+<tr><td>CarPlay</td><td>iPhoneのTV Library</td><td>車の画面に番組とエピソードを表示。運転中は音声、駐車中はビデオ。</td></tr>
+</table>
+<p>どのデバイスでも見た目と操作は同じです。同じ表示、同じメニュー、同じ用語を使い、各デバイスに合わせたレイアウトになっています。</p>
+
+<h2>はじめに</h2>
+<ol>
+<li>ライブラリのあるMacで、<a href="share.html">共有をオンにします</a>。</li>
+<li>複数の人が視聴する場合は、それぞれの視聴状況を別々に保てるように、人ごとに<a href="settings-accounts.html">アカウントを追加します</a>。</li>
+<li>ほかの各デバイスで、<a href="connect.html">共有ライブラリに接続します</a>。</li>
+</ol>
+<div class="see"><h3>関連項目</h3><ul><li><a href="share.html">Macのライブラリを共有する</a></li><li><a href="connect.html">共有ライブラリに接続する</a></li><li><a href="privacy.html">TV Library Viewerが読み取る情報、変更する情報、保存する情報</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

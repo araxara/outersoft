@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>No Mac de casa</title>
+<meta name="description" content="Ative o Compartilhamento Familiar e o início de sessão remoto no Mac remoto, e torne-o acessível de fora." />
+<meta name="keywords" content="compartilhamento familiar, media sharing, início de sessão remoto, SSH, redirecionamento de porta, DNS dinâmico, roteador" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="remote-setup"></a>
+<nav class="crumbs"><a href="index.html">Ajuda do Media Sharing GUI</a> › Primeiros passos</nav>
+<h1>No Mac de casa</h1>
+<p class="lead">Faça isto uma vez no Mac cuja biblioteca você quer alcançar.</p>
+
+<h2>Ativar o compartilhamento da biblioteca</h2>
+<ul>
+<li>No app <span class="ui">Apple TV</span> ou <span class="ui">Música</span>, ative o <b>Compartilhamento Familiar</b> (sistemas mais antigos o chamam de
+<b>Media Sharing</b>), com sua conta Apple conectada.</li>
+<li>Deixe esse Mac acordado, ou configure-o para permitir o acesso à rede em repouso, para que ele possa responder quando você se
+conectar.</li>
+</ul>
+
+<h2>Ativar o início de sessão remoto (SSH)</h2>
+<ol>
+<li>No Mac remoto, abra <span class="ui">Ajustes do Sistema</span> › <span class="ui">Geral</span> › <span class="ui">Compartilhamento</span>.</li>
+<li>Ative <span class="ui">Início de Sessão Remoto</span>. Anote a conta de usuário com permissão para entrar.</li>
+</ol>
+<div class="note"><b>Dica:</b> Configure uma chave SSH para não precisar de senha toda vez. Copie a
+chave pública deste Mac para o remoto (<code>ssh-copy-id user@host</code>). O Media Sharing GUI ainda
+aceita uma senha como reserva — consulte <a href="authentication.html">Chaves e senhas SSH</a>.</div>
+
+<h2>Torná-lo acessível de fora</h2>
+<ul>
+<li><b>Redirecionamento de porta:</b> no roteador de casa, redirecione uma porta externa para a porta SSH do Mac remoto
+(22). Muita gente redireciona uma porta externa incomum, como 22022, para evitar ruído — essa porta externa
+é a que você coloca em <a href="settings.html">Porta SSH remota</a>.</li>
+<li><b>Um nome que acompanha o IP de casa:</b> os endereços de internet residenciais mudam, então um nome de DNS dinâmico
+(como <code>myhome.example.com</code>) que o acompanha poupa você de perseguir números.</li>
+</ul>
+<p>Assim que o início de sessão remoto funcionar de fora — teste com <code>ssh user@host -p PORT</code>
+no Terminal — o Media Sharing GUI pode usá-lo.</p>
+<div class="see"><h3>Consulte também</h3><ul><li><a href="connect.html">Configurar e iniciar uma conexão</a></li><li><a href="authentication.html">Chaves e senhas SSH</a></li><li><a href="settings.html">Referência da configuração</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

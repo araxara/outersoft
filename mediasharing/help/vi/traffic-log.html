@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lưu lượng và nhật ký</title>
+<meta name="description" content="Theo dõi đường hầm đang chở bao nhiêu dữ liệu, và đọc (hoặc lưu) một nhật ký mọi việc nó làm." />
+<meta name="keywords" content="lưu lượng, nettop, byte, vào, ra, đỉnh, nhật ký, tệp, Finder" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="traffic-log"></a>
+<nav class="crumbs"><a href="index.html">Trợ giúp Media Sharing GUI</a> › Sử dụng</nav>
+<h1>Lưu lượng và nhật ký</h1>
+<p class="lead">Hai ô cho thấy kết nối đang ra sao: nó chuyển bao nhiêu, và nó đã làm gì.</p>
+
+<h2>Lưu lượng phiên SSH</h2>
+<ul>
+<li><span class="ui">Vào</span> và <span class="ui">Ra</span> cho thấy số byte chảy qua tiến trình đường hầm, với một con số <span class="ui">Đỉnh</span>
+cho thời điểm bận rộn nhất.</li>
+<li>Các con số được lấy mẫu bằng công cụ hệ thống <code>nettop</code>, không phải bắt gói thô, nên
+là một chỉ dẫn gần đúng chứ không phải đồng hồ đo chính xác.</li>
+<li>Tần suất lấy mẫu lại được đặt bởi <span class="ui">Khoảng thăm dò lưu lượng</span> trong
+<a href="settings.html">Cấu hình</a>. Mỗi lần lấy mẫu mất vài giây; một khoảng ngắn hơn
+thế chỉ chạy các lần lấy mẫu liên tiếp.</li>
+</ul>
+
+<h2>Nhật ký</h2>
+<p>Ô <span class="ui">Nhật ký</span> ghi lại từng bước — mở đường hầm, tìm thư viện, xuất bản chúng,
+kết nối lại, và bất kỳ lỗi nào. Nó cũng được ghi vào một tệp trên đĩa; ô hiển thị
+<span class="ui">Đã lưu vào:</span> đường dẫn của nó. Nhấp đường dẫn đó để <b>hiện nhật ký trong Finder</b>, tiện khi bạn muốn
+gửi kèm nó trong lúc xử lý một vấn đề.</p>
+<div class="see"><h3>Xem thêm</h3><ul><li><a href="status.html">Trạng thái và tình trạng</a></li><li><a href="troubleshooting.html">Nếu không kết nối được</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

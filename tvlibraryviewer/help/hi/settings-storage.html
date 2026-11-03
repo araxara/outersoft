@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>स्टोरेज सेटिंग्ज़</title>
+<meta name="description" content="लाइब्रेरी कितनी बड़ी है, और TV Library Viewer का डेटाबेस और कैश कितनी जगह लेते हैं।" />
+<meta name="keywords" content="सेटिंग्ज़, स्टोरेज, डेटाबेस, आकार, जगह, शो, एपिसोड, कलाकार, अभिनेताओं की तस्वीरें, कैश, TVmaze, TMDb" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings-storage"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer सहायता</a> › सेटिंग्ज़</nav>
+<h1>स्टोरेज सेटिंग्ज़</h1>
+<p class="lead"><span class="ui">TV Library Viewer › सेटिंग्ज़</span> चुनें, फिर <span class="ui">स्टोरेज</span> पर क्लिक करें।</p>
+
+<h2>इस Mac की TV लाइब्रेरी</h2>
+<p>TV ऐप की लाइब्रेरी में शो और एपिसोड की संख्या, और उसके डेटाबेस का आकार। वीडियो
+फ़ाइलें नहीं गिनी जातीं।</p>
+
+<h2>TV Library Viewer डेटाबेस</h2>
+<p>इस Mac पर TV Library Viewer का अपना डेटाबेस, जो लाइब्रेरी देखने वाले हर डिवाइस के साथ शेयर होता है।</p>
+<table>
+<tr><th>हिस्सा</th><th>इसमें क्या है</th></tr>
+<tr><td><span class="ui">शो की जानकारी</span></td><td>AppleScript से दिए गए पूरे विवरण, और हर शो के
+कलाकार: अभिनेताओं के नाम और भूमिकाएँ।</td></tr>
+<tr><td><span class="ui">अनुवाद</span></td><td>एपिसोड के शीर्षक और विवरण, उन भाषाओं में अनुवादित जिन पर ऐप सेट हैं।</td></tr>
+<tr><td><span class="ui">कलाकार और टीम</span></td><td>हर व्यक्ति की एक छोटी तस्वीर, और TVmaze और TMDb पर
+उनके पेजों के पते।</td></tr>
+<tr><td><span class="ui">खाते और देखना</span></td><td>अकाउंट, मुख्य अकाउंट को छोड़कर हर अकाउंट का
+देखना, और अकाउंट के लॉग।</td></tr>
+<tr><td><span class="ui">डेटाबेस संरचना और खाली जगह</span></td><td>SQLite के अपने रिकॉर्ड, और वह जगह जिसे यह फिर से इस्तेमाल करता है।</td></tr>
+<tr><td><span class="ui">हाल के बदलाव</span></td><td>वे बदलाव जो अभी डेटाबेस में शामिल नहीं हुए। यह काम
+समय-समय पर होता है।</td></tr>
+</table>
+<p>किसी शो के कलाकार और टीम पहली बार उसका पेज खुलने पर, यहाँ या किसी भी डिवाइस पर,
+TVmaze और TMDb पर खोजे जाते हैं। लोगों का विवरण हर बार उन्हें खोलने पर लाया जाता है, इसलिए वह कभी पुराना नहीं होता,
+और सहेजा नहीं जाता। डेटाबेस फ़ाइल देखने के लिए <span class="ui">Finder में दिखाएँ</span> पर क्लिक करें।</p>
+
+<h2><a name="tmdb"></a>कलाकार और टीम का विवरण: TMDb टोकन</h2>
+<p>TVmaze के लिए कुछ भी सेट अप नहीं करना पड़ता। TMDb (The Movie Database) निर्देशक और पटकथा लेखक, वे अभिनेता जो
+TVmaze में नहीं हैं, और जीवनी जोड़ता है, अक्सर आपकी भाषा में। इसके लिए आपका अपना टोकन चाहिए: TMDb
+अकाउंट वाले हर व्यक्ति को निजी, गैर-व्यावसायिक उपयोग के लिए मुफ़्त टोकन देता है। TV Library Viewer
+के साथ कोई टोकन नहीं आता।</p>
+<ol>
+<li>themoviedb.org पर एक मुफ़्त अकाउंट बनाएँ, और साइन इन करें।</li>
+<li>अपने अकाउंट आइकन पर क्लिक करें, <span class="ui">Settings</span> चुनें, फिर <span class="ui">API</span> पर क्लिक करें।</li>
+<li>API की का अनुरोध करें: <span class="ui">Developer</span> चुनें, शर्तें स्वीकार करें, और अपने उपयोग को निजी
+और गैर-व्यावसायिक बताएँ (उदाहरण के लिए, “Show cast and biographies in my own TV library app”)।</li>
+<li>जब की तैयार हो जाए, तो <span class="ui">API Read Access Token</span> कॉपी करें (लंबा वाला, छोटी API Key नहीं)।</li>
+<li>लाइब्रेरी वाले Mac पर, <span class="ui">TV Library Viewer › सेटिंग्ज़</span> चुनें, <span class="ui">स्टोरेज</span> पर क्लिक करें, और
+उसे <span class="ui">TMDb API Read Access Token</span> में पेस्ट करें।</li>
+<li><span class="ui">जाँचें</span> पर क्लिक करें। “TMDb यह टोकन स्वीकार करता है” का मतलब है कि यह काम करता है।</li>
+</ol>
+<p>टोकन Mac के कीचेन में रखा जाता है। इसका उपयोग केवल लाइब्रेरी वाला Mac करता है; आपके दूसरे
+डिवाइस कलाकार और विवरण उसी Mac से पाते हैं। जिन शो को पहले खोजा जा चुका है उन्हें TMDb के कलाकार और टीम
+अगली बार उनका पेज खुलने पर मिलते हैं। अगर आप नया टोकन जाँचे बिना सेटिंग्ज़ बंद कर दें, तो उसकी जाँच तभी होती है,
+और अगर TMDb उसे अस्वीकार करे तो आपको बताया जाता है।</p>
+<div class="note"><b>ध्यान दें:</b> यह उत्पाद TMDB API का उपयोग करता है, लेकिन TMDB द्वारा इसका समर्थन या प्रमाणन नहीं किया गया है।</div>
+
+<h2><a name="google"></a>अनुवाद: एक Google कुंजी</h2>
+<p>एपिसोड के शीर्षक और विवरण इस Mac पर Apple के अनुवाद से, मुफ़्त में, हर डिवाइस की भाषा में अनुवादित
+होते हैं। यह ग्रीक, चेक, हंगेरियन, रोमानियाई, फ़ारसी, उर्दू या बांग्ला में अनुवाद नहीं कर सकता। इन भाषाओं के
+लिए अपनी Google Cloud Translation API कुंजी जोड़ें। इसकी ज़रूरत केवल लाइब्रेरी वाले Mac को है; उसे देखने
+वाले डिवाइस को नहीं। हर महीने पहले 5,00,000 अक्षर मुफ़्त हैं, और हर टेक्स्ट का अनुवाद केवल एक बार होता है।</p>
+<ol>
+<li>console.cloud.google.com पर जाएँ और अपने Google अकाउंट से साइन इन करें।</li>
+<li>एक प्रोजेक्ट बनाएँ: सबसे ऊपर प्रोजेक्ट मेनू पर क्लिक करें, फिर <span class="ui">New Project</span> पर, और उसे
+कोई नाम दें, जैसे “TV Library Viewer”।</li>
+<li>बिलिंग चालू करें: मेनू ☰ में <span class="ui">Billing</span> चुनें और एक बिलिंग अकाउंट जोड़ें। Google मुफ़्त
+उपयोग के लिए भी इसे माँगता है। सुरक्षित रहने के लिए, <span class="ui">Budgets &amp; alerts</span> में एक बजट जोड़ें, जैसे $1।</li>
+<li>☰ › <span class="ui">APIs &amp; Services › Library</span> चुनें, <span class="ui">Cloud Translation API</span> खोजें, और
+<span class="ui">Enable</span> पर क्लिक करें।</li>
+<li>☰ › <span class="ui">APIs &amp; Services › Credentials</span> चुनें, फिर <span class="ui">Create credentials › API key</span>, और
+कुंजी कॉपी करें (यह “AIza” से शुरू होती है)।</li>
+<li>सुझाव: कुंजी के नाम पर क्लिक करें, API restrictions के नीचे <span class="ui">Restrict key</span> चुनें,
+<span class="ui">Cloud Translation API</span> पर टिक करें, और <span class="ui">Save</span> पर क्लिक करें, ताकि कुंजी केवल अनुवाद के लिए काम करे।</li>
+<li>लाइब्रेरी वाले Mac पर, <span class="ui">TV Library Viewer › सेटिंग्ज़</span> चुनें, <span class="ui">स्टोरेज</span> पर क्लिक करें,
+कुंजी को <span class="ui">Google Cloud Translation API कुंजी</span> में पेस्ट करें, और <span class="ui">जाँचें</span> पर क्लिक करें।</li>
+</ol>
+<p>कुंजी Mac के कीचेन में रखी जाती है और केवल इन सात भाषाओं के लिए उपयोग होती है। इसे किसी से साझा न
+करें: इससे अनुवादित हर चीज़ का बिल आपके Google अकाउंट में जाता है।</p>
+
+<h2>कैश</h2>
+<p>आर्टवर्क, और वे लाइब्रेरी जिन्हें इस Mac ने दूसरे Mac से देखा है। ज़रूरत पड़ने पर कैश फिर से बनाए जाते हैं,
+और जगह कम होने पर macOS उन्हें खाली कर देता है।</p>
+<div class="see"><h3>यह भी देखें</h3><ul><li><a href="show-page.html">शो पेज और कलाकार</a></li><li><a href="privacy.html">TV Library Viewer क्या पढ़ता है, क्या बदलता है और क्या रखता है</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

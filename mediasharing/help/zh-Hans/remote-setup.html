@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>在家里的 Mac 上</title>
+<meta name="description" content="在远程 Mac 上开启“家庭共享”和远程登录，并使其可从外部访问。" />
+<meta name="keywords" content="家庭共享, 媒体共享, 远程登录, SSH, 端口转发, 动态 DNS, 路由器" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="remote-setup"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI 帮助</a> › 入门</nav>
+<h1>在家里的 Mac 上</h1>
+<p class="lead">在你想访问其资料库的那台 Mac 上做一次即可。</p>
+
+<h2>开启资料库的共享</h2>
+<ul>
+<li>在 <span class="ui">Apple TV</span> 或 <span class="ui">音乐</span> App 中，登录你的 Apple 账户并开启<b>家庭共享</b>
+（较旧的系统称之为<b>媒体共享</b>）。</li>
+<li>让那台 Mac 保持唤醒，或将其设为睡眠时允许网络访问，这样你连接时它才能应答。</li>
+</ul>
+
+<h2>开启远程登录（SSH）</h2>
+<ol>
+<li>在远程 Mac 上，打开 <span class="ui">系统设置</span> › <span class="ui">通用</span> › <span class="ui">共享</span>。</li>
+<li>开启 <span class="ui">远程登录</span>。记下获准登录的用户账户。</li>
+</ol>
+<div class="note"><b>提示：</b>设置一个 SSH 密钥，就不必每次都输入密码。将这台 Mac 的公钥复制到远程 Mac
+（<code>ssh-copy-id user@host</code>）。Media Sharing GUI 仍会接受密码作为后备——请参阅
+<a href="authentication.html">SSH 密钥与密码</a>。</div>
+
+<h2>使其可从外部访问</h2>
+<ul>
+<li><b>端口转发：</b>在家中的路由器上，把一个外部端口转发到远程 Mac 的 SSH 端口（22）。许多人会转发一个不常见的外部端口，
+例如 22022，以避免噪音——你在 <a href="settings.html">远程 SSH 端口</a> 中填写的就是那个外部端口。</li>
+<li><b>跟随家庭 IP 的名称：</b>家庭网络地址会变化，所以一个跟随它的动态 DNS 名称
+（如 <code>myhome.example.com</code>）能让你不必追逐数字。</li>
+</ul>
+<p>一旦远程登录能从外部工作（在终端中用 <code>ssh user@host -p PORT</code> 测试），Media Sharing GUI 就能使用它。</p>
+<div class="see"><h3>另请参阅</h3><ul><li><a href="connect.html">设置并启动连接</a></li><li><a href="authentication.html">SSH 密钥与密码</a></li><li><a href="settings.html">配置参考</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

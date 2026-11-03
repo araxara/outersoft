@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="da">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Se med, når du ikke er hjemme</title>
+<meta name="description" content="Tre måder at nå dit bibliotek fra et andet netværk: SSH, et VPN eller en videresendt port." />
+<meta name="keywords" content="ekstern, ude, rejse, SSH, VPN, Tailscale, portvideresendelse, router, 47100, offline" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="away"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer Hjælp</a> › Kom i gang</nav>
+<h1>Se med, når du ikke er hjemme</h1>
+<p class="lead">Dit bibliotek bliver på Mac'en derhjemme. Vælg én måde at nå det på fra andre steder.</p>
+
+<h2>Via SSH</h2>
+<p>Bedst, hvis du allerede kan logge ind på den Mac, eller en computer på dens netværk, med SSH. Der skal ikke
+indstilles andet. Brug <span class="ui">Ekstern (SSH)</span> i Opret forbindelse til delt bibliotek. Alt går gennem
+SSH-forbindelsen.</p>
+
+<h2>Via et VPN</h2>
+<p>Med et VPN som Tailscale på begge enheder bruger du <span class="ui">Adresse</span> med Mac'ens VPN-adresse og
+port 47100.</p>
+
+<h2>Via en videresendt port</h2>
+<ol>
+<li>Videresend port 47100 (eller porten i <span class="ui">Indstillinger › Deling</span>) på din router til den Mac, der har
+biblioteket.</li>
+<li>Tilføj konti med stærke adgangskoder i <span class="ui">Indstillinger › Konti</span>.</li>
+<li>Brug <span class="ui">Adresse</span> på den anden enhed med dit hjems offentlige adresse og porten.</li>
+</ol>
+<div class="note"><b>Bemærk:</b> Forbindelser er altid krypterede, og enhederne kontrollerer bibliotekets
+certifikat, uanset hvorfra de opretter forbindelse. Ti forkerte adgangskoder fra samme adresse inden for 5 minutter
+afvises uden at blive kontrolleret.</div>
+
+<h2>Helt uden forbindelse</h2>
+<p>Hent afsnit, før du tager af sted (Mac, iPad og iPhone). Når biblioteket ikke kan nås, åbner
+appen det, som det så ud sidst, viser <span class="ui">Offline</span> og afspiller dine hentede afsnit. Det, du ser, sendes
+til Mac'en, så snart den kan nås igen.</p>
+<div class="see"><h3>Se også</h3><ul><li><a href="connect.html">Opret forbindelse til et delt bibliotek</a></li><li><a href="downloads.html">Hentede afsnit og offlinevisning</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

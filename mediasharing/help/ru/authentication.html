@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ключи и пароли SSH</title>
+<meta name="description" content="Media Sharing GUI входит по вашему ключу SSH, когда может, и переходит к паролю, который хранит в Связке ключей." />
+<meta name="keywords" content="аутентификация, SSH, ключ, пароль, связка ключей, забыть, вход" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="authentication"></a>
+<nav class="crumbs"><a href="index.html">Справка Media Sharing GUI</a> › Использование</nav>
+<h1>Ключи и пароли SSH</h1>
+<p class="lead">Вход по ключу — лучший вариант; сохранённый пароль — запасной.</p>
+
+<h2>С ключом SSH</h2>
+<p>Если удалённый Mac уже доверяет ключу SSH этого Mac, Media Sharing GUI входит без лишних слов —
+ничего вводить не нужно. Один раз настроить ключ (<code>ssh-copy-id user@host</code>) — самый гладкий способ
+пользоваться приложением. См. <a href="remote-setup.html">На Mac дома</a>.</p>
+
+<h2>С паролем</h2>
+<p>Если вход по ключу не удаётся, состояние меняется на <span class="ui">НУЖЕН ПАРОЛЬ</span>:</p>
+<ol>
+<li>Введите пароль учётной записи в блоке <span class="ui">Аутентификация SSH</span> и нажмите <span class="ui">Отправить</span>.</li>
+<li>Как только он сработает, пароль сохраняется в <b>Связке ключей</b> этого Mac, чтобы больше не спрашивать.</li>
+</ol>
+<p>Можно также заранее ввести пароль в <span class="ui">Конфигурация</span>; он используется только если вход по ключу
+не удаётся, и тоже перемещается в Связку ключей при первом успехе.</p>
+
+<h2>Забыть сохранённый пароль</h2>
+<p>Нажмите <span class="ui">Забыть сохранённый пароль</span>, чтобы удалить запись Связки ключей для текущего входа — например,
+после смены пароля на удалённом Mac. Следующее подключение снова спросит его.</p>
+<div class="see"><h3>См. также</h3><ul><li><a href="remote-setup.html">На Mac дома</a></li><li><a href="connect.html">Настройка и запуск подключения</a></li><li><a href="privacy.html">Что Media Sharing GUI читает, меняет и хранит</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

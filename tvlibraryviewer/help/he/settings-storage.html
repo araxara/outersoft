@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="he" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>הגדרות אחסון</title>
+<meta name="description" content="מה גודל הספרייה, וכמה מקום תופסים מסד הנתונים והמטמונים של ⁨TV Library Viewer⁩." />
+<meta name="keywords" content="הגדרות, אחסון, מסד נתונים, גודל, מקום, סדרות, פרקים, שחקנים, תמונות שחקנים, מטמון, TMDb, TVmaze" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings-storage"></a>
+<nav class="crumbs"><a href="index.html">עזרה של ⁨TV Library Viewer⁩</a> › הגדרות</nav>
+<h1>הגדרות אחסון</h1>
+<p class="lead">בחרו <span class="ui">⁨TV Library Viewer⁩ › הגדרות</span>, ואז לחצו על <span class="ui">אחסון</span>.</p>
+
+<h2>ספריית TV של ה‑Mac הזה</h2>
+<p>מספר הסדרות והפרקים בספרייה של היישום TV, וגודל מסד הנתונים שלה. קובצי
+הווידאו אינם נספרים.</p>
+
+<h2>מסד הנתונים של ⁨TV Library Viewer⁩</h2>
+<p>מסד הנתונים של ⁨TV Library Viewer⁩ עצמו ב‑Mac הזה, המשותף לכל מכשיר שמציג את הספרייה.</p>
+<table>
+<tr><th>חלק</th><th>מה הוא מכיל</th></tr>
+<tr><td><span class="ui">מידע על סדרות</span></td><td>תיאורים מלאים שניתנו דרך AppleScript, והשחקנים של כל
+סדרה: שמות השחקנים והתפקידים שלהם.</td></tr>
+<tr><td><span class="ui">תרגומים</span></td><td>כותרות ותיאורים של פרקים, מתורגמים לשפות שהיישומים מוגדרים אליהן.</td></tr>
+<tr><td><span class="ui">שחקנים וצוות</span></td><td>תמונה קטנה אחת לכל אדם, והכתובות של
+הדפים שלו ב‑⁨TVmaze⁩ וב‑⁨TMDb⁩.</td></tr>
+<tr><td><span class="ui">חשבונות וצפייה</span></td><td>החשבונות, הצפייה של כל חשבון מלבד
+החשבון הראשי, והיומנים של החשבונות.</td></tr>
+<tr><td><span class="ui">מבנה מסד הנתונים ושטח פנוי</span></td><td>הרשומות של SQLite עצמו, ושטח שהוא מנצל מחדש.</td></tr>
+<tr><td><span class="ui">שינויים אחרונים</span></td><td>שינויים שעדיין לא שולבו במסד הנתונים. זה קורה מדי
+פעם.</td></tr>
+</table>
+<p>את השחקנים והצוות של סדרה מחפשים ב‑⁨TVmaze⁩ וב‑⁨TMDb⁩ בפעם הראשונה שהדף שלה נפתח, כאן או
+בכל מכשיר. פרטי האנשים נטענים בכל פעם שפותחים אותם, כך שהם לעולם אינם מיושנים,
+והם אינם נשמרים. לחצו על <span class="ui">הצגה ב‑Finder</span> כדי לראות את קובץ מסד הנתונים.</p>
+
+<h2><a name="tmdb"></a>פרטי שחקנים וצוות: אסימון ⁨TMDb⁩</h2>
+<p>⁨TVmaze⁩ לא דורש שום הגדרה. ⁨TMDb⁩ (The Movie Database) מוסיף במאים ותסריטאים, שחקנים
+שאין ב‑⁨TVmaze⁩, וביוגרפיות, לעיתים קרובות בשפה שלכם. לשם כך נדרש אסימון משלכם: ⁨TMDb⁩
+נותן אסימון בחינם לכל מי שיש לו חשבון, לשימוש אישי ולא מסחרי. ⁨TV Library Viewer⁩
+אינו מגיע עם אסימון.</p>
+<ol>
+<li>צרו חשבון חינמי ב‑⁨themoviedb.org⁩, והתחברו.</li>
+<li>לחצו על סמל החשבון שלכם, בחרו <span class="ui">Settings</span>, ואז לחצו על <span class="ui">API</span>.</li>
+<li>בקשו מפתח API: בחרו <span class="ui">Developer</span>, קבלו את התנאים, ותארו את השימוש שלכם כאישי
+ולא מסחרי (לדוגמה, ״⁨Show cast and biographies in my own TV library app⁩״).</li>
+<li>כשהמפתח מוכן, העתיקו את <span class="ui">⁨API Read Access Token⁩</span> (הארוך, לא ⁨API Key⁩ הקצר יותר).</li>
+<li>ב‑Mac שבו נמצאת הספרייה, בחרו <span class="ui">⁨TV Library Viewer⁩ › הגדרות</span>, לחצו על <span class="ui">אחסון</span>, והדביקו אותו ב<span class="ui">⁨API Read Access Token⁩ של ⁨TMDb⁩</span>.</li>
+<li>לחצו על <span class="ui">בדיקה</span>. ההודעה ״⁨TMDb⁩ מקבל את האסימון הזה.״ פירושה שהוא עובד.</li>
+</ol>
+<p>האסימון נשמר במחזיק המפתחות של ה‑Mac. רק ה‑Mac שבו נמצאת הספרייה משתמש בו; המכשירים
+האחרים שלכם מקבלים את השחקנים והפרטים מאותו Mac. סדרות שכבר חיפשו אותן יקבלו את השחקנים והצוות מ‑⁨TMDb⁩
+בפעם הבאה שהדף שלהן ייפתח. אם תסגרו את ההגדרות בלי לבדוק אסימון חדש, הוא ייבדק אז,
+ותקבלו הודעה אם ⁨TMDb⁩ דוחה אותו.</p>
+<div class="note"><b>הערה:</b> מוצר זה משתמש ב‑API של ⁨TMDB⁩ אך אינו נתמך או מאושר על ידי ⁨TMDB⁩.</div>
+
+<h2><a name="google"></a>תרגום: מפתח ⁨Google⁩</h2>
+<p>שמות הפרקים ותיאוריהם מתורגמים לשפה של כל מכשיר ב‑Mac הזה, בחינם, באמצעות התרגום של ⁨Apple⁩. הוא אינו
+מתרגם ליוונית, צ׳כית, הונגרית, רומנית, פרסית, אורדו או בנגלית. עבור שפות אלה, הוסיפו מפתח ⁨Google Cloud Translation API⁩
+משלכם. רק ה‑Mac שבו נמצאת הספרייה צריך אותו; המכשירים שמציגים אותה לא צריכים. בכל חודש, 500,000 התווים
+הראשונים הם בחינם, וכל טקסט מתורגם פעם אחת בלבד.</p>
+<ol>
+<li>היכנסו אל ⁨console.cloud.google.com⁩ והתחברו עם חשבון ה‑⁨Google⁩ שלכם.</li>
+<li>צרו פרויקט: לחצו על תפריט הפרויקטים בחלק העליון, ואז על <span class="ui">⁨New Project⁩</span>, ותנו לו שם,
+כמו ״⁨TV Library Viewer⁩״.</li>
+<li>הפעילו חיוב: בתפריט ☰, בחרו <span class="ui">⁨Billing⁩</span> וקשרו חשבון חיוב. ⁨Google⁩ מבקשת חשבון כזה גם
+לשימוש בחינם. ליתר ביטחון, הוסיפו תקציב, כמו 1 דולר, תחת <span class="ui">⁨Budgets &amp; alerts⁩</span>.</li>
+<li>בחרו ☰ › <span class="ui">⁨APIs &amp; Services › Library⁩</span>, חפשו את <span class="ui">⁨Cloud Translation API⁩</span>, ולחצו
+על <span class="ui">⁨Enable⁩</span>.</li>
+<li>בחרו ☰ › <span class="ui">⁨APIs &amp; Services › Credentials⁩</span>, ואז <span class="ui">⁨Create credentials › API key⁩</span>,
+והעתיקו את המפתח (הוא מתחיל ב‑״⁨AIza⁩״).</li>
+<li>מומלץ: לחצו על שם המפתח, בחרו <span class="ui">⁨Restrict key⁩</span> תחת ⁨API restrictions⁩, סמנו את
+<span class="ui">⁨Cloud Translation API⁩</span>, ולחצו על <span class="ui">⁨Save⁩</span>, כדי שהמפתח יעבוד רק לתרגום.</li>
+<li>ב‑Mac שבו נמצאת הספרייה, בחרו <span class="ui">⁨TV Library Viewer⁩ › הגדרות</span>, לחצו על <span class="ui">אחסון</span>,
+הדביקו את המפתח ב<span class="ui">מפתח ⁨Google Cloud Translation API⁩</span>, ולחצו על <span class="ui">בדיקה</span>.</li>
+</ol>
+<p>המפתח נשמר במחזיק המפתחות של ה‑Mac, ומשמש רק לשבע השפות האלה. אל תשתפו אותו: כל מה שמתורגם
+בעזרתו מחויב לחשבון ה‑⁨Google⁩ שלכם.</p>
+
+<h2>מטמונים</h2>
+<p>תמונות, והספריות שה‑Mac הזה הציג ממחשבי Mac אחרים. המטמונים נוצרים מחדש כשצריך,
+ו‑macOS מרוקן אותם כשנגמר המקום.</p>
+<div class="see"><h3>ראו גם</h3><ul><li><a href="show-page.html">דף הסדרה והשחקנים</a></li><li><a href="privacy.html">מה ⁨TV Library Viewer⁩ קורא, משנה ושומר</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

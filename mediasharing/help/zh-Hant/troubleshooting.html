@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>如果無法連線</title>
+<meta name="description" content="Media Sharing GUI 回報的常見錯誤，以及如何應對。" />
+<meta name="keywords" content="疑難排解, 錯誤, 無法連線, 沒有資料庫, 身分驗證, 睡眠中, 輔助說明" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="troubleshooting"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI 輔助說明</a> › 參考</nav>
+<h1>如果無法連線</h1>
+<p class="lead">閱讀 <span class="ui">日誌</span> 框——以 <span class="ui">ERROR:</span> 開頭的那列通常會說明出了什麼問題。以下是常見情況。</p>
+
+<h2>它無法登入</h2>
+<ul>
+<li><b>身分驗證一再失敗。</b>檢查 <span class="ui">遠端登入</span> 和 <span class="ui">遠端 SSH 連接埠</span>，以及對端是否已開啟遠端登入。
+在終端機中嘗試同樣的操作：<code>ssh user@host -p PORT</code>。如果你更改了遠端密碼，點一下
+<span class="ui">忘記已儲存的密碼</span> 並輸入新的。</li>
+<li><b>通道在連線後立即中斷。</b>遠端 Mac 可能處於睡眠——每次連線只短暫喚醒——或在拒絕連線。
+將其設為保持喚醒，或睡眠時允許網路存取。</li>
+</ul>
+
+<h2>它連上了，但找不到任何資料庫</h2>
+<ul>
+<li><b>「找不到 _home-sharing 記錄。」</b>「家庭共享」（或媒體共享）未開啟，或該網路上沒有上線的 Apple TV / 音樂 / iTunes 資料庫。
+登入你的 Apple 帳號並開啟「家庭共享」，並確保那裡有一個資料庫處於喚醒狀態。請參閱<a href="remote-setup.html">在家中的 Mac 上</a>。</li>
+<li><b>找到了資料庫，但沒有一個能發佈。</b>日誌會按資料庫列出原因；通常是某個本機連接埠不可用。請重試，或更改
+<span class="ui">本機轉送連接埠</span>。</li>
+</ul>
+
+<h2>當一切都無效時</h2>
+<p>停止再開始連線（或從它側邊欄選單中的 <span class="ui">重新開啟</span>）可解決大多數短暫的麻煩。
+若你想更仔細地查看，<a href="traffic-log.html">日誌檔案</a>記錄了細節。</p>
+<div class="see"><h3>另請參閱</h3><ul><li><a href="authentication.html">SSH 密鑰與密碼</a></li><li><a href="remote-setup.html">在家中的 Mac 上</a></li><li><a href="reconnecting.html">重新連線與睡眠</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

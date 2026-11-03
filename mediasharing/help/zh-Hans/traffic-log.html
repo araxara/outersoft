@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>流量与日志</title>
+<meta name="description" content="查看隧道正在传输多少数据，并阅读（或保存）它所做一切的日志。" />
+<meta name="keywords" content="流量, nettop, 字节, 入站, 出站, 峰值, 日志, 文件, 访达" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="traffic-log"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI 帮助</a> › 使用</nav>
+<h1>流量与日志</h1>
+<p class="lead">两个框显示连接的状况：它传输了多少，以及它做了什么。</p>
+
+<h2>SSH 会话流量</h2>
+<ul>
+<li><span class="ui">入站</span> 和 <span class="ui">出站</span> 显示流经隧道进程的字节数，并给出最繁忙时刻的 <span class="ui">峰值</span> 数字。</li>
+<li>这些数字是用系统工具 <code>nettop</code> 采样的，而非原始数据包捕获，因此是大致的参考而非精确的计量。</li>
+<li>重新采样的频率由<a href="settings.html">配置</a>中的 <span class="ui">流量轮询间隔</span> 设定。每次采样本身需要几秒；
+若设得比这更短，采样只会一个接一个地连续进行。</li>
+</ul>
+
+<h2>日志</h2>
+<p><span class="ui">日志</span> 框记录每一步——打开隧道、找到资料库、发布它们、重新连接，以及任何错误。它也会写入磁盘上的一个文件；
+框中显示 <span class="ui">保存到：</span> 它的路径。点按该路径即可<b>在访达中显示日志</b>，当你在排查问题时想一并发送它，这很方便。</p>
+<div class="see"><h3>另请参阅</h3><ul><li><a href="status.html">状态与情况</a></li><li><a href="troubleshooting.html">如果无法连接</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

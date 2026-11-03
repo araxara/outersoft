@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>État et statut</title>
+<meta name="description" content="La zone État montre ce que fait la connexion, son processus de tunnel et depuis combien de temps elle fonctionne." />
+<meta name="keywords" content="état, statut, actif, connexion, durée active, tunnel, PID" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="status"></a>
+<nav class="crumbs"><a href="index.html">Aide de Media Sharing GUI</a> › Utilisation</nav>
+<h1>État et statut</h1>
+<p class="lead">La zone État est l'endroit où vous démarrez et arrêtez, et où vous observez ce qui se passe.</p>
+
+<h2>Ce que signifie le statut</h2>
+<table>
+<tr><th>Statut</th><th>Ce qui se passe</th></tr>
+<tr><td>INACTIF</td><td>Non connecté. Appuyez sur <span class="ui">Démarrer</span> pour commencer.</td></tr>
+<tr><td>CONNEXION</td><td>Ouverture du tunnel SSH vers le Mac distant.</td></tr>
+<tr><td>MOT DE PASSE REQUIS</td><td>La connexion par clé n'a pas fonctionné ; saisissez le mot de passe dans <span class="ui">Authentification SSH</span>.</td></tr>
+<tr><td>INTERROGATION</td><td>Demande au Mac distant quelle bibliothèque de partage à domicile il annonce.</td></tr>
+<tr><td>ENREGISTREMENT</td><td>Publie cette bibliothèque ici via Bonjour.</td></tr>
+<tr><td>ACTIF</td><td>En ligne. La bibliothèque est disponible dans l'app Apple TV / Musique.</td></tr>
+<tr><td>RECONNEXION</td><td>La connexion a été coupée ; elle réessaie d'elle-même.</td></tr>
+<tr><td>ARRÊT EN COURS</td><td>Ferme le tunnel et retire l'annonce locale.</td></tr>
+<tr><td>ERREUR</td><td>Un problème est survenu ; le journal indique lequel. Voir <a href="troubleshooting.html">En cas d'échec de connexion</a>.</td></tr>
+</table>
+
+<h2>Les autres lignes</h2>
+<ul>
+<li><span class="ui">PID du tunnel</span> — l'identifiant du processus du tunnel <code>ssh</code> d'arrière-plan, utilisé pour
+mesurer le <a href="traffic-log.html">trafic</a> et le fermer proprement.</li>
+<li><span class="ui">Durée active</span> — depuis combien de temps la connexion actuelle est établie.</li>
+</ul>
+<p>Les boutons en bas changent selon le statut : <span class="ui">Démarrer</span> à l'arrêt, <span class="ui">Arrêter</span> pendant la
+connexion, et <span class="ui">Annuler</span> pendant qu'elle se connecte encore.</p>
+<div class="see"><h3>Voir aussi</h3><ul><li><a href="libraries.html">Choisir les bibliothèques à publier</a></li><li><a href="reconnecting.html">Reconnexion et veille</a></li><li><a href="traffic-log.html">Trafic et journal</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

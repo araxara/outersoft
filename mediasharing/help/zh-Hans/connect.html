@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>设置并启动连接</title>
+<meta name="description" content="填写“配置”框，按“开始”，必要时登录，远程资料库便会在本地出现。" />
+<meta name="keywords" content="连接, 配置, 开始, 远程登录, 本地端口, 开始使用" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI 帮助</a> › 入门</nav>
+<h1>设置并启动连接</h1>
+<p class="lead">填写资料库所在之处，然后按“开始”。</p>
+
+<h2>填写连接</h2>
+<p>点按 <span class="ui">配置（点击以编辑）</span> 框，至少设置：</p>
+<ul>
+<li><span class="ui">连接名称</span>——供你自己参考的标签，显示在边栏中。</li>
+<li><span class="ui">远程登录（用户@主机）</span>——与你给 <code>ssh</code> 的相同的 <code>user@host</code>，
+例如 <code>alex@myhome.example.com</code>。</li>
+<li><span class="ui">远程 SSH 端口</span>——你的路由器转发到远程 Mac SSH 的端口（通常不是 22）。</li>
+</ul>
+<p>其他字段都有合理的默认值；点按其中任一项旁边的 <span class="ui">(i)</span>，或查看<a href="settings.html">配置参考</a>，了解每一项的作用。</p>
+
+<h2>按“开始”</h2>
+<ol>
+<li>点按窗口底部的 <span class="ui">开始</span>。</li>
+<li>如果基于密钥的登录未通过，状态会变为 <span class="ui">需要密码</span>：在 <span class="ui">SSH 身份验证</span> 中输入账户密码，
+并按 <span class="ui">提交</span>。它会保存到你的钥匙串，这样就不会再问你。</li>
+<li>App 打开隧道，询问远程 Mac 共享了什么，并在这里发布。当状态显示 <span class="ui">运行中</span> 时，资料库即已上线。</li>
+</ol>
+
+<h2>在 Apple TV 或音乐 App 中查看</h2>
+<p>在这台 Mac 上打开 <span class="ui">Apple TV</span> 或 <span class="ui">音乐</span> App。远程资料库会出现在来源列表中，
+就像你自己网络中的一台电脑那样。如果找到多个资料库，可在<a href="libraries.html">资料库框</a>中选择要显示哪些。</p>
+<p>点按 <span class="ui">停止</span> 以关闭隧道并停止发布。Media Sharing GUI 会记住该连接以备下次使用。</p>
+<div class="see"><h3>另请参阅</h3><ul><li><a href="libraries.html">选择要发布哪些资料库</a></li><li><a href="status.html">状态与情况</a></li><li><a href="authentication.html">SSH 密钥与密码</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

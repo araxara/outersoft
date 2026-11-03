@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Khóa và mật khẩu SSH</title>
+<meta name="description" content="Media Sharing GUI đăng nhập bằng khóa SSH của bạn khi có thể, và lùi về một mật khẩu nó lưu trong Chuỗi khóa." />
+<meta name="keywords" content="xác thực, SSH, khóa, mật khẩu, chuỗi khóa, quên, đăng nhập" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="authentication"></a>
+<nav class="crumbs"><a href="index.html">Trợ giúp Media Sharing GUI</a> › Sử dụng</nav>
+<h1>Khóa và mật khẩu SSH</h1>
+<p class="lead">Đăng nhập bằng khóa là tốt nhất; một mật khẩu đã lưu là phương án dự phòng.</p>
+
+<h2>Với một khóa SSH</h2>
+<p>Nếu máy Mac ở xa đã tin khóa SSH của máy Mac này, Media Sharing GUI đăng nhập lặng lẽ —
+không có gì để gõ. Thiết lập một khóa một lần (<code>ssh-copy-id user@host</code>) là cách mượt mà nhất
+để dùng app. Xem <a href="remote-setup.html">Trên máy Mac ở nhà</a>.</p>
+
+<h2>Với một mật khẩu</h2>
+<p>Nếu đăng nhập bằng khóa thất bại, trạng thái chuyển thành <span class="ui">CẦN MẬT KHẨU</span>:</p>
+<ol>
+<li>Gõ mật khẩu của tài khoản vào ô <span class="ui">Xác thực SSH</span> và nhấn <span class="ui">Gửi</span>.</li>
+<li>Khi nó hoạt động, mật khẩu được lưu vào <b>Chuỗi khóa</b> của máy Mac này, nên bạn sẽ không bị hỏi lại.</li>
+</ol>
+<p>Bạn cũng có thể gõ sẵn một mật khẩu vào <span class="ui">Cấu hình</span>; nó chỉ được dùng nếu đăng nhập bằng khóa
+thất bại, và nó cũng được chuyển vào Chuỗi khóa ở lần thành công đầu tiên.</p>
+
+<h2>Quên một mật khẩu đã lưu</h2>
+<p>Nhấp <span class="ui">Quên mật khẩu đã lưu</span> để gỡ mục Chuỗi khóa của lần đăng nhập hiện tại — ví dụ
+sau khi bạn đổi mật khẩu trên máy Mac ở xa. Kết nối kế tiếp sẽ hỏi lại nó.</p>
+<div class="see"><h3>Xem thêm</h3><ul><li><a href="remote-setup.html">Trên máy Mac ở nhà</a></li><li><a href="connect.html">Thiết lập và bắt đầu một kết nối</a></li><li><a href="privacy.html">Media Sharing GUI đọc, thay đổi và lưu giữ những gì</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

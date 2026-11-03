@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>كيف يعمل ⁨⁨Media Sharing⁩ GUI⁩</title>
+<meta name="description" content="يجعل مكتبة المشاركة المنزلية الموجودة على جهاز ⁨Mac⁩ في مكان آخر تظهر على شبكة هذا الـ⁨Mac⁩، للبثّ عبر نفق ⁨SSH⁩." />
+<meta name="keywords" content="نظرة عامة, المشاركة المنزلية, ⁨Media Sharing⁩, ⁨SSH⁩, نفق, ⁨Bonjour⁩, ⁨Apple TV⁩, الموسيقى, بعيد" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="overview"></a>
+<nav class="crumbs"><a href="index.html">مساعدة ⁨⁨Media Sharing⁩ GUI⁩</a> › البدء</nav>
+<h1>كيف يعمل ⁨⁨Media Sharing⁩ GUI⁩</h1>
+<p class="lead">يجعل مكتبة على جهاز ⁨Mac⁩ في مكان آخر تبدو كأنها هنا تماماً، على شبكتك.</p>
+
+<p>تتيح المشاركة المنزلية (⁨Media Sharing⁩) لتطبيق <span class="ui">⁨Apple TV⁩</span> و<span class="ui">الموسيقى</span> و<span class="ui">⁨iTunes⁩</span> البثّ
+من حاسوب آخر — لكن فقط من حاسوب على <b>الشبكة المحلية نفسها</b>. يزيل ⁨⁨Media Sharing⁩ GUI⁩
+هذا القيد. وجّهه إلى جهاز ⁨Mac⁩ في المنزل (أو أي جهاز تستطيع الوصول إليه عبر ⁨SSH⁩)، فتظهر المكتبة
+التي يشاركها هنا في قائمة مصادر <span class="ui">⁨Apple TV⁩</span> أو <span class="ui">الموسيقى</span>، كأن ذلك الـ⁨Mac⁩ في الغرفة
+المجاورة.</p>
+
+<h2>ماذا يفعل، خطوة بخطوة</h2>
+<ol>
+<li>يفتح <b>نفق ⁨SSH⁩</b> من هذا الـ⁨Mac⁩ إلى الجهاز البعيد.</li>
+<li>يسأل الـ⁨Mac⁩ البعيد، عبر ذلك النفق، عن خدمة المشاركة المنزلية التي يبثّها على شبكته المحلية الخاصة.</li>
+<li><b>يعيد نشر الخدمة نفسها هنا</b>، عبر ⁨Bonjour⁩، موجَّهة عائدةً خلال النفق —
+فترى التطبيقات على هذا الـ⁨Mac⁩ المكتبة كأنها قريبة في الشبكة المحلية.</li>
+</ol>
+<p>أثناء التشغيل، ينتقل البثّ من تلك المكتبة مشفَّراً داخل نفق ⁨SSH⁩. شغّله وأوقفه
+بـ<span class="ui">بدء</span> و<span class="ui">إيقاف</span> في مربّع الحالة.</p>
+
+<h2>ما تحتاج إليه</h2>
+<ul>
+<li><b>على الـ⁨Mac⁩ في المنزل:</b> تفعيل المشاركة المنزلية (أو ⁨Media Sharing⁩) في تطبيق <span class="ui">⁨Apple TV⁩</span> أو
+<span class="ui">الموسيقى</span>، وتفعيل تسجيل الدخول البعيد (⁨SSH⁩). انظر <a href="remote-setup.html">على الـ⁨Mac⁩ في المنزل</a>.</li>
+<li><b>طريقة للوصول إليه:</b> عنوانه أو اسم ⁨DNS⁩ الديناميكي، ومنفذ ⁨SSH⁩ الذي يحوّله موجّهك إليه.</li>
+<li><b>على هذا الـ⁨Mac⁩:</b> لا شيء خاصّ — يُشغّل ⁨⁨Media Sharing⁩ GUI⁩ نيابةً عنك أداتَي <code>ssh</code>
+و⁨Bonjour⁩ المدمجتين.</li>
+</ul>
+
+<h2>البدء</h2>
+<ol>
+<li>اضبط <a href="remote-setup.html">الـ⁨Mac⁩ في المنزل</a> مرة واحدة.</li>
+<li><a href="connect.html">املأ اتصالاً واضغط بدء</a>.</li>
+<li>هنا <a href="libraries.html">اختر المكتبات</a> التي تُنشَر.</li>
+</ol>
+<div class="see"><h3>انظر أيضاً</h3><ul><li><a href="remote-setup.html">على الـ⁨Mac⁩ في المنزل</a></li><li><a href="connect.html">إعداد اتصال وبدؤه</a></li><li><a href="privacy.html">ماذا يقرأ ⁨⁨Media Sharing⁩ GUI⁩ ويغيّر ويحفظ</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

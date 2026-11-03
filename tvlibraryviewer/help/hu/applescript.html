@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hu">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AppleScript</title>
+<meta name="description" content="A TV Library Viewer szkriptelése epizódok hozzáadásához, leírások beállításához és fiókok kezeléséhez." />
+<meta name="keywords" content="AppleScript, szkript, automatizálás, osascript, add episode, hosszú leírás, fiókok, TV Library Viewer" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="applescript"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer súgó</a> › Referencia</nav>
+<h1>AppleScript</h1>
+<p class="lead">A TV Library Viewer szkriptekből is vezérelhető, például egy epizódokat importáló szkriptből.
+A részletekért nyissa meg a szótárát a Szkriptszerkesztőben (<span class="ui">Fájl › Szótár megnyitása…</span>).</p>
+<table>
+<tr><th>Parancs</th><th>Mit csinál?</th></tr>
+<tr><td><span class="ui">add episode</span></td><td>Hozzáad egy videofájlt a TV app könyvtárához (vagy megkeresi ott)
+a sorozatával, évadjával, epizódjával, címével, műfajával és leírásaival együtt, és visszaadja az állandó azonosítóját.</td></tr>
+<tr><td><span class="ui">update episode</span></td><td>Módosítja egy epizód adatait.</td></tr>
+<tr><td><span class="ui">remove episode</span></td><td>Eltávolít egy epizódot a könyvtárból. A fájl megmarad.</td></tr>
+<tr><td><span class="ui">refresh library</span></td><td>Újraolvassa a könyvtárat.</td></tr>
+<tr><td><span class="ui">create account</span>, <span class="ui">change account password</span>, <span class="ui">delete account</span>,
+<span class="ui">account names</span>, <span class="ui">account log</span></td><td>Fiókok kezelése.</td></tr>
+</table>
+<p>Az így megadott hosszú leírásokat a TV Library Viewer a saját adatbázisában tárolja, és visszaírja őket, ha a
+TV app elfelejti őket.</p>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

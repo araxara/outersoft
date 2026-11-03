@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AppleScript</title>
+<meta name="description" content="Управляйте TV Library Viewer скриптами: добавляйте серии, задавайте описания и управляйте учетными записями." />
+<meta name="keywords" content="AppleScript, скрипт, автоматизация, osascript, add episode, длинное описание, учетные записи, TV Library Viewer" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="applescript"></a>
+<nav class="crumbs"><a href="index.html">Справка TV Library Viewer</a> › Справочник</nav>
+<h1>AppleScript</h1>
+<p class="lead">TV Library Viewer поддерживает скрипты, например скрипт, который импортирует серии.
+Подробности — в его словаре в Редакторе скриптов (<span class="ui">Файл › Открыть словарь…</span>).</p>
+<table>
+<tr><th>Команда</th><th>Что делает</th></tr>
+<tr><td><span class="ui">add episode</span></td><td>Добавляет видеофайл в медиатеку приложения TV (или находит его там) вместе
+с сериалом, сезоном, номером серии, названием, жанром и описаниями и возвращает его постоянный идентификатор.</td></tr>
+<tr><td><span class="ui">update episode</span></td><td>Изменяет сведения о серии.</td></tr>
+<tr><td><span class="ui">remove episode</span></td><td>Удаляет серию из медиатеки. Файл остается.</td></tr>
+<tr><td><span class="ui">refresh library</span></td><td>Заново считывает медиатеку.</td></tr>
+<tr><td><span class="ui">create account</span>, <span class="ui">change account password</span>, <span class="ui">delete account</span>,
+<span class="ui">account names</span>, <span class="ui">account log</span></td><td>Управление учетными записями.</td></tr>
+</table>
+<p>Длинные описания, заданные таким образом, хранятся в базе данных TV Library Viewer и возвращаются на место, если
+приложение TV их забывает.</p>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>节目页面和演员</title>
+<meta name="description" content="节目的详细信息、描述、播放、季、剧集和演员。" />
+<meta name="keywords" content="节目页面, 描述, 播放, 继续, 季, 演员, 演员表, TVmaze" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="show-page"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer 帮助</a> › 节目和剧集</nav>
+<h1>节目页面和演员</h1>
+<p class="lead">点按拼贴可打开其节目。</p>
+<h2>详细信息</h2>
+<p>图片、名称、一行类似“2026 · 国产剧 · 已观看 7 / 24”的信息，以及描述（点按<span class="ui">更多</span>可查看全部）。</p>
+<ul>
+<li><span class="ui">播放</span>会播放正在观看的剧集，否则播放下一集未观看的剧集。按钮名称会说明是哪一集：<span class="ui">继续播放第 7 集</span>、<span class="ui">播放第 15 集</span>，或在全部看完后显示<span class="ui">再次播放</span>。<kbd>空格键</kbd>的作用相同。</li>
+<li>旁边的 ⋯ 包含拼贴菜单中的其他命令。按住 Control 键点按标题区域也能打开它。</li>
+</ul>
+<p>当 App 设为其他语言时，剧集的标题和简介会在存放资料库的 Mac 上翻译成该语言，Mac 会保存每条翻译，因此只需翻译一次。由剧名构成的标题，以及 Mac 无法翻译成目标语言的文字，会保持原样。</p>
+<h2>季</h2>
+<p>有多季的节目会列出每一季及其观看进度，每季都有自己的 ⋯ 菜单：播放或继续播放该季、显示简介、观看相关命令、<span class="ui">选择第 1 季</span>、<span class="ui">下载第 1 季</span>和移除。</p>
+<h2>演员</h2>
+<p>描述下方（在 Apple TV 上位于剧集下方）是节目的演员：圆形照片配有每位演员的姓名和角色，可横向滚动；接着是导演、编剧和创作者，其职务显示在姓名下方。选择某人可查看其出生日期、年龄、国家或地区、人物简介和其他节目，以及指向其 TVmaze 和 TMDb 页面的链接。</p>
+<p>演员信息来自 TVmaze，如果有 <a href="settings-storage.html">TMDb 令牌</a>，也来自 TMDb：两者中任一列出的人都会显示，每人只显示一次。存有资料库的 Mac 会在节目页面首次打开时查找该节目，并保存姓名、照片和页面地址。人物详情在你打开时获取，因此是最新的；如果 TMDb 有对应语言的人物简介，则以 App 的语言显示，否则以英语显示。两者都没有收录或尚未有演员信息的节目不显示演员行；一周后会再次查找。</p>
+<div class="see"><h3>另请参阅</h3><ul><li><a href="episodes.html">标记已观看、选择和移除剧集</a></li><li><a href="playing.html">播放剧集</a></li><li><a href="settings-storage.html">储存空间设置</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>流量與日誌</title>
+<meta name="description" content="查看通道正在傳輸多少資料，並閱讀（或儲存）它所做一切的日誌。" />
+<meta name="keywords" content="流量, nettop, 位元組, 輸入, 輸出, 尖峰, 日誌, 檔案, Finder" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="traffic-log"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI 輔助說明</a> › 使用</nav>
+<h1>流量與日誌</h1>
+<p class="lead">兩個框顯示連線的狀況：它傳輸了多少，以及它做了什麼。</p>
+
+<h2>SSH 工作階段流量</h2>
+<ul>
+<li><span class="ui">輸入</span> 和 <span class="ui">輸出</span> 顯示流經通道程序的位元組數，並給出最繁忙時刻的 <span class="ui">尖峰</span> 數字。</li>
+<li>這些數字是用系統工具 <code>nettop</code> 取樣的，而非原始封包擷取，因此是大致的參考而非精確的計量。</li>
+<li>重新取樣的頻率由<a href="settings.html">設定</a>中的 <span class="ui">流量輪詢間隔</span> 設定。每次取樣本身需要幾秒；
+若設得比這更短，取樣只會一個接一個地連續進行。</li>
+</ul>
+
+<h2>日誌</h2>
+<p><span class="ui">日誌</span> 框記錄每一步——開啟通道、找到資料庫、發佈它們、重新連線，以及任何錯誤。它也會寫入磁碟上的一個檔案；
+框中顯示 <span class="ui">儲存至：</span> 它的路徑。點一下該路徑即可<b>在 Finder 中顯示日誌</b>，當你在排查問題時想一併傳送它，這很方便。</p>
+<div class="see"><h3>另請參閱</h3><ul><li><a href="status.html">狀態與情況</a></li><li><a href="troubleshooting.html">如果無法連線</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

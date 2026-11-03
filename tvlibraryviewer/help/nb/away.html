@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nb">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Se når du er borte</title>
+<meta name="description" content="Tre måter å nå biblioteket fra et annet nettverk på: SSH, VPN eller en videresendt port." />
+<meta name="keywords" content="ekstern, borte, reise, SSH, VPN, Tailscale, portvideresending, ruter, 47100, frakoblet" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="away"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer Hjelp</a> › Kom i gang</nav>
+<h1>Se når du er borte</h1>
+<p class="lead">Biblioteket blir værende på Macen hjemme. Velg én måte å nå det på fra andre steder.</p>
+
+<h2>Via SSH</h2>
+<p>Best hvis du allerede kan logge inn på den Macen, eller en datamaskin på samme nettverk, med SSH. Ingenting annet
+må konfigureres. Bruk <span class="ui">Ekstern (SSH)</span> i Koble til delt bibliotek. All trafikk går gjennom
+SSH-tilkoblingen.</p>
+
+<h2>Via VPN</h2>
+<p>Med et VPN som Tailscale på begge enhetene bruker du <span class="ui">Adresse</span> med Macens VPN-adresse og
+port 47100.</p>
+
+<h2>Via en videresendt port</h2>
+<ol>
+<li>Videresend port 47100 (eller porten i <span class="ui">Innstillinger › Deling</span>) på ruteren til Macen med
+biblioteket.</li>
+<li>Legg til kontoer med sterke passord i <span class="ui">Innstillinger › Kontoer</span>.</li>
+<li>På den andre enheten bruker du <span class="ui">Adresse</span> med den offentlige adressen hjemme og porten.</li>
+</ol>
+<div class="note"><b>Merk:</b> Tilkoblingene er alltid kryptert, og enhetene kontrollerer bibliotekets
+sertifikat, uansett hvor de kobler til fra. Ti feil passord fra én adresse innen 5 minutter blir
+avvist uten å bli kontrollert.</div>
+
+<h2>Helt uten tilkobling</h2>
+<p>Last ned episoder før du drar (Mac, iPad og iPhone). Når biblioteket ikke kan nås, åpner
+appen det slik det sist var, viser <span class="ui">Frakoblet</span> og spiller av nedlastingene dine. Det du ser, sendes
+til Macen så snart den kan nås igjen.</p>
+<div class="see"><h3>Se også</h3><ul><li><a href="connect.html">Koble til et delt bibliotek</a></li><li><a href="downloads.html">Nedlastinger og frakoblet visning</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Configurare e avviare una connessione</title>
+<meta name="description" content="Compila il riquadro Configurazione, premi Avvia, accedi se richiesto, e la libreria remota appare localmente." />
+<meta name="keywords" content="connettere, configurazione, avviare, login remoto, porta locale, iniziare" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">Aiuto di Media Sharing GUI</a> › Introduzione</nav>
+<h1>Configurare e avviare una connessione</h1>
+<p class="lead">Indica dove si trova la libreria, poi premi Avvia.</p>
+
+<h2>Compilare la connessione</h2>
+<p>Fai clic sul riquadro <span class="ui">Configurazione (clic per modificare)</span> e imposta almeno:</p>
+<ul>
+<li><span class="ui">Nome connessione</span> — un'etichetta per tuo riferimento, mostrata nella barra laterale.</li>
+<li><span class="ui">Accesso remoto (utente@host)</span> — lo stesso <code>user@host</code> che daresti a
+<code>ssh</code>, per esempio <code>alex@myhome.example.com</code>.</li>
+<li><span class="ui">Porta SSH remota</span> — la porta che il tuo router inoltra all'SSH del Mac remoto (spesso non 22).</li>
+</ul>
+<p>Gli altri campi hanno valori predefiniti sensati; fai clic sulla <span class="ui">(i)</span> accanto a uno qualsiasi, o vedi il
+<a href="settings.html">Riferimento della configurazione</a>, per sapere cosa fa ciascuno.</p>
+
+<h2>Premere Avvia</h2>
+<ol>
+<li>Fai clic su <span class="ui">Avvia</span> in fondo alla finestra.</li>
+<li>Se l'accesso con chiave non va a buon fine, la situazione passa a <span class="ui">PASSWORD RICHIESTA</span>: digita la
+password dell'account in <span class="ui">Autenticazione SSH</span> e premi <span class="ui">Invia</span>. Viene salvata nel tuo
+portachiavi, così non ti viene più richiesta.</li>
+<li>L'app apre il tunnel, chiede al Mac remoto cosa condivide e lo pubblica qui. Quando la
+situazione indica <span class="ui">ATTIVO</span>, la libreria è attiva.</li>
+</ol>
+
+<h2>Vederla nell'app Apple TV o Musica</h2>
+<p>Apri l'app <span class="ui">Apple TV</span> o <span class="ui">Musica</span> su questo Mac. La libreria remota appare nell'
+elenco delle sorgenti, come farebbe un computer sulla tua stessa rete. Se sono state trovate più librerie, scegli
+quali mostrare nel <a href="libraries.html">riquadro Librerie</a>.</p>
+<p>Fai clic su <span class="ui">Ferma</span> per chiudere il tunnel e smettere di pubblicare. Media Sharing GUI ricorda la
+connessione per la volta successiva.</p>
+<div class="see"><h3>Vedi anche</h3><ul><li><a href="libraries.html">Scegliere quali librerie pubblicare</a></li><li><a href="status.html">Stato e situazione</a></li><li><a href="authentication.html">Chiavi e password SSH</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

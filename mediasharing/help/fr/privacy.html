@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ce que Media Sharing GUI lit, modifie et conserve</title>
+<meta name="description" content="Tout reste entre ce Mac et votre Mac distant : aucun tiers, aucun compte, aucun suivi." />
+<meta name="keywords" content="confidentialité, sécurité, trousseau, SSH, local, données, journal" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="privacy"></a>
+<nav class="crumbs"><a href="index.html">Aide de Media Sharing GUI</a> › Référence</nav>
+<h1>Ce que Media Sharing GUI lit, modifie et conserve</h1>
+<p class="lead">L'app ne relie que ce Mac à votre propre Mac distant. Rien ne va ailleurs.</p>
+
+<h2>Sur ce Mac</h2>
+<ul>
+<li><b>Conserve :</b> vos réglages de connexion et tout mot de passe SSH que vous saisissez — le mot de passe dans le
+<b>trousseau</b> macOS, nulle part ailleurs. <span class="ui">Oublier le mot de passe enregistré</span> le supprime.</li>
+<li><b>Écrit :</b> un fichier journal de ce qu'a fait chaque connexion (voir <a href="traffic-log.html">Trafic et
+journal</a>). Vous pouvez l'afficher ou le supprimer à tout moment.</li>
+<li><b>Publie :</b> la bibliothèque distante sur le propre réseau de ce Mac via Bonjour, pour que les
+apps <span class="ui">Apple TV</span> et <span class="ui">Musique</span> la voient — seulement tant qu'une connexion est active.</li>
+</ul>
+
+<h2>Sur le réseau</h2>
+<ul>
+<li><b>Ne se connecte qu'au Mac distant que vous nommez</b>, en SSH, avec l'outil intégré <code>ssh</code>.
+La diffusion voyage chiffrée dans ce tunnel.</li>
+<li><b>Aucun tiers.</b> Il n'y a aucun service en nuage, aucun compte à créer, et rien n'est envoyé à
+Outersoft ni à qui que ce soit d'autre.</li>
+</ul>
+<div class="see"><h3>Voir aussi</h3><ul><li><a href="overview.html">Comment fonctionne Media Sharing GUI</a></li><li><a href="authentication.html">Clés et mots de passe SSH</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

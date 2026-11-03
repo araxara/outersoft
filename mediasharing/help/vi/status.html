@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Trạng thái và tình trạng</title>
+<meta name="description" content="Ô Trạng thái cho thấy kết nối đang làm gì, tiến trình đường hầm của nó, và nó đã chạy bao lâu." />
+<meta name="keywords" content="trạng thái, tình trạng, đang chạy, đang kết nối, thời gian hoạt động, đường hầm, PID" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="status"></a>
+<nav class="crumbs"><a href="index.html">Trợ giúp Media Sharing GUI</a> › Sử dụng</nav>
+<h1>Trạng thái và tình trạng</h1>
+<p class="lead">Ô Trạng thái là nơi bạn Bắt đầu và Dừng, và theo dõi những gì đang diễn ra.</p>
+
+<h2>Mỗi tình trạng nghĩa là gì</h2>
+<table>
+<tr><th>Tình trạng</th><th>Điều đang diễn ra</th></tr>
+<tr><td>RẢNH</td><td>Chưa kết nối. Nhấn <span class="ui">Bắt đầu</span> để bắt đầu.</td></tr>
+<tr><td>ĐANG KẾT NỐI</td><td>Đang mở đường hầm SSH tới máy Mac ở xa.</td></tr>
+<tr><td>CẦN MẬT KHẨU</td><td>Đăng nhập bằng khóa không được; nhập mật khẩu vào <span class="ui">Xác thực SSH</span>.</td></tr>
+<tr><td>ĐANG TRUY VẤN</td><td>Hỏi máy Mac ở xa nó quảng bá thư viện Chia sẻ Trong nhà nào.</td></tr>
+<tr><td>ĐANG ĐĂNG KÝ</td><td>Xuất bản thư viện đó ở đây qua Bonjour.</td></tr>
+<tr><td>ĐANG CHẠY</td><td>Đã sẵn sàng. Thư viện có trong app Apple TV / Nhạc.</td></tr>
+<tr><td>ĐANG KẾT NỐI LẠI</td><td>Kết nối bị rớt; nó tự thử lại.</td></tr>
+<tr><td>ĐANG DỪNG</td><td>Đóng đường hầm và gỡ quảng bá cục bộ.</td></tr>
+<tr><td>LỖI</td><td>Có gì đó sai; nhật ký cho biết điều gì. Xem <a href="troubleshooting.html">Nếu không kết nối được</a>.</td></tr>
+</table>
+
+<h2>Các hàng khác</h2>
+<ul>
+<li><span class="ui">PID đường hầm</span> — ID tiến trình của đường hầm <code>ssh</code> chạy nền, dùng để
+lấy mẫu <a href="traffic-log.html">lưu lượng</a> và đóng nó gọn gàng.</li>
+<li><span class="ui">Thời gian hoạt động</span> — kết nối hiện tại đã được thiết lập bao lâu.</li>
+</ul>
+<p>Các nút ở dưới thay đổi theo tình trạng: <span class="ui">Bắt đầu</span> khi rảnh, <span class="ui">Dừng</span> khi đang
+kết nối, và <span class="ui">Hủy</span> khi nó vẫn đang kết nối.</p>
+<div class="see"><h3>Xem thêm</h3><ul><li><a href="libraries.html">Chọn thư viện nào để xuất bản</a></li><li><a href="reconnecting.html">Kết nối lại và ngủ</a></li><li><a href="traffic-log.html">Lưu lượng và nhật ký</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

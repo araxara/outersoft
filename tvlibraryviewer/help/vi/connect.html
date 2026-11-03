@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kết nối với thư viện được chia sẻ</title>
+<meta name="description" content="Kết nối một máy Mac khác, iPad, iPhone hoặc Apple TV với máy Mac đang chia sẻ thư viện." />
+<meta name="keywords" content="kết nối, Bonjour, mạng, SSH, địa chỉ, chứng chỉ, dấu vân tay, tin cậy, đăng nhập, mật khẩu" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">Trợ giúp TV Library Viewer</a> › Bắt đầu</nav>
+<h1>Kết nối với thư viện được chia sẻ</h1>
+<p class="lead">Mỗi thiết bị chỉ cần kết nối một lần. Sau đó, thiết bị tự mở lại cùng thư viện đó.</p>
+
+<h2>Mở Kết nối với thư viện được chia sẻ</h2>
+<ul>
+<li><b>Mac:</b> chọn <span class="ui">Tệp › Kết nối với thư viện được chia sẻ…</span> (<kbd>⌘K</kbd>).</li>
+<li><b>iPad và iPhone:</b> chạm vào <span class="ui">Kết nối với thư viện được chia sẻ…</span> trong thanh bên (<kbd>⌘K</kbd> khi có bàn phím).</li>
+<li><b>Apple TV:</b> lần đầu tiên, TV Library kết nối với máy Mac đầu tiên trong mạng chia sẻ
+mà không cần mật khẩu. Nếu không, hãy vào <span class="ui">Thư viện › Kết nối với thư viện khác…</span>.</li>
+</ul>
+
+<h2>Chọn cách truy cập máy Mac</h2>
+<h3>Mạng này</h3>
+<p>Các máy Mac trong cùng mạng đang bật chia sẻ được liệt kê theo tên. Hãy chọn một máy.</p>
+<h3>Từ xa (SSH)</h3>
+<p>Dành cho máy Mac ở mạng khác, chẳng hạn ở một ngôi nhà khác. Nhập địa chỉ bạn dùng để SSH vào máy Mac
+đó (hoặc bất kỳ máy tính nào trong mạng của nó), và tên người dùng nếu khác. TV Library Viewer đăng
+nhập, tìm thư viện trong mạng đó và kết nối qua kết nối SSH.</p>
+<ul>
+<li>Lần đầu tiên, ứng dụng hiển thị khóa của máy chủ để bạn so sánh và xác nhận.</li>
+<li>Trên máy Mac, khóa SSH của riêng bạn được dùng khi máy chủ chấp nhận; nếu không, ứng dụng hỏi mật khẩu
+và lưu mật khẩu trong Chuỗi khóa của bạn.</li>
+<li>iPad, iPhone hoặc Apple TV có khóa riêng. Sau lần đăng nhập đầu tiên bằng mật khẩu, thiết bị đề nghị
+cài khóa đó lên máy chủ, để không cần mật khẩu nữa.</li>
+</ul>
+<h3>Địa chỉ</h3>
+<p>Dành cho máy Mac mà thiết bị này truy cập trực tiếp được: qua VPN như Tailscale, hoặc một cổng mà bộ định tuyến
+chuyển tiếp đến nó. Nhập địa chỉ và cổng (cổng 47100 nếu chưa đổi), cùng tên tài khoản
+và mật khẩu nếu thư viện có tài khoản.</p>
+
+<h2>Tin cậy chứng chỉ của thư viện</h2>
+<p>Lần kết nối đầu tiên hiển thị dấu vân tay chứng chỉ của thư viện. Hãy so sánh với dấu vân tay trong
+<span class="ui">Cài đặt › Chia sẻ</span> trên máy Mac có thư viện, rồi chọn <span class="ui">Tin cậy và kết nối</span>. Từ
+đó trở đi, thiết bị kiểm tra chứng chỉ đó mỗi lần, và từ chối thư viện có chứng chỉ đã
+thay đổi.</p>
+
+<h2>Đăng nhập</h2>
+<p>Nếu thư viện có tài khoản, hãy nhập tên và mật khẩu tài khoản của bạn trên máy Mac đó. Thiết bị
+lưu chúng trong Chuỗi khóa của thiết bị. Nếu không có tài khoản, để trống tên và dùng mật khẩu thư viện,
+nếu có.</p>
+<div class="see"><h3>Xem thêm</h3><ul><li><a href="away.html">Xem khi ở xa nhà</a></li><li><a href="sidebar-libraries.html">Chuyển đổi giữa các thư viện</a></li><li><a href="settings-accounts.html">Cài đặt Tài khoản</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

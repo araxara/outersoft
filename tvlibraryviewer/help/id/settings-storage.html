@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pengaturan Penyimpanan</title>
+<meta name="description" content="Seberapa besar perpustakaan, dan ruang yang digunakan basis data dan cache TV Library Viewer." />
+<meta name="keywords" content="pengaturan, penyimpanan, basis data, ukuran, ruang, acara, episode, pemeran, foto aktor, cache, TV Library Viewer" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings-storage"></a>
+<nav class="crumbs"><a href="index.html">Bantuan TV Library Viewer</a> › Pengaturan</nav>
+<h1>Pengaturan Penyimpanan</h1>
+<p class="lead">Pilih <span class="ui">TV Library Viewer › Pengaturan</span>, lalu klik <span class="ui">Penyimpanan</span>.</p>
+
+<h2>Perpustakaan TV Mac Ini</h2>
+<p>Jumlah acara dan episode di perpustakaan app TV, serta ukuran basis datanya. File
+video tidak dihitung.</p>
+
+<h2>Basis Data TV Library Viewer</h2>
+<p>Basis data TV Library Viewer sendiri di Mac ini, yang dibagikan dengan setiap perangkat yang menampilkan perpustakaan.</p>
+<table>
+<tr><th>Bagian</th><th>Isinya</th></tr>
+<tr><td><span class="ui">Informasi acara</span></td><td>Deskripsi lengkap yang diberikan melalui AppleScript, dan pemeran setiap
+acara: nama dan peran para aktor.</td></tr>
+<tr><td><span class="ui">Terjemahan</span></td><td>Judul dan deskripsi episode yang diterjemahkan ke bahasa yang diatur di app.</td></tr>
+<tr><td><span class="ui">Pemeran dan kru</span></td><td>Satu foto kecil untuk setiap orang, dan alamat halaman
+mereka di TVmaze dan TMDb.</td></tr>
+<tr><td><span class="ui">Akun dan tontonan</span></td><td>Akun, tontonan setiap akun kecuali
+akun utama, dan log akun.</td></tr>
+<tr><td><span class="ui">Struktur basis data dan ruang kosong</span></td><td>Catatan milik SQLite sendiri, dan ruang yang digunakannya kembali.</td></tr>
+<tr><td><span class="ui">Perubahan terbaru</span></td><td>Perubahan yang belum digabungkan ke dalam basis data. Penggabungan dilakukan dari
+waktu ke waktu.</td></tr>
+</table>
+<p>Pemeran dan kru acara dicari di TVmaze dan TMDb saat halamannya dibuka pertama kali, di sini atau
+di perangkat mana pun. Detail orang diambil setiap kali Anda membukanya, sehingga tidak pernah usang,
+dan tidak disimpan. Klik <span class="ui">Tampilkan di Finder</span> untuk melihat file basis data.</p>
+
+<h2><a name="tmdb"></a>Detail Pemeran dan Kru: token TMDb</h2>
+<p>TVmaze tidak memerlukan pengaturan apa pun. TMDb (The Movie Database) menambahkan sutradara dan penulis skenario, aktor
+yang tidak dimiliki TVmaze, serta biografi, sering kali dalam bahasa Anda. TMDb memerlukan token milik Anda sendiri: TMDb
+memberikannya gratis kepada siapa pun yang memiliki akun, untuk penggunaan pribadi dan nonkomersial. TV Library Viewer
+tidak menyertakan token.</p>
+<ol>
+<li>Buat akun gratis di themoviedb.org, lalu masuk.</li>
+<li>Klik ikon akun Anda, pilih <span class="ui">Settings</span>, lalu klik <span class="ui">API</span>.</li>
+<li>Minta kunci API: pilih <span class="ui">Developer</span>, terima persyaratannya, dan jelaskan penggunaan Anda sebagai pribadi
+dan nonkomersial (misalnya, "Show cast and biographies in my own TV library app").</li>
+<li>Setelah kunci siap, salin <span class="ui">API Read Access Token</span> (yang panjang, bukan API Key yang lebih pendek).</li>
+<li>Di Mac yang memiliki perpustakaan, pilih <span class="ui">TV Library Viewer › Pengaturan</span>, klik <span class="ui">Penyimpanan</span>, lalu
+tempelkan token ke <span class="ui">API Read Access Token TMDb</span>.</li>
+<li>Klik <span class="ui">Uji</span>. "TMDb menerima token ini" berarti token berfungsi.</li>
+</ol>
+<p>Token disimpan di Rantai Kunci Mac. Hanya Mac yang memiliki perpustakaan yang menggunakannya; perangkat
+lain Anda mendapatkan pemeran dan detail dari Mac tersebut. Acara yang sudah dicari akan mendapatkan pemeran dan kru dari TMDb
+saat halamannya dibuka berikutnya. Jika Anda menutup Pengaturan tanpa menguji token baru, token akan diuji saat itu,
+dan Anda akan diberi tahu jika TMDb menolaknya.</p>
+<div class="note"><b>Catatan:</b> Produk ini menggunakan API TMDB tetapi tidak didukung atau disertifikasi oleh TMDB.</div>
+
+<h2><a name="google"></a>Terjemahan: kunci Google</h2>
+<p>Judul dan deskripsi episode diterjemahkan ke bahasa setiap perangkat di Mac ini, gratis,
+dengan Terjemahan dari Apple. Terjemahan tidak dapat menerjemahkan ke bahasa Yunani, Ceko, Hungaria, Rumania, Persia, Urdu,
+atau Bengali. Untuk bahasa tersebut, tambahkan kunci Google Cloud Translation API Anda sendiri. Hanya Mac yang memiliki perpustakaan
+yang memerlukannya; perangkat yang melihat perpustakaan tidak. 500.000 karakter pertama setiap bulan gratis, dan setiap
+teks hanya diterjemahkan sekali.</p>
+<ol>
+<li>Buka console.cloud.google.com dan masuk dengan akun Google Anda.</li>
+<li>Buat proyek: klik menu proyek di bagian atas, lalu <span class="ui">New Project</span>, dan beri nama
+seperti "TV Library Viewer".</li>
+<li>Aktifkan penagihan: di menu ☰, pilih <span class="ui">Billing</span> dan tautkan akun penagihan. Google memintanya
+bahkan untuk penggunaan gratis. Agar aman, tambahkan anggaran, misalnya US$1, di <span class="ui">Budgets &amp; alerts</span>.</li>
+<li>Pilih ☰ › <span class="ui">APIs &amp; Services › Library</span>, cari <span class="ui">Cloud Translation API</span>, lalu klik
+<span class="ui">Enable</span>.</li>
+<li>Pilih ☰ › <span class="ui">APIs &amp; Services › Credentials</span>, lalu <span class="ui">Create credentials › API key</span>, dan
+salin kuncinya (diawali dengan "AIza").</li>
+<li>Disarankan: klik nama kunci, pilih <span class="ui">Restrict key</span> di bawah API restrictions, centang
+<span class="ui">Cloud Translation API</span>, lalu klik <span class="ui">Save</span>, sehingga kunci hanya berfungsi untuk terjemahan.</li>
+<li>Di Mac yang memiliki perpustakaan, pilih <span class="ui">TV Library Viewer › Pengaturan</span>, klik <span class="ui">Penyimpanan</span>,
+tempel kunci ke <span class="ui">Kunci Google Cloud Translation API</span>, lalu klik <span class="ui">Uji</span>.</li>
+</ol>
+<p>Kunci disimpan di Rantai Kunci Mac dan hanya digunakan untuk ketujuh bahasa tersebut. Jangan bagikan
+kunci ini: apa pun yang diterjemahkan dengannya akan ditagihkan ke akun Google Anda.</p>
+
+<h2>Cache</h2>
+<p>Gambar, dan perpustakaan yang telah dilihat Mac ini dari Mac lain. Cache dibuat ulang saat diperlukan,
+dan macOS mengosongkannya saat ruang hampir habis.</p>
+<div class="see"><h3>Lihat juga</h3><ul><li><a href="show-page.html">Halaman acara dan pemeran</a></li><li><a href="privacy.html">Apa yang dibaca, diubah, dan disimpan TV Library Viewer</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

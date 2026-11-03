@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AppleScript</title>
+<meta name="description" content="Controla TV Library Viewer con scripts para añadir episodios, definir descripciones y gestionar cuentas." />
+<meta name="keywords" content="AppleScript, script, automatización, osascript, add episode, descripción larga, cuentas, TV Library Viewer" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="applescript"></a>
+<nav class="crumbs"><a href="index.html">Ayuda de TV Library Viewer</a> › Referencia</nav>
+<h1>AppleScript</h1>
+<p class="lead">TV Library Viewer se puede controlar con scripts, por ejemplo desde un script que importe episodios.
+Abre su diccionario en el Editor de Scripts (<span class="ui">Archivo › Abrir diccionario…</span>) para ver los detalles.</p>
+<table>
+<tr><th>Comando</th><th>Qué hace</th></tr>
+<tr><td><span class="ui">add episode</span></td><td>Añade un archivo de vídeo a la biblioteca de la app TV (o lo encuentra en ella) con
+su serie, temporada, episodio, título, género y descripciones, y devuelve su ID persistente.</td></tr>
+<tr><td><span class="ui">update episode</span></td><td>Cambia los datos de un episodio.</td></tr>
+<tr><td><span class="ui">remove episode</span></td><td>Elimina un episodio de la biblioteca. El archivo se conserva.</td></tr>
+<tr><td><span class="ui">refresh library</span></td><td>Vuelve a leer la biblioteca.</td></tr>
+<tr><td><span class="ui">create account</span>, <span class="ui">change account password</span>, <span class="ui">delete account</span>,
+<span class="ui">account names</span>, <span class="ui">account log</span></td><td>Gestionan las cuentas.</td></tr>
+</table>
+<p>Las descripciones largas indicadas de esta forma se guardan en la base de datos de TV Library Viewer y se restauran cuando
+la app TV las olvida.</p>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

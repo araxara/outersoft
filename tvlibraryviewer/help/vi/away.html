@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Xem khi ở xa nhà</title>
+<meta name="description" content="Ba cách truy cập thư viện của bạn từ một mạng khác: SSH, VPN hoặc cổng được chuyển tiếp." />
+<meta name="keywords" content="từ xa, xa nhà, du lịch, SSH, VPN, Tailscale, chuyển tiếp cổng, bộ định tuyến, 47100, ngoại tuyến" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="away"></a>
+<nav class="crumbs"><a href="index.html">Trợ giúp TV Library Viewer</a> › Bắt đầu</nav>
+<h1>Xem khi ở xa nhà</h1>
+<p class="lead">Thư viện của bạn vẫn nằm trên máy Mac ở nhà. Hãy chọn một cách để truy cập thư viện từ nơi khác.</p>
+
+<h2>Qua SSH</h2>
+<p>Phù hợp nhất nếu bạn đã có thể đăng nhập vào máy Mac đó, hoặc một máy tính trong mạng của nó, bằng SSH. Không cần thiết lập
+gì thêm. Dùng <span class="ui">Từ xa (SSH)</span> trong Kết nối với thư viện được chia sẻ. Mọi dữ liệu đều đi qua
+kết nối SSH.</p>
+
+<h2>Qua VPN</h2>
+<p>Khi có VPN như Tailscale trên cả hai thiết bị, hãy dùng <span class="ui">Địa chỉ</span> với địa chỉ VPN của máy Mac và
+cổng 47100.</p>
+
+<h2>Qua cổng được chuyển tiếp</h2>
+<ol>
+<li>Trên bộ định tuyến, chuyển tiếp cổng 47100 (hoặc cổng trong <span class="ui">Cài đặt › Chia sẻ</span>) đến máy Mac có
+thư viện.</li>
+<li>Thêm tài khoản với mật khẩu mạnh trong <span class="ui">Cài đặt › Tài khoản</span>.</li>
+<li>Trên thiết bị kia, dùng <span class="ui">Địa chỉ</span> với địa chỉ công khai của nhà bạn và cổng đó.</li>
+</ol>
+<div class="note"><b>Lưu ý:</b> Kết nối luôn được mã hóa, và thiết bị luôn kiểm tra chứng chỉ của thư viện,
+dù kết nối từ đâu. Mười lần nhập sai mật khẩu từ một địa chỉ trong vòng 5 phút sẽ bị
+từ chối mà không được kiểm tra.</div>
+
+<h2>Khi hoàn toàn không có kết nối</h2>
+<p>Tải về các tập trước khi đi (Mac, iPad và iPhone). Khi không truy cập được thư viện,
+ứng dụng mở thư viện như lần xem gần nhất, hiển thị <span class="ui">Ngoại tuyến</span> và phát các mục bạn đã tải về. Những gì bạn xem sẽ được gửi
+đến máy Mac khi kết nối lại được.</p>
+<div class="see"><h3>Xem thêm</h3><ul><li><a href="connect.html">Kết nối với thư viện được chia sẻ</a></li><li><a href="downloads.html">Tải về và xem ngoại tuyến</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

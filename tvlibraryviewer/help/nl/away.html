@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kijken als je niet thuis bent</title>
+<meta name="description" content="Drie manieren om je bibliotheek vanaf een ander netwerk te bereiken: SSH, een VPN of een doorgestuurde poort." />
+<meta name="keywords" content="op afstand, onderweg, reizen, SSH, VPN, Tailscale, poort doorsturen, router, 47100, offline" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="away"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer Help</a> › Aan de slag</nav>
+<h1>Kijken als je niet thuis bent</h1>
+<p class="lead">Je bibliotheek blijft op de Mac thuis. Kies één manier om hem van elders te bereiken.</p>
+
+<h2>Via SSH</h2>
+<p>De beste keuze als je al met SSH kunt inloggen op die Mac, of op een computer in hetzelfde netwerk. Verder hoef je
+niets in te stellen. Gebruik <span class="ui">Op afstand (SSH)</span> in 'Maak verbinding met gedeelde bibliotheek'. Alles gaat via de
+SSH-verbinding.</p>
+
+<h2>Via een VPN</h2>
+<p>Met een VPN zoals Tailscale op beide apparaten gebruik je <span class="ui">Adres</span> met het VPN-adres van de Mac en
+poort 47100.</p>
+
+<h2>Via een doorgestuurde poort</h2>
+<ol>
+<li>Stuur op je router poort 47100 (of de poort in <span class="ui">Instellingen › Delen</span>) door naar de Mac met
+de bibliotheek.</li>
+<li>Voeg accounts met sterke wachtwoorden toe in <span class="ui">Instellingen › Accounts</span>.</li>
+<li>Gebruik op het andere apparaat <span class="ui">Adres</span> met het openbare adres van je thuisnetwerk en de poort.</li>
+</ol>
+<div class="note"><b>Opmerking:</b> Verbindingen zijn altijd versleuteld, en apparaten controleren het certificaat van de
+bibliotheek, waar ze ook vandaan verbinding maken. Tien verkeerde wachtwoorden vanaf één adres binnen 5 minuten worden
+geweigerd zonder te worden gecontroleerd.</div>
+
+<h2>Helemaal zonder verbinding</h2>
+<p>Download afleveringen voordat je vertrekt (Mac, iPad en iPhone). Als de bibliotheek niet bereikbaar is, opent de
+app hem zoals je hem het laatst zag, toont <span class="ui">Offline</span> en speelt je downloads af. Wat je bekijkt, wordt naar
+de Mac gestuurd zodra die weer bereikbaar is.</p>
+<div class="see"><h3>Zie ook</h3><ul><li><a href="connect.html">Verbinding maken met een gedeelde bibliotheek</a></li><li><a href="downloads.html">Downloads en offline kijken</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

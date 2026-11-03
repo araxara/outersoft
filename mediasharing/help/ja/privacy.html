@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Media Sharing GUI が読み取り・変更・保存するもの</title>
+<meta name="description" content="すべてはこの Mac とあなた自身のリモート Mac の間にとどまります。第三者なし、アカウントなし、トラッキングなし。" />
+<meta name="keywords" content="プライバシー, セキュリティ, キーチェーン, SSH, ローカル, データ, ログ" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="privacy"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI ヘルプ</a> › リファレンス</nav>
+<h1>Media Sharing GUI が読み取り・変更・保存するもの</h1>
+<p class="lead">App はこの Mac を、あなた自身のリモート Mac にだけつなぎます。ほかのどこにも送りません。</p>
+
+<h2>この Mac で</h2>
+<ul>
+<li><b>保存するもの：</b> 接続設定と、入力した SSH パスワード。パスワードは macOS の <b>キーチェーン</b> にのみ保存され、
+ほかには保存しません。<span class="ui">保存済みパスワードを削除</span> で消せます。</li>
+<li><b>書き込むもの：</b> 各接続が行ったことのログファイル（<a href="traffic-log.html">トラフィックとログ</a>を参照）。
+いつでも表示または削除できます。</li>
+<li><b>公開するもの：</b> リモートのライブラリを、この Mac のネットワークに Bonjour で公開します。これにより
+<span class="ui">Apple TV</span> と <span class="ui">ミュージック</span> App がそれを見られます。接続が実行中のあいだだけです。</li>
+</ul>
+
+<h2>ネットワーク越しに</h2>
+<ul>
+<li><b>指定したリモートの Mac にだけ接続します</b>。内蔵の <code>ssh</code> ツールを使った SSH 経由です。
+ストリーミングはそのトンネル内を暗号化されて流れます。</li>
+<li><b>第三者なし。</b> クラウドサービスも、作成するアカウントもなく、Outersoft やほかの誰にも何も送信しません。</li>
+</ul>
+<div class="see"><h3>関連項目</h3><ul><li><a href="overview.html">Media Sharing GUI のしくみ</a></li><li><a href="authentication.html">SSH の鍵とパスワード</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

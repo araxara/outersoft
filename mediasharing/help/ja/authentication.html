@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SSH の鍵とパスワード</title>
+<meta name="description" content="Media Sharing GUI は可能なときは SSH 鍵でログインし、できないときはキーチェーンに保存したパスワードにフォールバックします。" />
+<meta name="keywords" content="認証, SSH, 鍵, パスワード, キーチェーン, 削除, ログイン" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="authentication"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI ヘルプ</a> › 使い方</nav>
+<h1>SSH の鍵とパスワード</h1>
+<p class="lead">鍵ベースのログインが最良で、保存したパスワードはフォールバックです。</p>
+
+<h2>SSH 鍵で</h2>
+<p>リモートの Mac がこの Mac の SSH 鍵をすでに信頼していれば、Media Sharing GUI は何も入力せずに静かにログインします。
+鍵を一度設定しておく（<code>ssh-copy-id user@host</code>）のが、このアプリを最もスムーズに使う方法です。
+<a href="remote-setup.html">自宅の Mac で</a>を参照。</p>
+
+<h2>パスワードで</h2>
+<p>鍵ログインが失敗すると、状態が <span class="ui">パスワードが必要</span> になります。</p>
+<ol>
+<li><span class="ui">SSH 認証</span> ボックスにアカウントのパスワードを入力し、<span class="ui">送信</span> を押します。</li>
+<li>一度うまくいくと、パスワードはこの Mac の<b>キーチェーン</b>に保存され、次回から尋ねられません。</li>
+</ol>
+<p>あらかじめ <span class="ui">構成</span> にパスワードを入力しておくこともできます。使われるのは鍵ログインが失敗したときだけで、
+これも最初に成功した時点でキーチェーンに移されます。</p>
+
+<h2>保存したパスワードを削除する</h2>
+<p><span class="ui">保存済みパスワードを削除</span> をクリックすると、現在のログインのキーチェーン項目を取り除きます。
+たとえばリモートの Mac でパスワードを変更したあとに使います。次の接続で再び尋ねられます。</p>
+<div class="see"><h3>関連項目</h3><ul><li><a href="remote-setup.html">自宅の Mac で</a></li><li><a href="connect.html">接続を設定して開始する</a></li><li><a href="privacy.html">Media Sharing GUI が読み取り・変更・保存するもの</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

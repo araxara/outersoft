@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Media Sharing GUI 讀取、更改與儲存的內容</title>
+<meta name="description" content="一切都留在這台 Mac 與你自己的遠端 Mac 之間：沒有第三方、沒有帳號、沒有追蹤。" />
+<meta name="keywords" content="隱私, 安全, 鑰匙圈, SSH, 本機, 資料, 日誌" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="privacy"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI 輔助說明</a> › 參考</nav>
+<h1>Media Sharing GUI 讀取、更改與儲存的內容</h1>
+<p class="lead">這款 App 只把這台 Mac 連到你自己的遠端 Mac。沒有任何東西前往別處。</p>
+
+<h2>在這台 Mac 上</h2>
+<ul>
+<li><b>儲存：</b>你的連線設定，以及你輸入的任何 SSH 密碼——密碼儲存在 macOS 的<b>鑰匙圈</b>中，別無他處。
+<span class="ui">忘記已儲存的密碼</span> 會將其移除。</li>
+<li><b>寫入：</b>一個記錄每個連線所做之事的日誌檔案（參閱<a href="traffic-log.html">流量與日誌</a>）。你隨時可以顯示或刪除它。</li>
+<li><b>發佈：</b>透過 Bonjour 把遠端資料庫發佈到這台 Mac 自己的網路上，讓 <span class="ui">Apple TV</span> 和
+<span class="ui">音樂</span> App 能看到它——僅在連線執行期間。</li>
+</ul>
+
+<h2>透過網路</h2>
+<ul>
+<li><b>只連線到你指定的遠端 Mac</b>，透過 SSH，使用內建的 <code>ssh</code> 工具。串流在該通道內加密傳輸。</li>
+<li><b>沒有第三方。</b>沒有雲端服務，沒有要建立的帳號，也不會向 Outersoft 或任何其他人傳送任何內容。</li>
+</ul>
+<div class="see"><h3>另請參閱</h3><ul><li><a href="overview.html">Media Sharing GUI 的運作方式</a></li><li><a href="authentication.html">SSH 密鑰與密碼</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

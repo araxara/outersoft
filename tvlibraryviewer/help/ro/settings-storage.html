@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ro">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Configurările Stocare</title>
+<meta name="description" content="Cât de mare este biblioteca și cât spațiu ocupă baza de date și memoriile cache ale TV Library Viewer." />
+<meta name="keywords" content="configurări, stocare, bază de date, mărime, spațiu, seriale, episoade, distribuție, fotografii actori, cache, TV Library Viewer" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings-storage"></a>
+<nav class="crumbs"><a href="index.html">Ajutor TV Library Viewer</a> › Configurări</nav>
+<h1>Configurările Stocare</h1>
+<p class="lead">Alege <span class="ui">TV Library Viewer › Configurări</span>, apoi fă clic pe <span class="ui">Stocare</span>.</p>
+
+<h2>Biblioteca TV a acestui Mac</h2>
+<p>Numărul de seriale și episoade din biblioteca aplicației TV și mărimea bazei sale de date. Fișierele
+video nu sunt incluse.</p>
+
+<h2>Baza de date TV Library Viewer</h2>
+<p>Baza de date proprie a TV Library Viewer pe acest Mac, partajată cu fiecare dispozitiv care afișează biblioteca.</p>
+<table>
+<tr><th>Parte</th><th>Ce conține</th></tr>
+<tr><td><span class="ui">Informații despre seriale</span></td><td>Descrierile complete date prin AppleScript și distribuția fiecărui
+serial: numele actorilor și rolurile lor.</td></tr>
+<tr><td><span class="ui">Traduceri</span></td><td>Titluri și descrieri de episoade traduse în limbile setate în aplicații.</td></tr>
+<tr><td><span class="ui">Distribuție și echipă</span></td><td>O fotografie mică pentru fiecare persoană și adresele paginilor
+sale pe TVmaze și TMDb.</td></tr>
+<tr><td><span class="ui">Conturi și vizionare</span></td><td>Conturile, vizionările tuturor conturilor în afară de cel
+principal și jurnalele conturilor.</td></tr>
+<tr><td><span class="ui">Structura bazei de date și spațiu liber</span></td><td>Evidențele proprii ale SQLite și spațiul pe care îl refolosește.</td></tr>
+<tr><td><span class="ui">Modificări recente</span></td><td>Modificări încă neintegrate în baza de date. Acest lucru se face din
+când în când.</td></tr>
+</table>
+<p>Distribuția și echipa unui serial sunt căutate pe TVmaze și TMDb prima dată când i se deschide pagina, aici sau
+pe orice dispozitiv. Detaliile persoanelor sunt preluate de fiecare dată când le deschizi, așa că nu sunt niciodată învechite,
+și nu sunt stocate. Fă clic pe <span class="ui">Afișează în Finder</span> pentru a vedea fișierul bazei de date.</p>
+
+<h2><a name="tmdb"></a>Detalii despre distribuție și echipă: un token TMDb</h2>
+<p>TVmaze nu necesită nicio configurare. TMDb (The Movie Database) adaugă regizori și scenariști, actori
+pe care TVmaze nu îi are și biografii, adesea în limba ta. Are nevoie de un token propriu: TMDb
+oferă unul gratuit oricui are un cont, pentru uz personal, necomercial. TV Library Viewer
+nu vine cu unul.</p>
+<ol>
+<li>Creează un cont gratuit pe themoviedb.org și autentifică-te.</li>
+<li>Fă clic pe pictograma contului, alege <span class="ui">Settings</span>, apoi fă clic pe <span class="ui">API</span>.</li>
+<li>Solicită o cheie API: alege <span class="ui">Developer</span>, acceptă termenii și descrie utilizarea ca personală
+și necomercială (de exemplu, „Afișarea distribuției și a biografiilor în propria mea aplicație de bibliotecă TV”).</li>
+<li>Când cheia este gata, copiază <span class="ui">API Read Access Token</span> (cel lung, nu API Key, cel mai scurt).</li>
+<li>Pe Mac-ul cu biblioteca, alege <span class="ui">TV Library Viewer › Configurări</span>, fă clic pe <span class="ui">Stocare</span> și
+lipește-l în <span class="ui">API Read Access Token TMDb</span>.</li>
+<li>Fă clic pe <span class="ui">Testează</span>. „TMDb acceptă acest token” înseamnă că funcționează.</li>
+</ol>
+<p>Tokenul este păstrat în Portchei pe Mac. Doar Mac-ul cu biblioteca îl folosește; celelalte
+dispozitive primesc distribuția și detaliile de la acel Mac. Serialele deja căutate primesc distribuția și echipa de la TMDb
+data următoare când li se deschide pagina. Dacă închizi Configurări fără să testezi un token nou, acesta este testat atunci
+și ești anunțat dacă TMDb îl refuză.</p>
+<div class="note"><b>Notă:</b> Acest produs folosește API-ul TMDB, dar nu este aprobat sau certificat de TMDB.</div>
+
+<h2><a name="google"></a>Traducere: o cheie Google</h2>
+<p>Titlurile și descrierile episoadelor sunt traduse în limba fiecărui dispozitiv pe acest Mac, gratuit,
+cu funcția de traducere Apple. Aceasta nu poate traduce în greacă, cehă, maghiară, română, persană, urdu
+sau bengaleză. Pentru acestea, adaugă propria cheie Google Cloud Translation API. Doar Macul cu biblioteca
+are nevoie de una, nu și dispozitivele care o vizionează. Primele 500.000 de caractere în fiecare lună sunt gratuite, iar fiecare
+text este tradus o singură dată.</p>
+<ol>
+<li>Accesează console.cloud.google.com și autentifică-te cu contul tău Google.</li>
+<li>Creează un proiect: fă clic pe meniul de proiecte din partea de sus, apoi pe <span class="ui">New Project</span>, și dă-i un
+nume, de exemplu „TV Library Viewer”.</li>
+<li>Activează facturarea: în meniul ☰, alege <span class="ui">Billing</span> și asociază un cont de facturare. Google cere
+unul chiar și pentru utilizarea gratuită. Pentru siguranță, adaugă un buget, de exemplu 1 USD, în <span class="ui">Budgets &amp; alerts</span>.</li>
+<li>Alege ☰ › <span class="ui">APIs &amp; Services › Library</span>, caută <span class="ui">Cloud Translation API</span> și fă clic pe
+<span class="ui">Enable</span>.</li>
+<li>Alege ☰ › <span class="ui">APIs &amp; Services › Credentials</span>, apoi <span class="ui">Create credentials › API key</span>, și
+copiază cheia (începe cu „AIza”).</li>
+<li>Recomandat: fă clic pe numele cheii, alege <span class="ui">Restrict key</span> sub API restrictions, bifează
+<span class="ui">Cloud Translation API</span> și fă clic pe <span class="ui">Save</span>, ca cheia să funcționeze doar pentru traducere.</li>
+<li>Pe Macul cu biblioteca, alege <span class="ui">TV Library Viewer › Configurări</span>, fă clic pe <span class="ui">Stocare</span>,
+lipește cheia în <span class="ui">Cheie Google Cloud Translation API</span> și fă clic pe <span class="ui">Testează</span>.</li>
+</ol>
+<p>Cheia este păstrată în Brelocul Macului și este folosită doar pentru aceste șapte limbi. Nu o
+partaja: tot ce se traduce cu ea este facturat în contul tău Google.</p>
+
+<h2>Memorii cache</h2>
+<p>Imaginile și bibliotecile pe care acest Mac le-a afișat de pe alte Mac-uri. Memoriile cache sunt refăcute când este nevoie,
+iar macOS le golește când rămâne fără spațiu.</p>
+<div class="see"><h3>Vezi și</h3><ul><li><a href="show-page.html">Pagina serialului și distribuția</a></li><li><a href="privacy.html">Ce citește, modifică și păstrează TV Library Viewer</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

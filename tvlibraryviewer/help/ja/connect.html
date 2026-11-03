@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>共有ライブラリに接続する</title>
+<meta name="description" content="別のMac、iPad、iPhone、Apple TVを、ライブラリを共有しているMacに接続します。" />
+<meta name="keywords" content="接続, Bonjour, ネットワーク, SSH, アドレス, 証明書, フィンガープリント, 信頼, サインイン, パスワード" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer ヘルプ</a> › はじめに</nav>
+<h1>共有ライブラリに接続する</h1>
+<p class="lead">接続は各デバイスで一度だけ行います。それ以降は同じライブラリが自動的に開きます。</p>
+
+<h2>「共有ライブラリに接続」を開く</h2>
+<ul>
+<li><b>Mac：</b><span class="ui">ファイル › 共有ライブラリに接続…</span>を選択します（<kbd>⌘K</kbd>）。</li>
+<li><b>iPadとiPhone：</b>サイドバーの<span class="ui">共有ライブラリに接続…</span>をタップします（キーボードでは<kbd>⌘K</kbd>）。</li>
+<li><b>Apple TV：</b>初回は、ネットワーク上でパスワードなしで共有している最初のMacにTV Libraryが接続します。それ以外の場合は<span class="ui">ライブラリ › 別のライブラリに接続…</span>に移動します。</li>
+</ul>
+
+<h2>Macへの接続方法を選ぶ</h2>
+<h3>このネットワーク</h3>
+<p>同じネットワーク上で共有をオンにしているMacが名前で表示されます。1つ選んでください。</p>
+<h3>リモート（SSH）</h3>
+<p>別の家など、別のネットワーク上のMacに使います。そのMac（または同じネットワーク上の任意のコンピュータ）にSSHで接続するときのアドレスと、ユーザ名が異なる場合はそのユーザ名を入力します。TV Library Viewerがログインし、そのネットワーク上のライブラリを見つけて、SSH接続経由で接続します。</p>
+<ul>
+<li>初回は、照合して確認するためにホストの鍵が表示されます。</li>
+<li>Macでは、ホストが受け入れる場合は自分のSSH鍵が使われます。そうでない場合はパスワードを尋ねられ、パスワードはキーチェーンに保存されます。</li>
+<li>iPad、iPhone、Apple TVには独自の鍵があります。初めてパスワードでログインしたあと、その鍵をホストにインストールするよう提案されるので、次回からはパスワードが不要になります。</li>
+</ul>
+<h3>アドレス</h3>
+<p>このデバイスから直接接続できるMacに使います。TailscaleなどのVPN経由や、ルーターがMacに転送しているポート経由の場合です。アドレスとポート（変更していなければポート47100）を入力し、ライブラリにアカウントがある場合はアカウント名とパスワードを入力します。</p>
+
+<h2>ライブラリの証明書を信頼する</h2>
+<p>最初の接続時に、ライブラリの証明書のフィンガープリントが表示されます。ライブラリのあるMacの<span class="ui">設定 › 共有</span>に表示されるものと照合してから、<span class="ui">信頼して接続</span>を選択します。以降、デバイスは毎回その証明書を確認し、証明書が変わったライブラリへの接続は拒否します。</p>
+
+<h2>サインインする</h2>
+<p>ライブラリにアカウントがある場合は、そのMacで設定された自分のアカウントの名前とパスワードを入力します。デバイスはそれらをキーチェーンに保存します。アカウントがない場合は、名前を空欄のままにし、ライブラリのパスワードがあればそれを使います。</p>
+<div class="see"><h3>関連項目</h3><ul><li><a href="away.html">外出先で視聴する</a></li><li><a href="sidebar-libraries.html">ライブラリを切り替える</a></li><li><a href="settings-accounts.html">アカウント設定</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

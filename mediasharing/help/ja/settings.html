@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>構成リファレンス</title>
+<meta name="description" content="構成ボックスの各フィールドの役割と、変更するタイミング。" />
+<meta name="keywords" content="設定, 構成, フィールド, ポート, 制御ソケット, キープアライブ, 圧縮, リファレンス" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI ヘルプ</a> › リファレンス</nav>
+<h1>構成リファレンス</h1>
+<p class="lead">App 内の各フィールド横の <span class="ui">(i)</span> をクリックすると同じ説明が出ます。ほとんどのフィールドは
+初期値のままで構いません。</p>
+
+<h2>接続先</h2>
+<ul>
+<li><b><span class="ui">接続名</span></b> — サイドバーに表示される名札で、自分のための参照用です。接続の動作には影響しません。</li>
+<li><b><span class="ui">リモートログイン (user@host)</span></b> — リモートの Mac の SSH ユーザ名とホスト（またはダイナミック DNS 名）。
+例：<code>alex@myhome.example.com</code> — <code>ssh</code> に渡すのと同じ <code>user@host</code> です。</li>
+<li><b><span class="ui">リモート SSH ポート</span></b> — リモートの Mac の SSH サーバに到達する TCP ポート。
+ルーターはしばしばカスタムの外部ポート（22022 など）を自宅ネットワーク内の Mac の SSH ポートに転送するため、
+22 でないことが多いです。</li>
+</ul>
+
+<h2>ポート</h2>
+<ul>
+<li><b><span class="ui">ローカル転送ポート</span></b> — <i>この</i> Mac の空きポート。リモートのライブラリのホームシェアリングポートが
+ここにトンネルされるため、このポートの <code>localhost</code> を見る App はリモートのライブラリに到達します。</li>
+<li><b><span class="ui">リモート Media Sharing ポート</span></b> — リモートの Mac 側でホームシェアリングが待ち受けるポート。
+通常は 3689、標準の DAAP／ホームシェアリングのポートです。特殊な構成でない限り変更しないでください。</li>
+</ul>
+
+<h2>トンネルの動作</h2>
+<ul>
+<li><b><span class="ui">SSH 制御ソケットのパス</span></b> — <code>ssh</code> のバックグラウンド制御ソケット用のローカルファイルパス。
+これにより、プロセスを強制終了せずに、トンネルをきれいに閉じられます（<code>ssh -O exit</code>）。</li>
+<li><b><span class="ui">Server Alive Interval</span></b> — <code>ssh</code> がリモート側に ping を送る頻度（秒）。
+ルーターやファイアウォール越しにトンネルを維持し、切れたときに素早く気づくためのものです。</li>
+<li><b><span class="ui">トラフィックのポーリング間隔</span></b> — トラフィックパネルが <code>nettop</code> を再サンプリングする頻度（秒）。
+各サンプリングには数秒かかります。それより短い間隔にしても、続けて実行されるだけです。</li>
+<li><b><span class="ui">SSH 圧縮</span></b> — <code>ssh</code> の圧縮（<code>-C</code>）をオンにします。
+わずかな CPU と引き換えにデータ量を小さくし、遅い、または高遅延の自宅回線での再生を目に見えてなめらかにできます。
+オンのままで問題ありません。</li>
+</ul>
+<div class="see"><h3>関連項目</h3><ul><li><a href="connect.html">接続を設定して開始する</a></li><li><a href="traffic-log.html">トラフィックとログ</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kunci dan kata sandi SSH</title>
+<meta name="description" content="Media Sharing GUI masuk dengan kunci SSH Anda bila bisa, dan beralih ke kata sandi yang disimpannya di Keychain." />
+<meta name="keywords" content="autentikasi, SSH, kunci, kata sandi, keychain, lupakan, login" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="authentication"></a>
+<nav class="crumbs"><a href="index.html">Bantuan Media Sharing GUI</a> › Penggunaan</nav>
+<h1>Kunci dan kata sandi SSH</h1>
+<p class="lead">Login berbasis kunci yang terbaik; kata sandi tersimpan adalah cadangan.</p>
+
+<h2>Dengan kunci SSH</h2>
+<p>Jika Mac jarak jauh sudah memercayai kunci SSH Mac ini, Media Sharing GUI masuk tanpa suara —
+tidak ada yang perlu diketik. Menyiapkan kunci sekali (<code>ssh-copy-id user@host</code>) adalah cara termulus
+memakai app ini. Lihat <a href="remote-setup.html">Di Mac di rumah</a>.</p>
+
+<h2>Dengan kata sandi</h2>
+<p>Jika login kunci gagal, keadaan berubah menjadi <span class="ui">PERLU KATA SANDI</span>:</p>
+<ol>
+<li>Ketik kata sandi akun di kotak <span class="ui">Autentikasi SSH</span> dan tekan <span class="ui">Kirim</span>.</li>
+<li>Begitu berhasil, kata sandi disimpan ke <b>Keychain</b> Mac ini, sehingga tidak ditanyakan lagi.</li>
+</ol>
+<p>Anda juga bisa mengetik kata sandi ke <span class="ui">Konfigurasi</span> lebih dulu; ia hanya dipakai jika login
+kunci gagal, dan ia pun berpindah ke Keychain pada keberhasilan pertama.</p>
+
+<h2>Lupakan kata sandi tersimpan</h2>
+<p>Klik <span class="ui">Lupakan Kata Sandi Tersimpan</span> untuk menghapus entri Keychain untuk login saat ini — misalnya
+setelah Anda mengubah kata sandi di Mac jarak jauh. Koneksi berikutnya akan menanyakannya lagi.</p>
+<div class="see"><h3>Lihat juga</h3><ul><li><a href="remote-setup.html">Di Mac di rumah</a></li><li><a href="connect.html">Menyiapkan dan memulai koneksi</a></li><li><a href="privacy.html">Apa yang Media Sharing GUI baca, ubah, dan simpan</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

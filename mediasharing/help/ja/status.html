@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>状況と状態</title>
+<meta name="description" content="状況ボックスは、接続が何をしているか、そのトンネルのプロセス、どれくらい稼働しているかを表示します。" />
+<meta name="keywords" content="状況, 状態, 実行中, 接続中, 稼働時間, トンネル, PID" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="status"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI ヘルプ</a> › 使い方</nav>
+<h1>状況と状態</h1>
+<p class="lead">状況ボックスは、開始・停止を行い、何が起きているかを見る場所です。</p>
+
+<h2>状態の意味</h2>
+<table>
+<tr><th>状態</th><th>起きていること</th></tr>
+<tr><td>アイドル</td><td>未接続。<span class="ui">開始</span> を押して始めます。</td></tr>
+<tr><td>接続中</td><td>リモートの Mac への SSH トンネルを開いています。</td></tr>
+<tr><td>パスワードが必要</td><td>鍵ログインが通りませんでした。<span class="ui">SSH 認証</span> にパスワードを入力します。</td></tr>
+<tr><td>問い合わせ中</td><td>リモートの Mac に、広告しているホームシェアリングのライブラリを尋ねています。</td></tr>
+<tr><td>登録中</td><td>そのライブラリを Bonjour でここに公開しています。</td></tr>
+<tr><td>実行中</td><td>稼働中。ライブラリは Apple TV / ミュージック App で利用できます。</td></tr>
+<tr><td>再接続中</td><td>接続が切れました。自動で再試行しています。</td></tr>
+<tr><td>停止中</td><td>トンネルを閉じ、ローカルの広告を取り除いています。</td></tr>
+<tr><td>エラー</td><td>問題が起きました。ログに内容が表示されます。<a href="troubleshooting.html">接続できないとき</a>を参照。</td></tr>
+</table>
+
+<h2>その他の行</h2>
+<ul>
+<li><span class="ui">トンネル PID</span> — バックグラウンドの <code>ssh</code> トンネルのプロセス ID。
+<a href="traffic-log.html">トラフィック</a>の測定や、きれいに閉じるために使われます。</li>
+<li><span class="ui">稼働時間</span> — 現在の接続が確立してからの経過時間。</li>
+</ul>
+<p>下部のボタンは状態に応じて変わります。アイドル時は <span class="ui">開始</span>、接続中は <span class="ui">停止</span>、
+接続途中は <span class="ui">キャンセル</span>。</p>
+<div class="see"><h3>関連項目</h3><ul><li><a href="libraries.html">公開するライブラリを選ぶ</a></li><li><a href="reconnecting.html">再接続とスリープ</a></li><li><a href="traffic-log.html">トラフィックとログ</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

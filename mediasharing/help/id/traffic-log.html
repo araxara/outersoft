@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lalu lintas dan log</title>
+<meta name="description" content="Amati berapa banyak data yang dibawa terowongan, dan baca (atau simpan) log segala sesuatu yang dilakukannya." />
+<meta name="keywords" content="lalu lintas, nettop, byte, masuk, keluar, puncak, log, berkas, Finder" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="traffic-log"></a>
+<nav class="crumbs"><a href="index.html">Bantuan Media Sharing GUI</a> › Penggunaan</nav>
+<h1>Lalu lintas dan log</h1>
+<p class="lead">Dua kotak menunjukkan bagaimana koneksi berjalan: berapa banyak yang dipindahkannya dan apa yang telah dilakukannya.</p>
+
+<h2>Lalu Lintas Sesi SSH</h2>
+<ul>
+<li><span class="ui">Masuk</span> dan <span class="ui">Keluar</span> menunjukkan byte yang mengalir melalui proses terowongan, dengan angka <span class="ui">Puncak</span>
+untuk momen tersibuk.</li>
+<li>Angka-angka disampel dengan alat sistem <code>nettop</code>, bukan penangkapan paket mentah, jadi
+merupakan panduan kasar alih-alih meteran yang persis.</li>
+<li>Seberapa sering ia menyampel ulang diatur oleh <span class="ui">Interval polling traffic</span> di
+<a href="settings.html">Konfigurasi</a>. Setiap sampel memerlukan beberapa detik; interval yang lebih pendek
+dari itu hanya menjalankan sampel berurutan.</li>
+</ul>
+
+<h2>Log</h2>
+<p>Kotak <span class="ui">Log</span> mencatat setiap langkah — membuka terowongan, menemukan pustaka, menerbitkannya,
+menyambung ulang, dan galat apa pun. Ia juga ditulis ke berkas di disk; kotak menunjukkan
+<span class="ui">Disimpan ke:</span> jalurnya. Klik jalur itu untuk <b>menampilkan log di Finder</b>, berguna saat Anda ingin
+mengirimkannya sambil menyelesaikan masalah.</p>
+<div class="see"><h3>Lihat juga</h3><ul><li><a href="status.html">Status dan keadaan</a></li><li><a href="troubleshooting.html">Jika tidak tersambung</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

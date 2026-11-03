@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Media Sharing GUI 的運作方式</title>
+<meta name="description" content="讓另一台 Mac 上的「家庭共享」資料庫出現在這台 Mac 的網路中，以透過 SSH 通道播放。" />
+<meta name="keywords" content="概述, 家庭共享, 媒體共享, SSH, 通道, Bonjour, Apple TV, 音樂, 遠端" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="overview"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI 輔助說明</a> › 入門</nav>
+<h1>Media Sharing GUI 的運作方式</h1>
+<p class="lead">它讓另一台 Mac 上的資料庫看起來就像近在你的網路中。</p>
+
+<p>「家庭共享」（媒體共享）讓 <span class="ui">Apple TV</span> App、<span class="ui">音樂</span> 和 <span class="ui">iTunes</span> 能從另一台電腦串流，
+但僅限<b>同一本機網路</b>中的電腦。Media Sharing GUI 去除了這項限制。將它指向家中的一台 Mac（或任何你能透過 SSH 到達的 Mac），
+它所共享的資料庫便會出現在這裡的 <span class="ui">Apple TV</span> 或 <span class="ui">音樂</span> 來源列表中，彷彿那台 Mac 就在隔壁房間。</p>
+
+<h2>它的運作步驟</h2>
+<ol>
+<li>從這台 Mac 向遠端 Mac 開啟一條 <b>SSH 通道</b>。</li>
+<li>透過該通道，詢問遠端 Mac 它在自己的本機網路中廣播的是哪個「家庭共享」服務。</li>
+<li><b>在這裡重新發佈同一個服務</b>，透過 Bonjour，並經通道回指，這樣這台 Mac 上的 App 就會把該資料庫視為近在區域網路中。</li>
+</ol>
+<p>執行時，來自該資料庫的串流在 SSH 通道內加密傳輸。用狀態框中的 <span class="ui">開始</span> 和 <span class="ui">停止</span> 來開啟或關閉。</p>
+
+<h2>你需要什麼</h2>
+<ul>
+<li><b>在家中的 Mac 上：</b>在 <span class="ui">Apple TV</span> 或 <span class="ui">音樂</span> App 中開啟「家庭共享」（或媒體共享），
+並啟用遠端登入（SSH）。請參閱<a href="remote-setup.html">在家中的 Mac 上</a>。</li>
+<li><b>到達它的途徑：</b>它的位址或動態 DNS 名稱，以及你的路由器轉送到它的 SSH 連接埠。</li>
+<li><b>在這台 Mac 上：</b>無需特別設定——Media Sharing GUI 會替你驅動內建的 <code>ssh</code> 和 Bonjour 工具。</li>
+</ul>
+
+<h2>開始使用</h2>
+<ol>
+<li>將<a href="remote-setup.html">家中的 Mac</a> 設定一次。</li>
+<li><a href="connect.html">填寫一個連線並按「開始」</a>。</li>
+<li>在這裡<a href="libraries.html">選擇要發佈哪些資料庫</a>。</li>
+</ol>
+<div class="see"><h3>另請參閱</h3><ul><li><a href="remote-setup.html">在家中的 Mac 上</a></li><li><a href="connect.html">設定並啟動連線</a></li><li><a href="privacy.html">Media Sharing GUI 讀取、更改與儲存的內容</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

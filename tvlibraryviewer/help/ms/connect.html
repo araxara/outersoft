@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ms">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sambung ke pustaka dikongsi</title>
+<meta name="description" content="Sambungkan Mac lain, iPad, iPhone atau Apple TV ke Mac yang berkongsi pustakanya." />
+<meta name="keywords" content="sambung, Bonjour, rangkaian, SSH, alamat, sijil, cap jari, percaya, daftar masuk, kata laluan" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">Bantuan TV Library Viewer</a> › Bermula</nav>
+<h1>Sambung ke pustaka dikongsi</h1>
+<p class="lead">Setiap peranti hanya perlu bersambung sekali. Selepas itu, ia membuka semula pustaka yang sama dengan sendirinya.</p>
+
+<h2>Buka Sambung ke Pustaka Dikongsi</h2>
+<ul>
+<li><b>Mac:</b> pilih <span class="ui">Fail › Sambung ke Pustaka Dikongsi…</span> (<kbd>⌘K</kbd>).</li>
+<li><b>iPad dan iPhone:</b> ketik <span class="ui">Sambung ke Pustaka Dikongsi…</span> dalam bar sisi (<kbd>⌘K</kbd> dengan papan kekunci).</li>
+<li><b>Apple TV:</b> pada kali pertama, TV Library bersambung ke Mac pertama dalam rangkaian yang berkongsi
+tanpa kata laluan. Jika tidak, pergi ke <span class="ui">Pustaka › Sambung ke Pustaka Lain…</span>.</li>
+</ul>
+
+<h2>Pilih cara untuk mencapai Mac</h2>
+<h3>Rangkaian Ini</h3>
+<p>Mac dalam rangkaian yang sama yang perkongsiannya dihidupkan disenaraikan mengikut nama. Pilih salah satu.</p>
+<h3>Jauh (SSH)</h3>
+<p>Untuk Mac dalam rangkaian lain, seperti di rumah lain. Taipkan alamat yang anda gunakan untuk SSH ke Mac
+itu (atau mana-mana komputer dalam rangkaiannya), dan nama pengguna jika berbeza. TV Library Viewer log
+masuk, mencari pustaka dalam rangkaian itu dan bersambung melalui sambungan SSH.</p>
+<ul>
+<li>Pada kali pertama, ia menunjukkan kunci hos untuk dibandingkan dan disahkan.</li>
+<li>Pada Mac, kunci SSH anda sendiri digunakan apabila hos menerimanya; jika tidak, ia meminta kata laluan
+dan menyimpannya dalam Rantaian Kunci anda.</li>
+<li>iPad, iPhone atau Apple TV mempunyai kuncinya sendiri. Selepas log masuk pertama dengan kata laluan, ia menawarkan untuk
+memasang kunci itu pada hos, supaya kata laluan tidak diperlukan lagi.</li>
+</ul>
+<h3>Alamat</h3>
+<p>Untuk Mac yang boleh dicapai terus oleh peranti ini: melalui VPN seperti Tailscale, atau port yang dimajukan
+oleh penghala anda kepadanya. Taipkan alamat dan port (port 47100 melainkan ia telah ditukar), serta nama akaun
+dan kata laluan jika pustaka mempunyai akaun.</p>
+
+<h2>Percayai sijil pustaka</h2>
+<p>Sambungan pertama menunjukkan cap jari sijil pustaka. Bandingkannya dengan cap jari dalam
+<span class="ui">Tetapan › Perkongsian</span> pada Mac yang mempunyai pustaka, kemudian pilih <span class="ui">Percaya dan Sambung</span>. Sejak
+itu, peranti menyemak sijil tersebut setiap kali, dan menolak pustaka yang sijilnya telah
+berubah.</p>
+
+<h2>Daftar masuk</h2>
+<p>Jika pustaka mempunyai akaun, masukkan nama dan kata laluan akaun anda dari Mac itu. Peranti
+menyimpannya dalam Rantaian Kuncinya. Jika tiada akaun, biarkan nama kosong dan gunakan kata laluan pustaka,
+jika ada.</p>
+<div class="see"><h3>Lihat juga</h3><ul><li><a href="away.html">Menonton di luar rumah</a></li><li><a href="sidebar-libraries.html">Bertukar antara pustaka</a></li><li><a href="settings-accounts.html">Tetapan Akaun</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

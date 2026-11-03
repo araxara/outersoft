@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AppleScript</title>
+<meta name="description" content="用脚本控制 TV Library Viewer，以添加剧集、设置描述和管理账户。" />
+<meta name="keywords" content="AppleScript, 脚本, 自动化, osascript, add episode, 详细描述, 账户" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="applescript"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer 帮助</a> › 参考</nav>
+<h1>AppleScript</h1>
+<p class="lead">TV Library Viewer 支持脚本控制，例如可以通过导入剧集的脚本来使用。若要了解详情，请在脚本编辑器中打开它的词典（<span class="ui">文件 › 打开词典…</span>）。</p>
+<table>
+<tr><th>命令</th><th>作用</th></tr>
+<tr><td><span class="ui">add episode</span></td><td>将视频文件连同其节目、季、集数、标题、类型和描述一起添加到 TV App 的资料库（如果已存在则找到它），并返回其永久 ID。</td></tr>
+<tr><td><span class="ui">update episode</span></td><td>更改剧集的详细信息。</td></tr>
+<tr><td><span class="ui">remove episode</span></td><td>从资料库中移除剧集。文件会保留。</td></tr>
+<tr><td><span class="ui">refresh library</span></td><td>重新读取资料库。</td></tr>
+<tr><td><span class="ui">create account</span>、<span class="ui">change account password</span>、<span class="ui">delete account</span>、<span class="ui">account names</span>、<span class="ui">account log</span></td><td>管理账户。</td></tr>
+</table>
+<p>通过这种方式提供的详细描述保存在 TV Library Viewer 的数据库中，并在 TV App 丢失这些描述时恢复。</p>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

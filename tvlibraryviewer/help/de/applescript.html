@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AppleScript</title>
+<meta name="description" content="TV Library Viewer per Skript steuern: Folgen hinzufügen, Beschreibungen festlegen und Accounts verwalten." />
+<meta name="keywords" content="AppleScript, Skript, Automatisierung, osascript, add episode, lange Beschreibung, Accounts, TV Library Viewer" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="applescript"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer-Hilfe</a> › Referenz</nav>
+<h1>AppleScript</h1>
+<p class="lead">TV Library Viewer lässt sich per Skript steuern, zum Beispiel von einem Skript, das Folgen importiert.
+Öffne sein Verzeichnis im Skripteditor (<span class="ui">Ablage › Verzeichnis öffnen …</span>), um die Details zu sehen.</p>
+<table>
+<tr><th>Befehl</th><th>Funktion</th></tr>
+<tr><td><span class="ui">add episode</span></td><td>Fügt eine Videodatei zur Mediathek der TV-App hinzu (oder findet sie dort), mit
+Serie, Staffel, Folge, Titel, Genre und Beschreibungen, und gibt ihre persistente ID zurück.</td></tr>
+<tr><td><span class="ui">update episode</span></td><td>Ändert die Angaben einer Folge.</td></tr>
+<tr><td><span class="ui">remove episode</span></td><td>Entfernt eine Folge aus der Mediathek. Die Datei bleibt erhalten.</td></tr>
+<tr><td><span class="ui">refresh library</span></td><td>Liest die Mediathek neu ein.</td></tr>
+<tr><td><span class="ui">create account</span>, <span class="ui">change account password</span>, <span class="ui">delete account</span>,
+<span class="ui">account names</span>, <span class="ui">account log</span></td><td>Verwalten Accounts.</td></tr>
+</table>
+<p>Auf diesem Weg festgelegte lange Beschreibungen werden in der Datenbank von TV Library Viewer gesichert und wiederhergestellt, wenn
+die TV-App sie vergisst.</p>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

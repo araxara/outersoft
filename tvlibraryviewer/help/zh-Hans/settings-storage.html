@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>储存空间设置</title>
+<meta name="description" content="资料库有多大，以及 TV Library Viewer 的数据库和缓存占用的空间。" />
+<meta name="keywords" content="设置, 储存空间, 数据库, 大小, 空间, 节目, 剧集, 演员, 演员照片, 缓存" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings-storage"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer 帮助</a> › 设置</nav>
+<h1>储存空间设置</h1>
+<p class="lead">选取<span class="ui">TV Library Viewer › 设置</span>，然后点按<span class="ui">储存空间</span>。</p>
+
+<h2>这台 Mac 的 TV 资料库</h2>
+<p>TV App 资料库中的节目和剧集数量，以及其数据库的大小。不计算视频文件。</p>
+
+<h2>TV Library Viewer 数据库</h2>
+<p>TV Library Viewer 在这台 Mac 上的自有数据库，与每台查看该资料库的设备共享。</p>
+<table>
+<tr><th>部分</th><th>包含的内容</th></tr>
+<tr><td><span class="ui">剧集信息</span></td><td>通过 AppleScript 提供的完整描述，以及每个节目的演员：演员的姓名和角色。</td></tr>
+<tr><td><span class="ui">翻译</span></td><td>已翻译成各 App 所设语言的剧集标题和简介。</td></tr>
+<tr><td><span class="ui">演职员</span></td><td>每个人的一张小照片，以及其在 TVmaze 和 TMDb 上的页面地址。</td></tr>
+<tr><td><span class="ui">账户与观看</span></td><td>账户、除主账户外所有账户的观看记录，以及账户的日志。</td></tr>
+<tr><td><span class="ui">数据库结构与可用空间</span></td><td>SQLite 自身的记录，以及它会重复使用的空间。</td></tr>
+<tr><td><span class="ui">最近的更改</span></td><td>尚未合并到数据库中的更改。它会不时进行合并。</td></tr>
+</table>
+<p>节目的演职员会在其页面首次打开时（无论在这里还是在任何设备上）从 TVmaze 和 TMDb 查找。人物详情在每次打开时获取，因此永远不会过时，也不会被存储。点按<span class="ui">在访达中显示</span>可查看数据库文件。</p>
+
+<h2><a name="tmdb"></a>演职员详情：TMDb 令牌</h2>
+<p>TVmaze 无需任何设置。TMDb（The Movie Database）会增加导演和编剧、TVmaze 没有的演员以及人物简介，而且常常是你的语言版本。它需要你自己的令牌：TMDb 免费向任何拥有账户的人提供令牌，供个人非商业用途使用。TV Library Viewer 不附带令牌。</p>
+<ol>
+<li>在 themoviedb.org 创建一个免费账户并登录。</li>
+<li>点按你的账户图标，选取<span class="ui">Settings</span>，然后点按<span class="ui">API</span>。</li>
+<li>申请 API 密钥：选取<span class="ui">Developer</span>，接受条款，并将用途描述为个人和非商业用途（例如“在我自己的电视资料库 App 中显示演员和人物简介”）。</li>
+<li>密钥准备好后，拷贝<span class="ui">API Read Access Token</span>（较长的那个，而不是较短的 API Key）。</li>
+<li>在存有资料库的 Mac 上，选取<span class="ui">TV Library Viewer › 设置</span>，点按<span class="ui">储存空间</span>，然后将其粘贴到<span class="ui">TMDb API Read Access Token</span>中。</li>
+<li>点按<span class="ui">测试</span>。显示“TMDb 接受此令牌。”即表示可以使用。</li>
+</ol>
+<p>令牌保存在 Mac 的钥匙串中。只有存有资料库的 Mac 使用它；你的其他设备从那台 Mac 获取演员和详细信息。已经查找过的节目会在下次打开其页面时获得 TMDb 的演职员。如果你在未测试新令牌的情况下关闭设置，届时会对其进行测试，若 TMDb 拒绝，你会收到通知。</p>
+<div class="note"><b>注：</b>本产品使用 TMDB API，但未获得 TMDB 的认可或认证。</div>
+
+<h2><a name="google"></a>翻译：Google 密钥</h2>
+<p>剧集标题和描述会在这台 Mac 上使用 Apple 的翻译功能免费翻译成每台设备的语言。但它无法翻译成希腊语、捷克语、匈牙利语、罗马尼亚语、波斯语、乌尔都语或孟加拉语。对于这些语言，请添加你自己的 Google Cloud Translation API 密钥。只有存有资料库的 Mac 需要密钥；查看资料库的设备不需要。每月前 50 万个字符免费，并且每段文本只会翻译一次。</p>
+<ol>
+<li>前往 console.cloud.google.com，并使用你的 Google 账户登录。</li>
+<li>创建项目：点按顶部的项目菜单，然后点按<span class="ui">New Project</span>，并为其命名，例如“TV Library Viewer”。</li>
+<li>开启结算：在菜单 ☰ 中选择<span class="ui">Billing</span>，然后关联一个结算账户。即使免费使用，Google 也会要求提供结算账户。为安全起见，请在<span class="ui">Budgets &amp; alerts</span>下添加预算，例如 1 美元。</li>
+<li>选择 ☰ › <span class="ui">APIs &amp; Services › Library</span>，搜索<span class="ui">Cloud Translation API</span>，然后点按<span class="ui">Enable</span>。</li>
+<li>选择 ☰ › <span class="ui">APIs &amp; Services › Credentials</span>，然后选择<span class="ui">Create credentials › API key</span>，并拷贝密钥（以“AIza”开头）。</li>
+<li>建议：点按密钥的名称，在 API restrictions 下选择<span class="ui">Restrict key</span>，勾选<span class="ui">Cloud Translation API</span>，然后点按<span class="ui">Save</span>，这样密钥就只能用于翻译。</li>
+<li>在存有资料库的 Mac 上，选择<span class="ui">TV Library Viewer › 设置</span>，点按<span class="ui">储存空间</span>，将密钥粘贴到<span class="ui">Google Cloud Translation API 密钥</span>中，然后点按<span class="ui">测试</span>。</li>
+</ol>
+<p>密钥会保存在 Mac 的钥匙串中，并且只用于这七种语言。请勿与他人共享密钥：使用它翻译的任何内容都会计入你的 Google 账户费用。</p>
+
+<h2>缓存</h2>
+<p>插图，以及这台 Mac 从其他 Mac 查看过的资料库。缓存会在需要时重新生成，macOS 在空间不足时会将其清空。</p>
+<div class="see"><h3>另请参阅</h3><ul><li><a href="show-page.html">节目页面和演员</a></li><li><a href="privacy.html">TV Library Viewer 读取、更改和保存的内容</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>狀態與情況</title>
+<meta name="description" content="狀態框顯示連線正在做什麼、它的通道程序，以及已執行多久。" />
+<meta name="keywords" content="狀態, 情況, 執行中, 連線中, 執行時間, 通道, PID" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="status"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI 輔助說明</a> › 使用</nav>
+<h1>狀態與情況</h1>
+<p class="lead">狀態框是你開始和停止、並觀察發生了什麼的地方。</p>
+
+<h2>各狀態的含義</h2>
+<table>
+<tr><th>狀態</th><th>正在發生的事</th></tr>
+<tr><td>閒置</td><td>未連線。按 <span class="ui">開始</span> 以開始。</td></tr>
+<tr><td>連線中</td><td>正在開啟到遠端 Mac 的 SSH 通道。</td></tr>
+<tr><td>需要密碼</td><td>密鑰登入未成功；在 <span class="ui">SSH 身分驗證</span> 中輸入密碼。</td></tr>
+<tr><td>查詢中</td><td>詢問遠端 Mac 它廣播的是哪個「家庭共享」資料庫。</td></tr>
+<tr><td>註冊中</td><td>透過 Bonjour 在這裡發佈該資料庫。</td></tr>
+<tr><td>執行中</td><td>已上線。資料庫在 Apple TV / 音樂 App 中可用。</td></tr>
+<tr><td>重新連線中</td><td>連線已中斷；正在自動重試。</td></tr>
+<tr><td>停止中</td><td>正在關閉通道並移除本機廣告。</td></tr>
+<tr><td>錯誤</td><td>出了問題；日誌會說明原因。請參閱<a href="troubleshooting.html">如果無法連線</a>。</td></tr>
+</table>
+
+<h2>其他列</h2>
+<ul>
+<li><span class="ui">通道 PID</span>——背景 <code>ssh</code> 通道的程序 ID，用於取樣<a href="traffic-log.html">流量</a>並乾淨地關閉它。</li>
+<li><span class="ui">執行時間</span>——目前連線已建立多久。</li>
+</ul>
+<p>底部的按鈕隨狀態而變：閒置時為 <span class="ui">開始</span>，連線時為 <span class="ui">停止</span>，仍在連線時為 <span class="ui">取消</span>。</p>
+<div class="see"><h3>另請參閱</h3><ul><li><a href="libraries.html">選擇要發佈哪些資料庫</a></li><li><a href="reconnecting.html">重新連線與睡眠</a></li><li><a href="traffic-log.html">流量與日誌</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

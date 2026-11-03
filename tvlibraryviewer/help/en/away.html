@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Watch away from home</title>
+<meta name="description" content="Three ways to reach your library from another network: SSH, a VPN, or a forwarded port." />
+<meta name="keywords" content="remote, away, travel, SSH, VPN, Tailscale, port forwarding, router, 47100, offline" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="away"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer Help</a> › Getting Started</nav>
+<h1>Watch away from home</h1>
+<p class="lead">Your library stays on the Mac at home. Choose one way to reach it from elsewhere.</p>
+
+<h2>Through SSH</h2>
+<p>Best if you can already log in to that Mac, or a computer on its network, with SSH. Nothing else
+needs setting up. Use <span class="ui">Remote (SSH)</span> in Connect to Shared Library. Everything goes through the
+SSH connection.</p>
+
+<h2>Through a VPN</h2>
+<p>With a VPN such as Tailscale on both devices, use <span class="ui">Address</span> with the Mac's VPN address and
+port 47100.</p>
+
+<h2>Through a forwarded port</h2>
+<ol>
+<li>On your router, forward port 47100 (or the port in <span class="ui">Settings › Sharing</span>) to the Mac with
+the library.</li>
+<li>Add accounts with strong passwords in <span class="ui">Settings › Accounts</span>.</li>
+<li>On the other device, use <span class="ui">Address</span> with your home's public address and the port.</li>
+</ol>
+<div class="note"><b>Note:</b> Connections are always encrypted, and devices check the library's
+certificate, wherever they connect from. Ten wrong passwords from one address within 5 minutes are
+refused without being checked.</div>
+
+<h2>With no connection at all</h2>
+<p>Download episodes before you go (Mac, iPad and iPhone). When the library can't be reached, the
+app opens it as last seen, shows <span class="ui">Offline</span> and plays your downloads. What you watch is sent
+to the Mac once it can be reached again.</p>
+<div class="see"><h3>See also</h3><ul><li><a href="connect.html">Connect to a shared library</a></li><li><a href="downloads.html">Downloads and offline viewing</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

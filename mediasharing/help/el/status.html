@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="el">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Κατάσταση</title>
+<meta name="description" content="Το πλαίσιο Κατάσταση δείχνει τι κάνει η σύνδεση, τη διεργασία της σήραγγας και πόση ώρα λειτουργεί." />
+<meta name="keywords" content="κατάσταση, ενεργό, σύνδεση, χρόνος λειτουργίας, σήραγγα, PID" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="status"></a>
+<nav class="crumbs"><a href="index.html">Βοήθεια Media Sharing GUI</a> › Χρήση</nav>
+<h1>Κατάσταση</h1>
+<p class="lead">Το πλαίσιο Κατάσταση είναι όπου κάνετε Έναρξη και Διακοπή, και παρακολουθείτε τι συμβαίνει.</p>
+
+<h2>Τι σημαίνει η κατάσταση</h2>
+<table>
+<tr><th>Κατάσταση</th><th>Τι συμβαίνει</th></tr>
+<tr><td>ΑΔΡΑΝΕΣ</td><td>Δεν υπάρχει σύνδεση. Πατήστε <span class="ui">Έναρξη</span> για να ξεκινήσετε.</td></tr>
+<tr><td>ΣΥΝΔΕΣΗ</td><td>Ανοίγει η σήραγγα SSH προς τον απομακρυσμένο Mac.</td></tr>
+<tr><td>ΑΠΑΙΤΕΙΤΑΙ ΚΩΔΙΚΟΣ</td><td>Η σύνδεση με κλειδί δεν πέτυχε· εισαγάγετε τον κωδικό στην <span class="ui">Ταυτοποίηση SSH</span>.</td></tr>
+<tr><td>ΕΡΩΤΗΜΑ</td><td>Ρωτά τον απομακρυσμένο Mac ποια βιβλιοθήκη Κοινής χρήσης στο σπίτι διαφημίζει.</td></tr>
+<tr><td>ΚΑΤΑΧΩΡΙΣΗ</td><td>Δημοσιεύει εκείνη τη βιβλιοθήκη εδώ μέσω Bonjour.</td></tr>
+<tr><td>ΕΝΕΡΓΟ</td><td>Ζωντανό. Η βιβλιοθήκη είναι διαθέσιμη στην εφαρμογή Apple TV / Μουσική.</td></tr>
+<tr><td>ΕΠΑΝΑΣΥΝΔΕΣΗ</td><td>Η σύνδεση έπεσε· ξαναπροσπαθεί μόνη της.</td></tr>
+<tr><td>ΔΙΑΚΟΠΗ</td><td>Κλείνει τη σήραγγα και αφαιρεί την τοπική διαφήμιση.</td></tr>
+<tr><td>ΣΦΑΛΜΑ</td><td>Κάτι πήγε στραβά· το αρχείο καταγραφής λέει τι. Δείτε <a href="troubleshooting.html">Αν δεν συνδέεται</a>.</td></tr>
+</table>
+
+<h2>Οι άλλες γραμμές</h2>
+<ul>
+<li><span class="ui">PID σήραγγας</span> — το αναγνωριστικό διεργασίας της σήραγγας <code>ssh</code> στο παρασκήνιο, που χρησιμοποιείται για
+δειγματοληψία της <a href="traffic-log.html">κίνησης</a> και για καθαρό κλείσιμό της.</li>
+<li><span class="ui">Χρόνος λειτουργίας</span> — πόση ώρα είναι σε ισχύ η τρέχουσα σύνδεση.</li>
+</ul>
+<p>Τα κουμπιά κάτω αλλάζουν με την κατάσταση: <span class="ui">Έναρξη</span> όταν αδρανεί, <span class="ui">Διακοπή</span> όσο είναι
+συνδεδεμένο, και <span class="ui">Ακύρωση</span> όσο ακόμη συνδέεται.</p>
+<div class="see"><h3>Δείτε επίσης</h3><ul><li><a href="libraries.html">Επιλογή ποιες βιβλιοθήκες θα δημοσιευτούν</a></li><li><a href="reconnecting.html">Επανασύνδεση και ύπνος</a></li><li><a href="traffic-log.html">Κίνηση και αρχείο καταγραφής</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hu">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nézés otthonon kívül</title>
+<meta name="description" content="Háromféleképpen érheti el a könyvtárát egy másik hálózatról: SSH-val, VPN-nel vagy továbbított porttal." />
+<meta name="keywords" content="távoli, otthonon kívül, utazás, SSH, VPN, Tailscale, porttovábbítás, router, 47100, offline, TV Library" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="away"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer súgó</a> › Első lépések</nav>
+<h1>Nézés otthonon kívül</h1>
+<p class="lead">A könyvtára az otthoni Macen marad. Válasszon egy módot, amellyel máshonnan is elérheti.</p>
+
+<h2>SSH-n keresztül</h2>
+<p>Akkor a legjobb, ha SSH-val már be tud jelentkezni arra a Macre, vagy egy gépre annak hálózatán. Semmi mást
+nem kell beállítani. Használja a <span class="ui">Távoli (SSH)</span> lehetőséget a Csatlakozás megosztott könyvtárhoz ablakban. Minden forgalom az
+SSH-kapcsolaton keresztül megy.</p>
+
+<h2>VPN-en keresztül</h2>
+<p>Ha mindkét eszközön fut egy VPN, például a Tailscale, használja a <span class="ui">Cím</span> lehetőséget a Mac VPN-címével és
+a 47100-as porttal.</p>
+
+<h2>Továbbított porton keresztül</h2>
+<ol>
+<li>A routeren továbbítsa a 47100-as portot (vagy a <span class="ui">Beállítások › Megosztás</span> alatt megadott portot) a könyvtárat
+tároló Macre.</li>
+<li>Adjon hozzá erős jelszavú fiókokat a <span class="ui">Beállítások › Fiókok</span> alatt.</li>
+<li>A másik eszközön használja a <span class="ui">Cím</span> lehetőséget az otthoni nyilvános címével és a porttal.</li>
+</ol>
+<div class="note"><b>Megjegyzés:</b> A kapcsolatok mindig titkosítottak, és az eszközök ellenőrzik a könyvtár
+tanúsítványát, bárhonnan csatlakoznak is. Ha egy címről 5 percen belül tízszer adnak meg rossz jelszót, a további
+próbálkozásokat ellenőrzés nélkül elutasítja.</div>
+
+<h2>Kapcsolat nélkül</h2>
+<p>Indulás előtt töltsön le epizódokat (Mac, iPad és iPhone). Ha a könyvtár nem érhető el, az
+app a legutóbb látott állapotában nyitja meg, az <span class="ui">Offline</span> jelzést mutatja, és lejátssza a letöltéseit. Amit megnéz, azt
+elküldi a Macnek, amint az újra elérhető.</p>
+<div class="see"><h3>Lásd még</h3><ul><li><a href="connect.html">Csatlakozás megosztott könyvtárhoz</a></li><li><a href="downloads.html">Letöltések és offline nézés</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

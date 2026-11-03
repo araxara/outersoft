@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>स्थिति और हालत</title>
+<meta name="description" content="स्थिति बॉक्स दिखाता है कि कनेक्शन क्या कर रहा है, उसकी टनल प्रक्रिया, और वह कब से चल रहा है।" />
+<meta name="keywords" content="स्थिति, हालत, चल रहा है, कनेक्ट हो रहा है, अपटाइम, टनल, PID" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="status"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI मदद</a> › उपयोग</nav>
+<h1>स्थिति और हालत</h1>
+<p class="lead">स्थिति बॉक्स वह जगह है जहाँ आप शुरू और रोकते हैं, और देखते हैं कि क्या हो रहा है।</p>
+
+<h2>हालत का मतलब</h2>
+<table>
+<tr><th>हालत</th><th>क्या हो रहा है</th></tr>
+<tr><td>निष्क्रिय</td><td>कनेक्ट नहीं। शुरू करने के लिए <span class="ui">शुरू करें</span> दबाएँ।</td></tr>
+<tr><td>कनेक्ट हो रहा है</td><td>रिमोट Mac तक SSH टनल खुल रही है।</td></tr>
+<tr><td>पासवर्ड आवश्यक</td><td>कुंजी लॉगिन नहीं हुआ; <span class="ui">SSH प्रमाणीकरण</span> में पासवर्ड डालें।</td></tr>
+<tr><td>क्वेरी हो रही है</td><td>रिमोट Mac से पूछा जा रहा है कि वह कौन-सी होम शेयरिंग लाइब्रेरी का विज्ञापन करता है।</td></tr>
+<tr><td>पंजीकरण हो रहा है</td><td>उस लाइब्रेरी को यहाँ Bonjour से प्रकाशित किया जा रहा है।</td></tr>
+<tr><td>चल रहा है</td><td>लाइव। लाइब्रेरी Apple TV / म्यूज़िक ऐप में उपलब्ध है।</td></tr>
+<tr><td>फिर से कनेक्ट हो रहा है</td><td>कनेक्शन टूटा; यह अपने आप फिर कोशिश कर रहा है।</td></tr>
+<tr><td>रुक रहा है</td><td>टनल बंद कर रहा है और लोकल विज्ञापन हटा रहा है।</td></tr>
+<tr><td>त्रुटि</td><td>कुछ गड़बड़ हुई; लॉग बताता है क्या। <a href="troubleshooting.html">अगर कनेक्ट न हो</a> देखें।</td></tr>
+</table>
+
+<h2>बाकी पंक्तियाँ</h2>
+<ul>
+<li><span class="ui">टनल PID</span> — पृष्ठभूमि की <code>ssh</code> टनल की प्रक्रिया ID, जिसका उपयोग <a href="traffic-log.html">ट्रैफ़िक</a>
+मापने और उसे सफ़ाई से बंद करने के लिए होता है।</li>
+<li><span class="ui">अपटाइम</span> — मौजूदा कनेक्शन कब से बना हुआ है।</li>
+</ul>
+<p>नीचे के बटन हालत के साथ बदलते हैं: निष्क्रिय होने पर <span class="ui">शुरू करें</span>, कनेक्ट रहने पर <span class="ui">रोकें</span>, और
+जब यह अब भी कनेक्ट हो रहा हो तो <span class="ui">रद्द करें</span>।</p>
+<div class="see"><h3>यह भी देखें</h3><ul><li><a href="libraries.html">कौन-सी लाइब्रेरी प्रकाशित करनी है चुनना</a></li><li><a href="reconnecting.html">फिर से कनेक्ट होना और स्लीप</a></li><li><a href="traffic-log.html">ट्रैफ़िक और लॉग</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

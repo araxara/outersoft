@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Se non si connette</title>
+<meta name="description" content="Gli errori comuni che Media Sharing GUI segnala e cosa fare al riguardo." />
+<meta name="keywords" content="risoluzione problemi, errore, non si connette, nessuna libreria, autenticazione, in stop, aiuto" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="troubleshooting"></a>
+<nav class="crumbs"><a href="index.html">Aiuto di Media Sharing GUI</a> › Riferimento</nav>
+<h1>Se non si connette</h1>
+<p class="lead">Leggi il riquadro <span class="ui">Registro</span> — la riga che inizia con <span class="ui">ERROR:</span> di solito dice cosa non
+va. Ecco i casi comuni.</p>
+
+<h2>Non riesce ad accedere</h2>
+<ul>
+<li><b>L'autenticazione continua a fallire.</b> Controlla <span class="ui">Accesso remoto</span> e <span class="ui">Porta SSH remota</span>, e
+che il login remoto sia attivo all'altro capo. Prova lo stesso dal Terminale:
+<code>ssh user@host -p PORT</code>. Se hai cambiato la password remota, fai clic su
+<span class="ui">Dimentica password salvata</span> e inserisci quella nuova.</li>
+<li><b>Il tunnel muore subito dopo la connessione.</b> Il Mac remoto potrebbe essere in stop — si sveglia solo
+brevemente per ogni connessione — o rifiuta le connessioni. Impostalo per restare sveglio, o per consentire l'accesso
+alla rete in stop.</li>
+</ul>
+
+<h2>Si connette, ma non trova alcuna libreria</h2>
+<ul>
+<li><b>«Nessun record _home-sharing trovato.»</b> La Condivisione in casa (o Media Sharing) non è attiva,
+oppure nessuna libreria Apple TV / Musica / iTunes è online su quella rete. Attiva la Condivisione in casa, con il tuo
+account Apple collegato, e assicurati che una libreria lì sia sveglia. Vedi
+<a href="remote-setup.html">Sul Mac a casa</a>.</li>
+<li><b>Sono state trovate librerie ma nessuna è stata pubblicata.</b> Il registro elenca un motivo per libreria;
+di solito una porta locale non era disponibile. Riprova, o cambia la <span class="ui">Porta locale reindirizzata</span>.</li>
+</ul>
+
+<h2>Quando non funziona nulla</h2>
+<p>Fermare e avviare la connessione (o <span class="ui">Riavvia</span> dal suo menu nella barra laterale) risolve la maggior parte dei
+problemi passeggeri. Il <a href="traffic-log.html">file di registro</a> cattura i dettagli se vuoi
+guardare più da vicino.</p>
+<div class="see"><h3>Vedi anche</h3><ul><li><a href="authentication.html">Chiavi e password SSH</a></li><li><a href="remote-setup.html">Sul Mac a casa</a></li><li><a href="reconnecting.html">Riconnessione e stop</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

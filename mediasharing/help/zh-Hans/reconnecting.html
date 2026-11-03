@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>重新连接与睡眠</title>
+<meta name="description" content="Media Sharing GUI 如何保持连接：keep-alive、自动重新连接，以及挺过睡眠。" />
+<meta name="keywords" content="重新连接, 睡眠, 唤醒, keep-alive, 健康检查, 掉线, 自动" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="reconnecting"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI 帮助</a> › 参考</nav>
+<h1>重新连接与睡眠</h1>
+<p class="lead">家庭连接并不总是稳定。App 替你挺过这些颠簸。</p>
+
+<h2>保持存活</h2>
+<p>连接期间，<code>ssh</code> 每隔 <span class="ui">Server Alive Interval</span> 秒向远端发送一次 ping
+（参阅<a href="settings.html">配置参考</a>）。这能防止路由器和防火墙丢弃空闲的隧道，并让 App 在连接真正中断时迅速察觉。</p>
+
+<h2>自动重新连接</h2>
+<p>如果连接掉线，状态会变为 <span class="ui">正在重新连接</span>，Media Sharing GUI 会自动重试，在每次尝试之间等待稍长一些，并记录每一次。
+按 <span class="ui">停止</span> 可取消这些尝试。</p>
+
+<h2>Mac 睡眠之后</h2>
+<p>当这台 Mac 从睡眠中唤醒时，App 会检查隧道是否存活。若存活，便继续；若未存活，它会执行一次完整重置
+（等同于停止再开始），并自动把资料库恢复回来。</p>
+<div class="see"><h3>另请参阅</h3><ul><li><a href="status.html">状态与情况</a></li><li><a href="troubleshooting.html">如果无法连接</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

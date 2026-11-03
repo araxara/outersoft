@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>儲存空間設定</title>
+<meta name="description" content="資料庫有多大，以及 TV Library Viewer 的資料庫和快取佔用的空間。" />
+<meta name="keywords" content="設定, 儲存空間, 資料庫, 大小, 空間, 節目, 單集, 演員, 演員照片, 快取" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings-storage"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer 說明</a> › 設定</nav>
+<h1>儲存空間設定</h1>
+<p class="lead">選擇<span class="ui">TV Library Viewer › 設定</span>，然後按一下<span class="ui">儲存空間</span>。</p>
+
+<h2>這台 Mac 的 TV 資料庫</h2>
+<p>TV App 資料庫中的節目和單集數量，以及其資料庫的大小。不計入影片檔案。</p>
+
+<h2>TV Library Viewer 資料庫</h2>
+<p>TV Library Viewer 在這台 Mac 上的自有資料庫，與每部觀看該資料庫的裝置共享。</p>
+<table>
+<tr><th>部分</th><th>包含的內容</th></tr>
+<tr><td><span class="ui">劇集資訊</span></td><td>透過 AppleScript 提供的完整描述，以及每個節目的演員：演員的姓名和角色。</td></tr>
+<tr><td><span class="ui">翻譯</span></td><td>已翻譯成各 App 所設語言的劇集標題和簡介。</td></tr>
+<tr><td><span class="ui">演職員</span></td><td>每個人的一張小照片，以及其在 TVmaze 和 TMDb 上的頁面位址。</td></tr>
+<tr><td><span class="ui">帳號與觀看</span></td><td>帳號、主要帳號以外所有帳號的觀看紀錄，以及帳號的記錄。</td></tr>
+<tr><td><span class="ui">資料庫結構與可用空間</span></td><td>SQLite 本身的紀錄，以及它會重複使用的空間。</td></tr>
+<tr><td><span class="ui">最近的變更</span></td><td>尚未併入資料庫的變更。它會不時進行合併。</td></tr>
+</table>
+<p>節目的演職員會在其頁面第一次打開時（無論是在這裡或在任何裝置上）從 TVmaze 和 TMDb 查詢。人物詳情會在每次打開時取得，因此絕不會過時，也不會被儲存。按一下<span class="ui">在 Finder 中顯示</span>即可查看資料庫檔案。</p>
+
+<h2><a name="tmdb"></a>演職員詳情：TMDb 權杖</h2>
+<p>TVmaze 不需要任何設定。TMDb（The Movie Database）會加入導演和編劇、TVmaze 沒有的演員以及人物簡介，而且通常有你的語言版本。它需要你自己的權杖：TMDb 會免費提供權杖給任何擁有帳號的人，供個人非商業用途使用。TV Library Viewer 並未附帶權杖。</p>
+<ol>
+<li>在 themoviedb.org 建立免費帳號並登入。</li>
+<li>按一下你的帳號圖像，選擇<span class="ui">Settings</span>，然後按一下<span class="ui">API</span>。</li>
+<li>申請 API 金鑰：選擇<span class="ui">Developer</span>，接受條款，並將用途描述為個人和非商業用途（例如「在我自己的電視資料庫 App 中顯示演員和人物簡介」）。</li>
+<li>金鑰準備好後，拷貝<span class="ui">API Read Access Token</span>（較長的那個，而不是較短的 API Key）。</li>
+<li>在存有資料庫的 Mac 上，選擇<span class="ui">TV Library Viewer › 設定</span>，按一下<span class="ui">儲存空間</span>，然後將其貼到<span class="ui">TMDb API Read Access Token</span>中。</li>
+<li>按一下<span class="ui">測試</span>。顯示「TMDb 接受此權杖。」即表示可以使用。</li>
+</ol>
+<p>權杖會保存在 Mac 的鑰匙圈中。只有存有資料庫的 Mac 會使用它；你的其他裝置會從那台 Mac 取得演員和詳細資訊。已經查詢過的節目會在下次打開其頁面時取得 TMDb 的演職員。如果你在未測試新權杖的情況下關閉設定，屆時會對其進行測試，若 TMDb 拒絕，你會收到通知。</p>
+<div class="note"><b>注意：</b>本產品使用 TMDB API，但未經 TMDB 認可或認證。</div>
+
+<h2><a name="google"></a>翻譯：Google 密鑰</h2>
+<p>劇集標題和描述會在這台 Mac 上使用 Apple 的翻譯功能免費翻譯成每部裝置的語言。但它無法翻譯成希臘文、捷克文、匈牙利文、羅馬尼亞文、波斯文、烏爾都文或孟加拉文。如需這些語言，請加入你自己的 Google Cloud Translation API 密鑰。只有存有資料庫的 Mac 需要密鑰；觀看資料庫的裝置不需要。每月前 50 萬個字元免費，而且每段文字只會翻譯一次。</p>
+<ol>
+<li>前往 console.cloud.google.com，並使用你的 Google 帳號登入。</li>
+<li>建立專案：按一下頂部的專案選單，然後按一下<span class="ui">New Project</span>，並為其命名，例如「TV Library Viewer」。</li>
+<li>開啟帳單：在選單 ☰ 中選擇<span class="ui">Billing</span>，然後連結一個帳單帳戶。即使免費使用，Google 也會要求提供帳單帳戶。為了安全起見，請在<span class="ui">Budgets &amp; alerts</span>下加入預算，例如 1 美元。</li>
+<li>選擇 ☰ › <span class="ui">APIs &amp; Services › Library</span>，搜尋<span class="ui">Cloud Translation API</span>，然後按一下<span class="ui">Enable</span>。</li>
+<li>選擇 ☰ › <span class="ui">APIs &amp; Services › Credentials</span>，然後選擇<span class="ui">Create credentials › API key</span>，並拷貝密鑰（以「AIza」開頭）。</li>
+<li>建議：按一下密鑰的名稱，在 API restrictions 下選擇<span class="ui">Restrict key</span>，勾選<span class="ui">Cloud Translation API</span>，然後按一下<span class="ui">Save</span>，這樣密鑰就只能用於翻譯。</li>
+<li>在存有資料庫的 Mac 上，選擇<span class="ui">TV Library Viewer › 設定</span>，按一下<span class="ui">儲存空間</span>，將密鑰貼到<span class="ui">Google Cloud Translation API 密鑰</span>中，然後按一下<span class="ui">測試</span>。</li>
+</ol>
+<p>密鑰會保存在 Mac 的鑰匙圈中，而且只用於這七種語言。請勿與他人分享密鑰：使用它翻譯的任何內容都會向你的 Google 帳號收費。</p>
+
+<h2>快取</h2>
+<p>插圖，以及這台 Mac 從其他 Mac 觀看過的資料庫。快取會在需要時重新建立，macOS 在空間不足時會將其清空。</p>
+<div class="see"><h3>另請參閱</h3><ul><li><a href="show-page.html">節目頁面和演員</a></li><li><a href="privacy.html">TV Library Viewer 讀取、更改和保存的內容</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

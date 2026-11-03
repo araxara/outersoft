@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>الحالة</title>
+<meta name="description" content="يعرض مربّع الحالة ما يفعله الاتصال، وعملية نفقه، ومدة تشغيله." />
+<meta name="keywords" content="الحالة, نشط, اتصال, مدة التشغيل, نفق, ⁨PID⁩" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="status"></a>
+<nav class="crumbs"><a href="index.html">مساعدة ⁨⁨Media Sharing⁩ GUI⁩</a> › الاستخدام</nav>
+<h1>الحالة</h1>
+<p class="lead">مربّع الحالة هو حيث تبدأ وتوقف، وتراقب ما يجري.</p>
+
+<h2>ماذا تعني الحالة</h2>
+<table>
+<tr><th>الحالة</th><th>ما يجري</th></tr>
+<tr><td>خامل</td><td>غير متصل. اضغط <span class="ui">بدء</span> للبدء.</td></tr>
+<tr><td>جارٍ الاتصال</td><td>يجري فتح نفق ⁨SSH⁩ إلى الـ⁨Mac⁩ البعيد.</td></tr>
+<tr><td>كلمة المرور مطلوبة</td><td>لم ينجح تسجيل الدخول بالمفتاح؛ أدخل كلمة المرور في <span class="ui">مصادقة ⁨SSH⁩</span>.</td></tr>
+<tr><td>جارٍ الاستعلام</td><td>يسأل الـ⁨Mac⁩ البعيد عن مكتبة المشاركة المنزلية التي يعلن عنها.</td></tr>
+<tr><td>جارٍ التسجيل</td><td>ينشر تلك المكتبة هنا عبر ⁨Bonjour⁩.</td></tr>
+<tr><td>نشط</td><td>قيد التشغيل. المكتبة متاحة في تطبيق ⁨Apple TV⁩ / الموسيقى.</td></tr>
+<tr><td>جارٍ إعادة الاتصال</td><td>انقطع الاتصال؛ يعيد المحاولة من تلقاء نفسه.</td></tr>
+<tr><td>جارٍ الإيقاف</td><td>يغلق النفق ويزيل الإعلان المحلي.</td></tr>
+<tr><td>خطأ</td><td>حدث خطأ ما؛ يذكر السجل السبب. انظر <a href="troubleshooting.html">إذا تعذّر الاتصال</a>.</td></tr>
+</table>
+
+<h2>الصفوف الأخرى</h2>
+<ul>
+<li><span class="ui">معرّف عملية النفق</span> — معرّف عملية نفق <code>ssh</code> في الخلفية، يُستخدَم
+لقياس <a href="traffic-log.html">حركة البيانات</a> وإغلاقه بنظافة.</li>
+<li><span class="ui">مدة التشغيل</span> — منذ متى والاتصال الحالي قائم.</li>
+</ul>
+<p>تتغيّر الأزرار في الأسفل حسب الحالة: <span class="ui">بدء</span> عند الخمول، و<span class="ui">إيقاف</span> أثناء
+الاتصال، و<span class="ui">إلغاء</span> بينما لا يزال يتّصل.</p>
+<div class="see"><h3>انظر أيضاً</h3><ul><li><a href="libraries.html">اختيار المكتبات التي تُنشَر</a></li><li><a href="reconnecting.html">إعادة الاتصال والسكون</a></li><li><a href="traffic-log.html">حركة البيانات والسجل</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

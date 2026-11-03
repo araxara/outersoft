@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ro">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Conectarea la o bibliotecă partajată</title>
+<meta name="description" content="Conectează alt Mac, un iPad, un iPhone sau un Apple TV la Mac-ul care își partajează biblioteca." />
+<meta name="keywords" content="conectare, Bonjour, rețea, SSH, adresă, certificat, amprentă, încredere, autentificare, parolă, TV Library Viewer" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">Ajutor TV Library Viewer</a> › Primii pași</nav>
+<h1>Conectarea la o bibliotecă partajată</h1>
+<p class="lead">Fiecare dispozitiv se conectează o singură dată. După aceea redeschide singur aceeași bibliotecă.</p>
+
+<h2>Deschide Conectează la biblioteca partajată</h2>
+<ul>
+<li><b>Mac:</b> alege <span class="ui">Fișier › Conectează la biblioteca partajată…</span> (<kbd>⌘K</kbd>).</li>
+<li><b>iPad și iPhone:</b> apasă <span class="ui">Conectează la biblioteca partajată…</span> în bara laterală (<kbd>⌘K</kbd> cu o tastatură).</li>
+<li><b>Apple TV:</b> prima dată, TV Library se conectează la primul Mac din rețea care partajează
+fără parolă. Altfel, accesează <span class="ui">Biblioteci › Conectează la altă bibliotecă…</span>.</li>
+</ul>
+
+<h2>Alege cum ajungi la Mac</h2>
+<h3>Această rețea</h3>
+<p>Mac-urile din aceeași rețea cu partajarea activată sunt listate după nume. Alege unul.</p>
+<h3>La distanță (SSH)</h3>
+<p>Pentru un Mac dintr-o altă rețea, de exemplu dintr-o altă casă. Introdu adresa pe care o folosești pentru SSH pe acel
+Mac (sau pe orice computer din rețeaua sa) și numele de utilizator, dacă diferă. TV Library Viewer se autentifică,
+găsește biblioteca în acea rețea și se conectează prin conexiunea SSH.</p>
+<ul>
+<li>Prima dată, afișează cheia gazdei ca s-o compari și s-o confirmi.</li>
+<li>Pe un Mac, se folosește propria ta cheie SSH când gazda o acceptă; altfel cere parola
+și o păstrează în Portchei.</li>
+<li>Un iPad, un iPhone sau un Apple TV are propria cheie. După prima autentificare cu parolă, se oferă să
+instaleze acea cheie pe gazdă, ca să nu mai aibă nevoie de parolă.</li>
+</ul>
+<h3>Adresă</h3>
+<p>Pentru un Mac pe care acest dispozitiv îl poate accesa direct: printr-o rețea VPN precum Tailscale sau printr-un port pe care routerul
+îl redirecționează către el. Introdu adresa și portul (portul 47100, dacă nu a fost schimbat) și un nume de cont
+și o parolă, dacă biblioteca are conturi.</p>
+
+<h2>Acordă încredere certificatului bibliotecii</h2>
+<p>Prima conexiune afișează amprenta certificatului bibliotecii. Compar-o cu cea din
+<span class="ui">Configurări › Partajare</span> de pe Mac-ul cu biblioteca, apoi alege <span class="ui">Ai încredere și conectează</span>. De
+atunci, dispozitivul verifică acel certificat de fiecare dată și refuză o bibliotecă al cărei certificat s-a
+schimbat.</p>
+
+<h2>Autentificarea</h2>
+<p>Dacă biblioteca are conturi, introdu numele și parola contului tău de pe acel Mac. Dispozitivul
+le păstrează în Portchei. Fără conturi, lasă numele gol și folosește parola bibliotecii,
+dacă există una.</p>
+<div class="see"><h3>Vezi și</h3><ul><li><a href="away.html">Vizionarea departe de casă</a></li><li><a href="sidebar-libraries.html">Comutarea între biblioteci</a></li><li><a href="settings-accounts.html">Configurările Conturi</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

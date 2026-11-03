@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>En cas d'échec de connexion</title>
+<meta name="description" content="Les erreurs courantes que signale Media Sharing GUI et ce qu'il faut faire." />
+<meta name="keywords" content="dépannage, erreur, pas de connexion, pas de bibliothèque, authentification, en veille, aide" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="troubleshooting"></a>
+<nav class="crumbs"><a href="index.html">Aide de Media Sharing GUI</a> › Référence</nav>
+<h1>En cas d'échec de connexion</h1>
+<p class="lead">Lisez la zone <span class="ui">Journal</span> — la ligne qui commence par <span class="ui">ERROR:</span> indique en général ce qui ne
+va pas. Voici les cas courants.</p>
+
+<h2>Il n'arrive pas à se connecter</h2>
+<ul>
+<li><b>L'authentification échoue sans cesse.</b> Vérifiez <span class="ui">Identifiant distant</span> et <span class="ui">Port SSH distant</span>, et
+que la connexion à distance est activée à l'autre bout. Essayez la même chose dans Terminal :
+<code>ssh user@host -p PORT</code>. Si vous avez changé le mot de passe distant, cliquez sur
+<span class="ui">Oublier le mot de passe enregistré</span> et saisissez le nouveau.</li>
+<li><b>Le tunnel meurt juste après la connexion.</b> Le Mac distant est peut-être en veille — ne se réveillant que
+brièvement pour chaque connexion — ou refuse les connexions. Réglez-le pour rester éveillé, ou pour autoriser l'accès
+réseau en veille.</li>
+</ul>
+
+<h2>Il se connecte, mais ne trouve aucune bibliothèque</h2>
+<ul>
+<li><b>« Aucun enregistrement _home-sharing trouvé. »</b> Le partage à domicile (ou Media Sharing) n'est pas activé,
+ou aucune bibliothèque Apple TV / Musique / iTunes n'est en ligne sur ce réseau. Activez le partage à domicile, connecté
+avec votre identifiant Apple, et assurez-vous qu'une bibliothèque y est éveillée. Voir
+<a href="remote-setup.html">Sur le Mac à la maison</a>.</li>
+<li><b>Des bibliothèques ont été trouvées mais aucune n'a pu être publiée.</b> Le journal indique une raison par bibliothèque ;
+en général un port local n'était pas disponible. Réessayez, ou changez le <span class="ui">Port local redirigé</span>.</li>
+</ul>
+
+<h2>Quand rien ne marche</h2>
+<p>Arrêter et démarrer la connexion (ou <span class="ui">Redémarrer</span> depuis son menu de barre latérale) règle la plupart des
+soucis passagers. Le <a href="traffic-log.html">fichier journal</a> capture les détails si vous voulez
+regarder de plus près.</p>
+<div class="see"><h3>Voir aussi</h3><ul><li><a href="authentication.html">Clés et mots de passe SSH</a></li><li><a href="remote-setup.html">Sur le Mac à la maison</a></li><li><a href="reconnecting.html">Reconnexion et veille</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

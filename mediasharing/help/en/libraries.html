@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Choosing which libraries to publish</title>
+<meta name="description" content="The Libraries box lists each Home Sharing library found on the remote network, with a checkbox to show it here." />
+<meta name="keywords" content="libraries, publish, Bonjour, checkbox, home sharing, multiple" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="libraries"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI Help</a> › Using It</nav>
+<h1>Choosing which libraries to publish</h1>
+<p class="lead">One remote network can share more than one library. You choose which appear here.</p>
+
+<p>When the connection reaches <span class="ui">QUERYING</span>, Media Sharing GUI lists every Home Sharing library
+it finds on the remote Mac's network in the <span class="ui">Libraries</span> box — one row each. Until it finds
+any, the box reads <span class="ui">(none discovered yet)</span>.</p>
+
+<h2>Show or hide a library</h2>
+<ul>
+<li>Turn a row's checkbox <b>on</b> to publish that library here: it's forwarded through the tunnel
+and advertised over Bonjour, and shows up in the <span class="ui">Apple TV</span> or <span class="ui">Music</span> app.</li>
+<li>Turn it <b>off</b> to stop publishing just that one; the others stay.</li>
+<li>Each published library gets its own local forwarded port. The small detail text on the row shows
+that port and the library's Home Sharing id, for reference.</li>
+</ul>
+<div class="note"><b>Note:</b> A library has to be online on the remote network to be found. If a
+Mac or Apple TV there is asleep, its library may not appear until it wakes.</div>
+<div class="see"><h3>See also</h3><ul><li><a href="connect.html">Set up and start a connection</a></li><li><a href="status.html">Status and state</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

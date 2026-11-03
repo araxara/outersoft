@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Configurer et démarrer une connexion</title>
+<meta name="description" content="Remplissez la zone Configuration, appuyez sur Démarrer, connectez-vous si on vous le demande, et la bibliothèque distante apparaît localement." />
+<meta name="keywords" content="connexion, configuration, démarrer, connexion à distance, port local, commencer" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">Aide de Media Sharing GUI</a> › Premiers pas</nav>
+<h1>Configurer et démarrer une connexion</h1>
+<p class="lead">Indiquez où se trouve la bibliothèque, puis appuyez sur Démarrer.</p>
+
+<h2>Remplir la connexion</h2>
+<p>Cliquez sur la zone <span class="ui">Configuration (cliquer pour modifier)</span> et renseignez au moins :</p>
+<ul>
+<li><span class="ui">Nom de la connexion</span> — une étiquette pour votre propre repère, affichée dans la barre latérale.</li>
+<li><span class="ui">Identifiant distant (utilisateur@hôte)</span> — le même <code>user@host</code> que vous donneriez à
+<code>ssh</code>, par exemple <code>alex@myhome.example.com</code>.</li>
+<li><span class="ui">Port SSH distant</span> — le port que votre routeur redirige vers le SSH du Mac distant (souvent pas 22).</li>
+</ul>
+<p>Les autres champs ont des valeurs par défaut sensées ; cliquez sur le <span class="ui">(i)</span> à côté de l'un d'eux, ou voyez la
+<a href="settings.html">Référence de la configuration</a>, pour savoir ce que chacun fait.</p>
+
+<h2>Appuyer sur Démarrer</h2>
+<ol>
+<li>Cliquez sur <span class="ui">Démarrer</span> en bas de la fenêtre.</li>
+<li>Si la connexion par clé n'aboutit pas, le statut passe à <span class="ui">MOT DE PASSE REQUIS</span> : saisissez le
+mot de passe du compte dans <span class="ui">Authentification SSH</span> et appuyez sur <span class="ui">Envoyer</span>. Il est enregistré dans votre
+trousseau pour ne plus vous être demandé.</li>
+<li>L'app ouvre le tunnel, demande au Mac distant ce qu'il partage et le publie ici. Lorsque le
+statut affiche <span class="ui">ACTIF</span>, la bibliothèque est en ligne.</li>
+</ol>
+
+<h2>La voir dans l'app Apple TV ou Musique</h2>
+<p>Ouvrez l'app <span class="ui">Apple TV</span> ou <span class="ui">Musique</span> sur ce Mac. La bibliothèque distante apparaît dans la
+liste des sources, comme le ferait un ordinateur de votre propre réseau. Si plusieurs bibliothèques ont été trouvées, choisissez
+celles à afficher dans <a href="libraries.html">la zone Bibliothèques</a>.</p>
+<p>Cliquez sur <span class="ui">Arrêter</span> pour fermer le tunnel et cesser la publication. Media Sharing GUI retient la
+connexion pour la prochaine fois.</p>
+<div class="see"><h3>Voir aussi</h3><ul><li><a href="libraries.html">Choisir les bibliothèques à publier</a></li><li><a href="status.html">État et statut</a></li><li><a href="authentication.html">Clés et mots de passe SSH</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

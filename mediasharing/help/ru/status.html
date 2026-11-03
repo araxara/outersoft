@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Статус и состояние</title>
+<meta name="description" content="Блок «Статус» показывает, что делает подключение, его процесс туннеля и как долго оно работает." />
+<meta name="keywords" content="статус, состояние, активен, подключение, время работы, туннель, PID" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="status"></a>
+<nav class="crumbs"><a href="index.html">Справка Media Sharing GUI</a> › Использование</nav>
+<h1>Статус и состояние</h1>
+<p class="lead">Блок «Статус» — это место, где вы запускаете и останавливаете и наблюдаете за происходящим.</p>
+
+<h2>Что означает состояние</h2>
+<table>
+<tr><th>Состояние</th><th>Что происходит</th></tr>
+<tr><td>БЕЗДЕЙСТВУЕТ</td><td>Не подключено. Нажмите <span class="ui">Запустить</span>, чтобы начать.</td></tr>
+<tr><td>ПОДКЛЮЧЕНИЕ</td><td>Открывается туннель SSH к удалённому Mac.</td></tr>
+<tr><td>НУЖЕН ПАРОЛЬ</td><td>Вход по ключу не сработал; введите пароль в <span class="ui">Аутентификация SSH</span>.</td></tr>
+<tr><td>ЗАПРОС</td><td>Спрашивает удалённый Mac, какую библиотеку Домашней коллекции он объявляет.</td></tr>
+<tr><td>РЕГИСТРАЦИЯ</td><td>Публикует эту библиотеку здесь через Bonjour.</td></tr>
+<tr><td>АКТИВЕН</td><td>В сети. Библиотека доступна в приложении Apple TV / Музыка.</td></tr>
+<tr><td>ПЕРЕПОДКЛЮЧЕНИЕ</td><td>Подключение прервалось; оно повторяет попытки само.</td></tr>
+<tr><td>ОСТАНОВКА</td><td>Закрывает туннель и убирает локальное объявление.</td></tr>
+<tr><td>ОШИБКА</td><td>Что-то пошло не так; журнал сообщает что. См. <a href="troubleshooting.html">Если не подключается</a>.</td></tr>
+</table>
+
+<h2>Остальные строки</h2>
+<ul>
+<li><span class="ui">PID туннеля</span> — идентификатор фонового процесса туннеля <code>ssh</code>, используется для
+замера <a href="traffic-log.html">трафика</a> и аккуратного закрытия.</li>
+<li><span class="ui">Время работы</span> — как долго держится текущее подключение.</li>
+</ul>
+<p>Кнопки внизу меняются в зависимости от состояния: <span class="ui">Запустить</span> в простое, <span class="ui">Остановить</span> при
+подключении и <span class="ui">Отмена</span>, пока оно ещё подключается.</p>
+<div class="see"><h3>См. также</h3><ul><li><a href="libraries.html">Выбор публикуемых библиотек</a></li><li><a href="reconnecting.html">Переподключение и сон</a></li><li><a href="traffic-log.html">Трафик и журнал</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

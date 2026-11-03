@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>在家中的 Mac 上</title>
+<meta name="description" content="在遠端 Mac 上開啟「家庭共享」和遠端登入，並使其可從外部存取。" />
+<meta name="keywords" content="家庭共享, 媒體共享, 遠端登入, SSH, 連接埠轉送, 動態 DNS, 路由器" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="remote-setup"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI 輔助說明</a> › 入門</nav>
+<h1>在家中的 Mac 上</h1>
+<p class="lead">在你想存取其資料庫的那台 Mac 上做一次即可。</p>
+
+<h2>開啟資料庫的共享</h2>
+<ul>
+<li>在 <span class="ui">Apple TV</span> 或 <span class="ui">音樂</span> App 中，登入你的 Apple 帳號並開啟<b>家庭共享</b>
+（較舊的系統稱之為<b>媒體共享</b>）。</li>
+<li>讓那台 Mac 保持喚醒，或將其設為睡眠時允許網路存取，這樣你連線時它才能回應。</li>
+</ul>
+
+<h2>開啟遠端登入（SSH）</h2>
+<ol>
+<li>在遠端 Mac 上，打開 <span class="ui">系統設定</span> › <span class="ui">一般</span> › <span class="ui">共享</span>。</li>
+<li>開啟 <span class="ui">遠端登入</span>。記下獲准登入的使用者帳號。</li>
+</ol>
+<div class="note"><b>提示：</b>設定一個 SSH 密鑰，就不必每次都輸入密碼。將這台 Mac 的公鑰複製到遠端 Mac
+（<code>ssh-copy-id user@host</code>）。Media Sharing GUI 仍會接受密碼作為後備——請參閱
+<a href="authentication.html">SSH 密鑰與密碼</a>。</div>
+
+<h2>使其可從外部存取</h2>
+<ul>
+<li><b>連接埠轉送：</b>在家中的路由器上，把一個外部連接埠轉送到遠端 Mac 的 SSH 連接埠（22）。許多人會轉送一個不常見的外部連接埠，
+例如 22022，以避免雜訊——你在 <a href="settings.html">遠端 SSH 連接埠</a> 中填寫的就是那個外部連接埠。</li>
+<li><b>跟隨家庭 IP 的名稱：</b>家庭網路位址會變化，所以一個跟隨它的動態 DNS 名稱
+（如 <code>myhome.example.com</code>）能讓你不必追逐數字。</li>
+</ul>
+<p>一旦遠端登入能從外部運作（在終端機中用 <code>ssh user@host -p PORT</code> 測試），Media Sharing GUI 就能使用它。</p>
+<div class="see"><h3>另請參閱</h3><ul><li><a href="connect.html">設定並啟動連線</a></li><li><a href="authentication.html">SSH 密鑰與密碼</a></li><li><a href="settings.html">設定參考</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

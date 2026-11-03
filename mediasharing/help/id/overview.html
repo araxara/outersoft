@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cara kerja Media Sharing GUI</title>
+<meta name="description" content="Membuat pustaka Berbagi Rumah di Mac yang ada di tempat lain muncul di jaringan Mac ini, untuk diputar melalui terowongan SSH." />
+<meta name="keywords" content="ikhtisar, berbagi rumah, media sharing, SSH, terowongan, Bonjour, Apple TV, Musik, jarak jauh" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="overview"></a>
+<nav class="crumbs"><a href="index.html">Bantuan Media Sharing GUI</a> › Memulai</nav>
+<h1>Cara kerja Media Sharing GUI</h1>
+<p class="lead">Ia membuat pustaka di Mac yang ada di tempat lain tampak seolah berada tepat di sini, di jaringan Anda.</p>
+
+<p>Berbagi Rumah (Media Sharing) memungkinkan app <span class="ui">Apple TV</span>, <span class="ui">Musik</span>, dan <span class="ui">iTunes</span> memutar
+dari komputer lain — tetapi hanya yang berada di <b>jaringan lokal yang sama</b>. Media Sharing GUI
+menghapus batasan itu. Arahkan ke Mac di rumah (atau mana pun yang bisa Anda jangkau lewat SSH), dan pustaka
+yang dibagikannya muncul di sini dalam daftar sumber <span class="ui">Apple TV</span> atau <span class="ui">Musik</span>, seolah Mac itu berada di
+ruangan sebelah.</p>
+
+<h2>Apa yang dilakukannya, langkah demi langkah</h2>
+<ol>
+<li>Membuka <b>terowongan SSH</b> dari Mac ini ke Mac jarak jauh.</li>
+<li>Menanyakan ke Mac jarak jauh, lewat terowongan itu, layanan Berbagi Rumah mana yang disiarkannya di
+jaringan lokalnya sendiri.</li>
+<li><b>Menerbitkan ulang layanan yang sama di sini</b>, lewat Bonjour, diarahkan kembali melalui terowongan —
+sehingga app di Mac ini melihat pustaka itu seolah berada di dekatnya di LAN.</li>
+</ol>
+<p>Saat berjalan, pemutaran dari pustaka itu berjalan terenkripsi di dalam terowongan SSH. Nyalakan dan matikan
+dengan <span class="ui">Mulai</span> dan <span class="ui">Berhenti</span> di kotak Status.</p>
+
+<h2>Yang Anda butuhkan</h2>
+<ul>
+<li><b>Di Mac di rumah:</b> Berbagi Rumah (atau Media Sharing) dinyalakan di app <span class="ui">Apple TV</span> atau
+<span class="ui">Musik</span>, dan login jarak jauh (SSH) diaktifkan. Lihat <a href="remote-setup.html">Di Mac di rumah</a>.</li>
+<li><b>Cara menjangkaunya:</b> alamatnya atau nama DNS dinamis, dan port SSH yang diteruskan router Anda
+kepadanya.</li>
+<li><b>Di Mac ini:</b> tidak ada yang khusus — Media Sharing GUI menjalankan alat bawaan <code>ssh</code>
+dan Bonjour untuk Anda.</li>
+</ul>
+
+<h2>Memulai</h2>
+<ol>
+<li>Siapkan <a href="remote-setup.html">Mac di rumah</a> sekali.</li>
+<li><a href="connect.html">Isi sebuah koneksi dan tekan Mulai</a>.</li>
+<li><a href="libraries.html">Pilih pustaka mana</a> yang diterbitkan di sini.</li>
+</ol>
+<div class="see"><h3>Lihat juga</h3><ul><li><a href="remote-setup.html">Di Mac di rumah</a></li><li><a href="connect.html">Menyiapkan dan memulai koneksi</a></li><li><a href="privacy.html">Apa yang Media Sharing GUI baca, ubah, dan simpan</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

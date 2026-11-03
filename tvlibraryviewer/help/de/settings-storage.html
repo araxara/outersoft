@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Einstellungen „Speicher“</title>
+<meta name="description" content="Wie groß die Mediathek ist und wie viel Platz die Datenbank und Caches von TV Library Viewer belegen." />
+<meta name="keywords" content="Einstellungen, Speicher, Datenbank, Größe, Speicherplatz, Serien, Folgen, Besetzung, Schauspielerfotos, Cache, TV Library Viewer, TVmaze, TMDb" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings-storage"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer-Hilfe</a> › Einstellungen</nav>
+<h1>Einstellungen „Speicher“</h1>
+<p class="lead">Wähle <span class="ui">TV Library Viewer › Einstellungen</span> und klicke dann auf <span class="ui">Speicher</span>.</p>
+
+<h2>TV-Mediathek dieses Mac</h2>
+<p>Die Anzahl der Serien und Folgen in der Mediathek der TV-App und die Größe ihrer Datenbank. Die Videodateien
+werden nicht mitgezählt.</p>
+
+<h2>Datenbank von TV Library Viewer</h2>
+<p>Die eigene Datenbank von TV Library Viewer auf diesem Mac, geteilt mit jedem Gerät, das die Mediathek anzeigt.</p>
+<table>
+<tr><th>Teil</th><th>Inhalt</th></tr>
+<tr><td><span class="ui">Serieninformationen</span></td><td>Per AppleScript festgelegte vollständige Beschreibungen und die Besetzung jeder
+Serie: die Namen der Schauspieler und ihre Rollen.</td></tr>
+<tr><td><span class="ui">Übersetzungen</span></td><td>Folgentitel und -beschreibungen, übersetzt in die Sprachen, auf die die Apps eingestellt sind.</td></tr>
+<tr><td><span class="ui">Besetzung und Crew</span></td><td>Ein kleines Foto jeder Person und die Adressen ihrer
+Seiten bei TVmaze und TMDb.</td></tr>
+<tr><td><span class="ui">Accounts und Wiedergabe</span></td><td>Die Accounts, die Wiedergaben aller Accounts außer dem
+Hauptaccount und die Protokolle der Accounts.</td></tr>
+<tr><td><span class="ui">Datenbankstruktur und freier Platz</span></td><td>Die eigenen Verwaltungsdaten von SQLite und Platz, den es wiederverwendet.</td></tr>
+<tr><td><span class="ui">Letzte Änderungen</span></td><td>Änderungen, die noch nicht in die Datenbank übernommen wurden. Das geschieht von
+Zeit zu Zeit.</td></tr>
+</table>
+<p>Besetzung und Crew einer Serie werden bei TVmaze und TMDb nachgeschlagen, wenn ihre Seite zum ersten Mal geöffnet wird, hier oder
+auf einem beliebigen Gerät. Angaben zu Personen werden bei jedem Öffnen abgerufen, sind also nie veraltet,
+und werden nicht gespeichert. Klicke auf <span class="ui">Im Finder zeigen</span>, um die Datenbankdatei zu sehen.</p>
+
+<h2><a name="tmdb"></a>Details zu Besetzung und Crew: ein TMDb-Token</h2>
+<p>TVmaze erfordert keine Einrichtung. TMDb (The Movie Database) ergänzt Regie und Drehbuch, Schauspieler, die
+TVmaze nicht hat, und Biografien, oft in deiner Sprache. Dafür brauchst du ein eigenes Token: TMDb
+vergibt es kostenlos an alle mit Account, für die private, nicht kommerzielle Nutzung. TV Library Viewer
+bringt keines mit.</p>
+<ol>
+<li>Erstelle auf themoviedb.org einen kostenlosen Account und melde dich an.</li>
+<li>Klicke auf dein Accountsymbol, wähle <span class="ui">Settings</span> und klicke dann auf <span class="ui">API</span>.</li>
+<li>Beantrage einen API-Schlüssel: Wähle <span class="ui">Developer</span>, akzeptiere die Bedingungen und beschreibe deine Nutzung als privat
+und nicht kommerziell (zum Beispiel „Besetzung und Biografien in meiner eigenen TV-Mediathek-App anzeigen“).</li>
+<li>Wenn der Schlüssel bereit ist, kopiere das <span class="ui">API Read Access Token</span> (das lange, nicht den kürzeren API Key).</li>
+<li>Wähle auf dem Mac mit der Mediathek <span class="ui">TV Library Viewer › Einstellungen</span>, klicke auf <span class="ui">Speicher</span> und
+füge es in <span class="ui">TMDb API Read Access Token</span> ein.</li>
+<li>Klicke auf <span class="ui">Testen</span>. „TMDb akzeptiert dieses Token.“ bedeutet, dass es funktioniert.</li>
+</ol>
+<p>Das Token wird im Schlüsselbund des Mac verwahrt. Nur der Mac mit der Mediathek verwendet es; deine anderen
+Geräte erhalten Besetzung und Details von diesem Mac. Bereits nachgeschlagene Serien erhalten die Besetzung und Crew von TMDb beim
+nächsten Öffnen ihrer Seite. Schließt du die Einstellungen, ohne ein neues Token zu testen, wird es dann getestet,
+und du erfährst es, wenn TMDb es ablehnt.</p>
+<div class="note"><b>Hinweis:</b> Dieses Produkt verwendet die TMDB-API, wird aber von TMDB weder unterstützt noch zertifiziert.</div>
+
+<h2><a name="google"></a>Übersetzung: ein Google-Schlüssel</h2>
+<p>Episodentitel und -beschreibungen werden auf diesem Mac kostenlos mit Apples Übersetzung in die Sprache jedes
+Geräts übersetzt. Ins Griechische, Tschechische, Ungarische, Rumänische, Persische, Urdu und Bengalische kann sie
+nicht übersetzen. Dafür fügst du einen eigenen Google Cloud Translation API key hinzu. Nur der Mac mit der Mediathek
+braucht einen, die Geräte, die sie ansehen, nicht. Die ersten 500.000 Zeichen pro Monat sind kostenlos, und jeder
+Text wird nur einmal übersetzt.</p>
+<ol>
+<li>Öffne console.cloud.google.com und melde dich mit deinem Google-Account an.</li>
+<li>Erstelle ein Projekt: Klicke oben auf das Projektmenü, dann auf <span class="ui">New Project</span>, und gib ihm einen
+Namen wie „TV Library Viewer“.</li>
+<li>Aktiviere die Abrechnung: Wähle im Menü ☰ <span class="ui">Billing</span> und verknüpfe ein Rechnungskonto. Google verlangt
+eines auch für die kostenlose Nutzung. Lege zur Sicherheit unter <span class="ui">Budgets &amp; alerts</span> ein Budget an, zum Beispiel 1 $.</li>
+<li>Wähle ☰ › <span class="ui">APIs &amp; Services › Library</span>, suche nach <span class="ui">Cloud Translation API</span> und klicke auf
+<span class="ui">Enable</span>.</li>
+<li>Wähle ☰ › <span class="ui">APIs &amp; Services › Credentials</span>, dann <span class="ui">Create credentials › API key</span>, und
+kopiere den Schlüssel (er beginnt mit „AIza“).</li>
+<li>Empfohlen: Klicke auf den Namen des Schlüssels, wähle unter „API restrictions“ <span class="ui">Restrict key</span>, markiere
+<span class="ui">Cloud Translation API</span> und klicke auf <span class="ui">Save</span>, damit der Schlüssel nur für Übersetzungen funktioniert.</li>
+<li>Wähle auf dem Mac mit der Mediathek <span class="ui">TV Library Viewer › Einstellungen</span>, klicke auf <span class="ui">Speicher</span>,
+füge den Schlüssel in <span class="ui">Google Cloud Translation API-Schlüssel</span> ein und klicke auf <span class="ui">Testen</span>.</li>
+</ol>
+<p>Der Schlüssel wird im Schlüsselbund des Mac gespeichert und nur für diese sieben Sprachen verwendet. Gib ihn
+nicht weiter: Alles, was damit übersetzt wird, wird deinem Google-Account in Rechnung gestellt.</p>
+
+<h2>Caches</h2>
+<p>Bilder und die Mediatheken, die dieser Mac von anderen Macs angezeigt hat. Caches werden bei Bedarf neu erstellt,
+und macOS leert sie, wenn der Speicherplatz knapp wird.</p>
+<div class="see"><h3>Siehe auch</h3><ul><li><a href="show-page.html">Die Serienseite und die Besetzung</a></li><li><a href="privacy.html">Was TV Library Viewer liest, ändert und speichert</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

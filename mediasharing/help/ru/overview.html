@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Как работает Media Sharing GUI</title>
+<meta name="description" content="Делает так, что медиатека с Домашней коллекцией на другом Mac появляется в сети этого Mac, для воспроизведения через туннель SSH." />
+<meta name="keywords" content="обзор, домашняя коллекция, media sharing, SSH, туннель, Bonjour, Apple TV, Музыка, удалённый" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="overview"></a>
+<nav class="crumbs"><a href="index.html">Справка Media Sharing GUI</a> › Начало работы</nav>
+<h1>Как работает Media Sharing GUI</h1>
+<p class="lead">Он делает так, что медиатека на другом Mac выглядит так, будто она прямо здесь, в вашей сети.</p>
+
+<p>Домашняя коллекция (Media Sharing) позволяет приложениям <span class="ui">Apple TV</span>, <span class="ui">Музыка</span> и <span class="ui">iTunes</span> воспроизводить
+с другого компьютера, но только с того, что в <b>той же локальной сети</b>. Media Sharing GUI
+снимает это ограничение. Направьте его на Mac дома (или любой, до которого можно добраться по SSH), и медиатека,
+которую он публикует, появится здесь в списке источников <span class="ui">Apple TV</span> или <span class="ui">Музыка</span>, словно этот Mac в
+соседней комнате.</p>
+
+<h2>Что он делает, шаг за шагом</h2>
+<ol>
+<li>Открывает <b>туннель SSH</b> с этого Mac на удалённый.</li>
+<li>Через этот туннель спрашивает удалённый Mac, какую службу Домашней коллекции он объявляет в своей собственной
+локальной сети.</li>
+<li><b>Заново публикует ту же службу здесь</b>, через Bonjour, направляя её обратно через туннель —
+так приложения на этом Mac видят медиатеку, будто она рядом в локальной сети.</li>
+</ol>
+<p>Пока он работает, воспроизведение из этой медиатеки идёт в зашифрованном виде внутри туннеля SSH. Включайте и выключайте
+его кнопками <span class="ui">Запустить</span> и <span class="ui">Остановить</span> в блоке «Статус».</p>
+
+<h2>Что нужно</h2>
+<ul>
+<li><b>На Mac дома:</b> Домашняя коллекция (или Media Sharing) включена в приложении <span class="ui">Apple TV</span> или
+<span class="ui">Музыка</span>, и включён удалённый вход (SSH). См. <a href="remote-setup.html">На Mac дома</a>.</li>
+<li><b>Способ добраться до него:</b> его адрес или имя динамического DNS и порт SSH, который ваш роутер
+на него пробрасывает.</li>
+<li><b>На этом Mac:</b> ничего особенного — Media Sharing GUI управляет встроенными инструментами <code>ssh</code>
+и Bonjour за вас.</li>
+</ul>
+
+<h2>С чего начать</h2>
+<ol>
+<li>Один раз настройте <a href="remote-setup.html">Mac дома</a>.</li>
+<li><a href="connect.html">Заполните подключение и нажмите «Запустить»</a>.</li>
+<li><a href="libraries.html">Выберите, какие библиотеки</a> публиковать здесь.</li>
+</ol>
+<div class="see"><h3>См. также</h3><ul><li><a href="remote-setup.html">На Mac дома</a></li><li><a href="connect.html">Настройка и запуск подключения</a></li><li><a href="privacy.html">Что Media Sharing GUI читает, меняет и хранит</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

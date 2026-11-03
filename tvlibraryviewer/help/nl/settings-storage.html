@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Instellingen voor Opslag</title>
+<meta name="description" content="Hoe groot de bibliotheek is, en hoeveel ruimte de database en caches van TV Library Viewer innemen." />
+<meta name="keywords" content="instellingen, opslag, database, grootte, ruimte, series, afleveringen, cast, foto's van acteurs, cache, TV Library Viewer, TVmaze, TMDb" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings-storage"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer Help</a> › Instellingen</nav>
+<h1>Instellingen voor Opslag</h1>
+<p class="lead">Kies <span class="ui">TV Library Viewer › Instellingen</span> en klik op <span class="ui">Opslag</span>.</p>
+
+<h2>TV-bibliotheek van deze Mac</h2>
+<p>Het aantal series en afleveringen in de bibliotheek van de TV-app, en de grootte van de database ervan. De videobestanden
+worden niet meegeteld.</p>
+
+<h2>TV Library Viewer-database</h2>
+<p>De eigen database van TV Library Viewer op deze Mac, gedeeld met elk apparaat dat de bibliotheek toont.</p>
+<table>
+<tr><th>Onderdeel</th><th>Wat het bevat</th></tr>
+<tr><td><span class="ui">Serie-informatie</span></td><td>Volledige beschrijvingen die via AppleScript zijn opgegeven, en de cast van elke
+serie: de namen van de acteurs en hun rollen.</td></tr>
+<tr><td><span class="ui">Vertalingen</span></td><td>Titels en beschrijvingen van afleveringen, vertaald naar de talen waarop de apps staan.</td></tr>
+<tr><td><span class="ui">Cast en crew</span></td><td>Eén kleine foto per persoon, en de adressen van hun
+pagina's op TVmaze en TMDb.</td></tr>
+<tr><td><span class="ui">Accounts en kijken</span></td><td>De accounts, de kijkgeschiedenis van elk account behalve het
+hoofdaccount, en de logboeken van de accounts.</td></tr>
+<tr><td><span class="ui">Databasestructuur en vrije ruimte</span></td><td>De eigen gegevens van SQLite, en ruimte die het hergebruikt.</td></tr>
+<tr><td><span class="ui">Recente wijzigingen</span></td><td>Wijzigingen die nog niet in de database zijn verwerkt. Dat gebeurt
+af en toe.</td></tr>
+</table>
+<p>De cast en crew van een serie worden op TVmaze en TMDb opgezocht de eerste keer dat de pagina wordt geopend, hier of
+op een ander apparaat. Gegevens over personen worden elke keer opgehaald als je ze opent, zodat ze nooit verouderd zijn,
+en worden niet bewaard. Klik op <span class="ui">Toon in Finder</span> om het databasebestand te zien.</p>
+
+<h2><a name="tmdb"></a>Gegevens over cast en crew: een TMDb-token</h2>
+<p>TVmaze hoef je niet in te stellen. TMDb (The Movie Database) voegt regisseurs en scenarioschrijvers toe, acteurs
+die TVmaze niet heeft, en biografieën, vaak in jouw taal. Daarvoor is een eigen token nodig: TMDb
+geeft er gratis een aan iedereen met een account, voor persoonlijk, niet-commercieel gebruik. TV Library Viewer
+wordt niet met een token geleverd.</p>
+<ol>
+<li>Maak een gratis account aan op themoviedb.org en log in.</li>
+<li>Klik op je accountsymbool, kies <span class="ui">Settings</span> en klik op <span class="ui">API</span>.</li>
+<li>Vraag een API-sleutel aan: kies <span class="ui">Developer</span>, accepteer de voorwaarden en omschrijf je gebruik als persoonlijk
+en niet-commercieel (bijvoorbeeld 'Show cast and biographies in my own TV library app').</li>
+<li>Als de sleutel klaar is, kopieer je het <span class="ui">API Read Access Token</span> (het lange, niet de kortere API Key).</li>
+<li>Kies op de Mac met de bibliotheek <span class="ui">TV Library Viewer › Instellingen</span>, klik op <span class="ui">Opslag</span> en
+plak het in <span class="ui">TMDb API Read Access Token</span>.</li>
+<li>Klik op <span class="ui">Test</span>. 'TMDb accepteert dit token.' betekent dat het werkt.</li>
+</ol>
+<p>Het token wordt bewaard in de sleutelhanger van de Mac. Alleen de Mac met de bibliotheek gebruikt het; je andere
+apparaten krijgen de cast en details van die Mac. Series die al zijn opgezocht, krijgen de cast en crew van TMDb de
+volgende keer dat hun pagina wordt geopend. Als je Instellingen sluit zonder een nieuw token te testen, wordt het op dat moment getest,
+en krijg je een melding als TMDb het weigert.</p>
+<div class="note"><b>Opmerking:</b> Dit product gebruikt de TMDB API, maar wordt niet onderschreven of gecertificeerd door TMDB.</div>
+
+<h2><a name="google"></a>Vertaling: een Google-sleutel</h2>
+<p>Afleveringstitels en -beschrijvingen worden op deze Mac gratis in de taal van elk apparaat vertaald,
+met de vertaalfunctie van Apple. Die kan niet vertalen naar het Grieks, Tsjechisch, Hongaars, Roemeens, Perzisch,
+Urdu of Bengaals. Voeg daarvoor je eigen Google Cloud Translation API key toe. Alleen de Mac met de bibliotheek
+heeft er een nodig; de apparaten die ernaar kijken niet. De eerste 500.000 tekens per maand zijn gratis, en elke
+tekst wordt maar één keer vertaald.</p>
+<ol>
+<li>Ga naar console.cloud.google.com en log in met je Google-account.</li>
+<li>Maak een project: klik bovenaan op het projectmenu, dan op <span class="ui">New Project</span>, en geef het een
+naam zoals 'TV Library Viewer'.</li>
+<li>Zet facturering aan: kies in het menu ☰ <span class="ui">Billing</span> en koppel een factureringsaccount. Google vraagt
+er ook een voor gratis gebruik. Voeg voor de zekerheid een budget toe, bijvoorbeeld $ 1, onder <span class="ui">Budgets &amp; alerts</span>.</li>
+<li>Kies ☰ › <span class="ui">APIs &amp; Services › Library</span>, zoek naar <span class="ui">Cloud Translation API</span> en klik op
+<span class="ui">Enable</span>.</li>
+<li>Kies ☰ › <span class="ui">APIs &amp; Services › Credentials</span>, dan <span class="ui">Create credentials › API key</span>, en
+kopieer de sleutel (die begint met 'AIza').</li>
+<li>Aanbevolen: klik op de naam van de sleutel, kies <span class="ui">Restrict key</span> onder API restrictions, vink
+<span class="ui">Cloud Translation API</span> aan en klik op <span class="ui">Save</span>, zodat de sleutel alleen voor vertalen werkt.</li>
+<li>Kies op de Mac met de bibliotheek <span class="ui">TV Library Viewer › Instellingen</span>, klik op <span class="ui">Opslag</span>,
+plak de sleutel in <span class="ui">Google Cloud Translation API-sleutel</span> en klik op <span class="ui">Test</span>.</li>
+</ol>
+<p>De sleutel wordt bewaard in de sleutelhanger van de Mac en alleen voor die zeven talen gebruikt. Deel hem
+niet: alles wat ermee wordt vertaald, wordt aan je Google-account gefactureerd.</p>
+
+<h2>Caches</h2>
+<p>Illustraties, en de bibliotheken die deze Mac vanaf andere Macs heeft getoond. Caches worden opnieuw aangemaakt als dat nodig is,
+en macOS leegt ze als de ruimte opraakt.</p>
+<div class="see"><h3>Zie ook</h3><ul><li><a href="show-page.html">De seriepagina en de cast</a></li><li><a href="privacy.html">Wat TV Library Viewer leest, wijzigt en bewaart</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

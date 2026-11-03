@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cómo funciona Media Sharing GUI</title>
+<meta name="description" content="Hace que una biblioteca de Compartir en casa de un Mac en otro lugar aparezca en la red de este Mac, para transmitirla por un túnel SSH." />
+<meta name="keywords" content="resumen, compartir en casa, media sharing, SSH, túnel, Bonjour, Apple TV, Música, remoto" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="overview"></a>
+<nav class="crumbs"><a href="index.html">Ayuda de Media Sharing GUI</a> › Primeros pasos</nav>
+<h1>Cómo funciona Media Sharing GUI</h1>
+<p class="lead">Hace que una biblioteca de un Mac en otro lugar parezca estar aquí mismo, en tu red.</p>
+
+<p>Compartir en casa (Media Sharing) permite que la app <span class="ui">Apple TV</span>, <span class="ui">Música</span> e <span class="ui">iTunes</span> transmitan
+desde otro ordenador, pero solo desde uno que esté en la <b>misma red local</b>. Media Sharing GUI
+elimina ese límite. Apúntalo a un Mac de casa (o a cualquiera que puedas alcanzar por SSH) y la biblioteca
+que comparte aparece aquí en la lista de fuentes de <span class="ui">Apple TV</span> o <span class="ui">Música</span>, como si ese Mac estuviera en la
+habitación de al lado.</p>
+
+<h2>Qué hace, paso a paso</h2>
+<ol>
+<li>Abre un <b>túnel SSH</b> desde este Mac al remoto.</li>
+<li>Pregunta al Mac remoto, por ese túnel, qué servicio de Compartir en casa está anunciando en su propia
+red local.</li>
+<li><b>Vuelve a publicar ese mismo servicio aquí</b>, por Bonjour, dirigido de vuelta por el túnel,
+de modo que las apps de este Mac ven la biblioteca como si estuviera cerca en la LAN.</li>
+</ol>
+<p>Mientras funciona, la transmisión desde esa biblioteca viaja cifrada dentro del túnel SSH. Actívala y desactívala
+con <span class="ui">Iniciar</span> y <span class="ui">Detener</span> en el cuadro Estado.</p>
+
+<h2>Qué necesitas</h2>
+<ul>
+<li><b>En el Mac de casa:</b> Compartir en casa (o Media Sharing) activado en la app <span class="ui">Apple TV</span> o
+<span class="ui">Música</span>, y el inicio de sesión remoto (SSH) activado. Consulta <a href="remote-setup.html">En el Mac de casa</a>.</li>
+<li><b>Una forma de alcanzarlo:</b> su dirección o nombre DNS dinámico, y el puerto SSH que tu router
+le redirige.</li>
+<li><b>En este Mac:</b> nada especial; Media Sharing GUI maneja por ti las herramientas integradas <code>ssh</code>
+y Bonjour.</li>
+</ul>
+
+<h2>Primeros pasos</h2>
+<ol>
+<li>Configura el <a href="remote-setup.html">Mac de casa</a> una vez.</li>
+<li><a href="connect.html">Rellena una conexión y pulsa Iniciar</a>.</li>
+<li><a href="libraries.html">Elige qué bibliotecas</a> publicar aquí.</li>
+</ol>
+<div class="see"><h3>Consulta también</h3><ul><li><a href="remote-setup.html">En el Mac de casa</a></li><li><a href="connect.html">Configurar e iniciar una conexión</a></li><li><a href="privacy.html">Qué lee, cambia y guarda Media Sharing GUI</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

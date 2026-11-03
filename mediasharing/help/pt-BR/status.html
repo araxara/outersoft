@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Status e situação</title>
+<meta name="description" content="A área Status mostra o que a conexão está fazendo, seu processo de túnel e há quanto tempo está no ar." />
+<meta name="keywords" content="status, situação, ativo, conectando, tempo ativo, túnel, PID" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="status"></a>
+<nav class="crumbs"><a href="index.html">Ajuda do Media Sharing GUI</a> › Uso</nav>
+<h1>Status e situação</h1>
+<p class="lead">A área Status é onde você inicia e para, e observa o que acontece.</p>
+
+<h2>O que cada situação significa</h2>
+<table>
+<tr><th>Situação</th><th>O que acontece</th></tr>
+<tr><td>OCIOSO</td><td>Não conectado. Aperte <span class="ui">Iniciar</span> para começar.</td></tr>
+<tr><td>CONECTANDO</td><td>Abrindo o túnel SSH para o Mac remoto.</td></tr>
+<tr><td>SENHA NECESSÁRIA</td><td>O login por chave não funcionou; digite a senha em <span class="ui">Autenticação SSH</span>.</td></tr>
+<tr><td>CONSULTANDO</td><td>Pergunta ao Mac remoto qual biblioteca de Compartilhamento Familiar ele anuncia.</td></tr>
+<tr><td>REGISTRANDO</td><td>Publica essa biblioteca aqui via Bonjour.</td></tr>
+<tr><td>ATIVO</td><td>No ar. A biblioteca está disponível no app Apple TV / Música.</td></tr>
+<tr><td>RECONECTANDO</td><td>A conexão caiu; tenta de novo por conta própria.</td></tr>
+<tr><td>PARANDO</td><td>Fecha o túnel e remove o anúncio local.</td></tr>
+<tr><td>ERRO</td><td>Algo deu errado; o registro diz o quê. Consulte <a href="troubleshooting.html">Se não conectar</a>.</td></tr>
+</table>
+
+<h2>As outras linhas</h2>
+<ul>
+<li><span class="ui">PID do túnel</span> — o identificador do processo do túnel <code>ssh</code> em segundo plano, usado para
+medir o <a href="traffic-log.html">tráfego</a> e fechá-lo de forma limpa.</li>
+<li><span class="ui">Tempo ativo</span> — há quanto tempo a conexão atual está estabelecida.</li>
+</ul>
+<p>Os botões de baixo mudam com a situação: <span class="ui">Iniciar</span> quando ocioso, <span class="ui">Parar</span> enquanto
+conectado, e <span class="ui">Cancelar</span> enquanto ainda conecta.</p>
+<div class="see"><h3>Consulte também</h3><ul><li><a href="libraries.html">Escolher quais bibliotecas publicar</a></li><li><a href="reconnecting.html">Reconexão e repouso</a></li><li><a href="traffic-log.html">Tráfego e registro</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

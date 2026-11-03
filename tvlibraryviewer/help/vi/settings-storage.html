@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cài đặt Dung lượng</title>
+<meta name="description" content="Kích thước thư viện, và dung lượng mà cơ sở dữ liệu và bộ nhớ đệm của TV Library Viewer sử dụng." />
+<meta name="keywords" content="cài đặt, dung lượng, cơ sở dữ liệu, kích thước, chương trình, tập, diễn viên, ảnh diễn viên, bộ nhớ đệm, TV Library Viewer" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings-storage"></a>
+<nav class="crumbs"><a href="index.html">Trợ giúp TV Library Viewer</a> › Cài đặt</nav>
+<h1>Cài đặt Dung lượng</h1>
+<p class="lead">Chọn <span class="ui">TV Library Viewer › Cài đặt</span>, rồi bấm vào <span class="ui">Dung lượng</span>.</p>
+
+<h2>Thư viện TV của máy Mac này</h2>
+<p>Số chương trình và tập trong thư viện của ứng dụng TV, và kích thước cơ sở dữ liệu của thư viện. Tệp
+video không được tính.</p>
+
+<h2>Cơ sở dữ liệu TV Library Viewer</h2>
+<p>Cơ sở dữ liệu riêng của TV Library Viewer trên máy Mac này, được chia sẻ với mọi thiết bị xem thư viện.</p>
+<table>
+<tr><th>Phần</th><th>Nội dung</th></tr>
+<tr><td><span class="ui">Thông tin chương trình</span></td><td>Mô tả đầy đủ được cung cấp qua AppleScript, và diễn viên của từng
+chương trình: tên diễn viên và vai diễn.</td></tr>
+<tr><td><span class="ui">Bản dịch</span></td><td>Tiêu đề và mô tả các tập được dịch sang những ngôn ngữ đã đặt trong ứng dụng.</td></tr>
+<tr><td><span class="ui">Diễn viên và đoàn làm phim</span></td><td>Một ảnh nhỏ cho mỗi người, và địa chỉ trang của họ
+trên TVmaze và TMDb.</td></tr>
+<tr><td><span class="ui">Tài khoản và lượt xem</span></td><td>Các tài khoản, lượt xem của mọi tài khoản trừ
+tài khoản chính, và nhật ký của các tài khoản.</td></tr>
+<tr><td><span class="ui">Cấu trúc cơ sở dữ liệu và dung lượng trống</span></td><td>Bản ghi riêng của SQLite, và dung lượng mà SQLite dùng lại.</td></tr>
+<tr><td><span class="ui">Thay đổi gần đây</span></td><td>Các thay đổi chưa được gộp vào cơ sở dữ liệu. Việc gộp diễn ra
+định kỳ.</td></tr>
+</table>
+<p>Diễn viên và đoàn làm phim của một chương trình được tra cứu trên TVmaze và TMDb khi trang của chương trình được mở lần đầu, tại đây hoặc
+trên bất kỳ thiết bị nào. Thông tin chi tiết về từng người được tải mỗi lần bạn mở, nên không bao giờ lỗi thời,
+và không được lưu lại. Bấm vào <span class="ui">Hiện trong Finder</span> để xem tệp cơ sở dữ liệu.</p>
+
+<h2><a name="tmdb"></a>Chi tiết diễn viên và đoàn làm phim: mã thông báo TMDb</h2>
+<p>TVmaze không cần thiết lập gì. TMDb (The Movie Database) bổ sung đạo diễn và biên kịch, những diễn viên
+mà TVmaze không có, và tiểu sử, thường bằng ngôn ngữ của bạn. TMDb cần một mã thông báo của riêng bạn: TMDb
+cấp miễn phí cho bất kỳ ai có tài khoản, để dùng cho mục đích cá nhân, phi thương mại. TV Library Viewer
+không đi kèm mã thông báo.</p>
+<ol>
+<li>Tạo tài khoản miễn phí tại themoviedb.org, rồi đăng nhập.</li>
+<li>Bấm vào biểu tượng tài khoản, chọn <span class="ui">Settings</span>, rồi bấm vào <span class="ui">API</span>.</li>
+<li>Yêu cầu khóa API: chọn <span class="ui">Developer</span>, chấp nhận điều khoản, và mô tả mục đích sử dụng là cá nhân
+và phi thương mại (ví dụ: "Show cast and biographies in my own TV library app").</li>
+<li>Khi khóa đã sẵn sàng, sao chép <span class="ui">API Read Access Token</span> (mã dài, không phải API Key ngắn hơn).</li>
+<li>Trên máy Mac có thư viện, chọn <span class="ui">TV Library Viewer › Cài đặt</span>, bấm vào <span class="ui">Dung lượng</span>, rồi
+dán mã vào <span class="ui">API Read Access Token của TMDb</span>.</li>
+<li>Bấm vào <span class="ui">Kiểm tra</span>. "TMDb chấp nhận mã thông báo này" nghĩa là mã hoạt động.</li>
+</ol>
+<p>Mã thông báo được lưu trong Chuỗi khóa của máy Mac. Chỉ máy Mac có thư viện sử dụng mã này; các thiết bị
+khác của bạn nhận thông tin diễn viên và chi tiết từ máy Mac đó. Các chương trình đã được tra cứu sẽ có diễn viên và đoàn làm phim từ TMDb
+vào lần tới trang của chúng được mở. Nếu bạn đóng Cài đặt mà chưa kiểm tra mã thông báo mới, mã sẽ được kiểm tra khi đó,
+và bạn sẽ được thông báo nếu TMDb từ chối.</p>
+<div class="note"><b>Lưu ý:</b> Sản phẩm này sử dụng API của TMDB nhưng không được TMDB xác nhận hoặc chứng nhận.</div>
+
+<h2><a name="google"></a>Dịch thuật: khóa Google</h2>
+<p>Tiêu đề và mô tả tập phim được dịch sang ngôn ngữ của từng thiết bị ngay trên máy Mac này, miễn phí,
+bằng tính năng Dịch thuật của Apple. Tính năng này không dịch được sang tiếng Hy Lạp, tiếng Séc, tiếng Hungary, tiếng Romania, tiếng Ba Tư, tiếng Urdu
+hay tiếng Bengal. Với các ngôn ngữ đó, hãy thêm khóa Google Cloud Translation API của riêng bạn. Chỉ máy Mac có thư viện
+cần khóa; các thiết bị xem thư viện thì không. 500.000 ký tự đầu tiên mỗi tháng được miễn phí, và mỗi
+văn bản chỉ được dịch một lần.</p>
+<ol>
+<li>Truy cập console.cloud.google.com và đăng nhập bằng tài khoản Google của bạn.</li>
+<li>Tạo một dự án: bấm vào menu dự án ở trên cùng, rồi <span class="ui">New Project</span>, và đặt tên cho dự án,
+chẳng hạn "TV Library Viewer".</li>
+<li>Bật thanh toán: trong menu ☰, chọn <span class="ui">Billing</span> và liên kết một tài khoản thanh toán. Google yêu cầu
+tài khoản này ngay cả khi sử dụng miễn phí. Để an toàn, hãy thêm một ngân sách, chẳng hạn 1 USD, trong <span class="ui">Budgets &amp; alerts</span>.</li>
+<li>Chọn ☰ › <span class="ui">APIs &amp; Services › Library</span>, tìm <span class="ui">Cloud Translation API</span>, rồi bấm vào
+<span class="ui">Enable</span>.</li>
+<li>Chọn ☰ › <span class="ui">APIs &amp; Services › Credentials</span>, rồi <span class="ui">Create credentials › API key</span>, và
+sao chép khóa (khóa bắt đầu bằng "AIza").</li>
+<li>Nên làm: bấm vào tên của khóa, chọn <span class="ui">Restrict key</span> trong API restrictions, đánh dấu
+<span class="ui">Cloud Translation API</span>, rồi bấm vào <span class="ui">Save</span>, để khóa chỉ dùng được cho việc dịch.</li>
+<li>Trên máy Mac có thư viện, chọn <span class="ui">TV Library Viewer › Cài đặt</span>, bấm vào <span class="ui">Dung lượng</span>,
+dán khóa vào <span class="ui">Khóa Google Cloud Translation API</span>, rồi bấm vào <span class="ui">Kiểm tra</span>.</li>
+</ol>
+<p>Khóa được lưu trong Chuỗi khóa của máy Mac và chỉ được dùng cho bảy ngôn ngữ đó. Đừng chia sẻ
+khóa: mọi nội dung được dịch bằng khóa này đều được tính phí vào tài khoản Google của bạn.</p>
+
+<h2>Bộ nhớ đệm</h2>
+<p>Ảnh, và các thư viện mà máy Mac này đã xem từ các máy Mac khác. Bộ nhớ đệm được tạo lại khi cần,
+và macOS sẽ dọn sạch khi sắp hết dung lượng.</p>
+<div class="see"><h3>Xem thêm</h3><ul><li><a href="show-page.html">Trang chương trình và diễn viên</a></li><li><a href="privacy.html">Những gì TV Library Viewer đọc, thay đổi và lưu giữ</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

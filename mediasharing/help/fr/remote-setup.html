@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sur le Mac à la maison</title>
+<meta name="description" content="Activer le partage à domicile et la connexion à distance sur le Mac distant, et le rendre joignable depuis l'extérieur." />
+<meta name="keywords" content="partage à domicile, media sharing, connexion à distance, SSH, redirection de port, DNS dynamique, routeur" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="remote-setup"></a>
+<nav class="crumbs"><a href="index.html">Aide de Media Sharing GUI</a> › Premiers pas</nav>
+<h1>Sur le Mac à la maison</h1>
+<p class="lead">Faites ceci une fois sur le Mac dont vous voulez joindre la bibliothèque.</p>
+
+<h2>Activer le partage de la bibliothèque</h2>
+<ul>
+<li>Dans l'app <span class="ui">Apple TV</span> ou <span class="ui">Musique</span>, activez le <b>partage à domicile</b> (les anciens systèmes l'appellent
+<b>Media Sharing</b>), connecté avec votre identifiant Apple.</li>
+<li>Laissez ce Mac éveillé, ou réglez-le pour autoriser l'accès réseau en veille, afin qu'il puisse répondre quand vous vous
+connectez.</li>
+</ul>
+
+<h2>Activer la connexion à distance (SSH)</h2>
+<ol>
+<li>Sur le Mac distant, ouvrez <span class="ui">Réglages Système</span> › <span class="ui">Général</span> › <span class="ui">Partage</span>.</li>
+<li>Activez <span class="ui">Connexion à distance</span>. Notez le compte utilisateur autorisé à se connecter.</li>
+</ol>
+<div class="note"><b>Astuce :</b> Configurez une clé SSH pour ne pas avoir besoin d'un mot de passe à chaque fois. Copiez la
+clé publique de ce Mac sur le Mac distant (<code>ssh-copy-id user@host</code>). Media Sharing GUI accepte
+quand même un mot de passe en secours — voir <a href="authentication.html">Clés et mots de passe SSH</a>.</div>
+
+<h2>Le rendre joignable depuis l'extérieur</h2>
+<ul>
+<li><b>Redirection de port :</b> sur le routeur domestique, redirigez un port externe vers le port SSH du Mac distant
+(22). Beaucoup redirigent un port externe inhabituel, comme 22022, pour éviter le bruit — ce port externe
+est celui que vous indiquez dans <a href="settings.html">Port SSH distant</a>.</li>
+<li><b>Un nom qui suit l'IP domestique :</b> les adresses Internet domestiques changent, donc un nom DNS dynamique
+(comme <code>myhome.example.com</code>) qui la suit vous évite de courir après les numéros.</li>
+</ul>
+<p>Une fois que la connexion à distance fonctionne depuis l'extérieur — testez avec <code>ssh user@host -p PORT</code>
+dans Terminal — Media Sharing GUI peut l'utiliser.</p>
+<div class="see"><h3>Voir aussi</h3><ul><li><a href="connect.html">Configurer et démarrer une connexion</a></li><li><a href="authentication.html">Clés et mots de passe SSH</a></li><li><a href="settings.html">Référence de la configuration</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

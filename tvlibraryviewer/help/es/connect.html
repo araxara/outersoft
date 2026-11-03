@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Conectarse a una biblioteca compartida</title>
+<meta name="description" content="Conecta otro Mac, un iPad, un iPhone o un Apple TV al Mac que comparte su biblioteca." />
+<meta name="keywords" content="conectar, Bonjour, red, SSH, dirección, certificado, huella, confiar, iniciar sesión, contraseña" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">Ayuda de TV Library Viewer</a> › Primeros pasos</nav>
+<h1>Conectarse a una biblioteca compartida</h1>
+<p class="lead">Cada dispositivo se conecta una vez. Después vuelve a abrir la misma biblioteca por sí solo.</p>
+
+<h2>Abrir “Conectar a una biblioteca compartida”</h2>
+<ul>
+<li><b>Mac:</b> selecciona <span class="ui">Archivo › Conectar a una biblioteca compartida…</span> (<kbd>⌘K</kbd>).</li>
+<li><b>iPad y iPhone:</b> toca <span class="ui">Conectar a una biblioteca compartida…</span> en la barra lateral (<kbd>⌘K</kbd> con un teclado).</li>
+<li><b>Apple TV:</b> la primera vez, TV Library se conecta al primer Mac de la red que comparte
+sin contraseña. Si no, ve a <span class="ui">Bibliotecas › Conectar a otra biblioteca…</span>.</li>
+</ul>
+
+<h2>Elegir cómo acceder al Mac</h2>
+<h3>Esta red</h3>
+<p>Los Mac de la misma red que tienen activado el uso compartido aparecen por su nombre. Elige uno.</p>
+<h3>Remoto (SSH)</h3>
+<p>Para un Mac en otra red, como otra casa. Escribe la dirección que usas para conectarte por SSH a ese
+Mac (o a cualquier ordenador de su red), y el nombre de usuario si es distinto. TV Library Viewer inicia
+sesión, encuentra la biblioteca en esa red y se conecta a través de la conexión SSH.</p>
+<ul>
+<li>La primera vez, muestra la clave del host para que la compares y la confirmes.</li>
+<li>En un Mac se usa tu propia clave SSH si el host la acepta; si no, te pide la contraseña
+y la guarda en tu llavero.</li>
+<li>Un iPad, iPhone o Apple TV tiene su propia clave. Tras el primer inicio de sesión con contraseña, ofrece
+instalar esa clave en el host, para no necesitar la contraseña de nuevo.</li>
+</ul>
+<h3>Dirección</h3>
+<p>Para un Mac al que este dispositivo puede acceder directamente: mediante una VPN como Tailscale, o un puerto que tu router
+le redirige. Escribe la dirección y el puerto (el 47100 si no se ha cambiado), y un nombre de cuenta
+y una contraseña si la biblioteca tiene cuentas.</p>
+
+<h2>Confiar en el certificado de la biblioteca</h2>
+<p>La primera conexión muestra la huella del certificado de la biblioteca. Compárala con la que aparece en
+<span class="ui">Ajustes › Compartir</span> en el Mac que tiene la biblioteca y, a continuación, elige <span class="ui">Confiar y conectar</span>. A partir de
+entonces, el dispositivo comprueba ese certificado cada vez y rechaza una biblioteca cuyo certificado haya
+cambiado.</p>
+
+<h2>Iniciar sesión</h2>
+<p>Si la biblioteca tiene cuentas, introduce el nombre y la contraseña de tu cuenta en ese Mac. El dispositivo
+los guarda en su llavero. Sin cuentas, deja el nombre vacío y usa la contraseña de la biblioteca,
+si la hay.</p>
+<div class="see"><h3>Consulta también</h3><ul><li><a href="away.html">Ver fuera de casa</a></li><li><a href="sidebar-libraries.html">Cambiar de biblioteca</a></li><li><a href="settings-accounts.html">Ajustes de Cuentas</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

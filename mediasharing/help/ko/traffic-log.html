@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>트래픽과 로그</title>
+<meta name="description" content="터널이 얼마나 많은 데이터를 나르는지 지켜보고, 그것이 하는 모든 일의 로그를 읽거나 저장합니다." />
+<meta name="keywords" content="트래픽, nettop, 바이트, 수신, 송신, 최고, 로그, 파일, Finder" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="traffic-log"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI 도움말</a> › 사용</nav>
+<h1>트래픽과 로그</h1>
+<p class="lead">두 상자가 연결 상태를 보여 줍니다. 얼마나 나르는지, 그리고 무엇을 했는지.</p>
+
+<h2>SSH 세션 트래픽</h2>
+<ul>
+<li><span class="ui">수신</span>과 <span class="ui">송신</span>은 터널 프로세스를 흐르는 바이트를 보여 주며, 가장 바쁜 순간의 <span class="ui">최고</span>
+수치도 함께 표시합니다.</li>
+<li>수치는 원시 패킷 캡처가 아니라 시스템 도구 <code>nettop</code>으로 표본화되므로, 정확한 계측이라기보다
+대략적인 안내입니다.</li>
+<li>다시 표본화하는 빈도는 <a href="settings.html">구성</a>의 <span class="ui">트래픽 폴링 간격</span>으로 설정합니다.
+표본 하나에 몇 초가 걸립니다. 그보다 짧은 간격은 표본을 연달아 실행할 뿐입니다.</li>
+</ul>
+
+<h2>로그</h2>
+<p><span class="ui">로그</span> 상자는 각 단계를 기록합니다. 터널 열기, 보관함 찾기, 게시하기, 재연결, 그리고 모든 오류.
+디스크의 파일에도 기록되며, 상자에 <span class="ui">저장 위치:</span> 그 경로가 표시됩니다. 그 경로를 클릭하면
+<b>Finder에서 로그를 표시</b>합니다. 문제를 가려내면서 함께 보내고 싶을 때 편리합니다.</p>
+<div class="see"><h3>참고 항목</h3><ul><li><a href="status.html">상태와 상황</a></li><li><a href="troubleshooting.html">연결되지 않을 때</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

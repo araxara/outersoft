@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>连接到共享资料库</title>
+<meta name="description" content="将另一台 Mac、iPad、iPhone 或 Apple TV 连接到共享资料库的 Mac。" />
+<meta name="keywords" content="连接, Bonjour, 网络, SSH, 地址, 证书, 指纹, 信任, 登录, 密码" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer 帮助</a> › 入门</nav>
+<h1>连接到共享资料库</h1>
+<p class="lead">每台设备只需连接一次。之后它会自动重新打开同一个资料库。</p>
+
+<h2>打开“连接到共享资料库”</h2>
+<ul>
+<li><b>Mac：</b>选取<span class="ui">文件 › 连接到共享资料库…</span>（<kbd>⌘K</kbd>）。</li>
+<li><b>iPad 和 iPhone：</b>轻点边栏中的<span class="ui">连接到共享资料库…</span>（使用键盘时按 <kbd>⌘K</kbd>）。</li>
+<li><b>Apple TV：</b>首次使用时，TV Library 会连接到网络上第一台无需密码即可共享的 Mac。否则，请前往<span class="ui">资料库 › 连接到其他资料库…</span>。</li>
+</ul>
+
+<h2>选择访问 Mac 的方式</h2>
+<h3>此网络</h3>
+<p>同一网络上已开启共享的 Mac 会按名称列出。选择一台即可。</p>
+<h3>远程（SSH）</h3>
+<p>用于其他网络上的 Mac，例如另一个家中的 Mac。输入你通过 SSH 访问那台 Mac（或其网络上任何电脑）时使用的地址，如果用户名不同，还要输入用户名。TV Library Viewer 会登录，在该网络上找到资料库，并通过 SSH 连接进行连接。</p>
+<ul>
+<li>首次连接时，会显示主机的密钥供你比对和确认。</li>
+<li>在 Mac 上，如果主机接受，会使用你自己的 SSH 密钥；否则会要求输入密码，并将其保存在你的钥匙串中。</li>
+<li>iPad、iPhone 或 Apple TV 有自己的密钥。首次使用密码登录后，它会提议将该密钥安装到主机上，以后就不再需要密码。</li>
+</ul>
+<h3>地址</h3>
+<p>用于此设备可直接访问的 Mac：通过 Tailscale 等 VPN，或通过路由器转发给它的端口。输入地址和端口（除非已更改，否则为端口 47100）；如果资料库设有账户，还要输入账户名称和密码。</p>
+
+<h2>信任资料库的证书</h2>
+<p>首次连接时会显示资料库的证书指纹。将它与存有资料库的 Mac 上<span class="ui">设置 › 共享</span>中显示的指纹进行比对，然后选择<span class="ui">信任并连接</span>。此后，设备每次都会检查该证书，并拒绝证书已更改的资料库。</p>
+
+<h2>登录</h2>
+<p>如果资料库设有账户，请输入你在那台 Mac 上的账户名称和密码。设备会将它们保存在其钥匙串中。如果没有账户，请将名称留空，并使用资料库密码（如果有的话）。</p>
+<div class="see"><h3>另请参阅</h3><ul><li><a href="away.html">在外观看</a></li><li><a href="sidebar-libraries.html">在资料库之间切换</a></li><li><a href="settings-accounts.html">账户设置</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tham khảo cấu hình</title>
+<meta name="description" content="Mỗi trường trong ô Cấu hình làm gì, và khi nào thay đổi nó." />
+<meta name="keywords" content="cài đặt, cấu hình, trường, cổng, socket điều khiển, keep-alive, nén, tham khảo" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings"></a>
+<nav class="crumbs"><a href="index.html">Trợ giúp Media Sharing GUI</a> › Tham khảo</nav>
+<h1>Tham khảo cấu hình</h1>
+<p class="lead">Nhấp <span class="ui">(i)</span> bên cạnh bất kỳ trường nào trong app để xem cùng những ghi chú. Hầu hết các trường có thể
+để nguyên giá trị mặc định.</p>
+
+<h2>Kết nối tới đâu</h2>
+<ul>
+<li><b><span class="ui">Tên kết nối</span></b> — một nhãn hiển thị ở thanh bên, chỉ để bạn tham khảo. Nó không
+ảnh hưởng cách kết nối hoạt động.</li>
+<li><b><span class="ui">Đăng nhập từ xa (user@host)</span></b> — tên người dùng SSH và host (hoặc tên DNS động) của
+máy Mac ở xa, vd. <code>alex@myhome.example.com</code> — cùng <code>user@host</code>
+mà bạn đưa cho <code>ssh</code>.</li>
+<li><b><span class="ui">Cổng SSH ở xa</span></b> — cổng TCP mà máy chủ SSH của máy Mac ở xa được tới.
+Thường không phải 22, vì router thường chuyển tiếp một cổng bên ngoài tùy chỉnh (như 22022) tới cổng SSH của Mac
+bên trong mạng gia đình.</li>
+</ul>
+
+<h2>Cổng</h2>
+<ul>
+<li><b><span class="ui">Cổng chuyển tiếp cục bộ</span></b> — một cổng rảnh trên <i>máy Mac này</i>. Cổng Chia sẻ Trong nhà của thư viện
+ở xa được tạo đường hầm tới đây, nên một app nhìn vào <code>localhost</code> ở cổng này
+sẽ tới được thư viện ở xa.</li>
+<li><b><span class="ui">Cổng Media Sharing ở xa</span></b> — cổng mà Chia sẻ Trong nhà lắng nghe ở đầu bên kia, trên
+máy Mac ở xa — thường là 3689, cổng DAAP / Chia sẻ Trong nhà tiêu chuẩn. Chỉ đổi nó cho một thiết lập
+khác thường.</li>
+</ul>
+
+<h2>Hành vi đường hầm</h2>
+<ul>
+<li><b><span class="ui">Đường dẫn socket điều khiển SSH</span></b> — một đường dẫn tệp cục bộ cho socket điều khiển chạy nền của <code>ssh</code>,
+cho phép app đóng đường hầm gọn gàng (<code>ssh -O exit</code>) thay vì
+giết tiến trình.</li>
+<li><b><span class="ui">Server Alive Interval</span></b> — bao lâu một lần, tính bằng giây, <code>ssh</code> ping
+đầu ở xa để giữ đường hầm xuyên qua router và tường lửa và nhanh nhận ra nếu nó chết.</li>
+<li><b><span class="ui">Khoảng thăm dò lưu lượng</span></b> — bao lâu một lần, tính bằng giây, bảng Lưu lượng lấy mẫu lại
+<code>nettop</code>. Mỗi lần lấy mẫu mất vài giây; một khoảng ngắn hơn chỉ chạy chúng liên tiếp.</li>
+<li><b><span class="ui">Nén SSH</span></b> — bật nén của <code>ssh</code> (<code>-C</code>).
+Nó đánh đổi một chút CPU lấy luồng dữ liệu nhỏ hơn, có thể làm mượt rõ rệt việc phát qua một
+kết nối gia đình chậm hoặc độ trễ cao. Để bật cũng an toàn.</li>
+</ul>
+<div class="see"><h3>Xem thêm</h3><ul><li><a href="connect.html">Thiết lập và bắt đầu một kết nối</a></li><li><a href="traffic-log.html">Lưu lượng và nhật ký</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

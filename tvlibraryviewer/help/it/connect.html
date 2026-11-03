@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Collegarsi a una libreria condivisa</title>
+<meta name="description" content="Collegare un altro Mac, un iPad, un iPhone o un’Apple TV al Mac che condivide la sua libreria." />
+<meta name="keywords" content="collegarsi, Bonjour, rete, SSH, indirizzo, certificato, impronta, fidarsi, accedere, password" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">Aiuto di TV Library Viewer</a> › Per iniziare</nav>
+<h1>Collegarsi a una libreria condivisa</h1>
+<p class="lead">Ogni dispositivo si collega una volta sola. Dopodiché riapre da solo la stessa libreria.</p>
+
+<h2>Aprire “Collegati a una libreria condivisa”</h2>
+<ul>
+<li><b>Mac:</b> scegli <span class="ui">File › Collegati a una libreria condivisa…</span> (<kbd>⌘K</kbd>).</li>
+<li><b>iPad e iPhone:</b> tocca <span class="ui">Collegati a una libreria condivisa…</span> nella barra laterale (<kbd>⌘K</kbd> con una tastiera).</li>
+<li><b>Apple TV:</b> la prima volta, TV Library si collega al primo Mac della rete che condivide
+senza password. Altrimenti vai in <span class="ui">Librerie › Collegati a un’altra libreria…</span>.</li>
+</ul>
+
+<h2>Scegliere come raggiungere il Mac</h2>
+<h3>Questa rete</h3>
+<p>I Mac sulla stessa rete con la condivisione attiva vengono elencati per nome. Scegline uno.</p>
+<h3>Remoto (SSH)</h3>
+<p>Per un Mac su un’altra rete, ad esempio in un’altra casa. Inserisci l’indirizzo che usi per accedere con SSH a quel
+Mac (o a qualsiasi computer della sua rete), e il nome utente se è diverso. TV Library Viewer accede,
+trova la libreria su quella rete e si collega attraverso la connessione SSH.</p>
+<ul>
+<li>La prima volta, mostra la chiave dell’host da confrontare e confermare.</li>
+<li>Su un Mac viene usata la tua chiave SSH, se l’host la accetta; altrimenti ti viene chiesta la password,
+che viene conservata nel tuo portachiavi.</li>
+<li>Un iPad, un iPhone o un’Apple TV ha una propria chiave. Dopo il primo accesso con password, propone di
+installare quella chiave sull’host, così la password non serve più.</li>
+</ul>
+<h3>Indirizzo</h3>
+<p>Per un Mac che questo dispositivo può raggiungere direttamente: tramite una VPN come Tailscale, o una porta che il router
+gli inoltra. Inserisci l’indirizzo e la porta (47100, se non è stata cambiata), e un nome account
+e una password se la libreria ha degli account.</p>
+
+<h2>Fidarsi del certificato della libreria</h2>
+<p>Al primo collegamento viene mostrata l’impronta del certificato della libreria. Confrontala con quella in
+<span class="ui">Impostazioni › Condivisione</span> sul Mac con la libreria, poi scegli <span class="ui">Fidati e collegati</span>. Da
+quel momento il dispositivo controlla quel certificato ogni volta, e rifiuta una libreria il cui certificato sia
+cambiato.</p>
+
+<h2>Accedere</h2>
+<p>Se la libreria ha degli account, inserisci il nome e la password del tuo account su quel Mac. Il dispositivo
+li conserva nel suo portachiavi. Senza account, lascia vuoto il nome e usa la password della libreria,
+se c’è.</p>
+<div class="see"><h3>Vedi anche</h3><ul><li><a href="away.html">Guardare fuori casa</a></li><li><a href="sidebar-libraries.html">Passare da una libreria all’altra</a></li><li><a href="settings-accounts.html">Impostazioni Account</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

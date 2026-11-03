@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>外出先で視聴する</title>
+<meta name="description" content="別のネットワークからライブラリに接続する3つの方法：SSH、VPN、ポート転送。" />
+<meta name="keywords" content="リモート, 外出先, 旅行, SSH, VPN, Tailscale, ポート転送, ルーター, 47100, オフライン" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="away"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer ヘルプ</a> › はじめに</nav>
+<h1>外出先で視聴する</h1>
+<p class="lead">ライブラリは自宅のMacに置いたままです。外から接続する方法を1つ選んでください。</p>
+
+<h2>SSH経由</h2>
+<p>そのMac、または同じネットワーク上のコンピュータにすでにSSHでログインできる場合に最適です。ほかに設定は必要ありません。「共有ライブラリに接続」で<span class="ui">リモート（SSH）</span>を使います。すべての通信がSSH接続を経由します。</p>
+
+<h2>VPN経由</h2>
+<p>両方のデバイスでTailscaleなどのVPNを使っている場合は、<span class="ui">アドレス</span>でMacのVPNアドレスとポート47100を指定します。</p>
+
+<h2>ポート転送経由</h2>
+<ol>
+<li>ルーターで、ポート47100（または<span class="ui">設定 › 共有</span>のポート）をライブラリのあるMacに転送します。</li>
+<li><span class="ui">設定 › アカウント</span>で、強力なパスワードを設定したアカウントを追加します。</li>
+<li>もう一方のデバイスで、<span class="ui">アドレス</span>に自宅のパブリックアドレスとポートを指定します。</li>
+</ol>
+<div class="note"><b>注記：</b>どこから接続しても、通信は常に暗号化され、デバイスはライブラリの証明書を確認します。同じアドレスから5分以内に10回パスワードを間違えると、それ以降は確認せずに拒否されます。</div>
+
+<h2>まったく接続できない場合</h2>
+<p>出かける前にエピソードをダウンロードしておきます（Mac、iPad、iPhone）。ライブラリに接続できないときは、アプリは最後に見た状態でライブラリを開いて<span class="ui">オフライン</span>と表示し、ダウンロードしたエピソードを再生します。視聴した内容は、Macに接続できるようになった時点でMacに送信されます。</p>
+<div class="see"><h3>関連項目</h3><ul><li><a href="connect.html">共有ライブラリに接続する</a></li><li><a href="downloads.html">ダウンロードとオフライン視聴</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

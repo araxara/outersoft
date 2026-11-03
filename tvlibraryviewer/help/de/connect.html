@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mit einer geteilten Mediathek verbinden</title>
+<meta name="description" content="Einen anderen Mac, ein iPad, iPhone oder Apple TV mit dem Mac verbinden, der seine Mediathek teilt." />
+<meta name="keywords" content="verbinden, Bonjour, Netzwerk, SSH, Adresse, Zertifikat, Fingerabdruck, vertrauen, anmelden, Passwort" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer-Hilfe</a> › Erste Schritte</nav>
+<h1>Mit einer geteilten Mediathek verbinden</h1>
+<p class="lead">Jedes Gerät verbindet sich einmal. Danach öffnet es dieselbe Mediathek von selbst wieder.</p>
+
+<h2>„Mit geteilter Mediathek verbinden“ öffnen</h2>
+<ul>
+<li><b>Mac:</b> Wähle <span class="ui">Ablage › Mit geteilter Mediathek verbinden …</span> (<kbd>⌘K</kbd>).</li>
+<li><b>iPad und iPhone:</b> Tippe in der Seitenleiste auf <span class="ui">Mit geteilter Mediathek verbinden …</span> (mit Tastatur <kbd>⌘K</kbd>).</li>
+<li><b>Apple TV:</b> Beim ersten Mal verbindet sich TV Library mit dem ersten Mac im Netzwerk, der ohne Passwort
+teilt. Andernfalls gehe zu <span class="ui">Mediatheken › Mit anderer Mediathek verbinden …</span>.</li>
+</ul>
+
+<h2>Wählen, wie der Mac erreicht wird</h2>
+<h3>Dieses Netzwerk</h3>
+<p>Macs im selben Netzwerk mit aktivierter Freigabe werden mit Namen aufgelistet. Wähle einen aus.</p>
+<h3>Entfernt (SSH)</h3>
+<p>Für einen Mac in einem anderen Netzwerk, etwa in einem anderen Zuhause. Gib die Adresse ein, mit der du dich per SSH bei diesem
+Mac (oder einem beliebigen Computer in seinem Netzwerk) anmeldest, und den Benutzernamen, falls er abweicht. TV Library Viewer meldet
+sich an, findet die Mediathek in diesem Netzwerk und verbindet sich über die SSH-Verbindung.</p>
+<ul>
+<li>Beim ersten Mal wird der Schlüssel des Hosts zum Vergleichen und Bestätigen angezeigt.</li>
+<li>Auf einem Mac wird dein eigener SSH-Schlüssel verwendet, wenn der Host ihn akzeptiert. Andernfalls wirst du nach dem Passwort gefragt,
+das dann in deinem Schlüsselbund gesichert wird.</li>
+<li>Ein iPad, iPhone oder Apple TV hat einen eigenen Schlüssel. Nach der ersten Anmeldung mit Passwort bietet es an,
+diesen Schlüssel auf dem Host zu installieren, damit das Passwort nicht mehr nötig ist.</li>
+</ul>
+<h3>Adresse</h3>
+<p>Für einen Mac, den dieses Gerät direkt erreichen kann: über ein VPN wie Tailscale oder einen Port, den dein Router
+an ihn weiterleitet. Gib die Adresse und den Port ein (Port 47100, sofern nicht geändert) und einen Accountnamen
+und ein Passwort, wenn die Mediathek Accounts hat.</p>
+
+<h2>Dem Zertifikat der Mediathek vertrauen</h2>
+<p>Bei der ersten Verbindung wird der Fingerabdruck des Zertifikats der Mediathek angezeigt. Vergleiche ihn mit dem unter
+<span class="ui">Einstellungen › Freigabe</span> auf dem Mac mit der Mediathek und wähle dann <span class="ui">Vertrauen und verbinden</span>. Ab
+dann prüft das Gerät dieses Zertifikat jedes Mal und weist eine Mediathek ab, deren Zertifikat sich
+geändert hat.</p>
+
+<h2>Anmelden</h2>
+<p>Hat die Mediathek Accounts, gib den Namen und das Passwort deines Accounts auf diesem Mac ein. Das Gerät
+sichert beides in seinem Schlüsselbund. Ohne Accounts lässt du den Namen leer und verwendest das Mediathekspasswort,
+falls es eines gibt.</p>
+<div class="see"><h3>Siehe auch</h3><ul><li><a href="away.html">Unterwegs ansehen</a></li><li><a href="sidebar-libraries.html">Zwischen Mediatheken wechseln</a></li><li><a href="settings-accounts.html">Einstellungen „Accounts“</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bağlanmazsa</title>
+<meta name="description" content="Media Sharing GUI'nin bildirdiği yaygın hatalar ve bunlar için ne yapılacağı." />
+<meta name="keywords" content="sorun giderme, hata, bağlanmıyor, kitaplık yok, kimlik doğrulama, uykuda, yardım" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="troubleshooting"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI Yardımı</a> › Başvuru</nav>
+<h1>Bağlanmazsa</h1>
+<p class="lead"><span class="ui">Günlük</span> kutusunu okuyun — <span class="ui">ERROR:</span> ile başlayan satır genellikle neyin yanlış
+olduğunu söyler. İşte yaygın olanlar.</p>
+
+<h2>Oturum açamıyor</h2>
+<ul>
+<li><b>Kimlik doğrulama sürekli başarısız oluyor.</b> <span class="ui">Uzak oturum açma</span> ve <span class="ui">Uzak SSH bağlantı noktası</span>'nı ve
+karşı uçta uzaktan oturum açmanın açık olduğunu denetleyin. Aynısını Terminal'den deneyin:
+<code>ssh user@host -p PORT</code>. Uzaktaki parolayı değiştirdiyseniz
+<span class="ui">Kaydedilmiş Parolayı Unut</span>'a tıklayın ve yenisini girin.</li>
+<li><b>Tünel bağlantıdan hemen sonra ölüyor.</b> Uzaktaki Mac uykuda olabilir — her bağlantı için yalnızca
+kısa süre uyanıyor olabilir — ya da bağlantıları düşürüyor olabilir. Uyanık kalacak ya da uykuda ağ
+erişimine izin verecek şekilde ayarlayın.</li>
+</ul>
+
+<h2>Bağlanıyor, ama hiç kitaplık bulmuyor</h2>
+<ul>
+<li><b>«_home-sharing kaydı bulunamadı.»</b> Ev Paylaşımı (ya da Media Sharing) açık değil
+ya da o ağda çevrimiçi bir Apple TV / Müzik / iTunes kitaplığı yok. Apple Hesabınızla oturum açmış olarak
+Ev Paylaşımı'nı açın ve oradaki bir kitaplığın uyanık olduğundan emin olun.
+<a href="remote-setup.html">Evdeki Mac'te</a>'ye bakın.</li>
+<li><b>Kitaplıklar bulundu ama hiçbiri yayımlanamadı.</b> Günlük kitaplık başına bir neden listeler;
+genellikle bir yerel bağlantı noktası kullanılamıyordu. Yeniden deneyin ya da <span class="ui">Yerel yönlendirilen bağlantı noktası</span>'nı değiştirin.</li>
+</ul>
+
+<h2>Hiçbir şey işe yaramadığında</h2>
+<p>Bağlantıyı durdurup başlatmak (ya da kenar çubuğu menüsünden <span class="ui">Yeniden Başlat</span>) çoğu geçici
+sorunu giderir. Daha yakından bakmak isterseniz <a href="traffic-log.html">günlük dosyası</a> ayrıntıları
+yakalar.</p>
+<div class="see"><h3>Ayrıca bakın</h3><ul><li><a href="authentication.html">SSH anahtarları ve parolalar</a></li><li><a href="remote-setup.html">Evdeki Mac'te</a></li><li><a href="reconnecting.html">Yeniden bağlanma ve uyku</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

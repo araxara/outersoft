@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Guardare fuori casa</title>
+<meta name="description" content="Tre modi per raggiungere la tua libreria da un’altra rete: SSH, una VPN o una porta inoltrata." />
+<meta name="keywords" content="remoto, fuori casa, viaggio, SSH, VPN, Tailscale, inoltro porte, router, 47100, offline" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="away"></a>
+<nav class="crumbs"><a href="index.html">Aiuto di TV Library Viewer</a> › Per iniziare</nav>
+<h1>Guardare fuori casa</h1>
+<p class="lead">La tua libreria resta sul Mac di casa. Scegli un modo per raggiungerla da altrove.</p>
+
+<h2>Tramite SSH</h2>
+<p>La scelta migliore se puoi già accedere con SSH a quel Mac, o a un computer della sua rete. Non serve
+configurare nient’altro. Usa <span class="ui">Remoto (SSH)</span> in “Collegati a una libreria condivisa”. Tutto passa attraverso la
+connessione SSH.</p>
+
+<h2>Tramite una VPN</h2>
+<p>Con una VPN come Tailscale su entrambi i dispositivi, usa <span class="ui">Indirizzo</span> con l’indirizzo VPN del Mac e la
+porta 47100.</p>
+
+<h2>Tramite una porta inoltrata</h2>
+<ol>
+<li>Sul router, inoltra la porta 47100 (o quella indicata in <span class="ui">Impostazioni › Condivisione</span>) al Mac con
+la libreria.</li>
+<li>Aggiungi account con password sicure in <span class="ui">Impostazioni › Account</span>.</li>
+<li>Sull’altro dispositivo, usa <span class="ui">Indirizzo</span> con l’indirizzo pubblico di casa tua e la porta.</li>
+</ol>
+<div class="note"><b>Nota:</b> Le connessioni sono sempre cifrate, e i dispositivi controllano il certificato della
+libreria, ovunque si colleghino. Dieci password errate da uno stesso indirizzo nell’arco di 5 minuti vengono
+rifiutate senza essere verificate.</div>
+
+<h2>Senza alcuna connessione</h2>
+<p>Scarica gli episodi prima di partire (Mac, iPad e iPhone). Quando la libreria non è raggiungibile, l’app
+la apre com’era l’ultima volta, mostra <span class="ui">Offline</span> e riproduce i tuoi download. Ciò che guardi viene inviato
+al Mac appena torna raggiungibile.</p>
+<div class="see"><h3>Vedi anche</h3><ul><li><a href="connect.html">Collegarsi a una libreria condivisa</a></li><li><a href="downloads.html">Download e visione offline</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

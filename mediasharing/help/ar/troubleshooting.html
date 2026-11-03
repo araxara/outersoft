@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>إذا تعذّر الاتصال</title>
+<meta name="description" content="الأخطاء الشائعة التي يُبلغ عنها ⁨⁨Media Sharing⁩ GUI⁩ وما يجب فعله حيالها." />
+<meta name="keywords" content="استكشاف الأخطاء, خطأ, لا يتصل, لا مكتبة, مصادقة, في السكون, مساعدة" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="troubleshooting"></a>
+<nav class="crumbs"><a href="index.html">مساعدة ⁨⁨Media Sharing⁩ GUI⁩</a> › مرجع</nav>
+<h1>إذا تعذّر الاتصال</h1>
+<p class="lead">اقرأ مربّع <span class="ui">السجل</span> — السطر الذي يبدأ بـ<span class="ui">ERROR:</span> يذكر عادةً ما
+الخطأ. وهذه هي الحالات الشائعة.</p>
+
+<h2>لا يستطيع تسجيل الدخول</h2>
+<ul>
+<li><b>تفشل المصادقة مراراً.</b> تحقّق من <span class="ui">تسجيل الدخول البعيد</span> و<span class="ui">منفذ ⁨SSH⁩ البعيد</span>، ومن
+أن تسجيل الدخول البعيد مفعّل في الطرف الآخر. جرّب الأمر نفسه من الطرفية:
+<code>ssh user@host -p PORT</code>. إذا غيّرت كلمة المرور البعيدة، فانقر
+<span class="ui">نسيان كلمة المرور المحفوظة</span> وأدخل الجديدة.</li>
+<li><b>يموت النفق فور الاتصال.</b> قد يكون الـ⁨Mac⁩ البعيد نائماً — يستيقظ فقط
+لوقت قصير لكل اتصال — أو يرفض الاتصالات. اضبطه ليبقى مستيقظاً، أو ليسمح بالوصول إلى
+الشبكة أثناء السكون.</li>
+</ul>
+
+<h2>يتّصل، لكنه لا يجد أي مكتبة</h2>
+<ul>
+<li><b>«لم يُعثر على سجل ‎_home-sharing‎.»</b> المشاركة المنزلية (أو ⁨Media Sharing⁩) ليست مفعّلة،
+أو لا توجد مكتبة ⁨Apple TV⁩ / الموسيقى / ⁨iTunes⁩ متصلة على تلك الشبكة. فعّل المشاركة المنزلية، وأنت مسجَّل الدخول
+بحساب Apple الخاص بك، وتأكّد من أن مكتبة هناك مستيقظة. انظر
+<a href="remote-setup.html">على الـ⁨Mac⁩ في المنزل</a>.</li>
+<li><b>عُثر على مكتبات لكن تعذّر نشر أيٍّ منها.</b> يسرد السجل سبباً لكل مكتبة؛
+عادةً لم يكن منفذ محلي متاحاً. أعد المحاولة، أو غيّر <span class="ui">المنفذ المحلي الموجَّه</span>.</li>
+</ul>
+
+<h2>عندما لا ينفع شيء</h2>
+<p>إيقاف الاتصال وبدؤه (أو <span class="ui">إعادة التشغيل</span> من قائمة الشريط الجانبي الخاصة به) يحلّ معظم
+المشكلات العابرة. ويلتقط <a href="traffic-log.html">ملف السجل</a> التفاصيل إن أردت
+النظر عن كثب.</p>
+<div class="see"><h3>انظر أيضاً</h3><ul><li><a href="authentication.html">مفاتيح وكلمات مرور ⁨SSH⁩</a></li><li><a href="remote-setup.html">على الـ⁨Mac⁩ في المنزل</a></li><li><a href="reconnecting.html">إعادة الاتصال والسكون</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

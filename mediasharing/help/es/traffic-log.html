@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tráfico y registro</title>
+<meta name="description" content="Observa cuántos datos transporta el túnel, y lee (o guarda) un registro de todo lo que hace." />
+<meta name="keywords" content="tráfico, nettop, bytes, entrada, salida, pico, registro, archivo, Finder" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="traffic-log"></a>
+<nav class="crumbs"><a href="index.html">Ayuda de Media Sharing GUI</a> › Uso</nav>
+<h1>Tráfico y registro</h1>
+<p class="lead">Dos cuadros muestran cómo va la conexión: cuánto mueve y qué ha hecho.</p>
+
+<h2>Tráfico de la sesión SSH</h2>
+<ul>
+<li><span class="ui">Entrada</span> y <span class="ui">Salida</span> muestran los bytes que fluyen por el proceso del túnel, con una cifra de <span class="ui">Pico</span>
+para el momento de mayor actividad.</li>
+<li>Las cifras se muestrean con la herramienta del sistema <code>nettop</code>, no una captura de paquetes en bruto, así que
+son una guía aproximada más que una medida exacta.</li>
+<li>Cada cuánto vuelve a muestrear lo fija <span class="ui">Intervalo de sondeo de tráfico</span> en la
+<a href="settings.html">Configuración</a>. Cada muestra tarda unos segundos; un intervalo más corto
+que eso simplemente encadena las muestras.</li>
+</ul>
+
+<h2>Registro</h2>
+<p>El cuadro <span class="ui">Registro</span> anota cada paso: abrir el túnel, encontrar bibliotecas, publicarlas,
+reconectar y cualquier error. También se escribe en un archivo en el disco; el cuadro muestra
+<span class="ui">Guardado en:</span> su ruta. Haz clic en esa ruta para <b>mostrar el registro en el Finder</b>, útil cuando quieras
+enviarlo mientras resuelves un problema.</p>
+<div class="see"><h3>Consulta también</h3><ul><li><a href="status.html">Estado y situación</a></li><li><a href="troubleshooting.html">Si no conecta</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

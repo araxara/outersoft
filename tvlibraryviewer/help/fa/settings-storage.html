@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>تنظیمات فضای ذخیره‌سازی</title>
+<meta name="description" content="اندازهٔ کتابخانه، و فضایی که پایگاه داده و حافظه‌های نهان ⁨TV Library Viewer⁩ می‌گیرند." />
+<meta name="keywords" content="تنظیمات, فضای ذخیره‌سازی, پایگاه داده, اندازه, فضا, سریال‌ها, قسمت‌ها, بازیگران, عکس بازیگران, حافظهٔ نهان, TVmaze, TMDb" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings-storage"></a>
+<nav class="crumbs"><a href="index.html">راهنمای ⁨TV Library Viewer⁩</a> › تنظیمات</nav>
+<h1>تنظیمات فضای ذخیره‌سازی</h1>
+<p class="lead"><span class="ui">⁨TV Library Viewer⁩ › تنظیمات</span> را انتخاب کنید، سپس روی <span class="ui">فضای ذخیره‌سازی</span> کلیک کنید.</p>
+
+<h2>کتابخانهٔ TV این Mac</h2>
+<p>تعداد سریال‌ها و قسمت‌های کتابخانهٔ برنامهٔ TV، و اندازهٔ پایگاه دادهٔ آن. پرونده‌های
+ویدیویی حساب نمی‌شوند.</p>
+
+<h2>پایگاه دادهٔ ⁨TV Library Viewer⁩</h2>
+<p>پایگاه دادهٔ خود ⁨TV Library Viewer⁩ روی این Mac، که با همهٔ دستگاه‌هایی که کتابخانه را نشان می‌دهند هم‌رسانی می‌شود.</p>
+<table>
+<tr><th>بخش</th><th>چه چیزی را نگه می‌دارد</th></tr>
+<tr><td><span class="ui">اطلاعات سریال‌ها</span></td><td>توضیحات کاملی که از طریق AppleScript داده شده‌اند، و بازیگران هر
+سریال: نام بازیگران و نقش‌هایشان.</td></tr>
+<tr><td><span class="ui">ترجمه‌ها</span></td><td>عنوان‌ها و توضیحات قسمت‌ها، ترجمه‌شده به زبان‌هایی که برنامه‌ها روی آن‌ها تنظیم شده‌اند.</td></tr>
+<tr><td><span class="ui">بازیگران و عوامل</span></td><td>یک عکس کوچک برای هر نفر، و نشانی
+صفحه‌هایشان در ⁨TVmaze⁩ و ⁨TMDb⁩.</td></tr>
+<tr><td><span class="ui">حساب‌ها و تماشا</span></td><td>حساب‌ها، تماشای همهٔ حساب‌ها به‌جز
+حساب اصلی، و گزارش‌های حساب‌ها.</td></tr>
+<tr><td><span class="ui">ساختار پایگاه داده و فضای خالی</span></td><td>سوابق خود SQLite، و فضایی که دوباره استفاده می‌کند.</td></tr>
+<tr><td><span class="ui">تغییرات اخیر</span></td><td>تغییراتی که هنوز در پایگاه داده ادغام نشده‌اند. این کار
+هر از گاهی انجام می‌شود.</td></tr>
+</table>
+<p>بازیگران و عوامل هر سریال نخستین بار که صفحهٔ آن باز شود، اینجا یا روی هر دستگاه دیگری،
+در ⁨TVmaze⁩ و ⁨TMDb⁩ جستجو می‌شوند. جزئیات افراد هر بار که بازشان می‌کنید دریافت می‌شوند، پس هرگز قدیمی نیستند،
+و ذخیره نمی‌شوند. برای دیدن پروندهٔ پایگاه داده روی <span class="ui">نمایش در Finder</span> کلیک کنید.</p>
+
+<h2><a name="tmdb"></a>جزئیات بازیگران و عوامل: توکن ⁨TMDb⁩</h2>
+<p>⁨TVmaze⁩ به هیچ تنظیمی نیاز ندارد. ⁨TMDb⁩ (The Movie Database) کارگردانان و فیلمنامه‌نویسان، بازیگرانی که
+⁨TVmaze⁩ ندارد، و زندگی‌نامه‌ها را اضافه می‌کند، اغلب به زبان شما. برای این کار توکن خودتان لازم است: ⁨TMDb⁩
+آن را رایگان به هر کسی که حساب دارد، برای استفادهٔ شخصی و غیرتجاری، می‌دهد. ⁨TV Library Viewer⁩
+توکنی همراه ندارد.</p>
+<ol>
+<li>در themoviedb.org یک حساب رایگان بسازید و وارد شوید.</li>
+<li>روی نماد حساب خود کلیک کنید، <span class="ui">⁨Settings⁩</span> را انتخاب کنید، سپس روی <span class="ui">⁨API⁩</span> کلیک کنید.</li>
+<li>یک کلید API درخواست کنید: <span class="ui">⁨Developer⁩</span> را انتخاب کنید، شرایط را بپذیرید و کاربرد خود را شخصی
+و غیرتجاری توصیف کنید (برای مثال «Show cast and biographies in my own TV library app»).</li>
+<li>وقتی کلید آماده شد، <span class="ui">⁨API Read Access Token⁩</span> را کپی کنید (همان طولانی، نه API Key کوتاه‌تر).</li>
+<li>روی Macِ دارای کتابخانه، <span class="ui">⁨TV Library Viewer⁩ › تنظیمات</span> را انتخاب کنید، روی <span class="ui">فضای ذخیره‌سازی</span> کلیک کنید و
+آن را در <span class="ui">⁨API Read Access Token⁩ ‏⁨TMDb⁩</span> جای‌گذاری کنید.</li>
+<li>روی <span class="ui">آزمایش</span> کلیک کنید. «⁨TMDb⁩ این توکن را می‌پذیرد» یعنی کار می‌کند.</li>
+</ol>
+<p>توکن در جاکلیدی Mac نگه داشته می‌شود. فقط Macِ دارای کتابخانه از آن استفاده می‌کند؛ دستگاه‌های دیگر شما
+بازیگران و جزئیات را از آن Mac می‌گیرند. سریال‌هایی که قبلاً جستجو شده‌اند، بازیگران و عوامل ⁨TMDb⁩ را دفعهٔ بعد
+که صفحه‌شان باز شود می‌گیرند. اگر تنظیمات را بدون آزمایش توکن تازه ببندید، همان موقع آزمایش می‌شود
+و اگر ⁨TMDb⁩ آن را رد کند به شما گفته می‌شود.</p>
+<div class="note"><b>توجه:</b> این محصول از API ‏⁨TMDB⁩ استفاده می‌کند، اما مورد تأیید یا گواهی ⁨TMDB⁩ نیست.</div>
+
+<h2><a name="google"></a>ترجمه: یک کلید ⁨Google⁩</h2>
+<p>عنوان‌ها و توضیحات قسمت‌ها روی این Mac، رایگان و با ترجمهٔ ⁨Apple⁩، به زبان هر دستگاه ترجمه می‌شوند.
+ترجمهٔ ⁨Apple⁩ یونانی، چکی، مجاری، رومانیایی، فارسی، اردو و بنگالی را پشتیبانی نمی‌کند. برای این زبان‌ها،
+کلید ⁨Google Cloud Translation API⁩ خودتان را اضافه کنید. فقط Macِ دارای کتابخانه به آن نیاز دارد؛ دستگاه‌هایی
+که آن را می‌بینند نیازی ندارند. هر ماه ۵۰۰٬۰۰۰ نویسهٔ اول رایگان است و هر متن فقط یک بار ترجمه می‌شود.</p>
+<ol>
+<li>به ⁨console.cloud.google.com⁩ بروید و با حساب ⁨Google⁩ خود وارد شوید.</li>
+<li>یک پروژه بسازید: روی منوی پروژه در بالا کلیک کنید، سپس روی <span class="ui">⁨New Project⁩</span>، و نامی
+مانند «⁨TV Library Viewer⁩» به آن بدهید.</li>
+<li>صورت‌حساب را روشن کنید: در منوی ☰، <span class="ui">⁨Billing⁩</span> را انتخاب کنید و یک حساب صورت‌حساب پیوند دهید.
+⁨Google⁩ حتی برای استفادهٔ رایگان هم آن را می‌خواهد. برای اطمینان، یک بودجه، مثلاً ۱ دلار، در <span class="ui">⁨Budgets &amp; alerts⁩</span> اضافه کنید.</li>
+<li>☰ › <span class="ui">⁨APIs &amp; Services › Library⁩</span> را انتخاب کنید، <span class="ui">⁨Cloud Translation API⁩</span> را جستجو کنید
+و روی <span class="ui">⁨Enable⁩</span> کلیک کنید.</li>
+<li>☰ › <span class="ui">⁨APIs &amp; Services › Credentials⁩</span> و سپس <span class="ui">⁨Create credentials › API key⁩</span> را انتخاب کنید
+و کلید را کپی کنید (با «⁨AIza⁩» شروع می‌شود).</li>
+<li>توصیه می‌شود: روی نام کلید کلیک کنید، زیر ⁨API restrictions⁩ گزینهٔ <span class="ui">⁨Restrict key⁩</span> را انتخاب کنید،
+<span class="ui">⁨Cloud Translation API⁩</span> را علامت بزنید و روی <span class="ui">⁨Save⁩</span> کلیک کنید تا کلید فقط برای ترجمه کار کند.</li>
+<li>روی Macِ دارای کتابخانه، <span class="ui">⁨TV Library Viewer⁩ › تنظیمات</span> را انتخاب کنید، روی <span class="ui">فضای ذخیره‌سازی</span> کلیک کنید،
+کلید را در <span class="ui">کلید ⁨Google Cloud Translation API⁩</span> جای‌گذاری کنید و روی <span class="ui">آزمایش</span> کلیک کنید.</li>
+</ol>
+<p>کلید در جاکلیدی Mac نگه داشته می‌شود و فقط برای همین هفت زبان به کار می‌رود. آن را با کسی به اشتراک نگذارید:
+هزینهٔ هر چیزی که با آن ترجمه شود به حساب ⁨Google⁩ شما گذاشته می‌شود.</p>
+
+<h2>حافظه‌های نهان</h2>
+<p>تصاویر، و کتابخانه‌هایی که این Mac از Macهای دیگر دیده است. حافظه‌های نهان در صورت نیاز دوباره ساخته می‌شوند
+و macOS وقتی فضا کم بیاید آن‌ها را خالی می‌کند.</p>
+<div class="see"><h3>همچنین ببینید</h3><ul><li><a href="show-page.html">صفحهٔ سریال و بازیگران</a></li><li><a href="privacy.html">آنچه ⁨TV Library Viewer⁩ می‌خواند، تغییر می‌دهد و نگه می‌دارد</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

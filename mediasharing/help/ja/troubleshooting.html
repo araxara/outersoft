@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>接続できないとき</title>
+<meta name="description" content="Media Sharing GUI が報告する一般的なエラーと、その対処方法。" />
+<meta name="keywords" content="トラブルシューティング, エラー, 接続できない, ライブラリなし, 認証, スリープ中, ヘルプ" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="troubleshooting"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI ヘルプ</a> › リファレンス</nav>
+<h1>接続できないとき</h1>
+<p class="lead"><span class="ui">ログ</span> ボックスを読みます。<span class="ui">ERROR:</span> で始まる行がたいてい原因を示します。
+よくある例を挙げます。</p>
+
+<h2>ログインできない</h2>
+<ul>
+<li><b>認証が何度も失敗する。</b> <span class="ui">リモートログイン</span> と <span class="ui">リモート SSH ポート</span> を確認し、
+相手側でリモートログインがオンになっているか確かめます。ターミナルで同じことを試します：
+<code>ssh user@host -p PORT</code>。リモートのパスワードを変更した場合は、<span class="ui">保存済みパスワードを削除</span> を
+クリックし、新しいものを入力します。</li>
+<li><b>接続直後にトンネルが落ちる。</b> リモートの Mac がスリープしていて、接続のたびに短時間だけ目覚めているか、
+接続を拒否している可能性があります。起きたままにするか、スリープ時にネットワークアクセスを許可するよう設定します。</li>
+</ul>
+
+<h2>接続はするが、ライブラリが見つからない</h2>
+<ul>
+<li><b>「_home-sharing のレコードが見つかりません。」</b> ホームシェアリング（またはメディア共有）がオンでないか、
+そのネットワークに Apple TV／ミュージック／iTunes のライブラリがオンラインでありません。Apple アカウントにサインインして
+ホームシェアリングをオンにし、そこのライブラリが起きていることを確かめます。<a href="remote-setup.html">自宅の Mac で</a>を参照。</li>
+<li><b>ライブラリは見つかったが、どれも公開できなかった。</b> ログがライブラリごとの理由を示します。たいていはローカルポートが
+使えませんでした。もう一度試すか、<span class="ui">ローカル転送ポート</span> を変更します。</li>
+</ul>
+
+<h2>どうしてもだめなとき</h2>
+<p>接続を停止してから開始する（またはサイドバーのメニューの <span class="ui">再起動</span>）と、たいていの一時的な問題は解消します。
+もっと詳しく見たいときは、<a href="traffic-log.html">ログファイル</a>が詳細を記録しています。</p>
+<div class="see"><h3>関連項目</h3><ul><li><a href="authentication.html">SSH の鍵とパスワード</a></li><li><a href="remote-setup.html">自宅の Mac で</a></li><li><a href="reconnecting.html">再接続とスリープ</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

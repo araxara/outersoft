@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Erneutes Verbinden und Ruhezustand</title>
+<meta name="description" content="Wie Media Sharing GUI die Verbindung aufrechterhält: Keep-Alives, automatisches erneutes Verbinden und das Überstehen des Ruhezustands." />
+<meta name="keywords" content="erneut verbinden, Ruhezustand, aufwachen, Keep-Alive, Zustandsprüfung, Abbruch, automatisch" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="reconnecting"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI-Hilfe</a> › Referenz</nav>
+<h1>Erneutes Verbinden und Ruhezustand</h1>
+<p class="lead">Eine Heimverbindung ist nicht immer stabil. Die App übersteht die Holprigkeiten für dich.</p>
+
+<h2>Am Leben bleiben</h2>
+<p>Während der Verbindung pingt <code>ssh</code> das entfernte Ende alle <span class="ui">Server Alive Interval</span> Sekunden an
+(siehe <a href="settings.html">Konfigurationsreferenz</a>). Das hält Router und Firewalls davon ab,
+einen untätigen Tunnel fallen zu lassen, und lässt die App schnell merken, wenn eine Verbindung wirklich gestorben ist.</p>
+
+<h2>Automatisches erneutes Verbinden</h2>
+<p>Bricht die Verbindung ab, wechselt der Zustand zu <span class="ui">VERBINDET ERNEUT</span> und Media Sharing GUI versucht es von
+selbst erneut, wartet zwischen den Versuchen etwas länger und protokolliert jeden. Drücke <span class="ui">Stopp</span>, um
+die Versuche abzubrechen.</p>
+
+<h2>Nachdem der Mac im Ruhezustand war</h2>
+<p>Wenn dieser Mac aus dem Ruhezustand aufwacht, prüft die App, ob der Tunnel überlebt hat. Hat er es, macht sie
+weiter; wenn nicht, führt sie einen vollständigen Reset durch — dasselbe wie Stopp, dann Start — und holt die Mediathek
+von selbst zurück.</p>
+<div class="see"><h3>Siehe auch</h3><ul><li><a href="status.html">Status und Zustand</a></li><li><a href="troubleshooting.html">Wenn keine Verbindung zustande kommt</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

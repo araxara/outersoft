@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ustawienia pamięci</title>
+<meta name="description" content="Wielkość biblioteki oraz miejsce zajmowane przez bazę danych i pamięć podręczną TV Library Viewer." />
+<meta name="keywords" content="ustawienia, pamięć, baza danych, rozmiar, miejsce, seriale, odcinki, obsada, zdjęcia aktorów, pamięć podręczna, TVmaze, TMDb" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings-storage"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer – pomoc</a> › Ustawienia</nav>
+<h1>Ustawienia pamięci</h1>
+<p class="lead">Wybierz <span class="ui">TV Library Viewer › Ustawienia</span>, a następnie kliknij <span class="ui">Pamięć</span>.</p>
+
+<h2>Biblioteka TV tego Maca</h2>
+<p>Liczba seriali i odcinków w bibliotece aplikacji TV oraz rozmiar jej bazy danych. Pliki wideo
+nie są wliczane.</p>
+
+<h2>Baza danych TV Library Viewer</h2>
+<p>Własna baza danych TV Library Viewer na tym Macu, współdzielona ze wszystkimi urządzeniami, które wyświetlają bibliotekę.</p>
+<table>
+<tr><th>Część</th><th>Co zawiera</th></tr>
+<tr><td><span class="ui">Informacje o serialach</span></td><td>Pełne opisy podane przez AppleScript oraz obsadę
+każdego serialu: nazwiska aktorów i ich role.</td></tr>
+<tr><td><span class="ui">Tłumaczenia</span></td><td>Tytuły i opisy odcinków przetłumaczone na języki ustawione w aplikacjach.</td></tr>
+<tr><td><span class="ui">Obsada i ekipa</span></td><td>Jedno małe zdjęcie każdej osoby oraz adresy jej
+stron w TVmaze i TMDb.</td></tr>
+<tr><td><span class="ui">Konta i oglądanie</span></td><td>Konta, oglądanie wszystkich kont poza
+głównym oraz dzienniki kont.</td></tr>
+<tr><td><span class="ui">Struktura bazy danych i wolne miejsce</span></td><td>Własne rekordy SQLite i miejsce, które ponownie wykorzystuje.</td></tr>
+<tr><td><span class="ui">Ostatnie zmiany</span></td><td>Zmiany jeszcze niewłączone do bazy danych. Robi to ona
+od czasu do czasu.</td></tr>
+</table>
+<p>Obsada i ekipa serialu są wyszukiwane w TVmaze i TMDb przy pierwszym otwarciu jego strony, tutaj lub
+na dowolnym urządzeniu. Szczegóły osób są pobierane przy każdym ich otwarciu, więc nigdy nie są nieaktualne,
+i nie są przechowywane. Kliknij <span class="ui">Pokaż w Finderze</span>, aby zobaczyć plik bazy danych.</p>
+
+<h2><a name="tmdb"></a>Szczegóły obsady i ekipy: token TMDb</h2>
+<p>TVmaze nie wymaga konfiguracji. TMDb (The Movie Database) dodaje reżyserów i scenarzystów, aktorów,
+których nie ma w TVmaze, oraz biografie, często w Twoim języku. Wymaga własnego tokenu: TMDb
+udostępnia go bezpłatnie każdemu, kto ma konto, do użytku osobistego, niekomercyjnego. TV Library Viewer
+nie zawiera tokenu.</p>
+<ol>
+<li>Utwórz bezpłatne konto w themoviedb.org i zaloguj się.</li>
+<li>Kliknij ikonę konta, wybierz <span class="ui">Settings</span>, a następnie kliknij <span class="ui">API</span>.</li>
+<li>Poproś o klucz API: wybierz <span class="ui">Developer</span>, zaakceptuj warunki i opisz zastosowanie jako osobiste
+i niekomercyjne (na przykład „Show cast and biographies in my own TV library app”).</li>
+<li>Gdy klucz będzie gotowy, skopiuj <span class="ui">API Read Access Token</span> (długi, a nie krótszy API Key).</li>
+<li>Na Macu z biblioteką wybierz <span class="ui">TV Library Viewer › Ustawienia</span>, kliknij <span class="ui">Pamięć</span> i
+wklej go w pole <span class="ui">API Read Access Token z TMDb</span>.</li>
+<li>Kliknij <span class="ui">Testuj</span>. Komunikat „TMDb akceptuje ten token” oznacza, że działa.</li>
+</ol>
+<p>Token jest przechowywany w pęku kluczy Maca. Używa go tylko Mac z biblioteką; inne Twoje
+urządzenia otrzymują obsadę i szczegóły z tego Maca. Seriale już wyszukane otrzymają obsadę i ekipę z TMDb
+przy następnym otwarciu ich strony. Jeśli zamkniesz Ustawienia bez przetestowania nowego tokenu, zostanie on wtedy przetestowany,
+a Ty dowiesz się, jeśli TMDb go odrzuci.</p>
+<div class="note"><b>Uwaga:</b> Ten produkt korzysta z TMDB API, ale nie jest wspierany ani certyfikowany przez TMDB.</div>
+
+<h2><a name="google"></a>Tłumaczenie: klucz Google</h2>
+<p>Tytuły i opisy odcinków są tłumaczone na język każdego urządzenia na tym Macu, bezpłatnie,
+za pomocą tłumaczenia Apple. Nie potrafi ono tłumaczyć na grecki, czeski, węgierski, rumuński, perski, urdu
+ani bengalski. Dla tych języków dodaj własny klucz Google Cloud Translation API. Potrzebuje go tylko Mac
+z biblioteką, a nie urządzenia, które ją przeglądają. Pierwsze 500 000 znaków w każdym miesiącu jest bezpłatne, a każdy
+tekst jest tłumaczony tylko raz.</p>
+<ol>
+<li>Przejdź do console.cloud.google.com i zaloguj się na swoje konto Google.</li>
+<li>Utwórz projekt: kliknij menu projektów u góry, a następnie <span class="ui">New Project</span>, i nadaj mu
+nazwę, np. „TV Library Viewer”.</li>
+<li>Włącz płatności: w menu ☰ wybierz <span class="ui">Billing</span> i połącz konto rozliczeniowe. Google wymaga
+go nawet przy bezpłatnym korzystaniu. Dla bezpieczeństwa dodaj budżet, np. 1 USD, w sekcji <span class="ui">Budgets &amp; alerts</span>.</li>
+<li>Wybierz ☰ › <span class="ui">APIs &amp; Services › Library</span>, wyszukaj <span class="ui">Cloud Translation API</span> i kliknij
+<span class="ui">Enable</span>.</li>
+<li>Wybierz ☰ › <span class="ui">APIs &amp; Services › Credentials</span>, a następnie <span class="ui">Create credentials › API key</span>, i
+skopiuj klucz (zaczyna się od „AIza”).</li>
+<li>Zalecane: kliknij nazwę klucza, w sekcji API restrictions wybierz <span class="ui">Restrict key</span>, zaznacz
+<span class="ui">Cloud Translation API</span> i kliknij <span class="ui">Save</span>, aby klucz działał tylko do tłumaczenia.</li>
+<li>Na Macu z biblioteką wybierz <span class="ui">TV Library Viewer › Ustawienia</span>, kliknij <span class="ui">Pamięć</span>,
+wklej klucz w polu <span class="ui">Klucz Google Cloud Translation API</span> i kliknij <span class="ui">Testuj</span>.</li>
+</ol>
+<p>Klucz jest przechowywany w pęku kluczy Maca i używany tylko dla tych siedmiu języków. Nie udostępniaj
+go innym: wszystko, co zostanie nim przetłumaczone, obciąża Twoje konto Google.</p>
+
+<h2>Pamięć podręczna</h2>
+<p>Grafika oraz biblioteki, które ten Mac wyświetlał z innych Maków. Pamięć podręczna jest odtwarzana w razie potrzeby,
+a macOS opróżnia ją, gdy brakuje miejsca.</p>
+<div class="see"><h3>Zobacz także</h3><ul><li><a href="show-page.html">Strona serialu i obsada</a></li><li><a href="privacy.html">Co TV Library Viewer odczytuje, zmienia i przechowuje</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

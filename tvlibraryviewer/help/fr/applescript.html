@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AppleScript</title>
+<meta name="description" content="Piloter TV Library Viewer par script pour ajouter des épisodes, définir des descriptions et gérer des comptes." />
+<meta name="keywords" content="AppleScript, script, automatisation, osascript, add episode, description longue, comptes, TV Library Viewer" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="applescript"></a>
+<nav class="crumbs"><a href="index.html">Aide TV Library Viewer</a> › Référence</nav>
+<h1>AppleScript</h1>
+<p class="lead">TV Library Viewer peut être piloté par script, par exemple depuis un script qui importe des épisodes.
+Ouvrez son dictionnaire dans Éditeur de script (<span class="ui">Fichier › Ouvrir un dictionnaire…</span>) pour en savoir plus.</p>
+<table>
+<tr><th>Commande</th><th>Effet</th></tr>
+<tr><td><span class="ui">add episode</span></td><td>Ajoute un fichier vidéo à la bibliothèque de l’app TV (ou l’y retrouve) avec
+sa série, sa saison, son épisode, son titre, son genre et ses descriptions, et renvoie son identifiant persistant.</td></tr>
+<tr><td><span class="ui">update episode</span></td><td>Modifie les informations d’un épisode.</td></tr>
+<tr><td><span class="ui">remove episode</span></td><td>Supprime un épisode de la bibliothèque. Le fichier est conservé.</td></tr>
+<tr><td><span class="ui">refresh library</span></td><td>Relit la bibliothèque.</td></tr>
+<tr><td><span class="ui">create account</span>, <span class="ui">change account password</span>, <span class="ui">delete account</span>,
+<span class="ui">account names</span>, <span class="ui">account log</span></td><td>Gèrent les comptes.</td></tr>
+</table>
+<p>Les descriptions longues fournies de cette façon sont conservées dans la base de données de TV Library Viewer, et rétablies lorsque
+l’app TV les oublie.</p>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

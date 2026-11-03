@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AppleScript</title>
+<meta name="description" content="使用工序指令控制 TV Library Viewer，以加入單集、設定描述和管理帳號。" />
+<meta name="keywords" content="AppleScript, 工序指令, 自動化, osascript, add episode, 詳細描述, 帳號" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="applescript"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer 說明</a> › 參考資料</nav>
+<h1>AppleScript</h1>
+<p class="lead">TV Library Viewer 支援工序指令控制，例如可透過匯入單集的工序指令來使用。若要瞭解詳細資訊，請在「工序指令編寫程式」中打開其辭典（<span class="ui">檔案 › 打開辭典⋯</span>）。</p>
+<table>
+<tr><th>指令</th><th>作用</th></tr>
+<tr><td><span class="ui">add episode</span></td><td>將影片檔案連同其節目、季、集數、標題、類型和描述加入 TV App 的資料庫（若已存在則找到它），並傳回其永久 ID。</td></tr>
+<tr><td><span class="ui">update episode</span></td><td>更改單集的詳細資訊。</td></tr>
+<tr><td><span class="ui">remove episode</span></td><td>從資料庫移除單集。檔案會保留。</td></tr>
+<tr><td><span class="ui">refresh library</span></td><td>重新讀取資料庫。</td></tr>
+<tr><td><span class="ui">create account</span>、<span class="ui">change account password</span>、<span class="ui">delete account</span>、<span class="ui">account names</span>、<span class="ui">account log</span></td><td>管理帳號。</td></tr>
+</table>
+<p>以這種方式提供的詳細描述會保存在 TV Library Viewer 的資料庫中，並在 TV App 遺失這些描述時恢復。</p>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

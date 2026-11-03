@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tallennustila-asetukset</title>
+<meta name="description" content="Kirjaston koko sekä TV Library Viewerin tietokannan ja välimuistien viemä tila." />
+<meta name="keywords" content="asetukset, tallennustila, tietokanta, koko, tila, sarjat, jaksot, näyttelijät, näyttelijöiden kuvat, välimuisti, TVmaze, TMDb" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings-storage"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer -ohje</a> › Asetukset</nav>
+<h1>Tallennustila-asetukset</h1>
+<p class="lead">Valitse <span class="ui">TV Library Viewer › Asetukset</span> ja osoita sitten <span class="ui">Tallennustila</span>.</p>
+
+<h2>Tämän Macin TV-kirjasto</h2>
+<p>TV-apin kirjaston sarjojen ja jaksojen määrä sekä sen tietokannan koko. Videotiedostoja
+ei lasketa mukaan.</p>
+
+<h2>TV Library Viewerin tietokanta</h2>
+<p>TV Library Viewerin oma tietokanta tässä Macissa, jaettuna kaikille kirjastoa katseleville laitteille.</p>
+<table>
+<tr><th>Osa</th><th>Mitä se sisältää</th></tr>
+<tr><td><span class="ui">Sarjojen tiedot</span></td><td>AppleScriptillä annetut täydet kuvaukset ja kunkin sarjan
+näyttelijät: näyttelijöiden nimet ja roolit.</td></tr>
+<tr><td><span class="ui">Käännökset</span></td><td>Jaksojen nimet ja kuvaukset käännettyinä appeihin valituille kielille.</td></tr>
+<tr><td><span class="ui">Näyttelijät ja tekijät</span></td><td>Yksi pieni kuva kustakin henkilöstä sekä heidän
+TVmaze- ja TMDb-sivujensa osoitteet.</td></tr>
+<tr><td><span class="ui">Tilit ja katselu</span></td><td>Tilit, kaikkien muiden kuin päätilin katselut
+ja tilien lokit.</td></tr>
+<tr><td><span class="ui">Tietokannan rakenne ja vapaa tila</span></td><td>SQLiten omat tiedot ja tila, jota se käyttää uudelleen.</td></tr>
+<tr><td><span class="ui">Viimeaikaiset muutokset</span></td><td>Muutokset, joita ei ole vielä yhdistetty tietokantaan. Se tekee sen
+aika ajoin.</td></tr>
+</table>
+<p>Sarjan näyttelijät ja tekijät haetaan TVmazesta ja TMDb:stä, kun sen sivu avataan ensimmäisen kerran, täällä tai
+millä tahansa laitteella. Henkilöiden tiedot noudetaan aina, kun avaat ne, joten ne eivät koskaan vanhene,
+eikä niitä tallenneta. Osoita <span class="ui">Näytä Finderissa</span>, niin näet tietokantatiedoston.</p>
+
+<h2><a name="tmdb"></a>Näyttelijöiden ja tekijöiden tiedot: TMDb-tunnus</h2>
+<p>TVmaze ei vaadi määrityksiä. TMDb (The Movie Database) lisää ohjaajat ja käsikirjoittajat, näyttelijät,
+joita TVmazessa ei ole, sekä elämäkerrat, usein omalla kielelläsi. Se vaatii oman tunnuksen: TMDb
+antaa sellaisen ilmaiseksi kenelle tahansa, jolla on tili, henkilökohtaiseen, ei-kaupalliseen käyttöön. TV Library Viewerin
+mukana ei tule tunnusta.</p>
+<ol>
+<li>Luo ilmainen tili osoitteessa themoviedb.org ja kirjaudu sisään.</li>
+<li>Osoita tilisi kuvaketta, valitse <span class="ui">Settings</span> ja osoita sitten <span class="ui">API</span>.</li>
+<li>Pyydä API-avain: valitse <span class="ui">Developer</span>, hyväksy ehdot ja kuvaile käyttösi henkilökohtaiseksi
+ja ei-kaupalliseksi (esimerkiksi ”Show cast and biographies in my own TV library app”).</li>
+<li>Kun avain on valmis, kopioi <span class="ui">API Read Access Token</span> (pitkä, ei lyhyempi API Key).</li>
+<li>Valitse Macissa, jossa kirjasto on, <span class="ui">TV Library Viewer › Asetukset</span>, osoita <span class="ui">Tallennustila</span> ja
+liitä tunnus kenttään <span class="ui">TMDb API Read Access Token</span>.</li>
+<li>Osoita <span class="ui">Testaa</span>. ”TMDb hyväksyy tämän tunnuksen” tarkoittaa, että se toimii.</li>
+</ol>
+<p>Tunnus säilytetään Macin Avainnipussa. Vain Mac, jossa kirjasto on, käyttää sitä; muut
+laitteesi saavat näyttelijät ja tiedot siltä Macilta. Jo haetut sarjat saavat TMDb:n näyttelijät ja tekijät
+seuraavan kerran, kun niiden sivu avataan. Jos suljet Asetukset testaamatta uutta tunnusta, se testataan silloin,
+ja saat tiedon, jos TMDb hylkää sen.</p>
+<div class="note"><b>Huomaa:</b> Tämä tuote käyttää TMDB API:a, mutta TMDB ei ole hyväksynyt tai sertifioinut sitä.</div>
+
+<h2><a name="google"></a>Käännös: Google-avain</h2>
+<p>Jaksojen nimet ja kuvaukset käännetään kunkin laitteen kielelle tällä Macilla maksutta
+Applen käännöstoiminnolla. Se ei osaa kääntää kreikaksi, tšekiksi, unkariksi, romaniaksi, persiaksi, urduksi
+eikä bengaliksi. Niitä varten voit lisätä oman Google Cloud Translation API -avaimen. Avain tarvitaan vain
+Maciin, jossa kirjasto on, ei sitä katseleviin laitteisiin. Ensimmäiset 500 000 merkkiä kuukaudessa ovat maksuttomia, ja kukin
+teksti käännetään vain kerran.</p>
+<ol>
+<li>Siirry osoitteeseen console.cloud.google.com ja kirjaudu sisään Google-tililläsi.</li>
+<li>Luo projekti: osoita yläreunan projektivalikkoa, sitten <span class="ui">New Project</span>, ja anna sille
+nimi, esimerkiksi ”TV Library Viewer”.</li>
+<li>Ota laskutus käyttöön: valitse valikosta ☰ <span class="ui">Billing</span> ja yhdistä laskutustili. Google vaatii
+sen myös maksuttomaan käyttöön. Varmuuden vuoksi lisää budjetti, esimerkiksi 1 $, kohdassa <span class="ui">Budgets &amp; alerts</span>.</li>
+<li>Valitse ☰ › <span class="ui">APIs &amp; Services › Library</span>, hae <span class="ui">Cloud Translation API</span> ja osoita
+<span class="ui">Enable</span>.</li>
+<li>Valitse ☰ › <span class="ui">APIs &amp; Services › Credentials</span>, sitten <span class="ui">Create credentials › API key</span>, ja
+kopioi avain (se alkaa merkeillä ”AIza”).</li>
+<li>Suositus: osoita avaimen nimeä, valitse <span class="ui">Restrict key</span> kohdassa API restrictions, valitse
+<span class="ui">Cloud Translation API</span> ja osoita <span class="ui">Save</span>, jotta avain toimii vain kääntämiseen.</li>
+<li>Valitse kirjaston Macilla <span class="ui">TV Library Viewer › Asetukset</span>, osoita <span class="ui">Tallennustila</span>,
+liitä avain kenttään <span class="ui">Google Cloud Translation API -avain</span> ja osoita <span class="ui">Testaa</span>.</li>
+</ol>
+<p>Avain säilytetään Macin avainnipussa, ja sitä käytetään vain näihin seitsemään kieleen. Älä jaa
+sitä muille: kaikki sillä käännetty laskutetaan Google-tililtäsi.</p>
+
+<h2>Välimuistit</h2>
+<p>Kuvat sekä kirjastot, joita tämä Mac on katsonut muilta Maceilta. Välimuistit luodaan tarvittaessa uudelleen,
+ja macOS tyhjentää ne, kun tila käy vähiin.</p>
+<div class="see"><h3>Katso myös</h3><ul><li><a href="show-page.html">Sarjan sivu ja näyttelijät</a></li><li><a href="privacy.html">Mitä TV Library Viewer lukee, muuttaa ja säilyttää</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

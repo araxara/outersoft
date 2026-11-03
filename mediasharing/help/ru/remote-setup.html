@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>На Mac дома</title>
+<meta name="description" content="Включите Домашнюю коллекцию и удалённый вход на удалённом Mac и сделайте его доступным снаружи." />
+<meta name="keywords" content="домашняя коллекция, media sharing, удалённый вход, SSH, проброс портов, динамический DNS, роутер" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="remote-setup"></a>
+<nav class="crumbs"><a href="index.html">Справка Media Sharing GUI</a> › Начало работы</nav>
+<h1>На Mac дома</h1>
+<p class="lead">Сделайте это один раз на Mac, до медиатеки которого хотите добраться.</p>
+
+<h2>Включите общий доступ к медиатеке</h2>
+<ul>
+<li>В приложении <span class="ui">Apple TV</span> или <span class="ui">Музыка</span> включите <b>Домашнюю коллекцию</b> (в старых системах она называется
+<b>Media Sharing</b>), войдя со своей учётной записью Apple.</li>
+<li>Оставьте этот Mac активным или настройте его на доступ к сети во время сна, чтобы он мог отвечать, когда вы
+подключаетесь.</li>
+</ul>
+
+<h2>Включите удалённый вход (SSH)</h2>
+<ol>
+<li>На удалённом Mac откройте <span class="ui">Системные настройки</span> › <span class="ui">Основные</span> › <span class="ui">Общий доступ</span>.</li>
+<li>Включите <span class="ui">Удалённый вход</span>. Запишите учётную запись, которой разрешён вход.</li>
+</ol>
+<div class="note"><b>Совет:</b> настройте ключ SSH, чтобы не вводить пароль каждый раз. Скопируйте
+открытый ключ этого Mac на удалённый (<code>ssh-copy-id user@host</code>). Media Sharing GUI всё равно
+принимает пароль как запасной вариант — см. <a href="authentication.html">Ключи и пароли SSH</a>.</div>
+
+<h2>Сделайте его доступным снаружи</h2>
+<ul>
+<li><b>Проброс портов:</b> на домашнем роутере пробросьте внешний порт на порт SSH удалённого Mac
+(22). Многие пробрасывают необычный внешний порт, например 22022, чтобы избежать шума — именно этот внешний
+порт вы указываете в поле <a href="settings.html">Удалённый порт SSH</a>.</li>
+<li><b>Имя, которое следует за домашним IP:</b> домашние интернет-адреса меняются, поэтому имя динамического DNS
+(например, <code>myhome.example.com</code>), которое за ним следует, избавит вас от погони за числами.</li>
+</ul>
+<p>Как только удалённый вход заработает снаружи — проверьте командой <code>ssh user@host -p PORT</code>
+в Терминале — Media Sharing GUI сможет им пользоваться.</p>
+<div class="see"><h3>См. также</h3><ul><li><a href="connect.html">Настройка и запуск подключения</a></li><li><a href="authentication.html">Ключи и пароли SSH</a></li><li><a href="settings.html">Справочник по конфигурации</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

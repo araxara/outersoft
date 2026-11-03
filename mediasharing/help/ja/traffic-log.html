@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>トラフィックとログ</title>
+<meta name="description" content="トンネルがどれだけのデータを運んでいるかを見て、行ったことすべてのログを読む（または保存する）ことができます。" />
+<meta name="keywords" content="トラフィック, nettop, バイト, 受信, 送信, ピーク, ログ, ファイル, Finder" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="traffic-log"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI ヘルプ</a> › 使い方</nav>
+<h1>トラフィックとログ</h1>
+<p class="lead">2 つのボックスが接続の様子を示します。どれだけ運んでいるかと、何をしたか。</p>
+
+<h2>SSH セッショントラフィック</h2>
+<ul>
+<li><span class="ui">受信</span> と <span class="ui">送信</span> は、トンネルのプロセスを流れるバイト数を表示し、最も忙しかった瞬間の
+<span class="ui">ピーク</span> 値も示します。</li>
+<li>数値は生のパケットキャプチャではなく、システムツール <code>nettop</code> でサンプリングしているため、正確な計測というより
+おおよその目安です。</li>
+<li>どのくらいの頻度で再サンプリングするかは、<a href="settings.html">構成</a>の <span class="ui">トラフィックのポーリング間隔</span> で
+設定します。各サンプリングには数秒かかります。それより短い間隔にしても、サンプリングが続けて実行されるだけです。</li>
+</ul>
+
+<h2>ログ</h2>
+<p><span class="ui">ログ</span> ボックスは各ステップを記録します。トンネルを開く、ライブラリを見つける、公開する、再接続する、
+そして各種エラー。ディスク上のファイルにも書き込まれ、ボックスにはその <span class="ui">保存先：</span> のパスが表示されます。
+そのパスをクリックすると <b>ログを Finder に表示</b> します。問題を切り分けながら送りたいときに便利です。</p>
+<div class="see"><h3>関連項目</h3><ul><li><a href="status.html">状況と状態</a></li><li><a href="troubleshooting.html">接続できないとき</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SSH anahtarları ve parolalar</title>
+<meta name="description" content="Media Sharing GUI mümkün olduğunda SSH anahtarınızla oturum açar ve Anahtar Zinciri'nde sakladığı bir parolaya geri döner." />
+<meta name="keywords" content="kimlik doğrulama, SSH, anahtar, parola, anahtar zinciri, unut, oturum açma" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="authentication"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI Yardımı</a> › Kullanım</nav>
+<h1>SSH anahtarları ve parolalar</h1>
+<p class="lead">Anahtar tabanlı oturum açma en iyisidir; kaydedilmiş bir parola yedektir.</p>
+
+<h2>Bir SSH anahtarıyla</h2>
+<p>Uzaktaki Mac bu Mac'in SSH anahtarına zaten güveniyorsa, Media Sharing GUI sessizce oturum açar —
+yazılacak bir şey yoktur. Bir anahtarı bir kez kurmak (<code>ssh-copy-id user@host</code>) uygulamayı kullanmanın
+en akıcı yoludur. <a href="remote-setup.html">Evdeki Mac'te</a>'ye bakın.</p>
+
+<h2>Bir parolayla</h2>
+<p>Anahtar oturumu başarısız olursa, hâl <span class="ui">PAROLA GEREKLİ</span>'ye döner:</p>
+<ol>
+<li>Hesabın parolasını <span class="ui">SSH Kimlik Doğrulama</span> kutusuna yazın ve <span class="ui">Gönder</span>'e basın.</li>
+<li>Çalıştığında parola bu Mac'in <b>Anahtar Zinciri</b>'ne kaydedilir, böylece bir daha sorulmaz.</li>
+</ol>
+<p>Ayrıca önceden <span class="ui">Yapılandırma</span>'ya bir parola yazabilirsiniz; yalnızca anahtar oturumu
+başarısız olursa kullanılır ve o da ilk başarıda Anahtar Zinciri'ne taşınır.</p>
+
+<h2>Kaydedilmiş bir parolayı unutma</h2>
+<p>Geçerli oturumun Anahtar Zinciri girdisini kaldırmak için <span class="ui">Kaydedilmiş Parolayı Unut</span>'a tıklayın — örneğin
+uzaktaki Mac'te parolayı değiştirdikten sonra. Bir sonraki bağlantı onu tekrar sorar.</p>
+<div class="see"><h3>Ayrıca bakın</h3><ul><li><a href="remote-setup.html">Evdeki Mac'te</a></li><li><a href="connect.html">Bir bağlantı kurma ve başlatma</a></li><li><a href="privacy.html">Media Sharing GUI neyi okur, değiştirir ve saklar</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Was Media Sharing GUI liest, ändert und speichert</title>
+<meta name="description" content="Alles bleibt zwischen diesem Mac und deinem entfernten: keine Dritten, keine Accounts, kein Tracking." />
+<meta name="keywords" content="Datenschutz, Sicherheit, Schlüsselbund, SSH, lokal, Daten, Protokoll" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="privacy"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI-Hilfe</a> › Referenz</nav>
+<h1>Was Media Sharing GUI liest, ändert und speichert</h1>
+<p class="lead">Die App verbindet nur diesen Mac mit deinem eigenen entfernten Mac. Nichts geht irgendwo anders hin.</p>
+
+<h2>Auf diesem Mac</h2>
+<ul>
+<li><b>Speichert:</b> deine Verbindungseinstellungen und jedes SSH-Passwort, das du eingibst — das Passwort im
+macOS-<b>Schlüsselbund</b>, sonst nirgends. <span class="ui">Gespeichertes Passwort vergessen</span> entfernt es.</li>
+<li><b>Schreibt:</b> eine Protokolldatei dessen, was jede Verbindung getan hat (siehe <a href="traffic-log.html">Datenverkehr und
+Protokoll</a>). Du kannst sie jederzeit zeigen oder löschen.</li>
+<li><b>Veröffentlicht:</b> die entfernte Mediathek im eigenen Netzwerk dieses Macs über Bonjour, sodass die
+<span class="ui">Apple TV</span>- und <span class="ui">Musik</span>-Apps sie sehen — nur solange eine Verbindung läuft.</li>
+</ul>
+
+<h2>Über das Netzwerk</h2>
+<ul>
+<li><b>Verbindet nur zum entfernten Mac, den du nennst</b>, per SSH, mit dem eingebauten Werkzeug <code>ssh</code>.
+Das Streaming reist verschlüsselt in diesem Tunnel.</li>
+<li><b>Keine Dritten.</b> Es gibt keinen Cloud-Dienst, keinen Account zu erstellen, und nichts wird an
+Outersoft oder sonst jemanden gesendet.</li>
+</ul>
+<div class="see"><h3>Siehe auch</h3><ul><li><a href="overview.html">So funktioniert Media Sharing GUI</a></li><li><a href="authentication.html">SSH-Schlüssel und Passwörter</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

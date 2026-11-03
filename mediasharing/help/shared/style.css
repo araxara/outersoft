@@ -1,0 +1,54 @@
+/* Media Sharing GUI Help: one style for every page. */
+:root {
+  color-scheme: light dark;
+  --text: #1d1d1f; --secondary: #6e6e73; --accent: #0066cc; --rule: #d2d2d7;
+  --box: #f5f5f7; --note: #e8f2ff; --note-edge: #0071e3; --key: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #f5f5f7; --secondary: #a1a1a6; --accent: #4ea4ff; --rule: #424245;
+    --box: #2c2c2e; --note: #14263d; --note-edge: #4ea4ff; --key: #3a3a3c;
+  }
+}
+html { -webkit-text-size-adjust: 100%; }
+body {
+  font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  color: var(--text); background: Canvas; margin: 0; padding: 20px 28px 40px;
+  max-width: 720px;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+nav.crumbs { font-size: 12px; color: var(--secondary); margin-bottom: 14px; }
+h1 { font-size: 26px; line-height: 1.2; font-weight: 700; margin: 0 0 6px; }
+p.lead { font-size: 16px; color: var(--secondary); margin: 0 0 22px; }
+h2 { font-size: 19px; font-weight: 600; margin: 28px 0 8px; padding-top: 14px; border-top: 1px solid var(--rule); }
+h3 { font-size: 15px; font-weight: 600; margin: 18px 0 4px; }
+p, ul, ol { margin: 0 0 10px; }
+ul, ol { padding-inline-start: 22px; }
+li { margin: 3px 0; }
+.ui { font-weight: 600; }
+kbd {
+  font: 12px -apple-system, sans-serif; background: var(--key); border: 1px solid var(--rule);
+  border-bottom-width: 2px; border-radius: 4px; padding: 0 5px; white-space: nowrap;
+}
+.note {
+  background: var(--note); border-inline-start: 3px solid var(--note-edge); border-radius: 6px;
+  padding: 8px 12px; margin: 12px 0;
+}
+.note b:first-child { margin-inline-end: 4px; }
+table { border-collapse: collapse; width: 100%; margin: 6px 0 14px; }
+th, td { text-align: start; vertical-align: top; padding-block: 6px; padding-inline: 0 10px; border-bottom: 1px solid var(--rule); }
+th { font-size: 12px; color: var(--secondary); font-weight: 600; }
+td:first-child { white-space: nowrap; }
+.platforms { font-size: 12px; color: var(--secondary); margin: -2px 0 14px; }
+.see { margin-top: 30px; padding-top: 12px; border-top: 1px solid var(--rule); font-size: 13px; }
+.see h3 { margin-top: 0; font-size: 13px; color: var(--secondary); }
+.see ul { list-style: none; padding: 0; }
+/* The home page */
+header.home { display: flex; align-items: center; gap: 16px; margin-bottom: 18px; }
+header.home img { width: 64px; height: 64px; }
+header.home h1 { margin: 0; }
+.topics { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 4px 28px; }
+.topics section h2 { border-top: none; padding-top: 0; margin-top: 20px; }
+.topics ul { list-style: none; padding: 0; }
+.topics li { margin: 5px 0; }

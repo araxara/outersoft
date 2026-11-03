@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>कनेक्शन सेट करना और शुरू करना</title>
+<meta name="description" content="कॉन्फ़िगरेशन बॉक्स भरें, शुरू करें दबाएँ, पूछे जाने पर साइन इन करें, और रिमोट लाइब्रेरी स्थानीय रूप से दिखती है।" />
+<meta name="keywords" content="कनेक्ट, कॉन्फ़िगरेशन, शुरू, रिमोट लॉगिन, लोकल पोर्ट, आरंभ" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI मदद</a> › शुरुआत</nav>
+<h1>कनेक्शन सेट करना और शुरू करना</h1>
+<p class="lead">बताएँ कि लाइब्रेरी कहाँ है, फिर शुरू करें दबाएँ।</p>
+
+<h2>कनेक्शन भरना</h2>
+<p><span class="ui">कॉन्फ़िगरेशन (संपादित करने के लिए क्लिक करें)</span> बॉक्स पर क्लिक करें और कम-से-कम यह सेट करें:</p>
+<ul>
+<li><span class="ui">कनेक्शन नाम</span> — आपके अपने संदर्भ के लिए एक लेबल, साइडबार में दिखता है।</li>
+<li><span class="ui">रिमोट लॉगिन (user@host)</span> — वही <code>user@host</code> जो आप <code>ssh</code> को देते,
+उदाहरण के लिए <code>alex@myhome.example.com</code>।</li>
+<li><span class="ui">रिमोट SSH पोर्ट</span> — वह पोर्ट जिसे आपका राउटर रिमोट Mac के SSH पर अग्रेषित करता है (अक्सर 22 नहीं)।</li>
+</ul>
+<p>बाकी फ़ील्ड में समझदार डिफ़ॉल्ट होते हैं; उनमें से किसी के बगल में <span class="ui">(i)</span> पर क्लिक करें, या प्रत्येक क्या करता है यह जानने के लिए
+<a href="settings.html">कॉन्फ़िगरेशन संदर्भ</a> देखें।</p>
+
+<h2>शुरू करें दबाना</h2>
+<ol>
+<li>विंडो के नीचे <span class="ui">शुरू करें</span> पर क्लिक करें।</li>
+<li>अगर कुंजी-आधारित लॉगिन नहीं होता, तो हालत <span class="ui">पासवर्ड आवश्यक</span> में बदल जाती है: खाते का
+पासवर्ड <span class="ui">SSH प्रमाणीकरण</span> में टाइप करें और <span class="ui">सबमिट करें</span> दबाएँ। यह आपकी
+किचेन में सेव हो जाता है, ताकि दोबारा न पूछा जाए।</li>
+<li>ऐप टनल खोलता है, रिमोट Mac से पूछता है कि वह क्या साझा कर रहा है, और उसे यहाँ प्रकाशित करता है। जब
+हालत <span class="ui">चल रहा है</span> दिखाती है, लाइब्रेरी लाइव है।</li>
+</ol>
+
+<h2>Apple TV या म्यूज़िक ऐप में देखें</h2>
+<p>इस Mac पर <span class="ui">Apple TV</span> या <span class="ui">म्यूज़िक</span> ऐप खोलें। रिमोट लाइब्रेरी स्रोत सूची में
+वैसे ही दिखती है जैसे आपके अपने नेटवर्क का कोई कंप्यूटर। अगर कई लाइब्रेरी मिलीं, तो <a href="libraries.html">लाइब्रेरी बॉक्स</a> में
+चुनें कि कौन-सी दिखानी हैं।</p>
+<p>टनल बंद करने और प्रकाशन रोकने के लिए <span class="ui">रोकें</span> पर क्लिक करें। Media Sharing GUI अगली बार के लिए
+कनेक्शन याद रखता है।</p>
+<div class="see"><h3>यह भी देखें</h3><ul><li><a href="libraries.html">कौन-सी लाइब्रेरी प्रकाशित करनी है चुनना</a></li><li><a href="status.html">स्थिति और हालत</a></li><li><a href="authentication.html">SSH कुंजियाँ और पासवर्ड</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

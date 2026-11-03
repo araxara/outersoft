@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Media Sharing GUI कैसे काम करता है</title>
+<meta name="description" content="कहीं और मौजूद किसी Mac की होम शेयरिंग लाइब्रेरी को इस Mac के नेटवर्क पर दिखाता है, SSH टनल से स्ट्रीम करने के लिए।" />
+<meta name="keywords" content="अवलोकन, होम शेयरिंग, मीडिया शेयरिंग, SSH, टनल, Bonjour, Apple TV, म्यूज़िक, रिमोट" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="overview"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI मदद</a> › शुरुआत</nav>
+<h1>Media Sharing GUI कैसे काम करता है</h1>
+<p class="lead">यह कहीं और मौजूद किसी Mac की लाइब्रेरी को ऐसे दिखाता है मानो वह ठीक यहीं, आपके नेटवर्क पर हो।</p>
+
+<p>होम शेयरिंग (मीडिया शेयरिंग) <span class="ui">Apple TV</span> ऐप, <span class="ui">म्यूज़िक</span> और <span class="ui">iTunes</span> को किसी दूसरे कंप्यूटर से
+स्ट्रीम करने देती है — लेकिन सिर्फ़ उससे जो <b>उसी लोकल नेटवर्क</b> पर हो। Media Sharing GUI
+यह सीमा हटा देता है। इसे घर के किसी Mac की ओर (या किसी भी ऐसे Mac की ओर जिस तक आप SSH से पहुँच सकें) इंगित करें, और वह
+जो लाइब्रेरी साझा करता है वह यहाँ आपकी <span class="ui">Apple TV</span> या <span class="ui">म्यूज़िक</span> स्रोत सूची में ऐसे दिखती है मानो वह Mac बगल वाले
+कमरे में हो।</p>
+
+<h2>यह क्या करता है, चरण दर चरण</h2>
+<ol>
+<li>इस Mac से रिमोट Mac तक एक <b>SSH टनल</b> खोलता है।</li>
+<li>उस टनल के ज़रिए रिमोट Mac से पूछता है कि वह अपने लोकल नेटवर्क पर कौन-सी होम शेयरिंग सेवा का प्रसारण कर रहा है।</li>
+<li><b>वही सेवा यहाँ फिर से प्रकाशित करता है</b>, Bonjour के ज़रिए, टनल की ओर वापस इंगित करके —
+ताकि इस Mac के ऐप लाइब्रेरी को ऐसे देखें मानो वह LAN पर पास ही हो।</li>
+</ol>
+<p>चलते समय, उस लाइब्रेरी से स्ट्रीमिंग SSH टनल के अंदर एन्क्रिप्टेड होकर चलती है। स्थिति बॉक्स में <span class="ui">शुरू करें</span> और
+<span class="ui">रोकें</span> से इसे चालू-बंद करें।</p>
+
+<h2>आपको क्या चाहिए</h2>
+<ul>
+<li><b>घर वाले Mac पर:</b> <span class="ui">Apple TV</span> या <span class="ui">म्यूज़िक</span> ऐप में होम शेयरिंग (या मीडिया शेयरिंग)
+चालू, और रिमोट लॉगिन (SSH) सक्षम। <a href="remote-setup.html">घर वाले Mac पर</a> देखें।</li>
+<li><b>उस तक पहुँचने का तरीका:</b> उसका पता या डायनेमिक-DNS नाम, और वह SSH पोर्ट जिसे आपका राउटर उस तक अग्रेषित करता है।</li>
+<li><b>इस Mac पर:</b> कुछ खास नहीं — Media Sharing GUI आपके लिए अंतर्निर्मित <code>ssh</code> और Bonjour
+उपकरण चलाता है।</li>
+</ul>
+
+<h2>शुरुआत</h2>
+<ol>
+<li><a href="remote-setup.html">घर वाले Mac</a> को एक बार सेट करें।</li>
+<li><a href="connect.html">एक कनेक्शन भरें और शुरू करें दबाएँ</a>।</li>
+<li>यहाँ <a href="libraries.html">कौन-सी लाइब्रेरी</a> प्रकाशित करनी है चुनें।</li>
+</ol>
+<div class="see"><h3>यह भी देखें</h3><ul><li><a href="remote-setup.html">घर वाले Mac पर</a></li><li><a href="connect.html">कनेक्शन सेट करना और शुरू करना</a></li><li><a href="privacy.html">Media Sharing GUI क्या पढ़ता, बदलता और रखता है</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SSH 키와 비밀번호</title>
+<meta name="description" content="Media Sharing GUI는 가능할 때 SSH 키로 로그인하고, 그렇지 않으면 키체인에 저장한 비밀번호로 대체합니다." />
+<meta name="keywords" content="인증, SSH, 키, 비밀번호, 키체인, 삭제, 로그인" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="authentication"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI 도움말</a> › 사용</nav>
+<h1>SSH 키와 비밀번호</h1>
+<p class="lead">키 기반 로그인이 가장 좋고, 저장된 비밀번호가 대체 수단입니다.</p>
+
+<h2>SSH 키로</h2>
+<p>원격 Mac이 이미 이 Mac의 SSH 키를 신뢰한다면, Media Sharing GUI는 조용히 로그인합니다. 입력할 것이 없습니다.
+키를 한 번 설정해 두는 것(<code>ssh-copy-id user@host</code>)이 이 앱을 가장 매끄럽게 쓰는 방법입니다.
+<a href="remote-setup.html">집에 있는 Mac에서</a>를 참조하십시오.</p>
+
+<h2>비밀번호로</h2>
+<p>키 로그인이 실패하면 상태가 <span class="ui">비밀번호 필요</span>로 바뀝니다.</p>
+<ol>
+<li><span class="ui">SSH 인증</span> 상자에 계정 비밀번호를 입력하고 <span class="ui">제출</span>을 누릅니다.</li>
+<li>한 번 작동하면 비밀번호가 이 Mac의 <b>키체인</b>에 저장되어 다시 묻지 않습니다.</li>
+</ol>
+<p>미리 <span class="ui">구성</span>에 비밀번호를 입력해 둘 수도 있습니다. 키 로그인이 실패할 때만 사용되며,
+그것도 첫 성공 시 키체인으로 옮겨집니다.</p>
+
+<h2>저장된 비밀번호 삭제</h2>
+<p><span class="ui">저장된 비밀번호 삭제</span>를 클릭하면 현재 로그인의 키체인 항목을 제거합니다. 예를 들어 원격 Mac에서
+비밀번호를 바꾼 뒤에 사용합니다. 다음 연결에서 다시 묻습니다.</p>
+<div class="see"><h3>참고 항목</h3><ul><li><a href="remote-setup.html">집에 있는 Mac에서</a></li><li><a href="connect.html">연결 설정 및 시작</a></li><li><a href="privacy.html">Media Sharing GUI가 읽고 변경하고 저장하는 것</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

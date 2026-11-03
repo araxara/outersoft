@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Stato e situazione</title>
+<meta name="description" content="Il riquadro Stato mostra cosa sta facendo la connessione, il suo processo di tunnel e da quanto è attiva." />
+<meta name="keywords" content="stato, situazione, attivo, connessione, tempo attivo, tunnel, PID" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="status"></a>
+<nav class="crumbs"><a href="index.html">Aiuto di Media Sharing GUI</a> › Utilizzo</nav>
+<h1>Stato e situazione</h1>
+<p class="lead">Il riquadro Stato è dove avvii e fermi, e osservi cosa succede.</p>
+
+<h2>Cosa significa la situazione</h2>
+<table>
+<tr><th>Situazione</th><th>Cosa succede</th></tr>
+<tr><td>INATTIVO</td><td>Non connesso. Premi <span class="ui">Avvia</span> per iniziare.</td></tr>
+<tr><td>CONNESSIONE IN CORSO</td><td>Apertura del tunnel SSH verso il Mac remoto.</td></tr>
+<tr><td>PASSWORD RICHIESTA</td><td>L'accesso con chiave non ha funzionato; inserisci la password in <span class="ui">Autenticazione SSH</span>.</td></tr>
+<tr><td>INTERROGAZIONE</td><td>Chiede al Mac remoto quale libreria di Condivisione in casa annuncia.</td></tr>
+<tr><td>REGISTRAZIONE</td><td>Pubblica quella libreria qui tramite Bonjour.</td></tr>
+<tr><td>ATTIVO</td><td>Attivo. La libreria è disponibile nell'app Apple TV / Musica.</td></tr>
+<tr><td>RICONNESSIONE</td><td>La connessione è caduta; riprova da sola.</td></tr>
+<tr><td>ARRESTO IN CORSO</td><td>Chiude il tunnel e rimuove l'annuncio locale.</td></tr>
+<tr><td>ERRORE</td><td>Qualcosa è andato storto; il registro dice cosa. Vedi <a href="troubleshooting.html">Se non si connette</a>.</td></tr>
+</table>
+
+<h2>Le altre righe</h2>
+<ul>
+<li><span class="ui">PID del tunnel</span> — l'ID del processo del tunnel <code>ssh</code> in background, usato per
+misurare il <a href="traffic-log.html">traffico</a> e chiuderlo in modo pulito.</li>
+<li><span class="ui">Tempo attivo</span> — da quanto tempo è stabilita la connessione corrente.</li>
+</ul>
+<p>I pulsanti in basso cambiano con la situazione: <span class="ui">Avvia</span> da inattivo, <span class="ui">Ferma</span> durante la
+connessione e <span class="ui">Annulla</span> mentre si sta ancora connettendo.</p>
+<div class="see"><h3>Vedi anche</h3><ul><li><a href="libraries.html">Scegliere quali librerie pubblicare</a></li><li><a href="reconnecting.html">Riconnessione e stop</a></li><li><a href="traffic-log.html">Traffico e registro</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

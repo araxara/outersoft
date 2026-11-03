@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Clés et mots de passe SSH</title>
+<meta name="description" content="Media Sharing GUI se connecte avec votre clé SSH quand il le peut, et se rabat sur un mot de passe qu'il enregistre dans le trousseau." />
+<meta name="keywords" content="authentification, SSH, clé, mot de passe, trousseau, oublier, connexion" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="authentication"></a>
+<nav class="crumbs"><a href="index.html">Aide de Media Sharing GUI</a> › Utilisation</nav>
+<h1>Clés et mots de passe SSH</h1>
+<p class="lead">La connexion par clé est préférable ; un mot de passe enregistré est le secours.</p>
+
+<h2>Avec une clé SSH</h2>
+<p>Si le Mac distant fait déjà confiance à la clé SSH de ce Mac, Media Sharing GUI se connecte en silence —
+rien à saisir. Configurer une clé une fois (<code>ssh-copy-id user@host</code>) est la façon la plus fluide
+d'utiliser l'app. Voir <a href="remote-setup.html">Sur le Mac à la maison</a>.</p>
+
+<h2>Avec un mot de passe</h2>
+<p>Si la connexion par clé échoue, le statut passe à <span class="ui">MOT DE PASSE REQUIS</span> :</p>
+<ol>
+<li>Saisissez le mot de passe du compte dans la zone <span class="ui">Authentification SSH</span> et appuyez sur <span class="ui">Envoyer</span>.</li>
+<li>Une fois qu'il fonctionne, le mot de passe est enregistré dans le <b>trousseau</b> de ce Mac, pour ne plus vous être demandé.</li>
+</ol>
+<p>Vous pouvez aussi saisir un mot de passe dans la <span class="ui">Configuration</span> à l'avance ; il n'est utilisé que si la
+connexion par clé échoue, et lui aussi passe dans le trousseau au premier succès.</p>
+
+<h2>Oublier un mot de passe enregistré</h2>
+<p>Cliquez sur <span class="ui">Oublier le mot de passe enregistré</span> pour retirer l'entrée du trousseau de la connexion actuelle — par
+exemple après avoir changé le mot de passe sur le Mac distant. La prochaine connexion le redemandera.</p>
+<div class="see"><h3>Voir aussi</h3><ul><li><a href="remote-setup.html">Sur le Mac à la maison</a></li><li><a href="connect.html">Configurer et démarrer une connexion</a></li><li><a href="privacy.html">Ce que Media Sharing GUI lit, modifie et conserve</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

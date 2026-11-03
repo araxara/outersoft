@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Łączenie z udostępnioną biblioteką</title>
+<meta name="description" content="Połącz innego Maca, iPada, iPhone’a lub Apple TV z Makiem, który udostępnia swoją bibliotekę." />
+<meta name="keywords" content="połącz, Bonjour, sieć, SSH, adres, certyfikat, odcisk, zaufaj, zaloguj, hasło" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer – pomoc</a> › Pierwsze kroki</nav>
+<h1>Łączenie z udostępnioną biblioteką</h1>
+<p class="lead">Każde urządzenie łączy się raz. Później samo ponownie otwiera tę samą bibliotekę.</p>
+
+<h2>Otwórz okno Połącz z udostępnioną biblioteką</h2>
+<ul>
+<li><b>Mac:</b> wybierz <span class="ui">Plik › Połącz z udostępnioną biblioteką…</span> (<kbd>⌘K</kbd>).</li>
+<li><b>iPad i iPhone:</b> stuknij <span class="ui">Połącz z udostępnioną biblioteką…</span> na pasku bocznym (<kbd>⌘K</kbd> na klawiaturze).</li>
+<li><b>Apple TV:</b> za pierwszym razem TV Library łączy się z pierwszym Makiem w sieci, który udostępnia
+bibliotekę bez hasła. W przeciwnym razie przejdź do <span class="ui">Biblioteki › Połącz z inną biblioteką…</span>.</li>
+</ul>
+
+<h2>Wybierz sposób połączenia z Makiem</h2>
+<h3>Ta sieć</h3>
+<p>Maki w tej samej sieci z włączonym udostępnianiem są wyświetlane z nazwy. Wybierz jeden z nich.</p>
+<h3>Zdalnie (SSH)</h3>
+<p>Dla Maca w innej sieci, na przykład w innym domu. Wpisz adres, którego używasz do łączenia się przez SSH z tym
+Makiem (lub dowolnym komputerem w jego sieci), oraz nazwę użytkownika, jeśli jest inna. TV Library Viewer loguje
+się, znajduje bibliotekę w tej sieci i łączy się przez połączenie SSH.</p>
+<ul>
+<li>Za pierwszym razem wyświetla klucz hosta do porównania i potwierdzenia.</li>
+<li>Na Macu używany jest Twój własny klucz SSH, jeśli host go akceptuje; w przeciwnym razie aplikacja prosi o hasło
+i przechowuje je w pęku kluczy.</li>
+<li>iPad, iPhone i Apple TV mają własny klucz. Po pierwszym zalogowaniu hasłem urządzenie proponuje
+zainstalowanie tego klucza na hoście, aby hasło nie było już potrzebne.</li>
+</ul>
+<h3>Adres</h3>
+<p>Dla Maca, z którym to urządzenie może połączyć się bezpośrednio: przez VPN, taki jak Tailscale, lub port przekierowany na niego
+przez router. Wpisz adres i port (47100, o ile go nie zmieniono) oraz nazwę konta
+i hasło, jeśli biblioteka ma konta.</p>
+
+<h2>Zaufaj certyfikatowi biblioteki</h2>
+<p>Przy pierwszym połączeniu wyświetlany jest odcisk certyfikatu biblioteki. Porównaj go z odciskiem w
+<span class="ui">Ustawienia › Udostępnianie</span> na Macu z biblioteką, a następnie wybierz <span class="ui">Zaufaj i połącz</span>. Od tej
+pory urządzenie za każdym razem sprawdza ten certyfikat i odrzuca bibliotekę, której certyfikat
+się zmienił.</p>
+
+<h2>Logowanie</h2>
+<p>Jeśli biblioteka ma konta, wpisz nazwę i hasło swojego konta na tym Macu. Urządzenie
+przechowuje je w pęku kluczy. Jeśli nie ma kont, pozostaw nazwę pustą i użyj hasła biblioteki,
+o ile zostało ustawione.</p>
+<div class="see"><h3>Zobacz także</h3><ul><li><a href="away.html">Oglądanie poza domem</a></li><li><a href="sidebar-libraries.html">Przełączanie bibliotek</a></li><li><a href="settings-accounts.html">Ustawienia kont</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

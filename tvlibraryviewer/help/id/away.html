@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Menonton di luar rumah</title>
+<meta name="description" content="Tiga cara menjangkau perpustakaan Anda dari jaringan lain: SSH, VPN, atau port yang diteruskan." />
+<meta name="keywords" content="jarak jauh, di luar rumah, bepergian, SSH, VPN, Tailscale, penerusan port, router, 47100, offline" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="away"></a>
+<nav class="crumbs"><a href="index.html">Bantuan TV Library Viewer</a> › Memulai</nav>
+<h1>Menonton di luar rumah</h1>
+<p class="lead">Perpustakaan Anda tetap berada di Mac di rumah. Pilih salah satu cara untuk menjangkaunya dari tempat lain.</p>
+
+<h2>Melalui SSH</h2>
+<p>Paling cocok jika Anda sudah dapat masuk ke Mac tersebut, atau ke komputer di jaringannya, dengan SSH. Tidak ada lagi
+yang perlu diatur. Gunakan <span class="ui">Jarak Jauh (SSH)</span> di Hubungkan ke Perpustakaan Bersama. Semuanya melewati
+koneksi SSH.</p>
+
+<h2>Melalui VPN</h2>
+<p>Dengan VPN seperti Tailscale di kedua perangkat, gunakan <span class="ui">Alamat</span> dengan alamat VPN Mac dan
+port 47100.</p>
+
+<h2>Melalui port yang diteruskan</h2>
+<ol>
+<li>Di router Anda, teruskan port 47100 (atau port di <span class="ui">Pengaturan › Berbagi</span>) ke Mac yang memiliki
+perpustakaan.</li>
+<li>Tambahkan akun dengan kata sandi yang kuat di <span class="ui">Pengaturan › Akun</span>.</li>
+<li>Di perangkat lain, gunakan <span class="ui">Alamat</span> dengan alamat publik rumah Anda dan port tersebut.</li>
+</ol>
+<div class="note"><b>Catatan:</b> Koneksi selalu dienkripsi, dan perangkat memeriksa sertifikat perpustakaan,
+dari mana pun perangkat terhubung. Sepuluh kata sandi salah dari satu alamat dalam 5 menit akan
+ditolak tanpa diperiksa.</div>
+
+<h2>Tanpa koneksi sama sekali</h2>
+<p>Unduh episode sebelum Anda pergi (Mac, iPad, dan iPhone). Saat perpustakaan tidak dapat dijangkau,
+app membukanya seperti terakhir dilihat, menampilkan <span class="ui">Offline</span>, dan memutar unduhan Anda. Apa yang Anda tonton dikirim
+ke Mac begitu Mac dapat dijangkau kembali.</p>
+<div class="see"><h3>Lihat juga</h3><ul><li><a href="connect.html">Menghubungkan ke perpustakaan bersama</a></li><li><a href="downloads.html">Unduhan dan menonton offline</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

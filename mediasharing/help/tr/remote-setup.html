@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Evdeki Mac'te</title>
+<meta name="description" content="Uzaktaki Mac'te Ev Paylaşımı ve uzaktan oturum açmayı açın ve onu dışarıdan erişilebilir yapın." />
+<meta name="keywords" content="ev paylaşımı, media sharing, uzaktan oturum açma, SSH, bağlantı noktası yönlendirme, dinamik DNS, yönlendirici" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="remote-setup"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI Yardımı</a> › Başlarken</nav>
+<h1>Evdeki Mac'te</h1>
+<p class="lead">Bunu, kitaplığına ulaşmak istediğiniz Mac'te bir kez yapın.</p>
+
+<h2>Kitaplığın paylaşımını açın</h2>
+<ul>
+<li><span class="ui">Apple TV</span> veya <span class="ui">Müzik</span> uygulamasında, Apple Hesabınızla oturum açmış olarak <b>Ev Paylaşımı</b>'nı
+açın (eski sistemler buna <b>Media Sharing</b> der).</li>
+<li>O Mac'i uyanık bırakın ya da uykudayken ağ erişimine izin verecek şekilde ayarlayın; böylece bağlandığınızda
+yanıt verebilir.</li>
+</ul>
+
+<h2>Uzaktan oturum açmayı (SSH) açın</h2>
+<ol>
+<li>Uzaktaki Mac'te <span class="ui">Sistem Ayarları</span> › <span class="ui">Genel</span> › <span class="ui">Paylaşım</span> öğesini açın.</li>
+<li><span class="ui">Uzaktan Oturum Açma</span>'yı açın. Oturum açmasına izin verilen kullanıcı hesabını not edin.</li>
+</ol>
+<div class="note"><b>İpucu:</b> Her seferinde parolaya gerek kalmaması için bir SSH anahtarı kurun. Bu Mac'in
+ortak anahtarını uzaktaki Mac'e kopyalayın (<code>ssh-copy-id user@host</code>). Media Sharing GUI yine de
+yedek olarak bir parola kabul eder — <a href="authentication.html">SSH anahtarları ve parolalar</a> konusuna bakın.</div>
+
+<h2>Onu dışarıdan erişilebilir yapın</h2>
+<ul>
+<li><b>Bağlantı noktası yönlendirme:</b> ev yönlendiricisinde, bir dış bağlantı noktasını uzaktaki Mac'in SSH bağlantı
+noktasına (22) yönlendirin. Birçok kişi gürültüyü önlemek için 22022 gibi sıra dışı bir dış bağlantı noktası
+yönlendirir — o dış bağlantı noktası, <a href="settings.html">Uzak SSH bağlantı noktası</a> alanına yazdığınız şeydir.</li>
+<li><b>Ev IP'sini izleyen bir ad:</b> ev internet adresleri değişir, bu yüzden onu izleyen bir dinamik DNS adı
+(örneğin <code>myhome.example.com</code>) sizi sayıların peşinden koşmaktan kurtarır.</li>
+</ul>
+<p>Uzaktan oturum açma dışarıdan çalışmaya başladığında — Terminal'de <code>ssh user@host -p PORT</code>
+ile sınayın — Media Sharing GUI onu kullanabilir.</p>
+<div class="see"><h3>Ayrıca bakın</h3><ul><li><a href="connect.html">Bir bağlantı kurma ve başlatma</a></li><li><a href="authentication.html">SSH anahtarları ve parolalar</a></li><li><a href="settings.html">Yapılandırma başvurusu</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

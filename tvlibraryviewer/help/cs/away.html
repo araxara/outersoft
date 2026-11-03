@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sledování mimo domov</title>
+<meta name="description" content="Tři způsoby, jak se ke knihovně dostat z jiné sítě: SSH, VPN nebo přesměrovaný port." />
+<meta name="keywords" content="vzdálený, mimo domov, cestování, SSH, VPN, Tailscale, přesměrování portů, router, 47100, offline" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="away"></a>
+<nav class="crumbs"><a href="index.html">Nápověda k TV Library Viewer</a> › Začínáme</nav>
+<h1>Sledování mimo domov</h1>
+<p class="lead">Vaše knihovna zůstává na Macu doma. Vyberte si jeden způsob, jak se k ní dostat odjinud.</p>
+
+<h2>Přes SSH</h2>
+<p>Nejlepší, pokud se už k tomuto Macu nebo k počítači v jeho síti umíte přihlásit přes SSH. Nic dalšího
+není třeba nastavovat. V okně Připojit ke sdílené knihovně použijte <span class="ui">Vzdálené (SSH)</span>. Vše jde přes
+připojení SSH.</p>
+
+<h2>Přes VPN</h2>
+<p>Když je na obou zařízeních VPN, například Tailscale, použijte <span class="ui">Adresa</span> s VPN adresou Macu a
+portem 47100.</p>
+
+<h2>Přes přesměrovaný port</h2>
+<ol>
+<li>Na routeru přesměrujte port 47100 (nebo port uvedený v <span class="ui">Nastavení › Sdílení</span>) na Mac s
+knihovnou.</li>
+<li>V <span class="ui">Nastavení › Účty</span> přidejte účty se silnými hesly.</li>
+<li>Na druhém zařízení použijte <span class="ui">Adresa</span> s veřejnou adresou vaší domácnosti a portem.</li>
+</ol>
+<div class="note"><b>Poznámka:</b> Připojení jsou vždy šifrovaná a zařízení ověřují certifikát
+knihovny, ať se připojují odkudkoli. Deset chybných hesel z jedné adresy během 5 minut je
+odmítnuto bez ověření.</div>
+
+<h2>Úplně bez připojení</h2>
+<p>Před odjezdem si stáhněte epizody (Mac, iPad a iPhone). Když je knihovna nedostupná,
+aplikace ji otevře v podobě, v jaké byla naposledy, zobrazí <span class="ui">Offline</span> a přehrává stažené epizody. Co zhlédnete, se odešle
+do Macu, jakmile bude znovu dostupný.</p>
+<div class="see"><h3>Viz také</h3><ul><li><a href="connect.html">Připojení ke sdílené knihovně</a></li><li><a href="downloads.html">Stahování a sledování offline</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="he" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>צפייה מחוץ לבית</title>
+<meta name="description" content="שלוש דרכים להגיע לספרייה שלכם מרשת אחרת: SSH, ‏VPN או פורט מועבר." />
+<meta name="keywords" content="מרחוק, מחוץ לבית, נסיעה, SSH, VPN, Tailscale, העברת פורטים, נתב, 47100, לא מקוון" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="away"></a>
+<nav class="crumbs"><a href="index.html">עזרה של ⁨TV Library Viewer⁩</a> › תחילת העבודה</nav>
+<h1>צפייה מחוץ לבית</h1>
+<p class="lead">הספרייה שלכם נשארת ב‑Mac שבבית. בחרו דרך אחת להגיע אליה ממקום אחר.</p>
+
+<h2>דרך SSH</h2>
+<p>הדרך הטובה ביותר אם אתם כבר יכולים להתחבר ל‑Mac הזה, או למחשב ברשת שלו, באמצעות SSH. אין צורך להגדיר
+שום דבר נוסף. השתמשו ב<span class="ui">מרוחק (SSH)</span> בחלון ההתחברות לספרייה משותפת. הכול עובר דרך
+חיבור ה‑SSH.</p>
+
+<h2>דרך VPN</h2>
+<p>כאשר בשני המכשירים יש VPN כמו Tailscale, השתמשו ב<span class="ui">כתובת</span> עם כתובת ה‑VPN של ה‑Mac
+ועם פורט 47100.</p>
+
+<h2>דרך פורט מועבר</h2>
+<ol>
+<li>בנתב, העבירו את פורט 47100 (או את הפורט שמופיע ב<span class="ui">הגדרות › שיתוף</span>) אל ה‑Mac שבו
+נמצאת הספרייה.</li>
+<li>הוסיפו חשבונות עם סיסמאות חזקות ב<span class="ui">הגדרות › חשבונות</span>.</li>
+<li>במכשיר האחר, השתמשו ב<span class="ui">כתובת</span> עם הכתובת הציבורית של הבית שלכם ועם הפורט.</li>
+</ol>
+<div class="note"><b>הערה:</b> החיבורים תמיד מוצפנים, והמכשירים בודקים את האישור של הספרייה
+מכל מקום שממנו הם מתחברים. אחרי עשר סיסמאות שגויות מכתובת אחת בתוך 5 דקות, הניסיונות הבאים
+נדחים בלי שייבדקו.</div>
+
+<h2>בלי חיבור בכלל</h2>
+<p>הורידו פרקים לפני שאתם יוצאים (Mac, ‏iPad ו‑iPhone). כשאין גישה לספרייה, היישום
+פותח אותה כפי שנראתה לאחרונה, מציג <span class="ui">לא מקוון</span> ומפעיל את ההורדות שלכם. מה שאתם צופים בו נשלח
+ל‑Mac ברגע שאפשר להגיע אליו שוב.</p>
+<div class="see"><h3>ראו גם</h3><ul><li><a href="connect.html">התחברות לספרייה משותפת</a></li><li><a href="downloads.html">הורדות וצפייה לא מקוונת</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

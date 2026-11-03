@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Thiết lập và bắt đầu một kết nối</title>
+<meta name="description" content="Điền ô Cấu hình, nhấn Bắt đầu, đăng nhập nếu được hỏi, và thư viện ở xa xuất hiện cục bộ." />
+<meta name="keywords" content="kết nối, cấu hình, bắt đầu, đăng nhập từ xa, cổng cục bộ, khởi đầu" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">Trợ giúp Media Sharing GUI</a> › Bắt đầu</nav>
+<h1>Thiết lập và bắt đầu một kết nối</h1>
+<p class="lead">Cho biết thư viện nằm ở đâu, rồi nhấn Bắt đầu.</p>
+
+<h2>Điền kết nối</h2>
+<p>Nhấp vào ô <span class="ui">Cấu hình (nhấp để chỉnh sửa)</span> và đặt ít nhất:</p>
+<ul>
+<li><span class="ui">Tên kết nối</span> — một nhãn cho riêng bạn tham khảo, hiển thị ở thanh bên.</li>
+<li><span class="ui">Đăng nhập từ xa (user@host)</span> — cùng <code>user@host</code> mà bạn đưa cho
+<code>ssh</code>, ví dụ <code>alex@myhome.example.com</code>.</li>
+<li><span class="ui">Cổng SSH ở xa</span> — cổng mà router của bạn chuyển tiếp tới SSH của máy Mac ở xa (thường không phải 22).</li>
+</ul>
+<p>Các trường khác có giá trị mặc định hợp lý; nhấp vào <span class="ui">(i)</span> bên cạnh bất kỳ trường nào, hoặc xem
+<a href="settings.html">Tham khảo cấu hình</a>, để biết mỗi trường làm gì.</p>
+
+<h2>Nhấn Bắt đầu</h2>
+<ol>
+<li>Nhấp <span class="ui">Bắt đầu</span> ở dưới cùng cửa sổ.</li>
+<li>Nếu đăng nhập bằng khóa không thông, trạng thái chuyển thành <span class="ui">CẦN MẬT KHẨU</span>: gõ
+mật khẩu của tài khoản vào <span class="ui">Xác thực SSH</span> và nhấn <span class="ui">Gửi</span>. Nó được lưu vào
+Chuỗi khóa của bạn nên sẽ không bị hỏi lại.</li>
+<li>App mở đường hầm, hỏi máy Mac ở xa chia sẻ gì, và xuất bản nó ở đây. Khi
+trạng thái hiển thị <span class="ui">ĐANG CHẠY</span>, thư viện đã sẵn sàng.</li>
+</ol>
+
+<h2>Xem nó trong app Apple TV hoặc Nhạc</h2>
+<p>Mở app <span class="ui">Apple TV</span> hoặc <span class="ui">Nhạc</span> trên máy Mac này. Thư viện ở xa xuất hiện trong
+danh sách nguồn, y như một máy tính trên mạng của chính bạn. Nếu tìm thấy nhiều thư viện, hãy chọn
+thư viện nào để hiển thị trong <a href="libraries.html">ô Thư viện</a>.</p>
+<p>Nhấp <span class="ui">Dừng</span> để đóng đường hầm và ngừng xuất bản. Media Sharing GUI ghi nhớ
+kết nối cho lần sau.</p>
+<div class="see"><h3>Xem thêm</h3><ul><li><a href="libraries.html">Chọn thư viện nào để xuất bản</a></li><li><a href="status.html">Trạng thái và tình trạng</a></li><li><a href="authentication.html">Khóa và mật khẩu SSH</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

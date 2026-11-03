@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Regarder loin de chez vous</title>
+<meta name="description" content="Trois façons d’accéder à votre bibliothèque depuis un autre réseau : SSH, un VPN ou un port redirigé." />
+<meta name="keywords" content="à distance, en déplacement, voyage, SSH, VPN, Tailscale, redirection de port, routeur, 47100, hors ligne" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="away"></a>
+<nav class="crumbs"><a href="index.html">Aide TV Library Viewer</a> › Premiers pas</nav>
+<h1>Regarder loin de chez vous</h1>
+<p class="lead">Votre bibliothèque reste sur le Mac, à la maison. Choisissez une façon d’y accéder d’ailleurs.</p>
+
+<h2>Par SSH</h2>
+<p>La meilleure option si vous pouvez déjà vous connecter en SSH à ce Mac, ou à un ordinateur de son réseau. Rien d’autre
+à configurer. Utilisez <span class="ui">À distance (SSH)</span> dans « Se connecter à une bibliothèque partagée ». Tout passe par la
+connexion SSH.</p>
+
+<h2>Par un VPN</h2>
+<p>Avec un VPN comme Tailscale sur les deux appareils, utilisez <span class="ui">Adresse</span> avec l’adresse VPN du Mac et
+le port 47100.</p>
+
+<h2>Par un port redirigé</h2>
+<ol>
+<li>Sur votre routeur, redirigez le port 47100 (ou celui indiqué dans <span class="ui">Réglages › Partage</span>) vers le Mac qui contient
+la bibliothèque.</li>
+<li>Ajoutez des comptes avec des mots de passe robustes dans <span class="ui">Réglages › Comptes</span>.</li>
+<li>Sur l’autre appareil, utilisez <span class="ui">Adresse</span> avec l’adresse publique de votre domicile et le port.</li>
+</ol>
+<div class="note"><b>Remarque :</b> Les connexions sont toujours chiffrées, et les appareils vérifient le certificat
+de la bibliothèque, d’où qu’ils se connectent. Dix mots de passe erronés depuis une même adresse en 5 minutes sont
+refusés sans être vérifiés.</div>
+
+<h2>Sans aucune connexion</h2>
+<p>Téléchargez des épisodes avant de partir (Mac, iPad et iPhone). Lorsque la bibliothèque est injoignable,
+l’app l’ouvre telle qu’elle était la dernière fois, affiche <span class="ui">Hors ligne</span> et lit vos téléchargements. Ce que vous regardez est envoyé
+au Mac dès qu’il est de nouveau joignable.</p>
+<div class="see"><h3>Voir aussi</h3><ul><li><a href="connect.html">Se connecter à une bibliothèque partagée</a></li><li><a href="downloads.html">Téléchargements et visionnage hors ligne</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

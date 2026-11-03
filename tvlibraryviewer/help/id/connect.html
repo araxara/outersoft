@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Menghubungkan ke perpustakaan bersama</title>
+<meta name="description" content="Hubungkan Mac lain, iPad, iPhone, atau Apple TV ke Mac yang membagikan perpustakaannya." />
+<meta name="keywords" content="hubungkan, Bonjour, jaringan, SSH, alamat, sertifikat, sidik jari, percayai, masuk, kata sandi" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">Bantuan TV Library Viewer</a> › Memulai</nav>
+<h1>Menghubungkan ke perpustakaan bersama</h1>
+<p class="lead">Setiap perangkat cukup terhubung sekali. Setelah itu, perangkat membuka kembali perpustakaan yang sama dengan sendirinya.</p>
+
+<h2>Membuka Hubungkan ke Perpustakaan Bersama</h2>
+<ul>
+<li><b>Mac:</b> pilih <span class="ui">File › Hubungkan ke Perpustakaan Bersama…</span> (<kbd>⌘K</kbd>).</li>
+<li><b>iPad dan iPhone:</b> ketuk <span class="ui">Hubungkan ke Perpustakaan Bersama…</span> di bar samping (<kbd>⌘K</kbd> dengan papan ketik).</li>
+<li><b>Apple TV:</b> pertama kali, TV Library terhubung ke Mac pertama di jaringan yang berbagi
+tanpa kata sandi. Jika tidak, buka <span class="ui">Perpustakaan › Hubungkan ke Perpustakaan Lain…</span>.</li>
+</ul>
+
+<h2>Memilih cara menjangkau Mac</h2>
+<h3>Jaringan Ini</h3>
+<p>Mac di jaringan yang sama yang berbagi aktif dicantumkan menurut namanya. Pilih salah satunya.</p>
+<h3>Jarak Jauh (SSH)</h3>
+<p>Untuk Mac di jaringan lain, misalnya di rumah lain. Ketik alamat yang Anda gunakan untuk SSH ke Mac
+tersebut (atau komputer mana pun di jaringannya), dan nama pengguna jika berbeda. TV Library Viewer masuk,
+menemukan perpustakaan di jaringan tersebut, dan terhubung melalui koneksi SSH.</p>
+<ul>
+<li>Pertama kali, kunci host ditampilkan untuk Anda bandingkan dan konfirmasi.</li>
+<li>Di Mac, kunci SSH Anda sendiri digunakan jika host menerimanya; jika tidak, kata sandi akan diminta
+dan disimpan di Rantai Kunci Anda.</li>
+<li>iPad, iPhone, atau Apple TV memiliki kuncinya sendiri. Setelah masuk dengan kata sandi untuk pertama kali, perangkat menawarkan
+untuk memasang kunci tersebut di host, sehingga tidak memerlukan kata sandi lagi.</li>
+</ul>
+<h3>Alamat</h3>
+<p>Untuk Mac yang dapat dijangkau langsung oleh perangkat ini: melalui VPN seperti Tailscale, atau port yang
+diteruskan router Anda ke Mac tersebut. Ketik alamat dan port (port 47100 kecuali telah diubah), serta nama akun
+dan kata sandi jika perpustakaan memiliki akun.</p>
+
+<h2>Memercayai sertifikat perpustakaan</h2>
+<p>Koneksi pertama menampilkan sidik jari sertifikat perpustakaan. Bandingkan dengan yang ada di
+<span class="ui">Pengaturan › Berbagi</span> di Mac yang memiliki perpustakaan, lalu pilih <span class="ui">Percayai dan Hubungkan</span>. Sejak
+saat itu, perangkat memeriksa sertifikat tersebut setiap kali, dan menolak perpustakaan yang sertifikatnya
+telah berubah.</p>
+
+<h2>Masuk</h2>
+<p>Jika perpustakaan memiliki akun, masukkan nama dan kata sandi akun Anda dari Mac tersebut. Perangkat
+menyimpannya di Rantai Kuncinya. Jika tidak ada akun, kosongkan nama dan gunakan kata sandi perpustakaan,
+jika ada.</p>
+<div class="see"><h3>Lihat juga</h3><ul><li><a href="away.html">Menonton di luar rumah</a></li><li><a href="sidebar-libraries.html">Berpindah antarperpustakaan</a></li><li><a href="settings-accounts.html">Pengaturan Akun</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

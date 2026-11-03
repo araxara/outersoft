@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="th">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AppleScript</title>
+<meta name="description" content="ใช้สคริปต์กับ TV Library Viewer เพื่อเพิ่มตอน ตั้งค่าคำอธิบาย และจัดการบัญชี" />
+<meta name="keywords" content="AppleScript, สคริปต์, การทำงานอัตโนมัติ, osascript, add episode, คำอธิบายแบบยาว, บัญชี, TV Library Viewer" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="applescript"></a>
+<nav class="crumbs"><a href="index.html">วิธีใช้ TV Library Viewer</a> › ข้อมูลอ้างอิง</nav>
+<h1>AppleScript</h1>
+<p class="lead">TV Library Viewer สามารถควบคุมด้วยสคริปต์ได้ เช่น จากสคริปต์ที่นำเข้าตอนต่างๆ
+เปิดพจนานุกรมของแอปในตัวแก้ไขสคริปต์ (<span class="ui">ไฟล์ › เปิดพจนานุกรม…</span>) เพื่อดูรายละเอียด</p>
+<table>
+<tr><th>คำสั่ง</th><th>สิ่งที่ทำ</th></tr>
+<tr><td><span class="ui">add episode</span></td><td>เพิ่มไฟล์วิดีโอลงในคลังของแอป TV (หรือค้นหาไฟล์นั้นในคลัง) พร้อม
+รายการ ซีซั่น ตอน ชื่อเรื่อง ประเภท และคำอธิบาย แล้วส่งคืน ID ถาวรของไฟล์</td></tr>
+<tr><td><span class="ui">update episode</span></td><td>เปลี่ยนรายละเอียดของตอน</td></tr>
+<tr><td><span class="ui">remove episode</span></td><td>เอาตอนออกจากคลัง ไฟล์ยังคงอยู่</td></tr>
+<tr><td><span class="ui">refresh library</span></td><td>อ่านคลังอีกครั้ง</td></tr>
+<tr><td><span class="ui">create account</span>, <span class="ui">change account password</span>, <span class="ui">delete account</span>,
+<span class="ui">account names</span>, <span class="ui">account log</span></td><td>จัดการบัญชี</td></tr>
+</table>
+<p>คำอธิบายแบบยาวที่ใส่ด้วยวิธีนี้จะเก็บไว้ในฐานข้อมูลของ TV Library Viewer และจะใส่กลับเข้าไปเมื่อ
+แอป TV ลืมคำอธิบายนั้น</p>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

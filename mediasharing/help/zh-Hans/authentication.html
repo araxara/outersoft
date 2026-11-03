@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SSH 密钥与密码</title>
+<meta name="description" content="Media Sharing GUI 在可能时用你的 SSH 密钥登录，否则回退到它保存在钥匙串中的密码。" />
+<meta name="keywords" content="身份验证, SSH, 密钥, 密码, 钥匙串, 忘记, 登录" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="authentication"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI 帮助</a> › 使用</nav>
+<h1>SSH 密钥与密码</h1>
+<p class="lead">基于密钥的登录最佳；保存的密码是后备。</p>
+
+<h2>使用 SSH 密钥</h2>
+<p>如果远程 Mac 已信任这台 Mac 的 SSH 密钥，Media Sharing GUI 会默默登录——无需输入任何内容。
+一次性设置好密钥（<code>ssh-copy-id user@host</code>）是使用这款 App 最顺畅的方式。请参阅<a href="remote-setup.html">在家里的 Mac 上</a>。</p>
+
+<h2>使用密码</h2>
+<p>如果密钥登录失败，状态会变为 <span class="ui">需要密码</span>：</p>
+<ol>
+<li>在 <span class="ui">SSH 身份验证</span> 框中输入账户密码，并按 <span class="ui">提交</span>。</li>
+<li>一旦成功，密码便会保存到这台 Mac 的<b>钥匙串</b>，这样就不会再问你。</li>
+</ol>
+<p>你也可以提前在 <span class="ui">配置</span> 中输入密码；它仅在密钥登录失败时才会使用，并且也会在首次成功时移入钥匙串。</p>
+
+<h2>忘记已保存的密码</h2>
+<p>点按 <span class="ui">忘记已保存的密码</span> 以移除当前登录的钥匙串条目——例如在你更改了远程 Mac 上的密码之后。
+下一次连接会再次询问它。</p>
+<div class="see"><h3>另请参阅</h3><ul><li><a href="remote-setup.html">在家里的 Mac 上</a></li><li><a href="connect.html">设置并启动连接</a></li><li><a href="privacy.html">Media Sharing GUI 读取、更改和保存的内容</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

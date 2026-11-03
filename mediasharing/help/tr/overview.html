@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Media Sharing GUI nasıl çalışır</title>
+<meta name="description" content="Başka bir yerdeki bir Mac'te bulunan bir Ev Paylaşımı kitaplığının bu Mac'in ağında görünmesini sağlar; SSH tüneli üzerinden yayımlanır." />
+<meta name="keywords" content="genel bakış, ev paylaşımı, media sharing, SSH, tünel, Bonjour, Apple TV, Müzik, uzak" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="overview"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI Yardımı</a> › Başlarken</nav>
+<h1>Media Sharing GUI nasıl çalışır</h1>
+<p class="lead">Başka bir yerdeki bir Mac'teki kitaplığın sanki tam burada, ağınızdaymış gibi görünmesini sağlar.</p>
+
+<p>Ev Paylaşımı (Media Sharing), <span class="ui">Apple TV</span> uygulamasının, <span class="ui">Müzik</span>'in ve <span class="ui">iTunes</span>'un başka bir
+bilgisayardan yayımlamasına izin verir — ama yalnızca <b>aynı yerel ağdaki</b> bir bilgisayardan. Media Sharing GUI
+bu sınırı kaldırır. Onu evdeki bir Mac'e (ya da SSH ile ulaşabileceğiniz herhangi birine) yöneltin; paylaştığı
+kitaplık, o Mac yan odadaymış gibi, burada <span class="ui">Apple TV</span> veya <span class="ui">Müzik</span> kaynak listesinde görünür.</p>
+
+<h2>Ne yapar, adım adım</h2>
+<ol>
+<li>Bu Mac'ten uzaktaki Mac'e bir <b>SSH tüneli</b> açar.</li>
+<li>O tünel üzerinden uzaktaki Mac'e, kendi yerel ağında hangi Ev Paylaşımı hizmetini yayınladığını sorar.</li>
+<li><b>Aynı hizmeti burada yeniden yayımlar</b>, Bonjour üzerinden, tünele geri yönlendirerek —
+böylece bu Mac'teki uygulamalar kitaplığı LAN'da yakındaymış gibi görür.</li>
+</ol>
+<p>Çalışırken, o kitaplıktan yapılan yayım SSH tüneli içinde şifreli olarak akar. <span class="ui">Başlat</span> ve
+<span class="ui">Durdur</span> ile Durum kutusunda açıp kapatın.</p>
+
+<h2>Gerekenler</h2>
+<ul>
+<li><b>Evdeki Mac'te:</b> <span class="ui">Apple TV</span> veya <span class="ui">Müzik</span> uygulamasında Ev Paylaşımı (ya da Media Sharing)
+açık ve uzaktan oturum açma (SSH) etkin. <a href="remote-setup.html">Evdeki Mac'te</a> konusuna bakın.</li>
+<li><b>Ona ulaşmanın bir yolu:</b> adresi ya da dinamik DNS adı ve yönlendiricinizin ona ilettiği SSH bağlantı
+noktası.</li>
+<li><b>Bu Mac'te:</b> özel bir şey yok — Media Sharing GUI yerleşik <code>ssh</code> ve Bonjour araçlarını
+sizin için çalıştırır.</li>
+</ul>
+
+<h2>Başlarken</h2>
+<ol>
+<li><a href="remote-setup.html">Evdeki Mac</a>'i bir kez kurun.</li>
+<li><a href="connect.html">Bir bağlantı doldurup Başlat'a basın</a>.</li>
+<li>Burada <a href="libraries.html">hangi kitaplıkların</a> yayımlanacağını seçin.</li>
+</ol>
+<div class="see"><h3>Ayrıca bakın</h3><ul><li><a href="remote-setup.html">Evdeki Mac'te</a></li><li><a href="connect.html">Bir bağlantı kurma ve başlatma</a></li><li><a href="privacy.html">Media Sharing GUI neyi okur, değiştirir ve saklar</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

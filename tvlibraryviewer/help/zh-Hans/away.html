@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>在外观看</title>
+<meta name="description" content="从其他网络访问资料库的三种方式：SSH、VPN 或端口转发。" />
+<meta name="keywords" content="远程, 在外, 旅行, SSH, VPN, Tailscale, 端口转发, 路由器, 47100, 离线" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="away"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer 帮助</a> › 入门</nav>
+<h1>在外观看</h1>
+<p class="lead">你的资料库始终留在家里的 Mac 上。选择一种从其他地方访问它的方式。</p>
+
+<h2>通过 SSH</h2>
+<p>如果你已经可以通过 SSH 登录那台 Mac 或其网络上的某台电脑，这是最好的方式。无需其他设置。在“连接到共享资料库”中使用<span class="ui">远程（SSH）</span>。所有数据都通过 SSH 连接传输。</p>
+
+<h2>通过 VPN</h2>
+<p>如果两台设备上都使用 Tailscale 等 VPN，请在<span class="ui">地址</span>中使用 Mac 的 VPN 地址和端口 47100。</p>
+
+<h2>通过端口转发</h2>
+<ol>
+<li>在路由器上，将端口 47100（或<span class="ui">设置 › 共享</span>中的端口）转发到存有资料库的 Mac。</li>
+<li>在<span class="ui">设置 › 账户</span>中添加使用强密码的账户。</li>
+<li>在另一台设备上，在<span class="ui">地址</span>中使用你家的公网地址和端口。</li>
+</ol>
+<div class="note"><b>注：</b>无论从哪里连接，连接始终经过加密，设备也会检查资料库的证书。同一地址在 5 分钟内输错 10 次密码后，之后的尝试将不经检查直接被拒绝。</div>
+
+<h2>完全没有网络时</h2>
+<p>出门前先下载剧集（Mac、iPad 和 iPhone）。无法访问资料库时，App 会按上次看到的样子打开资料库，显示<span class="ui">离线</span>，并播放你下载的剧集。你的观看记录会在可以连接到 Mac 后发送给它。</p>
+<div class="see"><h3>另请参阅</h3><ul><li><a href="connect.html">连接到共享资料库</a></li><li><a href="downloads.html">下载与离线观看</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

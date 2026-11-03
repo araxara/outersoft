@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>على الـ⁨Mac⁩ في المنزل</title>
+<meta name="description" content="فعّل المشاركة المنزلية وتسجيل الدخول البعيد على الـ⁨Mac⁩ البعيد، واجعله قابلاً للوصول من الخارج." />
+<meta name="keywords" content="المشاركة المنزلية, ⁨Media Sharing⁩, تسجيل الدخول البعيد, ⁨SSH⁩, تحويل المنافذ, ⁨DNS⁩ الديناميكي, الموجّه" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="remote-setup"></a>
+<nav class="crumbs"><a href="index.html">مساعدة ⁨⁨Media Sharing⁩ GUI⁩</a> › البدء</nav>
+<h1>على الـ⁨Mac⁩ في المنزل</h1>
+<p class="lead">افعل هذا مرة واحدة على الـ⁨Mac⁩ الذي تريد الوصول إلى مكتبته.</p>
+
+<h2>فعّل مشاركة المكتبة</h2>
+<ul>
+<li>في تطبيق <span class="ui">⁨Apple TV⁩</span> أو <span class="ui">الموسيقى</span>، فعّل <b>المشاركة المنزلية</b> (الأنظمة الأقدم تسمّيها
+<b>⁨Media Sharing⁩</b>)، وأنت مسجَّل الدخول بحساب Apple الخاص بك.</li>
+<li>اترك ذلك الـ⁨Mac⁩ مستيقظاً، أو اضبطه للسماح بالوصول إلى الشبكة أثناء السكون، ليتمكّن من الردّ عندما
+تتصل.</li>
+</ul>
+
+<h2>فعّل تسجيل الدخول البعيد (⁨SSH⁩)</h2>
+<ol>
+<li>على الـ⁨Mac⁩ البعيد، افتح <span class="ui">إعدادات النظام</span> › <span class="ui">عام</span> › <span class="ui">المشاركة</span>.</li>
+<li>فعّل <span class="ui">تسجيل الدخول البعيد</span>. دوّن حساب المستخدم المسموح له بتسجيل الدخول.</li>
+</ol>
+<div class="note"><b>تلميح:</b> أعدّ مفتاح ⁨SSH⁩ كي لا تحتاج إلى كلمة مرور في كل مرة. انسخ المفتاح العام
+لهذا الـ⁨Mac⁩ إلى الجهاز البعيد (<code>ssh-copy-id user@host</code>). لا يزال ⁨⁨Media Sharing⁩ GUI⁩
+يقبل كلمة مرور كبديل احتياطي — انظر <a href="authentication.html">مفاتيح وكلمات مرور ⁨SSH⁩</a>.</div>
+
+<h2>اجعله قابلاً للوصول من الخارج</h2>
+<ul>
+<li><b>تحويل المنافذ:</b> على الموجّه المنزلي، حوّل منفذاً خارجياً إلى منفذ ⁨SSH⁩ للـ⁨Mac⁩ البعيد
+(22). يحوّل كثيرون منفذاً خارجياً غير معتاد، مثل 22022، لتجنّب الضوضاء — ذلك المنفذ الخارجي
+هو ما تضعه في <a href="settings.html">منفذ ⁨SSH⁩ البعيد</a>.</li>
+<li><b>اسم يتابع ⁨IP⁩ المنزل:</b> تتغيّر عناوين الإنترنت المنزلية، لذا فإنّ اسم ⁨DNS⁩ ديناميكياً
+(مثل <code>myhome.example.com</code>) يتابعها يوفّر عليك مطاردة الأرقام.</li>
+</ul>
+<p>بمجرد أن يعمل تسجيل الدخول البعيد من الخارج — جرّبه بـ<code>ssh user@host -p PORT</code>
+في الطرفية — يستطيع ⁨⁨Media Sharing⁩ GUI⁩ استخدامه.</p>
+<div class="see"><h3>انظر أيضاً</h3><ul><li><a href="connect.html">إعداد اتصال وبدؤه</a></li><li><a href="authentication.html">مفاتيح وكلمات مرور ⁨SSH⁩</a></li><li><a href="settings.html">مرجع الإعداد</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

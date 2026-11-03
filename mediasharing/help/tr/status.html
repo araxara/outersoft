@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Durum ve hâl</title>
+<meta name="description" content="Durum kutusu bağlantının ne yaptığını, tünel sürecini ve ne kadar süredir çalıştığını gösterir." />
+<meta name="keywords" content="durum, hâl, çalışıyor, bağlanıyor, çalışma süresi, tünel, PID" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="status"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI Yardımı</a> › Kullanım</nav>
+<h1>Durum ve hâl</h1>
+<p class="lead">Durum kutusu, başlatıp durdurduğunuz ve neler olduğunu izlediğiniz yerdir.</p>
+
+<h2>Hâl ne anlama gelir</h2>
+<table>
+<tr><th>Hâl</th><th>Olan şey</th></tr>
+<tr><td>BOŞTA</td><td>Bağlı değil. Başlamak için <span class="ui">Başlat</span>'a basın.</td></tr>
+<tr><td>BAĞLANIYOR</td><td>Uzaktaki Mac'e SSH tüneli açılıyor.</td></tr>
+<tr><td>PAROLA GEREKLİ</td><td>Anahtar oturumu çalışmadı; parolayı <span class="ui">SSH Kimlik Doğrulama</span>'ya girin.</td></tr>
+<tr><td>SORGULANIYOR</td><td>Uzaktaki Mac'e hangi Ev Paylaşımı kitaplığını duyurduğu soruluyor.</td></tr>
+<tr><td>KAYDEDİLİYOR</td><td>O kitaplık burada Bonjour üzerinden yayımlanıyor.</td></tr>
+<tr><td>ÇALIŞIYOR</td><td>Yayında. Kitaplık Apple TV / Müzik uygulamasında kullanılabilir.</td></tr>
+<tr><td>YENİDEN BAĞLANIYOR</td><td>Bağlantı düştü; kendi kendine yeniden deniyor.</td></tr>
+<tr><td>DURDURULUYOR</td><td>Tünel kapatılıyor ve yerel duyuru kaldırılıyor.</td></tr>
+<tr><td>HATA</td><td>Bir şey ters gitti; günlük nedenini söyler. <a href="troubleshooting.html">Bağlanmazsa</a>'ya bakın.</td></tr>
+</table>
+
+<h2>Diğer satırlar</h2>
+<ul>
+<li><span class="ui">Tünel PID</span> — arka plandaki <code>ssh</code> tünelinin süreç kimliği; <a href="traffic-log.html">trafiği</a>
+örneklemek ve onu temiz biçimde kapatmak için kullanılır.</li>
+<li><span class="ui">Çalışma süresi</span> — geçerli bağlantının kurulalı ne kadar olduğu.</li>
+</ul>
+<p>Alttaki düğmeler hâle göre değişir: boştayken <span class="ui">Başlat</span>, bağlıyken <span class="ui">Durdur</span> ve
+hâlâ bağlanırken <span class="ui">İptal</span>.</p>
+<div class="see"><h3>Ayrıca bakın</h3><ul><li><a href="libraries.html">Hangi kitaplıkların yayımlanacağını seçme</a></li><li><a href="reconnecting.html">Yeniden bağlanma ve uyku</a></li><li><a href="traffic-log.html">Trafik ve günlük</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

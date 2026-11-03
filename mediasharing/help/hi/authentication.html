@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SSH कुंजियाँ और पासवर्ड</title>
+<meta name="description" content="Media Sharing GUI जब कर सके तब आपकी SSH कुंजी से साइन इन करता है, और किचेन में सेव किए पासवर्ड पर फ़ॉलबैक करता है।" />
+<meta name="keywords" content="प्रमाणीकरण, SSH, कुंजी, पासवर्ड, किचेन, भूलें, लॉगिन" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="authentication"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI मदद</a> › उपयोग</nav>
+<h1>SSH कुंजियाँ और पासवर्ड</h1>
+<p class="lead">कुंजी-आधारित लॉगिन सबसे अच्छा है; सेव किया पासवर्ड फ़ॉलबैक है।</p>
+
+<h2>SSH कुंजी के साथ</h2>
+<p>अगर रिमोट Mac इस Mac की SSH कुंजी पर पहले से भरोसा करता है, तो Media Sharing GUI चुपचाप साइन इन कर लेता है —
+कुछ टाइप नहीं करना। कुंजी एक बार सेट कर लेना (<code>ssh-copy-id user@host</code>) ऐप का उपयोग करने का सबसे सहज तरीका है।
+<a href="remote-setup.html">घर वाले Mac पर</a> देखें।</p>
+
+<h2>पासवर्ड के साथ</h2>
+<p>अगर कुंजी लॉगिन विफल होता है, तो हालत <span class="ui">पासवर्ड आवश्यक</span> में बदल जाती है:</p>
+<ol>
+<li>खाते का पासवर्ड <span class="ui">SSH प्रमाणीकरण</span> बॉक्स में टाइप करें और <span class="ui">सबमिट करें</span> दबाएँ।</li>
+<li>एक बार काम करने पर, पासवर्ड इस Mac की <b>किचेन</b> में सेव हो जाता है, ताकि दोबारा न पूछा जाए।</li>
+</ol>
+<p>आप पहले से <span class="ui">कॉन्फ़िगरेशन</span> में भी पासवर्ड टाइप कर सकते हैं; यह सिर्फ़ तब उपयोग होता है जब कुंजी
+लॉगिन विफल हो, और यह भी पहली सफलता पर किचेन में चला जाता है।</p>
+
+<h2>सेव किया पासवर्ड भूलना</h2>
+<p>मौजूदा लॉगिन की किचेन प्रविष्टि हटाने के लिए <span class="ui">सेव किया गया पासवर्ड भूलें</span> पर क्लिक करें — उदाहरण के लिए
+रिमोट Mac पर पासवर्ड बदलने के बाद। अगला कनेक्शन इसे फिर पूछेगा।</p>
+<div class="see"><h3>यह भी देखें</h3><ul><li><a href="remote-setup.html">घर वाले Mac पर</a></li><li><a href="connect.html">कनेक्शन सेट करना और शुरू करना</a></li><li><a href="privacy.html">Media Sharing GUI क्या पढ़ता, बदलता और रखता है</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

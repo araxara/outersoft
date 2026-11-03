@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hu">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Csatlakozás megosztott könyvtárhoz</title>
+<meta name="description" content="Csatlakoztasson egy másik Macet, iPadet, iPhone-t vagy Apple TV-t ahhoz a Machez, amely megosztja a könyvtárát." />
+<meta name="keywords" content="csatlakozás, Bonjour, hálózat, SSH, cím, tanúsítvány, ujjlenyomat, megbízás, bejelentkezés, jelszó, TV Library Viewer" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer súgó</a> › Első lépések</nav>
+<h1>Csatlakozás megosztott könyvtárhoz</h1>
+<p class="lead">Minden eszköz egyszer csatlakozik. Utána magától újra megnyitja ugyanazt a könyvtárat.</p>
+
+<h2>A Csatlakozás megosztott könyvtárhoz megnyitása</h2>
+<ul>
+<li><b>Mac:</b> válassza a <span class="ui">Fájl › Csatlakozás megosztott könyvtárhoz…</span> menüpontot (<kbd>⌘K</kbd>).</li>
+<li><b>iPad és iPhone:</b> koppintson az oldalsávon a <span class="ui">Csatlakozás megosztott könyvtárhoz…</span> elemre (billentyűzettel <kbd>⌘K</kbd>).</li>
+<li><b>Apple TV:</b> első alkalommal a TV Library a hálózat első olyan Macjéhez csatlakozik, amely jelszó nélkül
+oszt meg. Egyébként válassza a <span class="ui">Könyvtárak › Csatlakozás másik könyvtárhoz…</span> lehetőséget.</li>
+</ul>
+
+<h2>Hogyan érje el a Macet?</h2>
+<h3>Ez a hálózat</h3>
+<p>Az ugyanazon a hálózaton lévő, megosztást használó Macek név szerint jelennek meg. Válasszon egyet.</p>
+<h3>Távoli (SSH)</h3>
+<p>Másik hálózaton, például egy másik otthonban lévő Machez. Írja be azt a címet, amellyel SSH-val arra a
+Macre (vagy annak hálózatán bármely gépre) bejelentkezik, és a felhasználónevet, ha az eltér. A TV Library Viewer bejelentkezik,
+megkeresi a könyvtárat azon a hálózaton, és az SSH-kapcsolaton keresztül csatlakozik.</p>
+<ul>
+<li>Első alkalommal megmutatja a gazdagép kulcsát, hogy összevethesse és megerősíthesse.</li>
+<li>Macen a saját SSH-kulcsát használja, ha a gazdagép elfogadja; különben jelszót kér,
+és azt a Kulcskarikában tárolja.</li>
+<li>Az iPadnek, iPhone-nak és Apple TV-nek saját kulcsa van. Az első jelszavas bejelentkezés után felajánlja, hogy
+telepíti ezt a kulcsot a gazdagépen, így többé nem kell jelszó.</li>
+</ul>
+<h3>Cím</h3>
+<p>Olyan Machez, amelyet ez az eszköz közvetlenül elér: VPN-en, például a Tailscale-en, vagy egy porton keresztül, amelyet a router
+továbbít hozzá. Írja be a címet és a portot (47100, ha nem módosították), valamint egy fióknevet
+és jelszót, ha a könyvtárban vannak fiókok.</p>
+
+<h2>A könyvtár tanúsítványának elfogadása</h2>
+<p>Az első csatlakozáskor megjelenik a könyvtár tanúsítványának ujjlenyomata. Vesse össze a könyvtárat tároló Macen a
+<span class="ui">Beállítások › Megosztás</span> alatt láthatóval, majd válassza a <span class="ui">Megbízás és csatlakozás</span> lehetőséget. Ettől
+kezdve az eszköz minden alkalommal ellenőrzi ezt a tanúsítványt, és elutasítja azt a könyvtárat, amelynek a tanúsítványa
+megváltozott.</p>
+
+<h2>Bejelentkezés</h2>
+<p>Ha a könyvtárban vannak fiókok, adja meg az azon a Macen lévő fiókja nevét és jelszavát. Az eszköz
+a Kulcskarikájában tárolja őket. Ha nincsenek fiókok, hagyja üresen a nevet, és használja a könyvtárjelszót,
+ha van.</p>
+<div class="see"><h3>Lásd még</h3><ul><li><a href="away.html">Nézés otthonon kívül</a></li><li><a href="sidebar-libraries.html">Váltás a könyvtárak között</a></li><li><a href="settings-accounts.html">Fiókok beállításai</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

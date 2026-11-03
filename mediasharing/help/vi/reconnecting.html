@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kết nối lại và ngủ</title>
+<meta name="description" content="Cách Media Sharing GUI giữ kết nối: keep-alive, tự động kết nối lại, và sống qua giấc ngủ." />
+<meta name="keywords" content="kết nối lại, ngủ, thức, keep-alive, kiểm tra sức khỏe, rớt, tự động" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="reconnecting"></a>
+<nav class="crumbs"><a href="index.html">Trợ giúp Media Sharing GUI</a> › Tham khảo</nav>
+<h1>Kết nối lại và ngủ</h1>
+<p class="lead">Kết nối gia đình không phải lúc nào cũng ổn định. App chịu các cú xóc thay bạn.</p>
+
+<h2>Giữ cho sống</h2>
+<p>Khi đang kết nối, <code>ssh</code> ping đầu ở xa mỗi <span class="ui">Server Alive Interval</span> giây
+(xem <a href="settings.html">Tham khảo cấu hình</a>). Điều đó giữ router và tường lửa khỏi
+bỏ rơi một đường hầm nhàn rỗi và cho app nhanh nhận ra khi một kết nối thật sự đã chết.</p>
+
+<h2>Tự động kết nối lại</h2>
+<p>Nếu kết nối rớt, trạng thái chuyển thành <span class="ui">ĐANG KẾT NỐI LẠI</span> và Media Sharing GUI tự
+thử lại, chờ lâu hơn một chút giữa các lần, ghi lại từng lần. Nhấn <span class="ui">Dừng</span> để
+hủy các lần thử.</p>
+
+<h2>Sau khi máy Mac ngủ</h2>
+<p>Khi máy Mac này thức khỏi giấc ngủ, app kiểm tra xem đường hầm có sống sót không. Nếu có, nó tiếp tục;
+nếu không, nó đặt lại hoàn toàn — giống như Dừng rồi Bắt đầu — và tự đưa thư viện
+trở lại.</p>
+<div class="see"><h3>Xem thêm</h3><ul><li><a href="status.html">Trạng thái và tình trạng</a></li><li><a href="troubleshooting.html">Nếu không kết nối được</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

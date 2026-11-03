@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Configurar e iniciar una conexión</title>
+<meta name="description" content="Rellena el cuadro Configuración, pulsa Iniciar, inicia sesión si se te pide, y la biblioteca remota aparece localmente." />
+<meta name="keywords" content="conectar, configuración, iniciar, inicio de sesión remoto, puerto local, empezar" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">Ayuda de Media Sharing GUI</a> › Primeros pasos</nav>
+<h1>Configurar e iniciar una conexión</h1>
+<p class="lead">Indica dónde está la biblioteca y luego pulsa Iniciar.</p>
+
+<h2>Rellenar la conexión</h2>
+<p>Haz clic en el cuadro <span class="ui">Configuración (clic para editar)</span> y pon al menos:</p>
+<ul>
+<li><span class="ui">Nombre de la conexión</span>: una etiqueta para tu propia referencia, mostrada en la barra lateral.</li>
+<li><span class="ui">Inicio de sesión remoto (usuario@host)</span>: el mismo <code>user@host</code> que darías a
+<code>ssh</code>, por ejemplo <code>alex@myhome.example.com</code>.</li>
+<li><span class="ui">Puerto SSH remoto</span>: el puerto que tu router redirige al SSH del Mac remoto (a menudo no es 22).</li>
+</ul>
+<p>Los demás campos tienen valores por omisión sensatos; haz clic en la <span class="ui">(i)</span> junto a cualquiera de ellos, o consulta la
+<a href="settings.html">Referencia de la configuración</a>, para saber qué hace cada uno.</p>
+
+<h2>Pulsar Iniciar</h2>
+<ol>
+<li>Haz clic en <span class="ui">Iniciar</span> en la parte inferior de la ventana.</li>
+<li>Si el inicio de sesión por clave no funciona, la situación cambia a <span class="ui">REQUIERE CONTRASEÑA</span>: escribe la
+contraseña de la cuenta en <span class="ui">Autenticación SSH</span> y pulsa <span class="ui">Enviar</span>. Se guarda en tu
+llavero para que no se te vuelva a pedir.</li>
+<li>La app abre el túnel, pregunta al Mac remoto qué comparte y lo publica aquí. Cuando la
+situación indica <span class="ui">ACTIVO</span>, la biblioteca está en línea.</li>
+</ol>
+
+<h2>Verla en la app Apple TV o Música</h2>
+<p>Abre la app <span class="ui">Apple TV</span> o <span class="ui">Música</span> en este Mac. La biblioteca remota aparece en la
+lista de fuentes, igual que lo haría un ordenador de tu propia red. Si se encontraron varias bibliotecas, elige
+cuáles mostrar en <a href="libraries.html">el cuadro Bibliotecas</a>.</p>
+<p>Haz clic en <span class="ui">Detener</span> para cerrar el túnel y dejar de publicar. Media Sharing GUI recuerda la
+conexión para la próxima vez.</p>
+<div class="see"><h3>Consulta también</h3><ul><li><a href="libraries.html">Elegir qué bibliotecas publicar</a></li><li><a href="status.html">Estado y situación</a></li><li><a href="authentication.html">Claves y contraseñas SSH</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

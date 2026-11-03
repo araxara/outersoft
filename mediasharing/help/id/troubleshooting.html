@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jika tidak tersambung</title>
+<meta name="description" content="Galat umum yang dilaporkan Media Sharing GUI dan apa yang harus dilakukan." />
+<meta name="keywords" content="pemecahan masalah, galat, tidak tersambung, tidak ada pustaka, autentikasi, sedang tidur, bantuan" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="troubleshooting"></a>
+<nav class="crumbs"><a href="index.html">Bantuan Media Sharing GUI</a> › Referensi</nav>
+<h1>Jika tidak tersambung</h1>
+<p class="lead">Baca kotak <span class="ui">Log</span> — baris yang diawali <span class="ui">ERROR:</span> biasanya menyebutkan apa yang
+salah. Berikut kasus yang umum.</p>
+
+<h2>Tidak bisa masuk</h2>
+<ul>
+<li><b>Autentikasi terus gagal.</b> Periksa <span class="ui">Login jarak jauh</span> dan <span class="ui">Port SSH jarak jauh</span>, dan
+bahwa login jarak jauh menyala di ujung sana. Coba hal yang sama dari Terminal:
+<code>ssh user@host -p PORT</code>. Jika Anda mengubah kata sandi jarak jauh, klik
+<span class="ui">Lupakan Kata Sandi Tersimpan</span> dan masukkan yang baru.</li>
+<li><b>Terowongan mati tepat setelah tersambung.</b> Mac jarak jauh mungkin sedang tidur — bangun hanya
+sebentar untuk tiap koneksi — atau menolak koneksi. Atur agar tetap terjaga, atau mengizinkan akses
+jaringan saat tidur.</li>
+</ul>
+
+<h2>Tersambung, tetapi tidak menemukan pustaka</h2>
+<ul>
+<li><b>«Tidak ada catatan _home-sharing yang ditemukan.»</b> Berbagi Rumah (atau Media Sharing) tidak menyala,
+atau tidak ada pustaka Apple TV / Musik / iTunes yang daring di jaringan itu. Nyalakan Berbagi Rumah, dengan
+Akun Apple Anda masuk, dan pastikan sebuah pustaka di sana terjaga. Lihat
+<a href="remote-setup.html">Di Mac di rumah</a>.</li>
+<li><b>Pustaka ditemukan tetapi tidak ada yang bisa diterbitkan.</b> Log mencantumkan alasan per pustaka;
+biasanya sebuah port lokal tidak tersedia. Coba lagi, atau ubah <span class="ui">Port lokal yang diteruskan</span>.</li>
+</ul>
+
+<h2>Saat segalanya gagal</h2>
+<p>Menghentikan lalu memulai koneksi (atau <span class="ui">Mulai Ulang</span> dari menu bilah sisinya) mengatasi sebagian besar
+gangguan sementara. <a href="traffic-log.html">Berkas log</a> menangkap detailnya jika Anda ingin
+melihat lebih dekat.</p>
+<div class="see"><h3>Lihat juga</h3><ul><li><a href="authentication.html">Kunci dan kata sandi SSH</a></li><li><a href="remote-setup.html">Di Mac di rumah</a></li><li><a href="reconnecting.html">Menyambung ulang dan tidur</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

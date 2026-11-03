@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>अगर कनेक्ट न हो</title>
+<meta name="description" content="Media Sharing GUI जो सामान्य त्रुटियाँ बताता है और उनके बारे में क्या करें।" />
+<meta name="keywords" content="समस्या निवारण, त्रुटि, कनेक्ट नहीं, कोई लाइब्रेरी नहीं, प्रमाणीकरण, स्लीप में, मदद" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="troubleshooting"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI मदद</a> › संदर्भ</nav>
+<h1>अगर कनेक्ट न हो</h1>
+<p class="lead"><span class="ui">लॉग</span> बॉक्स पढ़ें — <span class="ui">ERROR:</span> से शुरू होने वाली पंक्ति आमतौर पर बताती है कि क्या गड़बड़
+है। यहाँ सामान्य मामले हैं।</p>
+
+<h2>यह लॉग इन नहीं कर पाता</h2>
+<ul>
+<li><b>प्रमाणीकरण बार-बार विफल होता है।</b> <span class="ui">रिमोट लॉगिन</span> और <span class="ui">रिमोट SSH पोर्ट</span> जाँचें, और यह
+कि दूसरे छोर पर रिमोट लॉगिन चालू है। टर्मिनल से वही आज़माएँ:
+<code>ssh user@host -p PORT</code>। अगर आपने रिमोट पासवर्ड बदला, तो
+<span class="ui">सेव किया गया पासवर्ड भूलें</span> पर क्लिक करें और नया डालें।</li>
+<li><b>कनेक्ट होते ही टनल मर जाती है।</b> हो सकता है रिमोट Mac स्लीप में हो — हर कनेक्शन के लिए सिर्फ़
+थोड़ी देर जागता हो — या कनेक्शन गिरा रहा हो। उसे जागता रखने, या स्लीप में नेटवर्क पहुँच की अनुमति देने के लिए सेट करें।</li>
+</ul>
+
+<h2>यह कनेक्ट होता है, पर कोई लाइब्रेरी नहीं मिलती</h2>
+<ul>
+<li><b>“कोई _home-sharing रिकॉर्ड नहीं मिला।”</b> होम शेयरिंग (या मीडिया शेयरिंग) चालू नहीं है,
+या उस नेटवर्क पर कोई Apple TV / म्यूज़िक / iTunes लाइब्रेरी ऑनलाइन नहीं है। अपने Apple खाते से साइन इन करके
+होम शेयरिंग चालू करें, और सुनिश्चित करें कि वहाँ कोई लाइब्रेरी जागी हुई है।
+<a href="remote-setup.html">घर वाले Mac पर</a> देखें।</li>
+<li><b>लाइब्रेरी मिलीं पर कोई प्रकाशित नहीं हो सकी।</b> लॉग हर लाइब्रेरी के लिए एक कारण सूचीबद्ध करता है;
+आम तौर पर कोई लोकल पोर्ट उपलब्ध नहीं था। फिर कोशिश करें, या <span class="ui">लोकल फ़ॉरवर्डेड पोर्ट</span> बदलें।</li>
+</ul>
+
+<h2>जब कुछ भी काम न करे</h2>
+<p>कनेक्शन रोकना और शुरू करना (या उसके साइडबार मेनू से <span class="ui">पुनः आरंभ करें</span>) अधिकांश अस्थायी गड़बड़ियाँ
+ठीक कर देता है। अगर आप और करीब से देखना चाहें तो <a href="traffic-log.html">लॉग फ़ाइल</a> विवरण संजोती है।</p>
+<div class="see"><h3>यह भी देखें</h3><ul><li><a href="authentication.html">SSH कुंजियाँ और पासवर्ड</a></li><li><a href="remote-setup.html">घर वाले Mac पर</a></li><li><a href="reconnecting.html">फिर से कनेक्ट होना और स्लीप</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

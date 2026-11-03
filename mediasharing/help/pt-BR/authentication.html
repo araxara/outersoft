@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Chaves e senhas SSH</title>
+<meta name="description" content="O Media Sharing GUI entra com sua chave SSH quando pode, e recorre a uma senha que guarda no chaveiro." />
+<meta name="keywords" content="autenticação, SSH, chave, senha, chaveiro, esquecer, login" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="authentication"></a>
+<nav class="crumbs"><a href="index.html">Ajuda do Media Sharing GUI</a> › Uso</nav>
+<h1>Chaves e senhas SSH</h1>
+<p class="lead">O login por chave é o melhor; uma senha salva é a reserva.</p>
+
+<h2>Com uma chave SSH</h2>
+<p>Se o Mac remoto já confia na chave SSH deste Mac, o Media Sharing GUI entra em silêncio —
+nada a digitar. Configurar uma chave uma vez (<code>ssh-copy-id user@host</code>) é a forma mais tranquila
+de usar o app. Consulte <a href="remote-setup.html">No Mac de casa</a>.</p>
+
+<h2>Com uma senha</h2>
+<p>Se o login por chave falhar, a situação muda para <span class="ui">SENHA NECESSÁRIA</span>:</p>
+<ol>
+<li>Digite a senha da conta na área <span class="ui">Autenticação SSH</span> e aperte <span class="ui">Enviar</span>.</li>
+<li>Assim que funciona, a senha é salva no <b>chaveiro</b> deste Mac, para não ser pedida de novo.</li>
+</ol>
+<p>Você também pode digitar uma senha na <span class="ui">Configuração</span> com antecedência; ela só é usada se o login
+por chave falhar, e também vai para o chaveiro no primeiro sucesso.</p>
+
+<h2>Esquecer uma senha salva</h2>
+<p>Clique em <span class="ui">Esquecer senha salva</span> para remover a entrada do chaveiro do login atual — por
+exemplo, depois de mudar a senha no Mac remoto. A próxima conexão vai pedi-la de novo.</p>
+<div class="see"><h3>Consulte também</h3><ul><li><a href="remote-setup.html">No Mac de casa</a></li><li><a href="connect.html">Configurar e iniciar uma conexão</a></li><li><a href="privacy.html">O que o Media Sharing GUI lê, altera e guarda</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

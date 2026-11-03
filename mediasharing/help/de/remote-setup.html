@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Auf dem Mac zu Hause</title>
+<meta name="description" content="Home Sharing und die entfernte Anmeldung auf dem entfernten Mac einschalten und ihn von außen erreichbar machen." />
+<meta name="keywords" content="Home Sharing, Media Sharing, entfernte Anmeldung, SSH, Portweiterleitung, dynamisches DNS, Router" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="remote-setup"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI-Hilfe</a> › Erste Schritte</nav>
+<h1>Auf dem Mac zu Hause</h1>
+<p class="lead">Mach dies einmal auf dem Mac, dessen Mediathek du erreichen willst.</p>
+
+<h2>Die Freigabe der Mediathek einschalten</h2>
+<ul>
+<li>Schalte in der <span class="ui">Apple TV</span>-App oder <span class="ui">Musik</span> <b>Home Sharing</b> ein (ältere Systeme nennen es
+<b>Media Sharing</b>), angemeldet mit deinem Apple-Account.</li>
+<li>Lass diesen Mac wach, oder stelle ihn so ein, dass er im Ruhezustand Netzwerkzugriff erlaubt, damit er antworten kann, wenn du
+dich verbindest.</li>
+</ul>
+
+<h2>Entfernte Anmeldung (SSH) einschalten</h2>
+<ol>
+<li>Öffne auf dem entfernten Mac <span class="ui">Systemeinstellungen</span> › <span class="ui">Allgemein</span> › <span class="ui">Freigaben</span>.</li>
+<li>Schalte <span class="ui">Entfernte Anmeldung</span> ein. Notiere den Benutzer-Account, der sich anmelden darf.</li>
+</ol>
+<div class="note"><b>Tipp:</b> Richte einen SSH-Schlüssel ein, damit du nicht jedes Mal ein Passwort brauchst. Kopiere den
+öffentlichen Schlüssel dieses Macs auf den entfernten (<code>ssh-copy-id user@host</code>). Media Sharing GUI akzeptiert
+weiterhin ein Passwort als Rückfallebene — siehe <a href="authentication.html">SSH-Schlüssel und Passwörter</a>.</div>
+
+<h2>Ihn von außen erreichbar machen</h2>
+<ul>
+<li><b>Portweiterleitung:</b> Leite am Heimrouter einen externen Port auf den SSH-Port des entfernten Macs
+(22) weiter. Viele leiten einen ungewöhnlichen äußeren Port weiter, etwa 22022, um Störrauschen zu vermeiden — dieser äußere
+Port ist der, den du bei <a href="settings.html">Entfernter SSH-Port</a> einträgst.</li>
+<li><b>Ein Name, der der Heim-IP folgt:</b> Heim-Internetadressen ändern sich, daher erspart dir ein dynamischer DNS-Name
+(wie <code>myhome.example.com</code>), der ihr folgt, das Jagen nach Nummern.</li>
+</ul>
+<p>Sobald die entfernte Anmeldung von außen funktioniert — teste es mit <code>ssh user@host -p PORT</code>
+im Terminal —, kann Media Sharing GUI sie nutzen.</p>
+<div class="see"><h3>Siehe auch</h3><ul><li><a href="connect.html">Eine Verbindung einrichten und starten</a></li><li><a href="authentication.html">SSH-Schlüssel und Passwörter</a></li><li><a href="settings.html">Konfigurationsreferenz</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

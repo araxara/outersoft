@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Datenverkehr und Protokoll</title>
+<meta name="description" content="Beobachte, wie viele Daten der Tunnel überträgt, und lies (oder sichere) ein Protokoll von allem, was er tut." />
+<meta name="keywords" content="Datenverkehr, nettop, Bytes, ein, aus, Spitze, Protokoll, Datei, Finder" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="traffic-log"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI-Hilfe</a> › Verwendung</nav>
+<h1>Datenverkehr und Protokoll</h1>
+<p class="lead">Zwei Felder zeigen, wie es der Verbindung geht: wie viel sie überträgt und was sie getan hat.</p>
+
+<h2>SSH-Sitzungsverkehr</h2>
+<ul>
+<li><span class="ui">Ein</span> und <span class="ui">Aus</span> zeigen die Bytes, die durch den Tunnel-Prozess fließen, mit einem Wert für die <span class="ui">Spitze</span>
+im geschäftigsten Moment.</li>
+<li>Die Zahlen werden mit dem Systemwerkzeug <code>nettop</code> erfasst, nicht als reine Paketaufzeichnung, daher sind
+sie ein ungefährer Anhaltspunkt und kein exakter Messwert.</li>
+<li>Wie oft neu erfasst wird, legt <span class="ui">Traffic-Abfrageintervall</span> in der
+<a href="settings.html">Konfiguration</a> fest. Jede Messung dauert einige Sekunden; ein kürzeres Intervall
+als das führt die Messungen einfach hintereinander aus.</li>
+</ul>
+
+<h2>Protokoll</h2>
+<p>Das Feld <span class="ui">Protokoll</span> hält jeden Schritt fest — den Tunnel öffnen, Bibliotheken finden, sie
+veröffentlichen, erneut verbinden und etwaige Fehler. Es wird auch in eine Datei auf dem Volume geschrieben; das Feld zeigt
+<span class="ui">Gesichert in:</span> deren Pfad. Klicke auf diesen Pfad, um <b>das Protokoll im Finder zu zeigen</b>, praktisch, wenn du es
+zur Fehlersuche weitergeben willst.</p>
+<div class="see"><h3>Siehe auch</h3><ul><li><a href="status.html">Status und Zustand</a></li><li><a href="troubleshooting.html">Wenn keine Verbindung zustande kommt</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

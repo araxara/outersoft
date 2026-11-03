@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>公開するライブラリを選ぶ</title>
+<meta name="description" content="ライブラリボックスは、リモートのネットワークで見つかった各ホームシェアリングのライブラリを、ここに表示するためのチェックボックス付きで一覧します。" />
+<meta name="keywords" content="ライブラリ, 公開, Bonjour, チェックボックス, ホームシェアリング, 複数" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="libraries"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI ヘルプ</a> › 使い方</nav>
+<h1>公開するライブラリを選ぶ</h1>
+<p class="lead">1 つのリモートネットワークが複数のライブラリを共有していることがあります。どれをここに表示するかを選べます。</p>
+
+<p>接続が <span class="ui">問い合わせ中</span> になると、Media Sharing GUI はリモートの Mac のネットワークで見つけた各ホームシェアリングの
+ライブラリを <span class="ui">ライブラリ</span> ボックスに 1 行ずつ一覧します。見つかるまでは <span class="ui">（まだ見つかっていません）</span> と
+表示されます。</p>
+
+<h2>ライブラリの表示・非表示</h2>
+<ul>
+<li>行のチェックボックスを<b>オン</b>にすると、そのライブラリをここに公開します。トンネル経由で転送され、Bonjour で広告され、
+<span class="ui">Apple TV</span> または <span class="ui">ミュージック</span> App に表示されます。</li>
+<li><b>オフ</b>にすると、そのライブラリだけ公開を止めます。ほかはそのままです。</li>
+<li>公開された各ライブラリには独自のローカル転送ポートが割り当てられます。行の小さな詳細テキストに、
+そのポートとライブラリのホームシェアリング ID が参考として表示されます。</li>
+</ul>
+<div class="note"><b>注記：</b> ライブラリが見つかるには、リモートのネットワークでオンラインである必要があります。そこの
+Mac や Apple TV がスリープしていると、起きるまでライブラリが表示されないことがあります。</div>
+<div class="see"><h3>関連項目</h3><ul><li><a href="connect.html">接続を設定して開始する</a></li><li><a href="status.html">状況と状態</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

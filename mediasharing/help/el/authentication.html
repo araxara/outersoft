@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="el">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Κλειδιά και κωδικοί SSH</title>
+<meta name="description" content="Το Media Sharing GUI συνδέεται με το κλειδί SSH σας όταν μπορεί, και καταφεύγει σε έναν κωδικό που αποθηκεύει στο Μπρελόκ." />
+<meta name="keywords" content="ταυτοποίηση, SSH, κλειδί, κωδικός, μπρελόκ, απαλοιφή, σύνδεση" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="authentication"></a>
+<nav class="crumbs"><a href="index.html">Βοήθεια Media Sharing GUI</a> › Χρήση</nav>
+<h1>Κλειδιά και κωδικοί SSH</h1>
+<p class="lead">Η σύνδεση με κλειδί είναι η καλύτερη· ένας αποθηκευμένος κωδικός είναι η εφεδρεία.</p>
+
+<h2>Με κλειδί SSH</h2>
+<p>Αν ο απομακρυσμένος Mac εμπιστεύεται ήδη το κλειδί SSH αυτού του Mac, το Media Sharing GUI συνδέεται σιωπηλά —
+χωρίς τίποτα να πληκτρολογήσετε. Το να στήσετε ένα κλειδί μία φορά (<code>ssh-copy-id user@host</code>) είναι ο πιο ομαλός τρόπος
+να χρησιμοποιείτε την εφαρμογή. Δείτε <a href="remote-setup.html">Στον Mac στο σπίτι</a>.</p>
+
+<h2>Με κωδικό</h2>
+<p>Αν η σύνδεση με κλειδί αποτύχει, η κατάσταση γίνεται <span class="ui">ΑΠΑΙΤΕΙΤΑΙ ΚΩΔΙΚΟΣ</span>:</p>
+<ol>
+<li>Πληκτρολογήστε τον κωδικό του λογαριασμού στο πλαίσιο <span class="ui">Ταυτοποίηση SSH</span> και πατήστε <span class="ui">Υποβολή</span>.</li>
+<li>Μόλις λειτουργήσει, ο κωδικός αποθηκεύεται στο <b>Μπρελόκ</b> αυτού του Mac, ώστε να μη ξαναρωτηθείτε.</li>
+</ol>
+<p>Μπορείτε επίσης να πληκτρολογήσετε έναν κωδικό στη <span class="ui">Διαμόρφωση</span> εκ των προτέρων· χρησιμοποιείται μόνο αν η σύνδεση
+με κλειδί αποτύχει, και κι αυτός μεταφέρεται στο Μπρελόκ με την πρώτη επιτυχία.</p>
+
+<h2>Απαλοιφή αποθηκευμένου κωδικού</h2>
+<p>Κάντε κλικ στο <span class="ui">Απαλοιφή αποθηκευμένου κωδικού</span> για να αφαιρέσετε την καταχώριση Μπρελόκ της τρέχουσας σύνδεσης — για
+παράδειγμα αφού αλλάξετε τον κωδικό στον απομακρυσμένο Mac. Η επόμενη σύνδεση θα τον ζητήσει ξανά.</p>
+<div class="see"><h3>Δείτε επίσης</h3><ul><li><a href="remote-setup.html">Στον Mac στο σπίτι</a></li><li><a href="connect.html">Ρύθμιση και έναρξη μιας σύνδεσης</a></li><li><a href="privacy.html">Τι διαβάζει, αλλάζει και κρατά το Media Sharing GUI</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Menyiapkan dan memulai koneksi</title>
+<meta name="description" content="Isi kotak Konfigurasi, tekan Mulai, masuk jika diminta, dan pustaka jarak jauh muncul secara lokal." />
+<meta name="keywords" content="menyambung, konfigurasi, mulai, login jarak jauh, port lokal, memulai" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">Bantuan Media Sharing GUI</a> › Memulai</nav>
+<h1>Menyiapkan dan memulai koneksi</h1>
+<p class="lead">Beri tahu di mana pustaka berada, lalu tekan Mulai.</p>
+
+<h2>Mengisi koneksi</h2>
+<p>Klik kotak <span class="ui">Konfigurasi (klik untuk mengedit)</span> dan atur setidaknya:</p>
+<ul>
+<li><span class="ui">Nama koneksi</span> — label untuk referensi Anda sendiri, ditampilkan di bilah sisi.</li>
+<li><span class="ui">Login jarak jauh (user@host)</span> — <code>user@host</code> yang sama seperti yang Anda berikan ke
+<code>ssh</code>, misalnya <code>alex@myhome.example.com</code>.</li>
+<li><span class="ui">Port SSH jarak jauh</span> — port yang diteruskan router Anda ke SSH Mac jarak jauh (sering bukan 22).</li>
+</ul>
+<p>Bidang lain punya nilai bawaan yang masuk akal; klik <span class="ui">(i)</span> di sebelah salah satunya, atau lihat
+<a href="settings.html">Referensi konfigurasi</a>, untuk mengetahui fungsi masing-masing.</p>
+
+<h2>Menekan Mulai</h2>
+<ol>
+<li>Klik <span class="ui">Mulai</span> di bagian bawah jendela.</li>
+<li>Jika login berbasis kunci tidak tembus, keadaan berubah menjadi <span class="ui">PERLU KATA SANDI</span>: ketik
+kata sandi akun di <span class="ui">Autentikasi SSH</span> dan tekan <span class="ui">Kirim</span>. Kata sandi disimpan di
+Keychain Anda sehingga tidak ditanyakan lagi.</li>
+<li>App membuka terowongan, menanyakan ke Mac jarak jauh apa yang dibagikannya, dan menerbitkannya di sini. Saat
+keadaan menunjukkan <span class="ui">AKTIF</span>, pustaka sudah tayang.</li>
+</ol>
+
+<h2>Melihatnya di app Apple TV atau Musik</h2>
+<p>Buka app <span class="ui">Apple TV</span> atau <span class="ui">Musik</span> di Mac ini. Pustaka jarak jauh muncul di
+daftar sumber, sama seperti komputer di jaringan Anda sendiri. Jika beberapa pustaka ditemukan, pilih
+mana yang ditampilkan di <a href="libraries.html">kotak Pustaka</a>.</p>
+<p>Klik <span class="ui">Berhenti</span> untuk menutup terowongan dan berhenti menerbitkan. Media Sharing GUI mengingat
+koneksi untuk lain kali.</p>
+<div class="see"><h3>Lihat juga</h3><ul><li><a href="libraries.html">Memilih pustaka mana yang diterbitkan</a></li><li><a href="status.html">Status dan keadaan</a></li><li><a href="authentication.html">Kunci dan kata sandi SSH</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

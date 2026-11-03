@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SSH-Schlüssel und Passwörter</title>
+<meta name="description" content="Media Sharing GUI meldet sich mit deinem SSH-Schlüssel an, wenn es kann, und fällt auf ein Passwort zurück, das es im Schlüsselbund sichert." />
+<meta name="keywords" content="Authentifizierung, SSH, Schlüssel, Passwort, Schlüsselbund, vergessen, Anmeldung" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="authentication"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI-Hilfe</a> › Verwendung</nav>
+<h1>SSH-Schlüssel und Passwörter</h1>
+<p class="lead">Die schlüsselbasierte Anmeldung ist am besten; ein gesichertes Passwort ist die Rückfallebene.</p>
+
+<h2>Mit einem SSH-Schlüssel</h2>
+<p>Wenn der entfernte Mac dem SSH-Schlüssel dieses Macs bereits vertraut, meldet sich Media Sharing GUI still an —
+nichts einzutippen. Einen Schlüssel einmal einzurichten (<code>ssh-copy-id user@host</code>) ist der reibungsloseste Weg,
+die App zu nutzen. Siehe <a href="remote-setup.html">Auf dem Mac zu Hause</a>.</p>
+
+<h2>Mit einem Passwort</h2>
+<p>Scheitert die Schlüsselanmeldung, wechselt der Zustand zu <span class="ui">PASSWORT ERFORDERLICH</span>:</p>
+<ol>
+<li>Gib das Passwort des Accounts im Feld <span class="ui">SSH-Authentifizierung</span> ein und drücke <span class="ui">Bestätigen</span>.</li>
+<li>Sobald es funktioniert, wird das Passwort im <b>Schlüsselbund</b> dieses Macs gesichert, sodass du nicht erneut gefragt wirst.</li>
+</ol>
+<p>Du kannst ein Passwort auch vorab in die <span class="ui">Konfiguration</span> eintippen; es wird nur verwendet, falls die
+Schlüsselanmeldung scheitert, und auch es wandert beim ersten Erfolg in den Schlüsselbund.</p>
+
+<h2>Ein gesichertes Passwort vergessen</h2>
+<p>Klicke auf <span class="ui">Gespeichertes Passwort vergessen</span>, um den Schlüsselbund-Eintrag der aktuellen Anmeldung zu entfernen — zum
+Beispiel, nachdem du das Passwort auf dem entfernten Mac geändert hast. Die nächste Verbindung fragt dann wieder danach.</p>
+<div class="see"><h3>Siehe auch</h3><ul><li><a href="remote-setup.html">Auf dem Mac zu Hause</a></li><li><a href="connect.html">Eine Verbindung einrichten und starten</a></li><li><a href="privacy.html">Was Media Sharing GUI liest, ändert und speichert</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

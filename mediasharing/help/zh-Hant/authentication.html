@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SSH 密鑰與密碼</title>
+<meta name="description" content="Media Sharing GUI 在可能時用你的 SSH 密鑰登入，否則退回到它儲存在鑰匙圈中的密碼。" />
+<meta name="keywords" content="身分驗證, SSH, 密鑰, 密碼, 鑰匙圈, 忘記, 登入" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="authentication"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI 輔助說明</a> › 使用</nav>
+<h1>SSH 密鑰與密碼</h1>
+<p class="lead">以密鑰為基礎的登入最佳；儲存的密碼是後備。</p>
+
+<h2>使用 SSH 密鑰</h2>
+<p>如果遠端 Mac 已信任這台 Mac 的 SSH 密鑰，Media Sharing GUI 會默默登入——無需輸入任何內容。
+一次性設定好密鑰（<code>ssh-copy-id user@host</code>）是使用這款 App 最順暢的方式。請參閱<a href="remote-setup.html">在家中的 Mac 上</a>。</p>
+
+<h2>使用密碼</h2>
+<p>如果密鑰登入失敗，狀態會變為 <span class="ui">需要密碼</span>：</p>
+<ol>
+<li>在 <span class="ui">SSH 身分驗證</span> 框中輸入帳號密碼，並按 <span class="ui">送出</span>。</li>
+<li>一旦成功，密碼便會儲存到這台 Mac 的<b>鑰匙圈</b>，這樣就不會再問你。</li>
+</ol>
+<p>你也可以提前在 <span class="ui">設定</span> 中輸入密碼；它僅在密鑰登入失敗時才會使用，並且也會在首次成功時移入鑰匙圈。</p>
+
+<h2>忘記已儲存的密碼</h2>
+<p>點一下 <span class="ui">忘記已儲存的密碼</span> 以移除目前登入的鑰匙圈項目——例如在你更改了遠端 Mac 上的密碼之後。
+下一次連線會再次詢問它。</p>
+<div class="see"><h3>另請參閱</h3><ul><li><a href="remote-setup.html">在家中的 Mac 上</a></li><li><a href="connect.html">設定並啟動連線</a></li><li><a href="privacy.html">Media Sharing GUI 讀取、更改與儲存的內容</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

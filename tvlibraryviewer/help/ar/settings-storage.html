@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>إعدادات التخزين</title>
+<meta name="description" content="حجم المكتبة، والمساحة التي تشغلها قاعدة بيانات ⁨TV Library Viewer⁩ وذاكرات التخزين المؤقت." />
+<meta name="keywords" content="الإعدادات, التخزين, قاعدة البيانات, الحجم, المساحة, المسلسلات, الحلقات, طاقم التمثيل, صور الممثلين, ذاكرة التخزين المؤقت, TMDb, TVmaze" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings-storage"></a>
+<nav class="crumbs"><a href="index.html">تعليمات ⁨TV Library Viewer⁩</a> › الإعدادات</nav>
+<h1>إعدادات التخزين</h1>
+<p class="lead">اختر <span class="ui">⁨TV Library Viewer⁩ › الإعدادات</span>، ثم انقر على <span class="ui">التخزين</span>.</p>
+
+<h2>مكتبة TV على هذا الـ Mac</h2>
+<p>عدد المسلسلات والحلقات في مكتبة تطبيق TV، وحجم قاعدة بياناتها. ولا تُحسب ملفات
+الفيديو.</p>
+
+<h2>قاعدة بيانات ⁨TV Library Viewer⁩</h2>
+<p>قاعدة بيانات ⁨TV Library Viewer⁩ الخاصة على هذا الـ Mac، والمشتركة مع كل جهاز يعرض المكتبة.</p>
+<table>
+<tr><th>الجزء</th><th>ما يحتويه</th></tr>
+<tr><td><span class="ui">معلومات المسلسلات</span></td><td>الأوصاف الكاملة المعطاة عبر AppleScript، وطاقم تمثيل كل
+مسلسل: أسماء الممثلين وأدوارهم.</td></tr>
+<tr><td><span class="ui">الترجمات</span></td><td>عناوين الحلقات وأوصافها مترجمة إلى اللغات المضبوطة في التطبيقات.</td></tr>
+<tr><td><span class="ui">طاقم التمثيل والعمل</span></td><td>صورة صغيرة واحدة لكل شخص، وعناوين
+صفحاته على ⁨TVmaze⁩ و⁨TMDb⁩.</td></tr>
+<tr><td><span class="ui">الحسابات والمشاهدة</span></td><td>الحسابات، ومشاهدات كل حساب عدا
+الحساب الرئيسي، وسجلات الحسابات.</td></tr>
+<tr><td><span class="ui">بنية قاعدة البيانات والمساحة الفارغة</span></td><td>سجلات SQLite الخاصة، والمساحة التي يعيد استخدامها.</td></tr>
+<tr><td><span class="ui">التغييرات الأخيرة</span></td><td>تغييرات لم تُدمج بعد في قاعدة البيانات. ويحدث ذلك من
+حين لآخر.</td></tr>
+</table>
+<p>يُبحث عن طاقم تمثيل المسلسل وطاقم عمله على ⁨TVmaze⁩ و⁨TMDb⁩ في أول مرة تُفتح فيها صفحته، هنا أو
+على أي جهاز. وتُجلب تفاصيل الأشخاص في كل مرة تفتحها، لذا لا تكون قديمة أبدًا،
+ولا تُخزَّن. انقر على <span class="ui">العرض في Finder</span> لرؤية ملف قاعدة البيانات.</p>
+
+<h2><a name="tmdb"></a>تفاصيل طاقم التمثيل والعمل: رمز ⁨TMDb⁩</h2>
+<p>لا يحتاج ⁨TVmaze⁩ إلى أي إعداد. أما ⁨TMDb⁩ (The Movie Database) فيضيف المخرجين وكتّاب السيناريو، والممثلين
+غير الموجودين في ⁨TVmaze⁩، والسير الذاتية، غالبًا بلغتك. ويحتاج إلى رمز خاص بك: يمنح ⁨TMDb⁩
+رمزًا مجانًا لأي شخص لديه حساب، للاستخدام الشخصي غير التجاري. ولا يأتي ⁨TV Library Viewer⁩
+برمز.</p>
+<ol>
+<li>أنشئ حسابًا مجانيًا على ⁨themoviedb.org⁩، وسجّل الدخول.</li>
+<li>انقر على أيقونة حسابك، واختر <span class="ui">Settings</span>، ثم انقر على <span class="ui">API</span>.</li>
+<li>اطلب مفتاح API: اختر <span class="ui">Developer</span>، واقبل الشروط، وصِف استخدامك بأنه شخصي
+وغير تجاري (مثلًا، «⁨Show cast and biographies in my own TV library app⁩»).</li>
+<li>عندما يصبح المفتاح جاهزًا، انسخ <span class="ui">⁨API Read Access Token⁩</span> (الطويل، وليس ⁨API Key⁩ الأقصر).</li>
+<li>على الـ Mac الذي توجد عليه المكتبة، اختر <span class="ui">⁨TV Library Viewer⁩ › الإعدادات</span>، وانقر على <span class="ui">التخزين</span>، ثم
+الصقه في <span class="ui">رمز ⁨API Read Access Token⁩ من ⁨TMDb⁩</span>.</li>
+<li>انقر على <span class="ui">اختبار</span>. تعني عبارة «يقبل ⁨TMDb⁩ هذا الرمز.» أنه يعمل.</li>
+</ol>
+<p>يُحفظ الرمز في سلسلة المفاتيح على الـ Mac. ولا يستخدمه إلا الـ Mac الذي توجد عليه المكتبة؛ أما أجهزتك
+الأخرى فتحصل على طاقم التمثيل والتفاصيل من ذلك الـ Mac. والمسلسلات التي سبق البحث عنها تحصل على طاقم التمثيل والعمل من ⁨TMDb⁩
+في المرة التالية التي تُفتح فيها صفحتها. وإذا أغلقت الإعدادات دون اختبار رمز جديد، فسيُختبر حينها،
+وستُبلَّغ إذا رفضه ⁨TMDb⁩.</p>
+<div class="note"><b>ملاحظة:</b> يستخدم هذا المنتج ⁨TMDB⁩ API لكنه غير معتمد أو موثَّق من ⁨TMDB⁩.</div>
+
+<h2><a name="google"></a>الترجمة: مفتاح ⁨Google⁩</h2>
+<p>تُترجم عناوين الحلقات وأوصافها إلى لغة كل جهاز على هذا الـ Mac، مجانًا، باستخدام خدمة الترجمة من ⁨Apple⁩.
+ولا يمكنها الترجمة إلى اليونانية أو التشيكية أو المجرية أو الرومانية أو الفارسية أو الأردية أو البنغالية. ولهذه اللغات،
+أضف مفتاح ⁨Google Cloud Translation API⁩ الخاص بك. ولا يحتاج إليه إلا الـ Mac الذي توجد عليه المكتبة؛ أما الأجهزة
+التي تعرضها فلا. وأول 500,000 حرف في كل شهر مجانية، ولا يُترجم كل نص إلا مرة واحدة.</p>
+<ol>
+<li>انتقل إلى ⁨console.cloud.google.com⁩ وسجّل الدخول بحساب ⁨Google⁩ الخاص بك.</li>
+<li>أنشئ مشروعًا: انقر على قائمة المشاريع في الأعلى، ثم على <span class="ui">⁨New Project⁩</span>، وامنحه اسمًا
+مثل «⁨TV Library Viewer⁩».</li>
+<li>فعّل الفوترة: في القائمة ☰، اختر <span class="ui">⁨Billing⁩</span> واربط حساب فوترة. إذ يطلب ⁨Google⁩ حسابًا
+حتى للاستخدام المجاني. ولمزيد من الأمان، أضف ميزانية، مثل 1 دولار، ضمن <span class="ui">⁨Budgets &amp; alerts⁩</span>.</li>
+<li>اختر ☰ › <span class="ui">⁨APIs &amp; Services › Library⁩</span>، وابحث عن <span class="ui">⁨Cloud Translation API⁩</span>، ثم انقر
+على <span class="ui">⁨Enable⁩</span>.</li>
+<li>اختر ☰ › <span class="ui">⁨APIs &amp; Services › Credentials⁩</span>، ثم <span class="ui">⁨Create credentials › API key⁩</span>،
+وانسخ المفتاح (يبدأ بـ «⁨AIza⁩»).</li>
+<li>يُنصح بما يلي: انقر على اسم المفتاح، واختر <span class="ui">⁨Restrict key⁩</span> ضمن ⁨API restrictions⁩، وحدّد
+<span class="ui">⁨Cloud Translation API⁩</span>، ثم انقر على <span class="ui">⁨Save⁩</span>، كي لا يعمل المفتاح إلا للترجمة.</li>
+<li>على الـ Mac الذي توجد عليه المكتبة، اختر <span class="ui">⁨TV Library Viewer⁩ › الإعدادات</span>، وانقر على <span class="ui">التخزين</span>،
+والصق المفتاح في <span class="ui">مفتاح ⁨Google Cloud Translation API⁩</span>، ثم انقر على <span class="ui">اختبار</span>.</li>
+</ol>
+<p>يُحفظ المفتاح في سلسلة المفاتيح على الـ Mac، ولا يُستخدم إلا لهذه اللغات السبع. لا تشاركه مع أحد: فكل ما
+يُترجم به يُحتسب على حساب ⁨Google⁩ الخاص بك.</p>
+
+<h2>ذاكرات التخزين المؤقت</h2>
+<p>الصور، والمكتبات التي عرضها هذا الـ Mac من أجهزة Mac أخرى. وتُنشأ ذاكرات التخزين المؤقت مجددًا عند الحاجة،
+ويُفرغها macOS عندما تنفد المساحة.</p>
+<div class="see"><h3>انظر أيضًا</h3><ul><li><a href="show-page.html">صفحة المسلسل وطاقم التمثيل</a></li><li><a href="privacy.html">ما يقرؤه ⁨TV Library Viewer⁩ ويغيّره ويحتفظ به</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

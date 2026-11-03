@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Unterwegs ansehen</title>
+<meta name="description" content="Drei Wege, deine Mediathek aus einem anderen Netzwerk zu erreichen: SSH, ein VPN oder ein weitergeleiteter Port." />
+<meta name="keywords" content="entfernt, unterwegs, Reise, SSH, VPN, Tailscale, Portweiterleitung, Router, 47100, offline" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="away"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer-Hilfe</a> › Erste Schritte</nav>
+<h1>Unterwegs ansehen</h1>
+<p class="lead">Deine Mediathek bleibt auf dem Mac zu Hause. Wähle einen Weg, um sie von woanders zu erreichen.</p>
+
+<h2>Über SSH</h2>
+<p>Am besten, wenn du dich schon per SSH bei diesem Mac oder einem Computer in seinem Netzwerk anmelden kannst. Sonst
+ist nichts einzurichten. Verwende <span class="ui">Entfernt (SSH)</span> unter „Mit geteilter Mediathek verbinden“. Alles läuft über die
+SSH-Verbindung.</p>
+
+<h2>Über ein VPN</h2>
+<p>Ist auf beiden Geräten ein VPN wie Tailscale eingerichtet, verwende <span class="ui">Adresse</span> mit der VPN-Adresse des Mac und
+Port 47100.</p>
+
+<h2>Über einen weitergeleiteten Port</h2>
+<ol>
+<li>Leite auf deinem Router Port 47100 (oder den Port unter <span class="ui">Einstellungen › Freigabe</span>) an den Mac mit
+der Mediathek weiter.</li>
+<li>Füge unter <span class="ui">Einstellungen › Accounts</span> Accounts mit sicheren Passwörtern hinzu.</li>
+<li>Verwende auf dem anderen Gerät <span class="ui">Adresse</span> mit der öffentlichen Adresse deines Zuhauses und dem Port.</li>
+</ol>
+<div class="note"><b>Hinweis:</b> Verbindungen sind immer verschlüsselt, und die Geräte prüfen das Zertifikat der
+Mediathek, egal von wo sie sich verbinden. Zehn falsche Passwörter von einer Adresse innerhalb von 5 Minuten werden
+ohne Prüfung abgewiesen.</div>
+
+<h2>Ganz ohne Verbindung</h2>
+<p>Lade Folgen vor der Abreise (Mac, iPad und iPhone). Ist die Mediathek nicht erreichbar, öffnet die
+App sie im zuletzt gesehenen Zustand, zeigt <span class="ui">Offline</span> und spielt deine Downloads ab. Was du ansiehst, wird
+an den Mac gesendet, sobald er wieder erreichbar ist.</p>
+<div class="see"><h3>Siehe auch</h3><ul><li><a href="connect.html">Mit einer geteilten Mediathek verbinden</a></li><li><a href="downloads.html">Downloads und Offline-Wiedergabe</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

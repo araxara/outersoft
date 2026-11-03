@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Referência da configuração</title>
+<meta name="description" content="O que cada campo da área Configuração faz e quando mudá-lo." />
+<meta name="keywords" content="ajustes, configuração, campos, porta, socket de controle, keep-alive, compressão, referência" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings"></a>
+<nav class="crumbs"><a href="index.html">Ajuda do Media Sharing GUI</a> › Referência</nav>
+<h1>Referência da configuração</h1>
+<p class="lead">Clique no <span class="ui">(i)</span> ao lado de qualquer campo no app para as mesmas notas. A maioria dos campos pode
+ficar nos valores padrão.</p>
+
+<h2>Onde conectar</h2>
+<ul>
+<li><b><span class="ui">Nome da conexão</span></b> — um rótulo exibido na barra lateral, só para sua referência. Não
+afeta como a conexão funciona.</li>
+<li><b><span class="ui">Login remoto (usuário@host)</span></b> — o nome de usuário SSH e o host (ou nome de DNS dinâmico) do
+Mac remoto, p. ex. <code>alex@myhome.example.com</code> — o mesmo <code>user@host</code>
+que você daria ao <code>ssh</code>.</li>
+<li><b><span class="ui">Porta SSH remota</span></b> — a porta TCP em que o servidor SSH do Mac remoto é alcançado.
+Muitas vezes não é 22, porque os roteadores costumam redirecionar uma porta externa personalizada (como 22022) para a porta SSH do Mac
+dentro da rede de casa.</li>
+</ul>
+
+<h2>Portas</h2>
+<ul>
+<li><b><span class="ui">Porta local redirecionada</span></b> — uma porta livre <i>neste</i> Mac. A porta de Compartilhamento Familiar da biblioteca
+remota é tunelada até aqui, de modo que um app que olha para <code>localhost</code> nesta porta
+alcança a biblioteca remota.</li>
+<li><b><span class="ui">Porta remota do Media Sharing</span></b> — a porta em que o Compartilhamento Familiar escuta lá, no
+Mac remoto — normalmente 3689, a porta DAAP / Compartilhamento Familiar padrão. Mude-a apenas para uma configuração
+incomum.</li>
+</ul>
+
+<h2>Comportamento do túnel</h2>
+<ul>
+<li><b><span class="ui">Caminho do socket de controle SSH</span></b> — um caminho de arquivo local para o socket de controle em segundo plano do <code>ssh</code>,
+que permite ao app fechar o túnel de forma limpa (<code>ssh -O exit</code>) em vez de
+matar o processo.</li>
+<li><b><span class="ui">Server Alive Interval</span></b> — com que frequência, em segundos, o <code>ssh</code> envia um ping à
+ponta remota para manter o túnel através de roteadores e firewalls e perceber logo se ele morre.</li>
+<li><b><span class="ui">Intervalo de consulta de tráfego</span></b> — com que frequência, em segundos, o painel Tráfego reamostra
+o <code>nettop</code>. Cada amostra leva alguns segundos; um intervalo mais curto apenas as executa uma após a outra.</li>
+<li><b><span class="ui">Compressão SSH</span></b> — ativa a compressão do <code>ssh</code> (<code>-C</code>).
+Troca um pouco de CPU por um fluxo de dados menor, o que pode suavizar bastante a reprodução por uma
+conexão de casa lenta ou de alta latência. Pode deixar ativada sem problema.</li>
+</ul>
+<div class="see"><h3>Consulte também</h3><ul><li><a href="connect.html">Configurar e iniciar uma conexão</a></li><li><a href="traffic-log.html">Tráfego e registro</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

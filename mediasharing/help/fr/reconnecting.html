@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Reconnexion et veille</title>
+<meta name="description" content="Comment Media Sharing GUI maintient la connexion : keep-alives, reconnexion automatique et survie à la veille." />
+<meta name="keywords" content="reconnexion, veille, réveil, keep-alive, vérification d'état, coupure, automatique" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="reconnecting"></a>
+<nav class="crumbs"><a href="index.html">Aide de Media Sharing GUI</a> › Référence</nav>
+<h1>Reconnexion et veille</h1>
+<p class="lead">Une connexion domestique n'est pas toujours stable. L'app encaisse les secousses pour vous.</p>
+
+<h2>Rester en vie</h2>
+<p>Pendant la connexion, <code>ssh</code> envoie un ping à l'extrémité distante toutes les <span class="ui">Server Alive Interval</span> secondes
+(voir <a href="settings.html">Référence de la configuration</a>). Cela empêche les routeurs et pare-feu de
+laisser tomber un tunnel inactif et permet à l'app de remarquer vite qu'une connexion est vraiment morte.</p>
+
+<h2>Reconnexion automatique</h2>
+<p>Si la connexion tombe, le statut passe à <span class="ui">RECONNEXION</span> et Media Sharing GUI réessaie de
+lui-même, en attendant un peu plus longtemps entre les tentatives, en journalisant chacune. Appuyez sur <span class="ui">Arrêter</span> pour
+annuler les tentatives.</p>
+
+<h2>Après la veille du Mac</h2>
+<p>Quand ce Mac sort de veille, l'app vérifie si le tunnel a survécu. Si oui, elle
+continue ; sinon, elle effectue une réinitialisation complète — comme Arrêter puis Démarrer — et ramène la bibliothèque
+d'elle-même.</p>
+<div class="see"><h3>Voir aussi</h3><ul><li><a href="status.html">État et statut</a></li><li><a href="troubleshooting.html">En cas d'échec de connexion</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

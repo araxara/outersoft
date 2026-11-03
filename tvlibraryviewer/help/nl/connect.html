@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Verbinding maken met een gedeelde bibliotheek</title>
+<meta name="description" content="Verbind een andere Mac, een iPad, iPhone of Apple TV met de Mac die zijn bibliotheek deelt." />
+<meta name="keywords" content="verbinden, Bonjour, netwerk, SSH, adres, certificaat, vingerafdruk, vertrouwen, inloggen, wachtwoord" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer Help</a> › Aan de slag</nav>
+<h1>Verbinding maken met een gedeelde bibliotheek</h1>
+<p class="lead">Elk apparaat maakt één keer verbinding. Daarna opent het dezelfde bibliotheek vanzelf weer.</p>
+
+<h2>Open 'Maak verbinding met gedeelde bibliotheek'</h2>
+<ul>
+<li><b>Mac:</b> kies <span class="ui">Archief › Maak verbinding met gedeelde bibliotheek…</span> (<kbd>⌘K</kbd>).</li>
+<li><b>iPad en iPhone:</b> tik op <span class="ui">Maak verbinding met gedeelde bibliotheek…</span> in de navigatiekolom (<kbd>⌘K</kbd> met een toetsenbord).</li>
+<li><b>Apple TV:</b> de eerste keer maakt TV Library verbinding met de eerste Mac in het netwerk die
+zonder wachtwoord deelt. Ga anders naar <span class="ui">Bibliotheken › Maak verbinding met een andere bibliotheek…</span>.</li>
+</ul>
+
+<h2>Kies hoe je de Mac bereikt</h2>
+<h3>Dit netwerk</h3>
+<p>Macs in hetzelfde netwerk waarop delen aanstaat, worden op naam weergegeven. Kies er een.</p>
+<h3>Op afstand (SSH)</h3>
+<p>Voor een Mac in een ander netwerk, bijvoorbeeld in een ander huis. Typ het adres dat je gebruikt om met SSH in te loggen op die
+Mac (of een willekeurige computer in dat netwerk), en de gebruikersnaam als die anders is. TV Library Viewer logt
+in, vindt de bibliotheek in dat netwerk en maakt verbinding via de SSH-verbinding.</p>
+<ul>
+<li>De eerste keer toont het de sleutel van de host, zodat je die kunt vergelijken en bevestigen.</li>
+<li>Op een Mac wordt je eigen SSH-sleutel gebruikt als de host die accepteert; anders wordt om het wachtwoord gevraagd,
+dat in je sleutelhanger wordt bewaard.</li>
+<li>Een iPad, iPhone of Apple TV heeft een eigen sleutel. Na de eerste keer inloggen met een wachtwoord biedt het aan om
+die sleutel op de host te installeren, zodat het wachtwoord niet meer nodig is.</li>
+</ul>
+<h3>Adres</h3>
+<p>Voor een Mac die dit apparaat rechtstreeks kan bereiken: via een VPN zoals Tailscale, of een poort die je router
+naar de Mac doorstuurt. Typ het adres en de poort (poort 47100, tenzij die is gewijzigd), en een accountnaam
+en wachtwoord als de bibliotheek accounts heeft.</p>
+
+<h2>Het certificaat van de bibliotheek vertrouwen</h2>
+<p>Bij de eerste verbinding zie je de vingerafdruk van het certificaat van de bibliotheek. Vergelijk die met de vingerafdruk in
+<span class="ui">Instellingen › Delen</span> op de Mac met de bibliotheek en kies dan <span class="ui">Vertrouw en maak verbinding</span>. Vanaf
+dat moment controleert het apparaat dat certificaat elke keer, en weigert het een bibliotheek waarvan het certificaat is
+gewijzigd.</p>
+
+<h2>Inloggen</h2>
+<p>Als de bibliotheek accounts heeft, voer je de naam en het wachtwoord van je account op die Mac in. Het apparaat
+bewaart ze in zijn sleutelhanger. Zonder accounts laat je de naam leeg en gebruik je het bibliotheekwachtwoord,
+als dat er is.</p>
+<div class="see"><h3>Zie ook</h3><ul><li><a href="away.html">Kijken als je niet thuis bent</a></li><li><a href="sidebar-libraries.html">Wisselen tussen bibliotheken</a></li><li><a href="settings-accounts.html">Instellingen voor Accounts</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

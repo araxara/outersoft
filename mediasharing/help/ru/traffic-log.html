@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Трафик и журнал</title>
+<meta name="description" content="Следите за тем, сколько данных несёт туннель, и читайте (или сохраняйте) журнал всего, что он делает." />
+<meta name="keywords" content="трафик, nettop, байты, вход, выход, пик, журнал, файл, Finder" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="traffic-log"></a>
+<nav class="crumbs"><a href="index.html">Справка Media Sharing GUI</a> › Использование</nav>
+<h1>Трафик и журнал</h1>
+<p class="lead">Два блока показывают, как идёт подключение: сколько оно переносит и что делало.</p>
+
+<h2>Трафик сеанса SSH</h2>
+<ul>
+<li><span class="ui">Вх.</span> и <span class="ui">Исх.</span> показывают байты, проходящие через процесс туннеля, с показателем <span class="ui">Пик</span>
+для самого напряжённого момента.</li>
+<li>Числа замеряются системным инструментом <code>nettop</code>, а не «сырым» захватом пакетов, поэтому
+это близкий ориентир, а не точный измеритель.</li>
+<li>Как часто пересчитывать, задаёт <span class="ui">Интервал опроса трафика</span> в
+<a href="settings.html">Конфигурации</a>. Каждый замер длится несколько секунд; интервал короче
+этого просто запускает замеры один за другим.</li>
+</ul>
+
+<h2>Журнал</h2>
+<p>Блок <span class="ui">Журнал</span> записывает каждый шаг — открытие туннеля, поиск библиотек, их
+публикацию, переподключение и любые ошибки. Он также пишется в файл на диске; блок показывает
+<span class="ui">Сохранено в:</span> его путь. Нажмите этот путь, чтобы <b>показать журнал в Finder</b> — удобно, когда хотите
+переслать его, разбираясь с проблемой.</p>
+<div class="see"><h3>См. также</h3><ul><li><a href="status.html">Статус и состояние</a></li><li><a href="troubleshooting.html">Если не подключается</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

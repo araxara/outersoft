@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Menyambung ulang dan tidur</title>
+<meta name="description" content="Cara Media Sharing GUI menjaga koneksi tetap hidup: keep-alive, penyambungan ulang otomatis, dan bertahan melewati tidur." />
+<meta name="keywords" content="menyambung ulang, tidur, bangun, keep-alive, pemeriksaan kesehatan, putus, otomatis" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="reconnecting"></a>
+<nav class="crumbs"><a href="index.html">Bantuan Media Sharing GUI</a> › Referensi</nav>
+<h1>Menyambung ulang dan tidur</h1>
+<p class="lead">Koneksi rumah tidak selalu mantap. App menanggung guncangannya untuk Anda.</p>
+
+<h2>Tetap hidup</h2>
+<p>Selama tersambung, <code>ssh</code> melakukan ping ke ujung jarak jauh setiap <span class="ui">Server Alive Interval</span> detik
+(lihat <a href="settings.html">Referensi konfigurasi</a>). Itu mencegah router dan firewall
+menjatuhkan terowongan yang menganggur dan membuat app cepat menyadari ketika koneksi benar-benar mati.</p>
+
+<h2>Penyambungan ulang otomatis</h2>
+<p>Jika koneksi putus, keadaan berubah menjadi <span class="ui">MENYAMBUNGKAN ULANG</span> dan Media Sharing GUI mencoba lagi
+sendiri, menunggu sedikit lebih lama di antara percobaan, mencatat setiap percobaan. Tekan <span class="ui">Berhenti</span> untuk
+membatalkan percobaan.</p>
+
+<h2>Setelah Mac tidur</h2>
+<p>Saat Mac ini bangun dari tidur, app memeriksa apakah terowongan selamat. Jika ya, ia berlanjut;
+jika tidak, ia melakukan reset penuh — sama seperti Berhenti lalu Mulai — dan membawa kembali pustaka
+dengan sendirinya.</p>
+<div class="see"><h3>Lihat juga</h3><ul><li><a href="status.html">Status dan keadaan</a></li><li><a href="troubleshooting.html">Jika tidak tersambung</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

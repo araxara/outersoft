@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>設定並啟動連線</title>
+<meta name="description" content="填寫「設定」框，按「開始」，必要時登入，遠端資料庫便會在本機出現。" />
+<meta name="keywords" content="連線, 設定, 開始, 遠端登入, 本機連接埠, 開始使用" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI 輔助說明</a> › 入門</nav>
+<h1>設定並啟動連線</h1>
+<p class="lead">填寫資料庫所在之處，然後按「開始」。</p>
+
+<h2>填寫連線</h2>
+<p>點一下 <span class="ui">設定（點一下以編輯）</span> 框，至少設定：</p>
+<ul>
+<li><span class="ui">連線名稱</span>——供你自己參考的標籤，顯示在側邊欄中。</li>
+<li><span class="ui">遠端登入（使用者@主機）</span>——與你給 <code>ssh</code> 的相同的 <code>user@host</code>，
+例如 <code>alex@myhome.example.com</code>。</li>
+<li><span class="ui">遠端 SSH 連接埠</span>——你的路由器轉送到遠端 Mac SSH 的連接埠（通常不是 22）。</li>
+</ul>
+<p>其他欄位都有合理的預設值；點一下其中任一項旁邊的 <span class="ui">(i)</span>，或查看<a href="settings.html">設定參考</a>，了解每一項的作用。</p>
+
+<h2>按「開始」</h2>
+<ol>
+<li>點一下視窗底部的 <span class="ui">開始</span>。</li>
+<li>如果以密鑰為基礎的登入未通過，狀態會變為 <span class="ui">需要密碼</span>：在 <span class="ui">SSH 身分驗證</span> 中輸入帳號密碼，
+並按 <span class="ui">送出</span>。它會儲存到你的鑰匙圈，這樣就不會再問你。</li>
+<li>App 開啟通道，詢問遠端 Mac 共享了什麼，並在這裡發佈。當狀態顯示 <span class="ui">執行中</span> 時，資料庫即已上線。</li>
+</ol>
+
+<h2>在 Apple TV 或音樂 App 中查看</h2>
+<p>在這台 Mac 上打開 <span class="ui">Apple TV</span> 或 <span class="ui">音樂</span> App。遠端資料庫會出現在來源列表中，
+就像你自己網路中的一台電腦那樣。如果找到多個資料庫，可在<a href="libraries.html">資料庫框</a>中選擇要顯示哪些。</p>
+<p>點一下 <span class="ui">停止</span> 以關閉通道並停止發佈。Media Sharing GUI 會記住該連線以備下次使用。</p>
+<div class="see"><h3>另請參閱</h3><ul><li><a href="libraries.html">選擇要發佈哪些資料庫</a></li><li><a href="status.html">狀態與情況</a></li><li><a href="authentication.html">SSH 密鑰與密碼</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

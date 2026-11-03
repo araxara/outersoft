@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Chiavi e password SSH</title>
+<meta name="description" content="Media Sharing GUI accede con la tua chiave SSH quando può, e ricorre a una password che salva nel portachiavi." />
+<meta name="keywords" content="autenticazione, SSH, chiave, password, portachiavi, dimenticare, accesso" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="authentication"></a>
+<nav class="crumbs"><a href="index.html">Aiuto di Media Sharing GUI</a> › Utilizzo</nav>
+<h1>Chiavi e password SSH</h1>
+<p class="lead">L'accesso con chiave è il migliore; una password salvata è la riserva.</p>
+
+<h2>Con una chiave SSH</h2>
+<p>Se il Mac remoto si fida già della chiave SSH di questo Mac, Media Sharing GUI accede in silenzio:
+niente da digitare. Configurare una chiave una volta (<code>ssh-copy-id user@host</code>) è il modo più scorrevole
+di usare l'app. Vedi <a href="remote-setup.html">Sul Mac a casa</a>.</p>
+
+<h2>Con una password</h2>
+<p>Se l'accesso con chiave fallisce, la situazione passa a <span class="ui">PASSWORD RICHIESTA</span>:</p>
+<ol>
+<li>Digita la password dell'account nel riquadro <span class="ui">Autenticazione SSH</span> e premi <span class="ui">Invia</span>.</li>
+<li>Una volta che funziona, la password viene salvata nel <b>portachiavi</b> di questo Mac, così non ti viene più richiesta.</li>
+</ol>
+<p>Puoi anche digitare una password nella <span class="ui">Configurazione</span> in anticipo; viene usata solo se l'accesso
+con chiave fallisce, e anch'essa passa nel portachiavi al primo successo.</p>
+
+<h2>Dimenticare una password salvata</h2>
+<p>Fai clic su <span class="ui">Dimentica password salvata</span> per rimuovere la voce del portachiavi dell'accesso corrente — per
+esempio dopo aver cambiato la password sul Mac remoto. La connessione successiva la richiederà di nuovo.</p>
+<div class="see"><h3>Vedi anche</h3><ul><li><a href="remote-setup.html">Sul Mac a casa</a></li><li><a href="connect.html">Configurare e avviare una connessione</a></li><li><a href="privacy.html">Cosa legge, modifica e conserva Media Sharing GUI</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

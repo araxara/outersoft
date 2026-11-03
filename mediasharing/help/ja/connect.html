@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>接続を設定して開始する</title>
+<meta name="description" content="構成ボックスを入力し、開始を押し、求められたらサインインすると、リモートのライブラリがローカルに表示されます。" />
+<meta name="keywords" content="接続, 構成, 開始, リモートログイン, ローカルポート, 始める" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI ヘルプ</a> › はじめに</nav>
+<h1>接続を設定して開始する</h1>
+<p class="lead">ライブラリがどこにあるかを入力し、開始を押します。</p>
+
+<h2>接続を入力する</h2>
+<p><span class="ui">構成（クリックで編集）</span> ボックスをクリックし、少なくとも次を設定します。</p>
+<ul>
+<li><span class="ui">接続名</span> — 自分のための名札で、サイドバーに表示されます。</li>
+<li><span class="ui">リモートログイン (user@host)</span> — <code>ssh</code> に渡すのと同じ <code>user@host</code>。
+たとえば <code>alex@myhome.example.com</code>。</li>
+<li><span class="ui">リモート SSH ポート</span> — ルーターがリモートの Mac の SSH に転送するポート（22 でないことが多い）。</li>
+</ul>
+<p>他のフィールドには妥当な初期値があります。いずれかの横の <span class="ui">(i)</span> をクリックするか、
+<a href="settings.html">構成リファレンス</a>を参照して、それぞれの役割を確認してください。</p>
+
+<h2>開始を押す</h2>
+<ol>
+<li>ウインドウ下部の <span class="ui">開始</span> をクリックします。</li>
+<li>鍵ベースのログインが通らない場合、状態が <span class="ui">パスワードが必要</span> になります。<span class="ui">SSH 認証</span> に
+アカウントのパスワードを入力し、<span class="ui">送信</span> を押します。キーチェーンに保存されるので、次回から尋ねられません。</li>
+<li>App はトンネルを開き、リモートの Mac に共有内容を尋ね、ここで公開します。状態が <span class="ui">実行中</span> になれば、
+ライブラリは稼働中です。</li>
+</ol>
+
+<h2>Apple TV または ミュージック App で見る</h2>
+<p>この Mac で <span class="ui">Apple TV</span> App または <span class="ui">ミュージック</span> を開きます。リモートのライブラリが、
+自分のネットワーク上のコンピュータと同じようにソースリストに表示されます。複数のライブラリが見つかった場合は、
+<a href="libraries.html">ライブラリボックス</a>で表示するものを選びます。</p>
+<p><span class="ui">停止</span> をクリックすると、トンネルを閉じて公開を終了します。Media Sharing GUI は次回のために接続を覚えています。</p>
+<div class="see"><h3>関連項目</h3><ul><li><a href="libraries.html">公開するライブラリを選ぶ</a></li><li><a href="status.html">状況と状態</a></li><li><a href="authentication.html">SSH の鍵とパスワード</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

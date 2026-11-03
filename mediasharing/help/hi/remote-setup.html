@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>घर वाले Mac पर</title>
+<meta name="description" content="रिमोट Mac पर होम शेयरिंग और रिमोट लॉगिन चालू करें, और उसे बाहर से पहुँच योग्य बनाएँ।" />
+<meta name="keywords" content="होम शेयरिंग, मीडिया शेयरिंग, रिमोट लॉगिन, SSH, पोर्ट फ़ॉरवर्डिंग, डायनेमिक DNS, राउटर" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="remote-setup"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI मदद</a> › शुरुआत</nav>
+<h1>घर वाले Mac पर</h1>
+<p class="lead">यह उस Mac पर एक बार करें जिसकी लाइब्रेरी तक आप पहुँचना चाहते हैं।</p>
+
+<h2>लाइब्रेरी की शेयरिंग चालू करें</h2>
+<ul>
+<li><span class="ui">Apple TV</span> या <span class="ui">म्यूज़िक</span> ऐप में, अपने Apple खाते से साइन इन करके <b>होम शेयरिंग</b> चालू करें
+(पुराने सिस्टम इसे <b>मीडिया शेयरिंग</b> कहते हैं)।</li>
+<li>उस Mac को जगाए रखें, या उसे स्लीप के दौरान नेटवर्क पहुँच की अनुमति देने के लिए सेट करें, ताकि आप कनेक्ट करें तो वह जवाब दे सके।</li>
+</ul>
+
+<h2>रिमोट लॉगिन (SSH) चालू करें</h2>
+<ol>
+<li>रिमोट Mac पर <span class="ui">सिस्टम सेटिंग्स</span> › <span class="ui">सामान्य</span> › <span class="ui">शेयरिंग</span> खोलें।</li>
+<li><span class="ui">रिमोट लॉगिन</span> चालू करें। जिस उपयोक्ता खाते को लॉगिन की अनुमति है उसे नोट करें।</li>
+</ol>
+<div class="note"><b>सुझाव:</b> हर बार पासवर्ड की ज़रूरत न पड़े इसके लिए एक SSH कुंजी सेट करें। इस Mac की सार्वजनिक कुंजी
+रिमोट Mac पर कॉपी करें (<code>ssh-copy-id user@host</code>)। Media Sharing GUI फिर भी पासवर्ड को
+फ़ॉलबैक के रूप में स्वीकार करता है — <a href="authentication.html">SSH कुंजियाँ और पासवर्ड</a> देखें।</div>
+
+<h2>उसे बाहर से पहुँच योग्य बनाएँ</h2>
+<ul>
+<li><b>पोर्ट फ़ॉरवर्डिंग:</b> घर के राउटर पर, एक बाहरी पोर्ट को रिमोट Mac के SSH पोर्ट (22) पर अग्रेषित करें। कई लोग शोर से
+बचने के लिए 22022 जैसा कोई असामान्य बाहरी पोर्ट अग्रेषित करते हैं — वही बाहरी पोर्ट आप
+<a href="settings.html">रिमोट SSH पोर्ट</a> में डालते हैं।</li>
+<li><b>घर के IP का अनुसरण करने वाला नाम:</b> घर के इंटरनेट पते बदलते रहते हैं, इसलिए उसका अनुसरण करने वाला एक डायनेमिक-DNS नाम
+(जैसे <code>myhome.example.com</code>) आपको संख्याओं के पीछे भागने से बचाता है।</li>
+</ul>
+<p>जब रिमोट लॉगिन बाहर से काम करने लगे — टर्मिनल में <code>ssh user@host -p PORT</code> से परखें —
+तो Media Sharing GUI उसका उपयोग कर सकता है।</p>
+<div class="see"><h3>यह भी देखें</h3><ul><li><a href="connect.html">कनेक्शन सेट करना और शुरू करना</a></li><li><a href="authentication.html">SSH कुंजियाँ और पासवर्ड</a></li><li><a href="settings.html">कॉन्फ़िगरेशन संदर्भ</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

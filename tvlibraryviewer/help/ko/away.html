@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>외부에서 시청하기</title>
+<meta name="description" content="다른 네트워크에서 보관함에 연결하는 세 가지 방법: SSH, VPN 또는 포트 포워딩." />
+<meta name="keywords" content="원격, 외부, 여행, SSH, VPN, Tailscale, 포트 포워딩, 라우터, 47100, 오프라인" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="away"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer 도움말</a> › 시작하기</nav>
+<h1>외부에서 시청하기</h1>
+<p class="lead">보관함은 집에 있는 Mac에 그대로 있습니다. 외부에서 연결할 방법을 하나 선택하십시오.</p>
+
+<h2>SSH를 통해</h2>
+<p>해당 Mac 또는 같은 네트워크의 컴퓨터에 이미 SSH로 로그인할 수 있다면 가장 좋은 방법입니다. 다른 설정은 필요하지 않습니다. 공유 보관함에 연결에서 <span class="ui">원격(SSH)</span>을 사용합니다. 모든 데이터가 SSH 연결을 통해 전송됩니다.</p>
+
+<h2>VPN을 통해</h2>
+<p>두 기기 모두에서 Tailscale 같은 VPN을 사용하는 경우, <span class="ui">주소</span>에 Mac의 VPN 주소와 포트 47100을 사용합니다.</p>
+
+<h2>포트 포워딩을 통해</h2>
+<ol>
+<li>라우터에서 포트 47100(또는 <span class="ui">설정 › 공유</span>에 있는 포트)을 보관함이 있는 Mac으로 포워딩합니다.</li>
+<li><span class="ui">설정 › 계정</span>에서 강력한 암호를 사용하는 계정을 추가합니다.</li>
+<li>다른 기기에서 <span class="ui">주소</span>에 집의 공인 주소와 포트를 사용합니다.</li>
+</ol>
+<div class="note"><b>참고:</b> 어디에서 연결하든 연결은 항상 암호화되며, 기기는 보관함의 인증서를 확인합니다. 한 주소에서 5분 이내에 잘못된 암호를 10번 입력하면 그 이후에는 확인하지 않고 거부됩니다.</div>
+
+<h2>연결이 전혀 없을 때</h2>
+<p>떠나기 전에 에피소드를 다운로드해 두십시오(Mac, iPad 및 iPhone). 보관함에 연결할 수 없으면 앱이 마지막으로 본 상태의 보관함을 열고 <span class="ui">오프라인</span>을 표시하며 다운로드한 항목을 재생합니다. 시청한 내용은 Mac에 다시 연결되면 Mac으로 전송됩니다.</p>
+<div class="see"><h3>참고 항목</h3><ul><li><a href="connect.html">공유 보관함에 연결하기</a></li><li><a href="downloads.html">다운로드 및 오프라인 시청</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

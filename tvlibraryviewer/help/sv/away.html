@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sv">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Titta när du inte är hemma</title>
+<meta name="description" content="Tre sätt att nå ditt bibliotek från ett annat nätverk: SSH, ett VPN eller en vidarebefordrad port." />
+<meta name="keywords" content="fjärr, bortrest, resa, SSH, VPN, Tailscale, portvidarebefordring, router, 47100, offline" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="away"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer Hjälp</a> › Komma igång</nav>
+<h1>Titta när du inte är hemma</h1>
+<p class="lead">Ditt bibliotek finns kvar på datorn hemma. Välj ett sätt att nå det från andra platser.</p>
+
+<h2>Via SSH</h2>
+<p>Bäst om du redan kan logga in på den datorn, eller en dator i samma nätverk, med SSH. Inget annat
+behöver ställas in. Använd <span class="ui">Fjärr (SSH)</span> i Anslut till delat bibliotek. Allt går via
+SSH-anslutningen.</p>
+
+<h2>Via ett VPN</h2>
+<p>Med ett VPN som Tailscale på båda enheterna använder du <span class="ui">Adress</span> med datorns VPN-adress och
+port 47100.</p>
+
+<h2>Via en vidarebefordrad port</h2>
+<ol>
+<li>Vidarebefordra port 47100 (eller porten i <span class="ui">Inställningar › Delning</span>) på routern till den Mac som har
+biblioteket.</li>
+<li>Lägg till konton med starka lösenord i <span class="ui">Inställningar › Konton</span>.</li>
+<li>På den andra enheten använder du <span class="ui">Adress</span> med hemmets offentliga adress och porten.</li>
+</ol>
+<div class="note"><b>Obs!</b> Anslutningarna är alltid krypterade, och enheterna kontrollerar bibliotekets
+certifikat, var de än ansluter ifrån. Tio felaktiga lösenord från samma adress inom 5 minuter
+avvisas utan att kontrolleras.</div>
+
+<h2>Helt utan anslutning</h2>
+<p>Hämta avsnitt innan du åker (Mac, iPad och iPhone). När det inte går att nå biblioteket öppnar
+appen det som det såg ut senast, visar <span class="ui">Offline</span> och spelar upp dina hämtningar. Det du tittar på skickas
+till datorn så fort den kan nås igen.</p>
+<div class="see"><h3>Se även</h3><ul><li><a href="connect.html">Ansluta till ett delat bibliotek</a></li><li><a href="downloads.html">Hämtningar och offlinevisning</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

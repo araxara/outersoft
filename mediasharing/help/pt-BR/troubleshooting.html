@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Se não conectar</title>
+<meta name="description" content="Os erros comuns que o Media Sharing GUI relata e o que fazer a respeito." />
+<meta name="keywords" content="solução de problemas, erro, não conecta, sem biblioteca, autenticação, em repouso, ajuda" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="troubleshooting"></a>
+<nav class="crumbs"><a href="index.html">Ajuda do Media Sharing GUI</a> › Referência</nav>
+<h1>Se não conectar</h1>
+<p class="lead">Leia a área <span class="ui">Registro</span> — a linha que começa com <span class="ui">ERROR:</span> costuma dizer o que está
+errado. Eis os casos comuns.</p>
+
+<h2>Não consegue entrar</h2>
+<ul>
+<li><b>A autenticação falha repetidamente.</b> Verifique <span class="ui">Login remoto</span> e <span class="ui">Porta SSH remota</span>, e
+que o início de sessão remoto está ativado na outra ponta. Tente o mesmo no Terminal:
+<code>ssh user@host -p PORT</code>. Se você mudou a senha remota, clique em
+<span class="ui">Esquecer senha salva</span> e digite a nova.</li>
+<li><b>O túnel morre logo após conectar.</b> O Mac remoto pode estar em repouso — acordando só
+brevemente para cada conexão — ou recusando conexões. Configure-o para ficar acordado, ou para permitir o acesso à
+rede em repouso.</li>
+</ul>
+
+<h2>Conecta, mas não encontra biblioteca nenhuma</h2>
+<ul>
+<li><b>«Nenhum registro _home-sharing encontrado.»</b> O Compartilhamento Familiar (ou Media Sharing) não está ativado,
+ou nenhuma biblioteca do Apple TV / Música / iTunes está on-line nessa rede. Ative o Compartilhamento Familiar, com sua
+conta Apple conectada, e garanta que uma biblioteca lá esteja acordada. Consulte
+<a href="remote-setup.html">No Mac de casa</a>.</li>
+<li><b>Bibliotecas foram encontradas, mas nenhuma pôde ser publicada.</b> O registro lista um motivo por biblioteca;
+normalmente uma porta local não estava disponível. Tente de novo, ou mude a <span class="ui">Porta local redirecionada</span>.</li>
+</ul>
+
+<h2>Quando nada funciona</h2>
+<p>Parar e iniciar a conexão (ou <span class="ui">Reiniciar</span> pelo menu dela na barra lateral) resolve a maioria dos
+problemas passageiros. O <a href="traffic-log.html">arquivo de registro</a> captura os detalhes se você quiser
+olhar mais de perto.</p>
+<div class="see"><h3>Consulte também</h3><ul><li><a href="authentication.html">Chaves e senhas SSH</a></li><li><a href="remote-setup.html">No Mac de casa</a></li><li><a href="reconnecting.html">Reconexão e repouso</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

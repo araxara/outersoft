@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>إعادة الاتصال والسكون</title>
+<meta name="description" content="كيف يُبقي ⁨⁨Media Sharing⁩ GUI⁩ الاتصال قائماً: keep-alive، وإعادة الاتصال التلقائية، والنجاة من السكون." />
+<meta name="keywords" content="إعادة الاتصال, السكون, الاستيقاظ, keep-alive, فحص السلامة, انقطاع, تلقائي" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="reconnecting"></a>
+<nav class="crumbs"><a href="index.html">مساعدة ⁨⁨Media Sharing⁩ GUI⁩</a> › مرجع</nav>
+<h1>إعادة الاتصال والسكون</h1>
+<p class="lead">الاتصال المنزلي ليس ثابتاً دائماً. يمتصّ التطبيق المطبّات عنك.</p>
+
+<h2>البقاء حيّاً</h2>
+<p>أثناء الاتصال، يرسل <code>ssh</code> إشارة ping إلى الطرف البعيد كل <span class="ui">Server Alive Interval</span> ثانية
+(انظر <a href="settings.html">مرجع الإعداد</a>). يمنع ذلك الموجّهات والجدران النارية من
+إسقاط نفق خامل، ويتيح للتطبيق ملاحظة موت الاتصال فعلاً بسرعة.</p>
+
+<h2>إعادة الاتصال التلقائية</h2>
+<p>إذا انقطع الاتصال، تتحوّل الحالة إلى <span class="ui">جارٍ إعادة الاتصال</span> ويعيد ⁨⁨Media Sharing⁩ GUI⁩ المحاولة من
+تلقاء نفسه، منتظراً أطول قليلاً بين المحاولات، مسجّلاً كلّاً منها. اضغط <span class="ui">إيقاف</span> لـ
+إلغاء المحاولات.</p>
+
+<h2>بعد أن ينام الـ⁨Mac⁩</h2>
+<p>عندما يستيقظ هذا الـ⁨Mac⁩ من السكون، يتحقّق التطبيق إن نجا النفق. إن نجا، تابَع؛
+وإن لم ينجُ، يُجري إعادة تعيين كاملة — مثل إيقاف ثم بدء — ويعيد المكتبة
+من تلقاء نفسه.</p>
+<div class="see"><h3>انظر أيضاً</h3><ul><li><a href="status.html">الحالة</a></li><li><a href="troubleshooting.html">إذا تعذّر الاتصال</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

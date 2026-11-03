@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Se connecter à une bibliothèque partagée</title>
+<meta name="description" content="Connecter un autre Mac, un iPad, un iPhone ou une Apple TV au Mac qui partage sa bibliothèque." />
+<meta name="keywords" content="connexion, Bonjour, réseau, SSH, adresse, certificat, empreinte, confiance, se connecter, mot de passe" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">Aide TV Library Viewer</a> › Premiers pas</nav>
+<h1>Se connecter à une bibliothèque partagée</h1>
+<p class="lead">Chaque appareil se connecte une seule fois. Ensuite, il rouvre lui-même la même bibliothèque.</p>
+
+<h2>Ouvrir « Se connecter à une bibliothèque partagée »</h2>
+<ul>
+<li><b>Mac :</b> choisissez <span class="ui">Fichier › Se connecter à une bibliothèque partagée…</span> (<kbd>⌘K</kbd>).</li>
+<li><b>iPad et iPhone :</b> touchez <span class="ui">Se connecter à une bibliothèque partagée…</span> dans la barre latérale (<kbd>⌘K</kbd> avec un clavier).</li>
+<li><b>Apple TV :</b> la première fois, TV Library se connecte au premier Mac du réseau qui partage
+sans mot de passe. Sinon, allez dans <span class="ui">Bibliothèques › Se connecter à une autre bibliothèque…</span>.</li>
+</ul>
+
+<h2>Choisir comment joindre le Mac</h2>
+<h3>Ce réseau</h3>
+<p>Les Mac du même réseau dont le partage est activé sont listés par nom. Choisissez-en un.</p>
+<h3>À distance (SSH)</h3>
+<p>Pour un Mac situé sur un autre réseau, par exemple dans une autre maison. Saisissez l’adresse que vous utilisez pour vous connecter en SSH à ce
+Mac (ou à n’importe quel ordinateur de son réseau), et le nom d’utilisateur s’il est différent. TV Library Viewer se
+connecte, trouve la bibliothèque sur ce réseau et s’y connecte par la connexion SSH.</p>
+<ul>
+<li>La première fois, la clé de l’hôte s’affiche pour que vous la compariez et la confirmiez.</li>
+<li>Sur un Mac, votre propre clé SSH est utilisée si l’hôte l’accepte ; sinon, le mot de passe vous est demandé
+et conservé dans votre trousseau.</li>
+<li>Un iPad, un iPhone ou une Apple TV possède sa propre clé. Après la première connexion par mot de passe, il propose
+d’installer cette clé sur l’hôte, pour ne plus avoir besoin du mot de passe.</li>
+</ul>
+<h3>Adresse</h3>
+<p>Pour un Mac que cet appareil peut joindre directement : par un VPN comme Tailscale, ou par un port que votre routeur
+redirige vers lui. Saisissez l’adresse et le port (47100, sauf s’il a été modifié), ainsi qu’un nom de compte
+et un mot de passe si la bibliothèque a des comptes.</p>
+
+<h2>Faire confiance au certificat de la bibliothèque</h2>
+<p>La première connexion affiche l’empreinte du certificat de la bibliothèque. Comparez-la à celle indiquée dans
+<span class="ui">Réglages › Partage</span> sur le Mac qui contient la bibliothèque, puis choisissez <span class="ui">Faire confiance et se connecter</span>. Dès
+lors, l’appareil vérifie ce certificat à chaque fois, et refuse une bibliothèque dont le certificat a
+changé.</p>
+
+<h2>Se connecter avec un compte</h2>
+<p>Si la bibliothèque a des comptes, saisissez le nom et le mot de passe de votre compte sur ce Mac. L’appareil
+les conserve dans son trousseau. Sans comptes, laissez le nom vide et utilisez le mot de passe de la bibliothèque,
+s’il y en a un.</p>
+<div class="see"><h3>Voir aussi</h3><ul><li><a href="away.html">Regarder loin de chez vous</a></li><li><a href="sidebar-libraries.html">Passer d’une bibliothèque à l’autre</a></li><li><a href="settings-accounts.html">Réglages Comptes</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

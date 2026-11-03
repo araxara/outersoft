@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Oglądanie poza domem</title>
+<meta name="description" content="Trzy sposoby dostępu do biblioteki z innej sieci: SSH, VPN lub przekierowany port." />
+<meta name="keywords" content="zdalnie, poza domem, podróż, SSH, VPN, Tailscale, przekierowanie portów, router, 47100, offline" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="away"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer – pomoc</a> › Pierwsze kroki</nav>
+<h1>Oglądanie poza domem</h1>
+<p class="lead">Twoja biblioteka pozostaje na Macu w domu. Wybierz jeden sposób, aby mieć do niej dostęp z innego miejsca.</p>
+
+<h2>Przez SSH</h2>
+<p>Najlepszy, jeśli już możesz logować się przez SSH do tego Maca lub do komputera w jego sieci. Nie trzeba
+niczego więcej konfigurować. Użyj opcji <span class="ui">Zdalnie (SSH)</span> w oknie Połącz z udostępnioną biblioteką. Cały ruch przechodzi przez
+połączenie SSH.</p>
+
+<h2>Przez VPN</h2>
+<p>Jeśli na obu urządzeniach jest VPN, taki jak Tailscale, użyj opcji <span class="ui">Adres</span> z adresem VPN Maca i
+portem 47100.</p>
+
+<h2>Przez przekierowany port</h2>
+<ol>
+<li>Na routerze przekieruj port 47100 (lub port podany w <span class="ui">Ustawienia › Udostępnianie</span>) na Maca z
+biblioteką.</li>
+<li>Dodaj konta z silnymi hasłami w <span class="ui">Ustawienia › Konta</span>.</li>
+<li>Na drugim urządzeniu użyj opcji <span class="ui">Adres</span> z publicznym adresem Twojego domu i portem.</li>
+</ol>
+<div class="note"><b>Uwaga:</b> Połączenia są zawsze szyfrowane, a urządzenia sprawdzają certyfikat
+biblioteki, niezależnie od tego, skąd się łączą. Dziesięć błędnych haseł z jednego adresu w ciągu 5 minut jest
+odrzucanych bez sprawdzania.</div>
+
+<h2>Bez żadnego połączenia</h2>
+<p>Pobierz odcinki przed wyjazdem (Mac, iPad i iPhone). Gdy biblioteka jest nieosiągalna,
+aplikacja otwiera ją w ostatnio widzianym stanie, wyświetla <span class="ui">Offline</span> i odtwarza pobrane odcinki. To, co obejrzysz, zostanie wysłane
+do Maca, gdy znów będzie osiągalny.</p>
+<div class="see"><h3>Zobacz także</h3><ul><li><a href="connect.html">Łączenie z udostępnioną biblioteką</a></li><li><a href="downloads.html">Pobrane i oglądanie offline</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

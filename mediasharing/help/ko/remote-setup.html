@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>집에 있는 Mac에서</title>
+<meta name="description" content="원격 Mac에서 홈 공유와 원격 로그인을 켜고, 외부에서 도달할 수 있게 합니다." />
+<meta name="keywords" content="홈 공유, 미디어 공유, 원격 로그인, SSH, 포트 포워딩, 동적 DNS, 라우터" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="remote-setup"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI 도움말</a> › 시작하기</nav>
+<h1>집에 있는 Mac에서</h1>
+<p class="lead">보관함에 도달하려는 Mac에서 한 번만 하면 됩니다.</p>
+
+<h2>보관함 공유 켜기</h2>
+<ul>
+<li><span class="ui">Apple TV</span> 또는 <span class="ui">음악</span> 앱에서 Apple 계정으로 로그인한 상태로 <b>홈 공유</b>를 켭니다
+(이전 시스템에서는 <b>미디어 공유</b>라고 합니다).</li>
+<li>그 Mac을 깨어 있게 두거나, 잠자는 동안 네트워크 접근을 허용하도록 설정하여, 연결할 때 응답할 수 있게 합니다.</li>
+</ul>
+
+<h2>원격 로그인(SSH) 켜기</h2>
+<ol>
+<li>원격 Mac에서 <span class="ui">시스템 설정</span> › <span class="ui">일반</span> › <span class="ui">공유</span>를 엽니다.</li>
+<li><span class="ui">원격 로그인</span>을 켭니다. 로그인이 허용된 사용자 계정을 적어 둡니다.</li>
+</ol>
+<div class="note"><b>팁:</b> 매번 비밀번호가 필요 없도록 SSH 키를 설정하십시오. 이 Mac의 공개 키를 원격 Mac으로
+복사합니다(<code>ssh-copy-id user@host</code>). Media Sharing GUI는 여전히 비밀번호를 대체 수단으로
+받아들입니다. <a href="authentication.html">SSH 키와 비밀번호</a>를 참조하십시오.</div>
+
+<h2>외부에서 도달할 수 있게 하기</h2>
+<ul>
+<li><b>포트 포워딩:</b> 집 라우터에서 외부 포트를 원격 Mac의 SSH 포트(22)로 전달합니다. 많은 사람이 잡음을 피하려고
+22022 같은 흔치 않은 외부 포트를 전달합니다. 그 외부 포트가 <a href="settings.html">원격 SSH 포트</a>에 입력하는 값입니다.</li>
+<li><b>집 IP를 따라가는 이름:</b> 집 인터넷 주소는 바뀌므로, 이를 따라가는 동적 DNS 이름
+(<code>myhome.example.com</code> 등)이 있으면 숫자를 쫓지 않아도 됩니다.</li>
+</ul>
+<p>외부에서 원격 로그인이 작동하면(터미널에서 <code>ssh user@host -p PORT</code>로 테스트), Media Sharing GUI가 그것을 사용할 수 있습니다.</p>
+<div class="see"><h3>참고 항목</h3><ul><li><a href="connect.html">연결 설정 및 시작</a></li><li><a href="authentication.html">SSH 키와 비밀번호</a></li><li><a href="settings.html">구성 참고</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Что Media Sharing GUI читает, меняет и хранит</title>
+<meta name="description" content="Всё остаётся между этим Mac и вашим удалённым: никаких третьих сторон, аккаунтов и отслеживания." />
+<meta name="keywords" content="конфиденциальность, безопасность, связка ключей, SSH, локально, данные, журнал" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="privacy"></a>
+<nav class="crumbs"><a href="index.html">Справка Media Sharing GUI</a> › Справка</nav>
+<h1>Что Media Sharing GUI читает, меняет и хранит</h1>
+<p class="lead">Приложение соединяет только этот Mac с вашим собственным удалённым Mac. Больше никуда ничего не идёт.</p>
+
+<h2>На этом Mac</h2>
+<ul>
+<li><b>Хранит:</b> ваши настройки подключения и любой введённый пароль SSH — пароль в
+<b>Связке ключей</b> macOS, больше нигде. <span class="ui">Забыть сохранённый пароль</span> удаляет его.</li>
+<li><b>Пишет:</b> файл журнала того, что делало каждое подключение (см. <a href="traffic-log.html">Трафик и
+журнал</a>). Вы можете показать или удалить его в любой момент.</li>
+<li><b>Публикует:</b> удалённую библиотеку в собственной сети этого Mac через Bonjour, чтобы
+приложения <span class="ui">Apple TV</span> и <span class="ui">Музыка</span> её видели — только пока подключение работает.</li>
+</ul>
+
+<h2>По сети</h2>
+<ul>
+<li><b>Подключается только к удалённому Mac, который вы называете</b>, по SSH, встроенным инструментом <code>ssh</code>.
+Воспроизведение идёт в зашифрованном виде внутри этого туннеля.</li>
+<li><b>Никаких третьих сторон.</b> Нет облачной службы, нет аккаунта для создания, и ничего не отправляется в
+Outersoft или кому-либо ещё.</li>
+</ul>
+<div class="see"><h3>См. также</h3><ul><li><a href="overview.html">Как работает Media Sharing GUI</a></li><li><a href="authentication.html">Ключи и пароли SSH</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

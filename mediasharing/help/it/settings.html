@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Riferimento della configurazione</title>
+<meta name="description" content="Cosa fa ogni campo del riquadro Configurazione e quando cambiarlo." />
+<meta name="keywords" content="impostazioni, configurazione, campi, porta, socket di controllo, keep-alive, compressione, riferimento" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings"></a>
+<nav class="crumbs"><a href="index.html">Aiuto di Media Sharing GUI</a> › Riferimento</nav>
+<h1>Riferimento della configurazione</h1>
+<p class="lead">Fai clic sulla <span class="ui">(i)</span> accanto a un campo nell'app per le stesse note. La maggior parte dei campi può
+restare ai valori predefiniti.</p>
+
+<h2>Dove connettersi</h2>
+<ul>
+<li><b><span class="ui">Nome connessione</span></b> — un'etichetta mostrata nella barra laterale, solo per tuo riferimento. Non
+influisce sul funzionamento della connessione.</li>
+<li><b><span class="ui">Accesso remoto (utente@host)</span></b> — il nome utente SSH e l'host (o nome DNS dinamico) del
+Mac remoto, es. <code>alex@myhome.example.com</code> — lo stesso <code>user@host</code>
+che daresti a <code>ssh</code>.</li>
+<li><b><span class="ui">Porta SSH remota</span></b> — la porta TCP su cui si raggiunge il server SSH del Mac remoto.
+Spesso non 22, perché i router inoltrano di frequente una porta esterna personalizzata (come 22022) alla porta SSH del Mac
+nella rete domestica.</li>
+</ul>
+
+<h2>Porte</h2>
+<ul>
+<li><b><span class="ui">Porta locale reindirizzata</span></b> — una porta libera su <i>questo</i> Mac. La porta di Condivisione in casa della libreria
+remota viene convogliata qui, così un'app che guarda <code>localhost</code> su questa porta
+raggiunge la libreria remota.</li>
+<li><b><span class="ui">Porta Media Sharing remota</span></b> — la porta su cui la Condivisione in casa ascolta laggiù, sul
+Mac remoto — normalmente 3689, la porta DAAP / Condivisione in casa standard. Cambiala solo per una configurazione
+insolita.</li>
+</ul>
+
+<h2>Comportamento del tunnel</h2>
+<ul>
+<li><b><span class="ui">Percorso socket di controllo SSH</span></b> — un percorso di file locale per il socket di controllo in background di <code>ssh</code>,
+che consente all'app di chiudere il tunnel in modo pulito (<code>ssh -O exit</code>) invece di
+terminare il processo.</li>
+<li><b><span class="ui">Server Alive Interval</span></b> — con quale frequenza, in secondi, <code>ssh</code> invia un ping
+all'estremità remota per mantenere il tunnel attraverso router e firewall e accorgersi presto se muore.</li>
+<li><b><span class="ui">Intervallo di polling del traffico</span></b> — con quale frequenza, in secondi, il pannello Traffico ricampiona
+<code>nettop</code>. Ogni campione impiega alcuni secondi; un intervallo più breve li esegue semplicemente uno dopo l'altro.</li>
+<li><b><span class="ui">Compressione SSH</span></b> — attiva la compressione di <code>ssh</code> (<code>-C</code>).
+Scambia un po' di CPU con un flusso di dati più piccolo, il che può rendere notevolmente più fluida la riproduzione su una
+connessione domestica lenta o ad alta latenza. Si può lasciare attiva senza problemi.</li>
+</ul>
+<div class="see"><h3>Vedi anche</h3><ul><li><a href="connect.html">Configurare e avviare una connessione</a></li><li><a href="traffic-log.html">Traffico e registro</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

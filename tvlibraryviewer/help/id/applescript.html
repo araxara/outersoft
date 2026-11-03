@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AppleScript</title>
+<meta name="description" content="Gunakan skrip pada TV Library Viewer untuk menambahkan episode, mengatur deskripsi, dan mengelola akun." />
+<meta name="keywords" content="AppleScript, skrip, otomatisasi, osascript, add episode, deskripsi panjang, akun, TV Library Viewer" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="applescript"></a>
+<nav class="crumbs"><a href="index.html">Bantuan TV Library Viewer</a> › Referensi</nav>
+<h1>AppleScript</h1>
+<p class="lead">TV Library Viewer dapat dikendalikan dengan skrip, misalnya dari skrip yang mengimpor episode.
+Buka kamusnya di Editor Skrip (<span class="ui">File › Buka Kamus…</span>) untuk detailnya.</p>
+<table>
+<tr><th>Perintah</th><th>Fungsinya</th></tr>
+<tr><td><span class="ui">add episode</span></td><td>Menambahkan file video ke perpustakaan app TV (atau menemukannya di sana) beserta
+acara, musim, episode, judul, genre, dan deskripsinya, lalu mengembalikan ID persistennya.</td></tr>
+<tr><td><span class="ui">update episode</span></td><td>Mengubah detail episode.</td></tr>
+<tr><td><span class="ui">remove episode</span></td><td>Menghapus episode dari perpustakaan. Filenya tetap ada.</td></tr>
+<tr><td><span class="ui">refresh library</span></td><td>Membaca ulang perpustakaan.</td></tr>
+<tr><td><span class="ui">create account</span>, <span class="ui">change account password</span>, <span class="ui">delete account</span>,
+<span class="ui">account names</span>, <span class="ui">account log</span></td><td>Mengelola akun.</td></tr>
+</table>
+<p>Deskripsi panjang yang diberikan dengan cara ini disimpan di basis data TV Library Viewer, dan dikembalikan saat
+app TV melupakannya.</p>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>TV Library Viewerが読み取る情報、変更する情報、保存する情報</title>
+<meta name="description" content="何を読み取り、何をどこで変更し、各デバイスに何を保存するか。" />
+<meta name="keywords" content="プライバシー, 安全性, ファイル, 削除, キーチェーン, データベース, 読み取り専用, データ" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="privacy"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer ヘルプ</a> › リファレンス</nav>
+<h1>TV Library Viewerが読み取る情報、変更する情報、保存する情報</h1>
+<h2>読み取る情報</h2>
+<p>TVアプリのライブラリとアートワーク、およびビデオファイル自体に含まれる説明と画像。読み取りによってそれらが変更されることはありません。</p>
+<h2>変更する情報</h2>
+<p>変更はTVアプリを通じてのみ行います：視聴済みまたは未視聴にする、再生位置、ライブラリ項目の追加と削除。<b>ビデオファイルが削除されることはありません。</b></p>
+<h2>保存する情報</h2>
+<ul>
+<li><b>ライブラリのあるMac：</b>アカウントのデータベース、メインアカウント以外のすべてのアカウントの視聴状況、30日分のログ、詳しい説明とキャスト（<a href="settings-storage.html">ストレージ</a>を参照）。パスワードの照合用データと共有用の証明書は、そのMacのキーチェーンに保存されます。</li>
+<li><b>閲覧するデバイス：</b>最後に見た状態のライブラリ（オフラインで使うため）、ダウンロード、キーチェーン内のアカウント名とパスワード。</li>
+<li><b>外部に送信される情報：</b>キャストや詳細を調べるために、番組名とその出演者だけがTVmazeとTMDbに送信されます。TMDbのトークンはTMDbにだけ送信されます。 Google Cloud Translationキーがある場合、ギリシャ語、チェコ語、ハンガリー語、ルーマニア語、ペルシャ語、ウルドゥー語、ベンガル語に翻訳するタイトルと説明はGoogleにも送られます。それ以外の翻訳はすべてMac上で行われます。</li>
+</ul>
+<div class="see"><h3>関連項目</h3><ul><li><a href="overview.html">TV Library Viewerの仕組み</a></li><li><a href="settings-storage.html">ストレージ設定</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

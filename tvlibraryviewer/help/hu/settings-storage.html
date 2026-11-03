@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hu">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tárhely beállításai</title>
+<meta name="description" content="Mekkora a könyvtár, és mennyi helyet foglal a TV Library Viewer adatbázisa és gyorsítótárai." />
+<meta name="keywords" content="beállítások, tárhely, adatbázis, méret, hely, sorozatok, epizódok, szereplők, színészfotók, gyorsítótár, TV Library Viewer" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings-storage"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer súgó</a> › Beállítások</nav>
+<h1>Tárhely beállításai</h1>
+<p class="lead">Válassza a <span class="ui">TV Library Viewer › Beállítások</span> menüpontot, majd kattintson a <span class="ui">Tárhely</span> elemre.</p>
+
+<h2>A Mac TV-könyvtára</h2>
+<p>A TV app könyvtárában lévő sorozatok és epizódok száma, valamint az adatbázisának mérete. A videofájlokat
+nem számolja bele.</p>
+
+<h2>TV Library Viewer-adatbázis</h2>
+<p>A TV Library Viewer saját adatbázisa ezen a Macen, amelyet minden, a könyvtárat megjelenítő eszközzel megoszt.</p>
+<table>
+<tr><th>Rész</th><th>Mit tartalmaz?</th></tr>
+<tr><td><span class="ui">Sorozatadatok</span></td><td>Az AppleScripttel megadott teljes leírások és az egyes sorozatok
+szereplői: a színészek neve és szerepe.</td></tr>
+<tr><td><span class="ui">Fordítások</span></td><td>Az appokban beállított nyelvekre lefordított epizódcímek és -leírások.</td></tr>
+<tr><td><span class="ui">Szereplők és stáb</span></td><td>Mindenkiről egy kis fénykép, valamint a TVmaze-en és a TMDb-n lévő
+oldalaik címe.</td></tr>
+<tr><td><span class="ui">Fiókok és megtekintés</span></td><td>A fiókok, minden fiók megtekintései a fő fiók
+kivételével, és a fiókok naplói.</td></tr>
+<tr><td><span class="ui">Adatbázis-szerkezet és szabad hely</span></td><td>Az SQLite saját nyilvántartásai és az általa újrahasznosított hely.</td></tr>
+<tr><td><span class="ui">Legutóbbi módosítások</span></td><td>Az adatbázisba még be nem olvasztott módosítások. Ezt időnként
+elvégzi.</td></tr>
+</table>
+<p>Egy sorozat szereplőit és stábját akkor keresi ki a TVmaze-en és a TMDb-n, amikor az oldalát először megnyitják, itt vagy
+bármelyik eszközön. A személyek adatait minden megnyitáskor lekéri, így soha nem elavultak,
+és nem tárolja őket. Kattintson a <span class="ui">Megjelenítés a Finderben</span> gombra az adatbázisfájl megtekintéséhez.</p>
+
+<h2><a name="tmdb"></a>Szereplők és stáb adatai: TMDb-token</h2>
+<p>A TVmaze-hez semmit nem kell beállítani. A TMDb (The Movie Database) rendezőket és forgatókönyvírókat, a TVmaze-ről
+hiányzó színészeket és életrajzokat ad hozzá, gyakran az Ön nyelvén. Ehhez saját token kell: a TMDb ingyen
+ad egyet mindenkinek, akinek fiókja van, személyes, nem kereskedelmi használatra. A TV Library Viewer
+nem tartalmaz ilyet.</p>
+<ol>
+<li>Hozzon létre egy ingyenes fiókot a themoviedb.org oldalon, és jelentkezzen be.</li>
+<li>Kattintson a fiókja ikonjára, válassza a <span class="ui">Settings</span> lehetőséget, majd kattintson az <span class="ui">API</span> elemre.</li>
+<li>Kérjen API-kulcsot: válassza a <span class="ui">Developer</span> lehetőséget, fogadja el a feltételeket, és írja le, hogy személyes,
+nem kereskedelmi célra használja (például: „Szereplők és életrajzok megjelenítése a saját tévékönyvtár-appomban”).</li>
+<li>Amikor a kulcs elkészült, másolja ki az <span class="ui">API Read Access Token</span> értékét (a hosszút, nem a rövidebb API Key-t).</li>
+<li>A könyvtárat tároló Macen válassza a <span class="ui">TV Library Viewer › Beállítások</span> menüpontot, kattintson a <span class="ui">Tárhely</span> elemre, és
+illessze be a <span class="ui">TMDb API Read Access Token</span> mezőbe.</li>
+<li>Kattintson a <span class="ui">Teszt</span> gombra. „A TMDb elfogadja ezt a tokent” azt jelenti, hogy működik.</li>
+</ol>
+<p>A tokent a Mac Kulcskarikája tárolja. Csak a könyvtárat tároló Mac használja; a többi
+eszköze attól a Mactől kapja a szereplőket és a részleteket. A már kikeresett sorozatok a következő megnyitáskor
+kapják meg a TMDb szereplőit és stábját. Ha egy új tokent tesztelés nélkül zár be a Beállításokban, akkor teszteli,
+és szól, ha a TMDb elutasítja.</p>
+<div class="note"><b>Megjegyzés:</b> Ez a termék a TMDB API-t használja, de a TMDB nem támogatja és nem tanúsította.</div>
+
+<h2><a name="google"></a>Fordítás: Google-kulcs</h2>
+<p>Az epizódok címét és leírását ez a Mac ingyen lefordítja az egyes eszközök nyelvére
+az Apple fordítási funkciójával. Ez nem tud görögre, csehre, magyarra, románra, perzsára, urdura
+és bengálira fordítani. Ezekhez adja meg saját Google Cloud Translation API-kulcsát. Csak a könyvtárat tároló Macnek
+kell kulcs, az azt megtekintő eszközöknek nem. Havonta az első 500 000 karakter ingyenes, és minden
+szöveget csak egyszer fordít le.</p>
+<ol>
+<li>Nyissa meg a console.cloud.google.com oldalt, és jelentkezzen be Google-fiókjával.</li>
+<li>Hozzon létre egy projektet: kattintson a felül lévő projektmenüre, majd a <span class="ui">New Project</span> elemre, és adjon neki
+nevet, például „TV Library Viewer”.</li>
+<li>Kapcsolja be a számlázást: a ☰ menüben válassza a <span class="ui">Billing</span> lehetőséget, és kapcsoljon hozzá egy számlázási fiókot. A Google
+ingyenes használathoz is kéri. A biztonság kedvéért adjon meg egy költségkeretet, például 1 dollárt, a <span class="ui">Budgets &amp; alerts</span> részben.</li>
+<li>Válassza a ☰ › <span class="ui">APIs &amp; Services › Library</span> lehetőséget, keresse meg a <span class="ui">Cloud Translation API</span> elemet, és kattintson az
+<span class="ui">Enable</span> gombra.</li>
+<li>Válassza a ☰ › <span class="ui">APIs &amp; Services › Credentials</span>, majd a <span class="ui">Create credentials › API key</span> lehetőséget, és
+másolja ki a kulcsot (ez „AIza”-val kezdődik).</li>
+<li>Ajánlott: kattintson a kulcs nevére, az API restrictions részben válassza a <span class="ui">Restrict key</span> lehetőséget, jelölje be a
+<span class="ui">Cloud Translation API</span> elemet, és kattintson a <span class="ui">Save</span> gombra, hogy a kulcs csak fordításra legyen használható.</li>
+<li>A könyvtárat tároló Macen válassza a <span class="ui">TV Library Viewer › Beállítások</span> menüpontot, kattintson a <span class="ui">Tárhely</span> elemre,
+illessze be a kulcsot a <span class="ui">Google Cloud Translation API-kulcs</span> mezőbe, és kattintson a <span class="ui">Teszt</span> gombra.</li>
+</ol>
+<p>A kulcsot a Mac kulcskarikája tárolja, és csak ehhez a hét nyelvhez használja. Ne ossza meg
+másokkal: minden vele lefordított szöveg az Ön Google-fiókjának lesz kiszámlázva.</p>
+
+<h2>Gyorsítótárak</h2>
+<p>A borítók és azok a könyvtárak, amelyeket ez a Mac más Macekről jelenített meg. A gyorsítótárak szükség esetén újra létrejönnek,
+és a macOS kiüríti őket, ha kevés a hely.</p>
+<div class="see"><h3>Lásd még</h3><ul><li><a href="show-page.html">A sorozat oldala és szereplői</a></li><li><a href="privacy.html">Mit olvas, módosít és tárol a TV Library Viewer?</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

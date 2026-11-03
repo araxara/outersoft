@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Si no conecta</title>
+<meta name="description" content="Los errores habituales que informa Media Sharing GUI y qué hacer ante ellos." />
+<meta name="keywords" content="resolución de problemas, error, no conecta, sin biblioteca, autenticación, en reposo, ayuda" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="troubleshooting"></a>
+<nav class="crumbs"><a href="index.html">Ayuda de Media Sharing GUI</a> › Referencia</nav>
+<h1>Si no conecta</h1>
+<p class="lead">Lee el cuadro <span class="ui">Registro</span>: la línea que empieza por <span class="ui">ERROR:</span> suele decir qué va
+mal. Estos son los casos habituales.</p>
+
+<h2>No puede iniciar sesión</h2>
+<ul>
+<li><b>La autenticación falla una y otra vez.</b> Comprueba <span class="ui">Inicio de sesión remoto</span> y <span class="ui">Puerto SSH remoto</span>, y
+que el inicio de sesión remoto esté activado en el otro extremo. Prueba lo mismo desde Terminal:
+<code>ssh user@host -p PORT</code>. Si cambiaste la contraseña remota, haz clic en
+<span class="ui">Olvidar contraseña guardada</span> e introduce la nueva.</li>
+<li><b>El túnel muere justo después de conectar.</b> El Mac remoto puede estar en reposo —despertando solo
+brevemente para cada conexión— o rechazando conexiones. Ponlo a permanecer despierto, o a permitir el acceso a la
+red en reposo.</li>
+</ul>
+
+<h2>Conecta, pero no encuentra ninguna biblioteca</h2>
+<ul>
+<li><b>«No se encontró ningún registro _home-sharing.»</b> Compartir en casa (o Media Sharing) no está activado,
+o no hay ninguna biblioteca de Apple TV / Música / iTunes en línea en esa red. Activa Compartir en casa, con tu
+cuenta de Apple iniciada, y asegúrate de que una biblioteca allí esté despierta. Consulta
+<a href="remote-setup.html">En el Mac de casa</a>.</li>
+<li><b>Se encontraron bibliotecas pero no se pudo publicar ninguna.</b> El registro indica un motivo por biblioteca;
+normalmente un puerto local no estaba disponible. Reinténtalo, o cambia el <span class="ui">Puerto local reenviado</span>.</li>
+</ul>
+
+<h2>Cuando nada funciona</h2>
+<p>Detener e iniciar la conexión (o <span class="ui">Reiniciar</span> desde su menú de la barra lateral) resuelve la mayoría de los
+problemas pasajeros. El <a href="traffic-log.html">archivo de registro</a> recoge el detalle si quieres
+mirar más de cerca.</p>
+<div class="see"><h3>Consulta también</h3><ul><li><a href="authentication.html">Claves y contraseñas SSH</a></li><li><a href="remote-setup.html">En el Mac de casa</a></li><li><a href="reconnecting.html">Reconexión y reposo</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sv">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AppleScript</title>
+<meta name="description" content="Styr TV Library Viewer med skript för att lägga till avsnitt, ange beskrivningar och hantera konton." />
+<meta name="keywords" content="AppleScript, skript, automatisering, osascript, add episode, lång beskrivning, konton, TV Library Viewer" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="applescript"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer Hjälp</a> › Referens</nav>
+<h1>AppleScript</h1>
+<p class="lead">TV Library Viewer kan styras med skript, till exempel från ett skript som importerar avsnitt.
+Öppna dess lexikon i Skriptredigerare (<span class="ui">Arkiv › Öppna lexikon…</span>) för mer information.</p>
+<table>
+<tr><th>Kommando</th><th>Vad det gör</th></tr>
+<tr><td><span class="ui">add episode</span></td><td>Lägger till en videofil i biblioteket i appen TV (eller hittar den där) med
+serie, säsong, avsnitt, titel, genre och beskrivningar, och returnerar dess beständiga ID.</td></tr>
+<tr><td><span class="ui">update episode</span></td><td>Ändrar ett avsnitts uppgifter.</td></tr>
+<tr><td><span class="ui">remove episode</span></td><td>Tar bort ett avsnitt från biblioteket. Filen finns kvar.</td></tr>
+<tr><td><span class="ui">refresh library</span></td><td>Läser biblioteket igen.</td></tr>
+<tr><td><span class="ui">create account</span>, <span class="ui">change account password</span>, <span class="ui">delete account</span>,
+<span class="ui">account names</span>, <span class="ui">account log</span></td><td>Hanterar konton.</td></tr>
+</table>
+<p>Långa beskrivningar som anges på det här sättet sparas i TV Library Viewers databas och läggs tillbaka när
+appen TV glömmer dem.</p>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nb">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lagringsinnstillinger</title>
+<meta name="description" content="Hvor stort biblioteket er, og plassen databasen og hurtigbufferne til TV Library Viewer tar." />
+<meta name="keywords" content="innstillinger, lagring, database, størrelse, plass, serier, episoder, rolleliste, skuespillerbilder, hurtigbuffer, TVmaze, TMDb" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings-storage"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer Hjelp</a> › Innstillinger</nav>
+<h1>Lagringsinnstillinger</h1>
+<p class="lead">Velg <span class="ui">TV Library Viewer › Innstillinger</span>, og klikk deretter på <span class="ui">Lagring</span>.</p>
+
+<h2>TV-biblioteket på denne Macen</h2>
+<p>Antall serier og episoder i TV-appens bibliotek, og størrelsen på databasen. Videofilene
+telles ikke med.</p>
+
+<h2>TV Library Viewer-database</h2>
+<p>Den egne databasen til TV Library Viewer på denne Macen, delt med alle enheter som viser biblioteket.</p>
+<table>
+<tr><th>Del</th><th>Dette inneholder den</th></tr>
+<tr><td><span class="ui">Serieinformasjon</span></td><td>Fullstendige beskrivelser angitt via AppleScript, og rollelisten
+for hver serie: skuespillernes navn og roller.</td></tr>
+<tr><td><span class="ui">Oversettelser</span></td><td>Episodetitler og -beskrivelser oversatt til språkene appene er stilt inn på.</td></tr>
+<tr><td><span class="ui">Rolleliste og stab</span></td><td>Ett lite bilde av hver person, og adressene til sidene deres
+på TVmaze og TMDb.</td></tr>
+<tr><td><span class="ui">Kontoer og visning</span></td><td>Kontoene, det alle kontoene unntatt
+hovedkontoen har sett, og kontoenes logger.</td></tr>
+<tr><td><span class="ui">Databasestruktur og ledig plass</span></td><td>SQLites egne oppføringer, og plass den gjenbruker.</td></tr>
+<tr><td><span class="ui">Nylige endringer</span></td><td>Endringer som ennå ikke er skrevet inn i databasen. Det skjer
+med jevne mellomrom.</td></tr>
+</table>
+<p>Rollelisten og staben til en serie slås opp på TVmaze og TMDb første gang siden åpnes, her eller
+på en annen enhet. Personopplysninger hentes hver gang du åpner dem, så de aldri er utdaterte,
+og lagres ikke. Klikk på <span class="ui">Vis i Finder</span> for å se databasefilen.</p>
+
+<h2><a name="tmdb"></a>Detaljer om rolleliste og stab: et TMDb-token</h2>
+<p>TVmaze trenger ikke noe oppsett. TMDb (The Movie Database) legger til regissører og manusforfattere, skuespillere
+TVmaze ikke har, og biografier, ofte på ditt språk. Det krever et eget token: TMDb
+gir et gratis til alle med en konto, til personlig, ikke-kommersiell bruk. TV Library Viewer
+følger ikke med et.</p>
+<ol>
+<li>Opprett en gratis konto på themoviedb.org, og logg inn.</li>
+<li>Klikk på kontosymbolet, velg <span class="ui">Settings</span>, og klikk deretter på <span class="ui">API</span>.</li>
+<li>Be om en API-nøkkel: Velg <span class="ui">Developer</span>, godta vilkårene, og beskriv bruken som personlig
+og ikke-kommersiell (for eksempel «Show cast and biographies in my own TV library app»).</li>
+<li>Når nøkkelen er klar, kopierer du <span class="ui">API Read Access Token</span> (den lange, ikke den kortere API Key).</li>
+<li>På Macen med biblioteket velger du <span class="ui">TV Library Viewer › Innstillinger</span>, klikker på <span class="ui">Lagring</span> og
+limer det inn i <span class="ui">TMDb API Read Access Token</span>.</li>
+<li>Klikk på <span class="ui">Test</span>. «TMDb godtar dette tokenet» betyr at det fungerer.</li>
+</ol>
+<p>Tokenet lagres i nøkkelringen på Macen. Bare Macen med biblioteket bruker det; de andre
+enhetene dine får rollelisten og detaljene fra den Macen. Serier som allerede er slått opp, får rollelisten og staben fra TMDb
+neste gang siden deres åpnes. Hvis du lukker Innstillinger uten å teste et nytt token, testes det da,
+og du får beskjed hvis TMDb avviser det.</p>
+<div class="note"><b>Merk:</b> Dette produktet bruker TMDB API, men er ikke godkjent eller sertifisert av TMDB.</div>
+
+<h2><a name="google"></a>Oversettelse: en Google-nøkkel</h2>
+<p>Episodetitler og -beskrivelser oversettes til språket på hver enhet her på Macen, gratis,
+med Apples oversettelsesfunksjon. Den kan ikke oversette til gresk, tsjekkisk, ungarsk, rumensk, persisk, urdu
+eller bengali. For disse kan du legge til din egen Google Cloud Translation API-nøkkel. Bare Macen med biblioteket
+trenger en, ikke enhetene som viser det. De første 500 000 tegnene hver måned er gratis, og hver
+tekst oversettes bare én gang.</p>
+<ol>
+<li>Gå til console.cloud.google.com, og logg på med Google-kontoen din.</li>
+<li>Opprett et prosjekt: Klikk på prosjektmenyen øverst, deretter på <span class="ui">New Project</span>, og gi det et
+navn, for eksempel «TV Library Viewer».</li>
+<li>Slå på fakturering: Velg <span class="ui">Billing</span> i menyen ☰, og koble til en faktureringskonto. Google krever
+en selv for gratis bruk. For sikkerhets skyld kan du legge til et budsjett, for eksempel 1 dollar, under <span class="ui">Budgets &amp; alerts</span>.</li>
+<li>Velg ☰ › <span class="ui">APIs &amp; Services › Library</span>, søk etter <span class="ui">Cloud Translation API</span>, og klikk på
+<span class="ui">Enable</span>.</li>
+<li>Velg ☰ › <span class="ui">APIs &amp; Services › Credentials</span>, deretter <span class="ui">Create credentials › API key</span>, og
+kopier nøkkelen (den begynner med «AIza»).</li>
+<li>Anbefalt: Klikk på navnet til nøkkelen, velg <span class="ui">Restrict key</span> under API restrictions, kryss av for
+<span class="ui">Cloud Translation API</span>, og klikk på <span class="ui">Save</span>, slik at nøkkelen bare fungerer for oversettelse.</li>
+<li>På Macen med biblioteket velger du <span class="ui">TV Library Viewer › Innstillinger</span>, klikker på <span class="ui">Lagring</span>,
+limer inn nøkkelen i <span class="ui">Google Cloud Translation API-nøkkel</span> og klikker på <span class="ui">Test</span>.</li>
+</ol>
+<p>Nøkkelen oppbevares i nøkkelringen på Macen og brukes bare for disse sju språkene. Ikke del
+den: Alt som oversettes med den, faktureres Google-kontoen din.</p>
+
+<h2>Hurtigbuffere</h2>
+<p>Bilder, og bibliotekene denne Macen har vist fra andre Mac-maskiner. Hurtigbuffere lages på nytt ved behov,
+og macOS tømmer dem når det blir lite plass.</p>
+<div class="see"><h3>Se også</h3><ul><li><a href="show-page.html">Seriesiden og rollelisten</a></li><li><a href="privacy.html">Hva TV Library Viewer leser, endrer og lagrer</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

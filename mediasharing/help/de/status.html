@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Status und Zustand</title>
+<meta name="description" content="Das Statusfeld zeigt, was die Verbindung tut, ihren Tunnel-Prozess und wie lange sie schon läuft." />
+<meta name="keywords" content="Status, Zustand, aktiv, verbindet, Laufzeit, Tunnel, PID" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="status"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI-Hilfe</a> › Verwendung</nav>
+<h1>Status und Zustand</h1>
+<p class="lead">Im Statusfeld startest und stoppst du und beobachtest, was geschieht.</p>
+
+<h2>Was der Zustand bedeutet</h2>
+<table>
+<tr><th>Zustand</th><th>Was geschieht</th></tr>
+<tr><td>INAKTIV</td><td>Nicht verbunden. Drücke <span class="ui">Start</span>, um zu beginnen.</td></tr>
+<tr><td>VERBINDET</td><td>Öffnet den SSH-Tunnel zum entfernten Mac.</td></tr>
+<tr><td>PASSWORT ERFORDERLICH</td><td>Die Schlüsselanmeldung ging nicht; gib das Passwort bei <span class="ui">SSH-Authentifizierung</span> ein.</td></tr>
+<tr><td>FRAGT AB</td><td>Fragt den entfernten Mac, welche Home-Sharing-Mediathek er ankündigt.</td></tr>
+<tr><td>REGISTRIERT</td><td>Veröffentlicht diese Mediathek hier über Bonjour.</td></tr>
+<tr><td>AKTIV</td><td>Live. Die Mediathek ist in der Apple TV- / Musik-App verfügbar.</td></tr>
+<tr><td>VERBINDET ERNEUT</td><td>Die Verbindung brach ab; sie versucht es von selbst erneut.</td></tr>
+<tr><td>STOPPT</td><td>Schließt den Tunnel und entfernt die lokale Ankündigung.</td></tr>
+<tr><td>FEHLER</td><td>Etwas ging schief; das Protokoll sagt, was. Siehe <a href="troubleshooting.html">Wenn keine Verbindung zustande kommt</a>.</td></tr>
+</table>
+
+<h2>Die übrigen Zeilen</h2>
+<ul>
+<li><span class="ui">Tunnel-PID</span> — die Prozess-ID des im Hintergrund laufenden <code>ssh</code>-Tunnels, verwendet, um
+den <a href="traffic-log.html">Datenverkehr</a> zu messen und ihn sauber zu schließen.</li>
+<li><span class="ui">Laufzeit</span> — wie lange die aktuelle Verbindung schon besteht.</li>
+</ul>
+<p>Die Tasten unten ändern sich mit dem Zustand: <span class="ui">Start</span> im Leerlauf, <span class="ui">Stopp</span> während der
+Verbindung und <span class="ui">Abbrechen</span>, während sie noch verbindet.</p>
+<div class="see"><h3>Siehe auch</h3><ul><li><a href="libraries.html">Auswählen, welche Bibliotheken veröffentlicht werden</a></li><li><a href="reconnecting.html">Erneutes Verbinden und Ruhezustand</a></li><li><a href="traffic-log.html">Datenverkehr und Protokoll</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

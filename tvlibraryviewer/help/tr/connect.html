@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Paylaşılan arşive bağlanma</title>
+<meta name="description" content="Başka bir Mac’i, iPad’i, iPhone’u veya Apple TV’yi arşivini paylaşan Mac’e bağlayın." />
+<meta name="keywords" content="bağlan, Bonjour, ağ, SSH, adres, sertifika, parmak izi, güven, giriş yap, parola" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer Yardımı</a> › Başlarken</nav>
+<h1>Paylaşılan arşive bağlanma</h1>
+<p class="lead">Her aygıt bir kez bağlanır. Sonrasında aynı arşivi kendiliğinden yeniden açar.</p>
+
+<h2>Paylaşılan Arşive Bağlan’ı açın</h2>
+<ul>
+<li><b>Mac:</b> <span class="ui">Dosya › Paylaşılan Arşive Bağlan…</span> komutunu seçin (<kbd>⌘K</kbd>).</li>
+<li><b>iPad ve iPhone:</b> kenar çubuğunda <span class="ui">Paylaşılan Arşive Bağlan…</span> seçeneğine dokunun (klavyeyle <kbd>⌘K</kbd>).</li>
+<li><b>Apple TV:</b> TV Library ilk seferde ağdaki parolasız paylaşım yapan ilk Mac’e
+bağlanır. Aksi hâlde <span class="ui">Arşivler › Başka Bir Arşive Bağlan…</span> bölümüne gidin.</li>
+</ul>
+
+<h2>Mac’e nasıl ulaşılacağını seçin</h2>
+<h3>Bu Ağ</h3>
+<p>Aynı ağda paylaşımı açık olan Mac’ler adlarıyla listelenir. Birini seçin.</p>
+<h3>Uzak (SSH)</h3>
+<p>Başka bir evdeki gibi başka bir ağdaki Mac için. O Mac’e (veya ağındaki herhangi bir bilgisayara) SSH ile bağlanırken
+kullandığınız adresi ve farklıysa kullanıcı adını yazın. TV Library Viewer giriş yapar,
+o ağdaki arşivi bulur ve SSH bağlantısı üzerinden bağlanır.</p>
+<ul>
+<li>İlk seferde, karşılaştırıp onaylamanız için ana bilgisayarın anahtarını gösterir.</li>
+<li>Mac’te, ana bilgisayar kabul ederse kendi SSH anahtarınız kullanılır; aksi hâlde parola sorulur
+ve Anahtar Zinciri’nizde saklanır.</li>
+<li>iPad, iPhone veya Apple TV’nin kendi anahtarı vardır. İlk parolalı girişten sonra bu anahtarı ana bilgisayara
+yüklemeyi önerir; böylece parola bir daha gerekmez.</li>
+</ul>
+<h3>Adres</h3>
+<p>Bu aygıtın doğrudan ulaşabildiği bir Mac için: Tailscale gibi bir VPN veya yönlendiricinizin ona yönlendirdiği bir
+bağlantı noktası üzerinden. Adresi ve bağlantı noktasını (değiştirilmediyse 47100), arşivde hesaplar varsa bir hesap adı
+ve parola yazın.</p>
+
+<h2>Arşivin sertifikasına güvenin</h2>
+<p>İlk bağlantıda arşivin sertifika parmak izi gösterilir. Bunu arşivin bulunduğu Mac’teki
+<span class="ui">Ayarlar › Paylaşma</span> bölümündekiyle karşılaştırın, sonra <span class="ui">Güven ve Bağlan</span> seçeneğini seçin. Bundan
+sonra aygıt bu sertifikayı her seferinde denetler ve sertifikası değişmiş bir arşivi
+reddeder.</p>
+
+<h2>Giriş yapma</h2>
+<p>Arşivde hesaplar varsa o Mac’teki hesabınızın adını ve parolasını girin. Aygıt
+bunları Anahtar Zinciri’nde saklar. Hesap yoksa adı boş bırakın ve varsa arşiv parolasını
+kullanın.</p>
+<div class="see"><h3>Ayrıca bakın</h3><ul><li><a href="away.html">Evden uzaktayken izleme</a></li><li><a href="sidebar-libraries.html">Arşivler arasında geçiş yapma</a></li><li><a href="settings-accounts.html">Hesap ayarları</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

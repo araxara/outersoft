@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Eine Verbindung einrichten und starten</title>
+<meta name="description" content="Fülle das Konfigurationsfeld aus, drücke Start, melde dich bei Bedarf an, und die entfernte Mediathek erscheint lokal." />
+<meta name="keywords" content="verbinden, Konfiguration, Start, entfernte Anmeldung, lokaler Port, beginnen" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI-Hilfe</a> › Erste Schritte</nav>
+<h1>Eine Verbindung einrichten und starten</h1>
+<p class="lead">Trage ein, wo die Mediathek liegt, und drücke dann Start.</p>
+
+<h2>Die Verbindung ausfüllen</h2>
+<p>Klicke auf das Feld <span class="ui">Konfiguration (zum Bearbeiten klicken)</span> und setze mindestens:</p>
+<ul>
+<li><span class="ui">Verbindungsname</span> — eine Bezeichnung für dich selbst, in der Seitenleiste angezeigt.</li>
+<li><span class="ui">Entfernte Anmeldung (Benutzer@Host)</span> — dasselbe <code>user@host</code>, das du
+<code>ssh</code> geben würdest, zum Beispiel <code>alex@myhome.example.com</code>.</li>
+<li><span class="ui">Entfernter SSH-Port</span> — der Port, den dein Router auf das SSH des entfernten Macs weiterleitet (oft nicht 22).</li>
+</ul>
+<p>Die übrigen Felder haben sinnvolle Standardwerte; klicke auf das <span class="ui">(i)</span> neben einem davon, oder siehe die
+<a href="settings.html">Konfigurationsreferenz</a>, um zu erfahren, was jedes bewirkt.</p>
+
+<h2>Start drücken</h2>
+<ol>
+<li>Klicke unten im Fenster auf <span class="ui">Start</span>.</li>
+<li>Wenn die schlüsselbasierte Anmeldung nicht durchgeht, wechselt der Zustand zu <span class="ui">PASSWORT ERFORDERLICH</span>: Gib das
+Passwort des Accounts bei <span class="ui">SSH-Authentifizierung</span> ein und drücke <span class="ui">Bestätigen</span>. Es wird in deinem
+Schlüsselbund gesichert, sodass du nicht erneut gefragt wirst.</li>
+<li>Die App öffnet den Tunnel, fragt den entfernten Mac, was er teilt, und veröffentlicht es hier. Wenn der
+Zustand <span class="ui">AKTIV</span> anzeigt, ist die Mediathek live.</li>
+</ol>
+
+<h2>In der Apple TV- oder Musik-App ansehen</h2>
+<p>Öffne auf diesem Mac die <span class="ui">Apple TV</span>-App oder <span class="ui">Musik</span>. Die entfernte Mediathek erscheint in der
+Quellenliste, genauso wie ein Computer in deinem eigenen Netzwerk. Wurden mehrere Bibliotheken gefunden, wähle
+im <a href="libraries.html">Feld „Bibliotheken“</a>, welche angezeigt werden.</p>
+<p>Klicke auf <span class="ui">Stopp</span>, um den Tunnel zu schließen und die Veröffentlichung zu beenden. Media Sharing GUI merkt sich die
+Verbindung fürs nächste Mal.</p>
+<div class="see"><h3>Siehe auch</h3><ul><li><a href="libraries.html">Auswählen, welche Bibliotheken veröffentlicht werden</a></li><li><a href="status.html">Status und Zustand</a></li><li><a href="authentication.html">SSH-Schlüssel und Passwörter</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

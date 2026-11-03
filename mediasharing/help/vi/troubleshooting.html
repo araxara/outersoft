@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nếu không kết nối được</title>
+<meta name="description" content="Các lỗi thường gặp mà Media Sharing GUI báo và cách xử lý." />
+<meta name="keywords" content="khắc phục sự cố, lỗi, không kết nối được, không có thư viện, xác thực, đang ngủ, trợ giúp" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="troubleshooting"></a>
+<nav class="crumbs"><a href="index.html">Trợ giúp Media Sharing GUI</a> › Tham khảo</nav>
+<h1>Nếu không kết nối được</h1>
+<p class="lead">Đọc ô <span class="ui">Nhật ký</span> — dòng bắt đầu bằng <span class="ui">ERROR:</span> thường cho biết điều gì
+sai. Dưới đây là các trường hợp thường gặp.</p>
+
+<h2>Không đăng nhập được</h2>
+<ul>
+<li><b>Xác thực cứ thất bại.</b> Kiểm tra <span class="ui">Đăng nhập từ xa</span> và <span class="ui">Cổng SSH ở xa</span>, và
+rằng đăng nhập từ xa đang bật ở đầu kia. Thử y như vậy từ Terminal:
+<code>ssh user@host -p PORT</code>. Nếu bạn đã đổi mật khẩu ở xa, nhấp
+<span class="ui">Quên mật khẩu đã lưu</span> và nhập mật khẩu mới.</li>
+<li><b>Đường hầm chết ngay sau khi kết nối.</b> Máy Mac ở xa có thể đang ngủ — chỉ thức
+ngắn cho mỗi kết nối — hoặc đang từ chối kết nối. Đặt nó luôn thức, hoặc cho phép truy cập
+mạng khi ngủ.</li>
+</ul>
+
+<h2>Nó kết nối, nhưng không tìm thấy thư viện nào</h2>
+<ul>
+<li><b>«Không tìm thấy bản ghi _home-sharing.»</b> Chia sẻ Trong nhà (hoặc Media Sharing) chưa bật,
+hoặc không có thư viện Apple TV / Nhạc / iTunes nào trực tuyến trên mạng đó. Bật Chia sẻ Trong nhà, đã đăng nhập
+bằng Tài khoản Apple của bạn, và đảm bảo một thư viện ở đó đang thức. Xem
+<a href="remote-setup.html">Trên máy Mac ở nhà</a>.</li>
+<li><b>Tìm thấy thư viện nhưng không xuất bản được cái nào.</b> Nhật ký liệt kê lý do cho từng thư viện;
+thường một cổng cục bộ không khả dụng. Thử lại, hoặc đổi <span class="ui">Cổng chuyển tiếp cục bộ</span>.</li>
+</ul>
+
+<h2>Khi mọi cách đều không được</h2>
+<p>Dừng rồi bắt đầu kết nối (hoặc <span class="ui">Khởi động lại</span> từ trình đơn thanh bên của nó) khắc phục phần lớn
+trục trặc thoáng qua. <a href="traffic-log.html">Tệp nhật ký</a> ghi lại chi tiết nếu bạn muốn
+xem kỹ hơn.</p>
+<div class="see"><h3>Xem thêm</h3><ul><li><a href="authentication.html">Khóa và mật khẩu SSH</a></li><li><a href="remote-setup.html">Trên máy Mac ở nhà</a></li><li><a href="reconnecting.html">Kết nối lại và ngủ</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

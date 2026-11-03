@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="th">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>การตั้งค่าที่เก็บข้อมูล</title>
+<meta name="description" content="ขนาดของคลัง และพื้นที่ที่ฐานข้อมูลและแคชของ TV Library Viewer ใช้" />
+<meta name="keywords" content="การตั้งค่า, ที่เก็บข้อมูล, ฐานข้อมูล, ขนาด, พื้นที่, รายการ, ตอน, นักแสดง, รูปนักแสดง, แคช, TV Library Viewer" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings-storage"></a>
+<nav class="crumbs"><a href="index.html">วิธีใช้ TV Library Viewer</a> › การตั้งค่า</nav>
+<h1>การตั้งค่าที่เก็บข้อมูล</h1>
+<p class="lead">เลือก <span class="ui">TV Library Viewer › การตั้งค่า</span> แล้วคลิก <span class="ui">ที่เก็บข้อมูล</span></p>
+
+<h2>คลัง TV ของ Mac เครื่องนี้</h2>
+<p>จำนวนรายการและตอนในคลังของแอป TV และขนาดฐานข้อมูลของคลัง ไม่นับรวม
+ไฟล์วิดีโอ</p>
+
+<h2>ฐานข้อมูล TV Library Viewer</h2>
+<p>ฐานข้อมูลของ TV Library Viewer เองบน Mac เครื่องนี้ ซึ่งแชร์กับอุปกรณ์ทุกเครื่องที่ใช้ดูคลัง</p>
+<table>
+<tr><th>ส่วน</th><th>สิ่งที่เก็บ</th></tr>
+<tr><td><span class="ui">ข้อมูลรายการ</span></td><td>คำอธิบายฉบับเต็มที่ใส่ผ่าน AppleScript และนักแสดงของแต่ละ
+รายการ: ชื่อนักแสดงและบทบาท</td></tr>
+<tr><td><span class="ui">คำแปล</span></td><td>ชื่อและคำอธิบายของตอนที่แปลเป็นภาษาที่ตั้งไว้ในแอป</td></tr>
+<tr><td><span class="ui">นักแสดงและทีมงาน</span></td><td>รูปขนาดเล็กหนึ่งรูปสำหรับแต่ละคน และที่อยู่หน้าเพจของบุคคลนั้น
+บน TVmaze และ TMDb</td></tr>
+<tr><td><span class="ui">บัญชีและการดู</span></td><td>บัญชี ประวัติการดูของทุกบัญชียกเว้น
+บัญชีหลัก และบันทึกของบัญชี</td></tr>
+<tr><td><span class="ui">โครงสร้างฐานข้อมูลและพื้นที่ว่าง</span></td><td>ระเบียนของ SQLite เอง และพื้นที่ที่ SQLite นำกลับมาใช้ใหม่</td></tr>
+<tr><td><span class="ui">การเปลี่ยนแปลงล่าสุด</span></td><td>การเปลี่ยนแปลงที่ยังไม่ได้รวมเข้าในฐานข้อมูล ซึ่งจะรวมเป็น
+ระยะๆ</td></tr>
+</table>
+<p>นักแสดงและทีมงานของรายการจะค้นหาบน TVmaze และ TMDb ในครั้งแรกที่เปิดหน้าของรายการ ไม่ว่าจะที่นี่หรือ
+บนอุปกรณ์ใดก็ตาม รายละเอียดของบุคคลจะดึงมาใหม่ทุกครั้งที่คุณเปิด จึงไม่ล้าสมัย
+และไม่ได้ถูกจัดเก็บ คลิก <span class="ui">แสดงใน Finder</span> เพื่อดูไฟล์ฐานข้อมูล</p>
+
+<h2><a name="tmdb"></a>รายละเอียดนักแสดงและทีมงาน: โทเค็น TMDb</h2>
+<p>TVmaze ไม่ต้องตั้งค่าใดๆ TMDb (The Movie Database) จะเพิ่มผู้กำกับและผู้เขียนบท นักแสดง
+ที่ TVmaze ไม่มี และประวัติ ซึ่งมักเป็นภาษาของคุณ TMDb ต้องใช้โทเค็นของคุณเอง: TMDb
+ให้ฟรีแก่ทุกคนที่มีบัญชี สำหรับการใช้งานส่วนตัวที่ไม่ใช่เชิงพาณิชย์ TV Library Viewer
+ไม่ได้มีโทเค็นมาให้</p>
+<ol>
+<li>สร้างบัญชีฟรีที่ themoviedb.org แล้วลงชื่อเข้า</li>
+<li>คลิกไอคอนบัญชีของคุณ เลือก <span class="ui">Settings</span> แล้วคลิก <span class="ui">API</span></li>
+<li>ขอคีย์ API: เลือก <span class="ui">Developer</span> ยอมรับข้อกำหนด และอธิบายการใช้งานของคุณว่าเป็นการใช้งานส่วนตัว
+และไม่ใช่เชิงพาณิชย์ (เช่น "Show cast and biographies in my own TV library app")</li>
+<li>เมื่อคีย์พร้อมแล้ว ให้คัดลอก <span class="ui">API Read Access Token</span> (ตัวที่ยาว ไม่ใช่ API Key ที่สั้นกว่า)</li>
+<li>บน Mac ที่มีคลัง ให้เลือก <span class="ui">TV Library Viewer › การตั้งค่า</span> คลิก <span class="ui">ที่เก็บข้อมูล</span> แล้ว
+วางลงใน <span class="ui">TMDb API Read Access Token</span></li>
+<li>คลิก <span class="ui">ทดสอบ</span> "TMDb ยอมรับโทเค็นนี้" หมายความว่าใช้งานได้</li>
+</ol>
+<p>โทเค็นจะเก็บไว้ในพวงกุญแจของ Mac มีเพียง Mac ที่มีคลังเท่านั้นที่ใช้โทเค็น อุปกรณ์
+อื่นของคุณจะได้รับนักแสดงและรายละเอียดจาก Mac เครื่องนั้น รายการที่ค้นหาไปแล้วจะได้รับนักแสดงและทีมงานจาก TMDb
+ในครั้งถัดไปที่เปิดหน้าของรายการ หากคุณปิดการตั้งค่าโดยไม่ได้ทดสอบโทเค็นใหม่ โทเค็นจะได้รับการทดสอบในตอนนั้น
+และคุณจะได้รับแจ้งหาก TMDb ปฏิเสธ</p>
+<div class="note"><b>หมายเหตุ:</b> ผลิตภัณฑ์นี้ใช้ API ของ TMDB แต่ไม่ได้รับการรับรองหรือการรับประกันจาก TMDB</div>
+
+<h2><a name="google"></a>การแปล: คีย์ Google</h2>
+<p>ชื่อและคำอธิบายของตอนจะได้รับการแปลเป็นภาษาของแต่ละอุปกรณ์บน Mac เครื่องนี้ฟรี
+ด้วยการแปลของ Apple แต่ไม่สามารถแปลเป็นภาษากรีก เช็ก ฮังการี โรมาเนีย เปอร์เซีย อูรดู
+หรือเบงกาลีได้ สำหรับภาษาเหล่านั้น ให้เพิ่มคีย์ Google Cloud Translation API ของคุณเอง มีเพียง Mac ที่มีคลัง
+เท่านั้นที่ต้องใช้คีย์ อุปกรณ์ที่ดูคลังไม่ต้องใช้ 500,000 อักขระแรกของทุกเดือนใช้ได้ฟรี และข้อความแต่ละรายการ
+จะได้รับการแปลเพียงครั้งเดียว</p>
+<ol>
+<li>ไปที่ console.cloud.google.com แล้วลงชื่อเข้าด้วยบัญชี Google ของคุณ</li>
+<li>สร้างโปรเจกต์: คลิกเมนูโปรเจกต์ที่ด้านบน แล้วคลิก <span class="ui">New Project</span> และตั้งชื่อ
+เช่น "TV Library Viewer"</li>
+<li>เปิดการเรียกเก็บเงิน: ในเมนู ☰ ให้เลือก <span class="ui">Billing</span> แล้วเชื่อมโยงบัญชีสำหรับเรียกเก็บเงิน Google ต้องการบัญชีนี้
+แม้จะใช้งานฟรีก็ตาม เพื่อความปลอดภัย ให้เพิ่มงบประมาณ เช่น 1 ดอลลาร์ ภายใต้ <span class="ui">Budgets &amp; alerts</span></li>
+<li>เลือก ☰ › <span class="ui">APIs &amp; Services › Library</span> ค้นหา <span class="ui">Cloud Translation API</span> แล้วคลิก
+<span class="ui">Enable</span></li>
+<li>เลือก ☰ › <span class="ui">APIs &amp; Services › Credentials</span> แล้วเลือก <span class="ui">Create credentials › API key</span> และ
+คัดลอกคีย์ (ขึ้นต้นด้วย "AIza")</li>
+<li>แนะนำ: คลิกชื่อของคีย์ เลือก <span class="ui">Restrict key</span> ภายใต้ API restrictions ทำเครื่องหมาย
+<span class="ui">Cloud Translation API</span> แล้วคลิก <span class="ui">Save</span> เพื่อให้คีย์ใช้ได้กับการแปลเท่านั้น</li>
+<li>บน Mac ที่มีคลัง ให้เลือก <span class="ui">TV Library Viewer › การตั้งค่า</span> คลิก <span class="ui">ที่เก็บข้อมูล</span>
+วางคีย์ลงใน <span class="ui">คีย์ Google Cloud Translation API</span> แล้วคลิก <span class="ui">ทดสอบ</span></li>
+</ol>
+<p>คีย์จะเก็บไว้ในพวงกุญแจของ Mac และใช้สำหรับเจ็ดภาษานั้นเท่านั้น อย่าแชร์คีย์นี้
+กับผู้อื่น ทุกอย่างที่แปลด้วยคีย์นี้จะเรียกเก็บเงินจากบัญชี Google ของคุณ</p>
+
+<h2>แคช</h2>
+<p>ภาพ และคลังที่ Mac เครื่องนี้เคยดูจาก Mac เครื่องอื่น แคชจะสร้างขึ้นใหม่เมื่อจำเป็น
+และ macOS จะล้างแคชเมื่อพื้นที่ใกล้เต็ม</p>
+<div class="see"><h3>ดูเพิ่มเติม</h3><ul><li><a href="show-page.html">หน้ารายการและนักแสดง</a></li><li><a href="privacy.html">สิ่งที่ TV Library Viewer อ่าน เปลี่ยนแปลง และเก็บไว้</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Trafic et journal</title>
+<meta name="description" content="Observez la quantité de données que le tunnel transporte, et lisez (ou enregistrez) un journal de tout ce qu'il fait." />
+<meta name="keywords" content="trafic, nettop, octets, entrant, sortant, pic, journal, fichier, Finder" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="traffic-log"></a>
+<nav class="crumbs"><a href="index.html">Aide de Media Sharing GUI</a> › Utilisation</nav>
+<h1>Trafic et journal</h1>
+<p class="lead">Deux zones montrent comment se porte la connexion : combien elle transporte et ce qu'elle a fait.</p>
+
+<h2>Trafic de la session SSH</h2>
+<ul>
+<li><span class="ui">Entrant</span> et <span class="ui">Sortant</span> indiquent les octets qui circulent dans le processus du tunnel, avec une valeur de <span class="ui">Pic</span>
+pour le moment le plus chargé.</li>
+<li>Les chiffres sont échantillonnés avec l'outil système <code>nettop</code>, et non une capture de paquets brute, donc
+ils donnent un repère approché plutôt qu'une mesure exacte.</li>
+<li>La fréquence de ré-échantillonnage est définie par <span class="ui">Intervalle d'interrogation du trafic</span> dans la
+<a href="settings.html">Configuration</a>. Chaque échantillon prend quelques secondes ; un intervalle plus court
+que cela enchaîne simplement les échantillons.</li>
+</ul>
+
+<h2>Journal</h2>
+<p>La zone <span class="ui">Journal</span> consigne chaque étape — l'ouverture du tunnel, la découverte des bibliothèques, leur
+publication, les reconnexions et les éventuelles erreurs. Il est aussi écrit dans un fichier sur le disque ; la zone affiche
+<span class="ui">Enregistré dans :</span> son chemin. Cliquez sur ce chemin pour <b>afficher le journal dans le Finder</b>, pratique quand vous voulez
+le transmettre en réglant un problème.</p>
+<div class="see"><h3>Voir aussi</h3><ul><li><a href="status.html">État et statut</a></li><li><a href="troubleshooting.html">En cas d'échec de connexion</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

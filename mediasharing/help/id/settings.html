@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Referensi konfigurasi</title>
+<meta name="description" content="Apa yang dilakukan setiap bidang di kotak Konfigurasi, dan kapan mengubahnya." />
+<meta name="keywords" content="pengaturan, konfigurasi, bidang, port, soket kontrol, keep-alive, kompresi, referensi" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings"></a>
+<nav class="crumbs"><a href="index.html">Bantuan Media Sharing GUI</a> › Referensi</nav>
+<h1>Referensi konfigurasi</h1>
+<p class="lead">Klik <span class="ui">(i)</span> di sebelah bidang mana pun di app untuk catatan yang sama. Sebagian besar bidang bisa
+dibiarkan pada nilai bawaannya.</p>
+
+<h2>Ke mana menyambung</h2>
+<ul>
+<li><b><span class="ui">Nama koneksi</span></b> — label yang ditampilkan di bilah sisi, hanya untuk referensi Anda. Ini tidak
+memengaruhi cara koneksi bekerja.</li>
+<li><b><span class="ui">Login jarak jauh (user@host)</span></b> — nama pengguna SSH dan host (atau nama DNS dinamis) dari
+Mac jarak jauh, mis. <code>alex@myhome.example.com</code> — <code>user@host</code> yang sama
+yang akan Anda berikan ke <code>ssh</code>.</li>
+<li><b><span class="ui">Port SSH jarak jauh</span></b> — port TCP tempat server SSH Mac jarak jauh dijangkau.
+Sering bukan 22, karena router umumnya meneruskan port eksternal khusus (seperti 22022) ke port SSH Mac
+di dalam jaringan rumah.</li>
+</ul>
+
+<h2>Port</h2>
+<ul>
+<li><b><span class="ui">Port lokal yang diteruskan</span></b> — port bebas di <i>Mac ini</i>. Port Berbagi Rumah dari pustaka
+jarak jauh diterowongkan ke sini, sehingga app yang melihat <code>localhost</code> pada port ini
+menjangkau pustaka jarak jauh.</li>
+<li><b><span class="ui">Port Media Sharing jarak jauh</span></b> — port tempat Berbagi Rumah mendengarkan di sana, di
+Mac jarak jauh — biasanya 3689, port DAAP / Berbagi Rumah standar. Ubah hanya untuk pengaturan yang
+tidak biasa.</li>
+</ul>
+
+<h2>Perilaku terowongan</h2>
+<ul>
+<li><b><span class="ui">Jalur soket kontrol SSH</span></b> — jalur berkas lokal untuk soket kontrol latar belakang <code>ssh</code>,
+yang memungkinkan app menutup terowongan dengan rapi (<code>ssh -O exit</code>) alih-alih
+mematikan proses.</li>
+<li><b><span class="ui">Server Alive Interval</span></b> — seberapa sering, dalam detik, <code>ssh</code> melakukan ping ke
+ujung jarak jauh untuk menjaga terowongan menembus router dan firewall serta cepat menyadari jika mati.</li>
+<li><b><span class="ui">Interval polling traffic</span></b> — seberapa sering, dalam detik, panel Lalu Lintas menyampel ulang
+<code>nettop</code>. Setiap sampel memerlukan beberapa detik; interval yang lebih pendek hanya menjalankannya berurutan.</li>
+<li><b><span class="ui">Kompresi SSH</span></b> — menyalakan kompresi <code>ssh</code> (<code>-C</code>).
+Ia menukar sedikit CPU dengan aliran data yang lebih kecil, yang bisa jelas memuluskan pemutaran di
+koneksi rumah yang lambat atau berlatensi tinggi. Aman dibiarkan menyala.</li>
+</ul>
+<div class="see"><h3>Lihat juga</h3><ul><li><a href="connect.html">Menyiapkan dan memulai koneksi</a></li><li><a href="traffic-log.html">Lalu lintas dan log</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

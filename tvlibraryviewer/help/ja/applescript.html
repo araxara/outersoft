@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AppleScript</title>
+<meta name="description" content="スクリプトでTV Library Viewerを操作して、エピソードの追加、説明の設定、アカウントの管理を行います。" />
+<meta name="keywords" content="AppleScript, スクリプト, 自動化, osascript, add episode, 詳しい説明, アカウント" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="applescript"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer ヘルプ</a> › リファレンス</nav>
+<h1>AppleScript</h1>
+<p class="lead">TV Library Viewerはスクリプトで操作できます。たとえば、エピソードを読み込むスクリプトから使えます。詳しくは、スクリプトエディタでTV Library Viewerの用語説明を開いてください（<span class="ui">ファイル › 用語説明を開く…</span>）。</p>
+<table>
+<tr><th>コマンド</th><th>機能</th></tr>
+<tr><td><span class="ui">add episode</span></td><td>ビデオファイルを番組、シーズン、エピソード、タイトル、ジャンル、説明とともにTVアプリのライブラリに追加し（すでにある場合はそれを見つけ）、その永続IDを返します。</td></tr>
+<tr><td><span class="ui">update episode</span></td><td>エピソードの詳細を変更します。</td></tr>
+<tr><td><span class="ui">remove episode</span></td><td>エピソードをライブラリから削除します。ファイルはそのまま残ります。</td></tr>
+<tr><td><span class="ui">refresh library</span></td><td>ライブラリを読み込み直します。</td></tr>
+<tr><td><span class="ui">create account</span>、<span class="ui">change account password</span>、<span class="ui">delete account</span>、<span class="ui">account names</span>、<span class="ui">account log</span></td><td>アカウントを管理します。</td></tr>
+</table>
+<p>この方法で指定した詳しい説明はTV Library Viewerのデータベースに保存され、TVアプリから失われたときに元に戻されます。</p>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

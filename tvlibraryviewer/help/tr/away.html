@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Evden uzaktayken izleme</title>
+<meta name="description" content="Arşivinize başka bir ağdan ulaşmanın üç yolu: SSH, VPN veya yönlendirilmiş bir bağlantı noktası." />
+<meta name="keywords" content="uzak, evden uzakta, seyahat, SSH, VPN, Tailscale, bağlantı noktası yönlendirme, yönlendirici, 47100, çevrim dışı" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="away"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer Yardımı</a> › Başlarken</nav>
+<h1>Evden uzaktayken izleme</h1>
+<p class="lead">Arşiviniz evdeki Mac’te kalır. Ona başka bir yerden ulaşmak için bir yol seçin.</p>
+
+<h2>SSH üzerinden</h2>
+<p>O Mac’e veya ağındaki bir bilgisayara zaten SSH ile giriş yapabiliyorsanız en iyi yol budur. Başka hiçbir şeyin
+ayarlanması gerekmez. Paylaşılan Arşive Bağlan’da <span class="ui">Uzak (SSH)</span> seçeneğini kullanın. Her şey
+SSH bağlantısı üzerinden geçer.</p>
+
+<h2>VPN üzerinden</h2>
+<p>Her iki aygıtta da Tailscale gibi bir VPN varsa <span class="ui">Adres</span> seçeneğini Mac’in VPN adresi ve
+47100 numaralı bağlantı noktasıyla kullanın.</p>
+
+<h2>Yönlendirilmiş bir bağlantı noktası üzerinden</h2>
+<ol>
+<li>Yönlendiricinizde 47100 numaralı bağlantı noktasını (veya <span class="ui">Ayarlar › Paylaşma</span> bölümündeki bağlantı noktasını) arşivin
+bulunduğu Mac’e yönlendirin.</li>
+<li><span class="ui">Ayarlar › Hesaplar</span> bölümünde güçlü parolalı hesaplar ekleyin.</li>
+<li>Diğer aygıtta <span class="ui">Adres</span> seçeneğini evinizin genel adresi ve bağlantı noktasıyla kullanın.</li>
+</ol>
+<div class="note"><b>Not:</b> Bağlantılar her zaman şifrelenir ve aygıtlar nereden bağlanırsa bağlansın arşivin
+sertifikasını denetler. Bir adresten 5 dakika içinde girilen on yanlış paroladan sonrakiler denetlenmeden
+reddedilir.</div>
+
+<h2>Hiç bağlantı yokken</h2>
+<p>Yola çıkmadan önce bölümleri indirin (Mac, iPad ve iPhone). Arşive ulaşılamadığında uygulama onu
+son görüldüğü hâliyle açar, <span class="ui">Çevrim dışı</span> gösterir ve indirdiklerinizi oynatır. İzledikleriniz,
+Mac’e yeniden ulaşılabildiğinde ona gönderilir.</p>
+<div class="see"><h3>Ayrıca bakın</h3><ul><li><a href="connect.html">Paylaşılan arşive bağlanma</a></li><li><a href="downloads.html">İndirmeler ve çevrim dışı izleme</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Připojení ke sdílené knihovně</title>
+<meta name="description" content="Připojte další Mac, iPad, iPhone nebo Apple TV k Macu, který sdílí svou knihovnu." />
+<meta name="keywords" content="připojit, Bonjour, síť, SSH, adresa, certifikát, otisk, důvěřovat, přihlásit, heslo" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">Nápověda k TV Library Viewer</a> › Začínáme</nav>
+<h1>Připojení ke sdílené knihovně</h1>
+<p class="lead">Každé zařízení se připojí jednou. Potom stejnou knihovnu otevírá samo.</p>
+
+<h2>Otevřete Připojit ke sdílené knihovně</h2>
+<ul>
+<li><b>Mac:</b> Vyberte <span class="ui">Soubor › Připojit ke sdílené knihovně…</span> (<kbd>⌘K</kbd>).</li>
+<li><b>iPad a iPhone:</b> Na bočním panelu klepněte na <span class="ui">Připojit ke sdílené knihovně…</span> (s klávesnicí <kbd>⌘K</kbd>).</li>
+<li><b>Apple TV:</b> Napoprvé se TV Library připojí k prvnímu Macu v síti, který sdílí
+bez hesla. Jinak přejděte do <span class="ui">Knihovny › Připojit k jiné knihovně…</span>.</li>
+</ul>
+
+<h2>Vyberte, jak se k Macu dostat</h2>
+<h3>Tato síť</h3>
+<p>Macy ve stejné síti se zapnutým sdílením jsou uvedené podle názvu. Vyberte jeden.</p>
+<h3>Vzdálené (SSH)</h3>
+<p>Pro Mac v jiné síti, například v jiné domácnosti. Zadejte adresu, kterou používáte pro SSH k tomuto
+Macu (nebo k libovolnému počítači v jeho síti), a uživatelské jméno, pokud je jiné. TV Library Viewer se
+přihlásí, najde knihovnu v dané síti a připojí se přes připojení SSH.</p>
+<ul>
+<li>Napoprvé zobrazí klíč hostitele, abyste ho porovnali a potvrdili.</li>
+<li>Na Macu se použije váš vlastní klíč SSH, pokud ho hostitel přijme; jinak se zeptá na heslo
+a uloží ho do vaší Klíčenky.</li>
+<li>iPad, iPhone a Apple TV mají vlastní klíč. Po prvním přihlášení heslem nabídnou
+instalaci tohoto klíče na hostitele, aby heslo už nebylo potřeba.</li>
+</ul>
+<h3>Adresa</h3>
+<p>Pro Mac, ke kterému se toto zařízení dostane přímo: přes VPN, například Tailscale, nebo přes port, který na něj router
+přesměrovává. Zadejte adresu a port (port 47100, pokud nebyl změněn) a jméno účtu
+a heslo, pokud knihovna má účty.</p>
+
+<h2>Důvěřujte certifikátu knihovny</h2>
+<p>Při prvním připojení se zobrazí otisk certifikátu knihovny. Porovnejte ho s otiskem v
+<span class="ui">Nastavení › Sdílení</span> na Macu s knihovnou a pak vyberte <span class="ui">Důvěřovat a připojit</span>. Od té
+doby zařízení certifikát pokaždé ověřuje a odmítne knihovnu, jejíž certifikát se
+změnil.</p>
+
+<h2>Přihlášení</h2>
+<p>Pokud knihovna má účty, zadejte jméno a heslo svého účtu na tomto Macu. Zařízení
+je uloží do své Klíčenky. Bez účtů nechte jméno prázdné a použijte heslo knihovny,
+pokud nějaké je.</p>
+<div class="see"><h3>Viz také</h3><ul><li><a href="away.html">Sledování mimo domov</a></li><li><a href="sidebar-libraries.html">Přepínání mezi knihovnami</a></li><li><a href="settings-accounts.html">Nastavení účtů</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

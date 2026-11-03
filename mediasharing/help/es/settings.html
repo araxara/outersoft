@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Referencia de la configuración</title>
+<meta name="description" content="Qué hace cada campo del cuadro Configuración y cuándo cambiarlo." />
+<meta name="keywords" content="ajustes, configuración, campos, puerto, socket de control, keep-alive, compresión, referencia" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings"></a>
+<nav class="crumbs"><a href="index.html">Ayuda de Media Sharing GUI</a> › Referencia</nav>
+<h1>Referencia de la configuración</h1>
+<p class="lead">Haz clic en la <span class="ui">(i)</span> junto a cualquier campo en la app para ver las mismas notas. La mayoría de los campos pueden
+dejarse en sus valores por omisión.</p>
+
+<h2>Adónde conectar</h2>
+<ul>
+<li><b><span class="ui">Nombre de la conexión</span></b>: una etiqueta mostrada en la barra lateral, solo para tu referencia. No
+afecta a cómo funciona la conexión.</li>
+<li><b><span class="ui">Inicio de sesión remoto (usuario@host)</span></b>: el nombre de usuario SSH y el host (o nombre DNS dinámico) del
+Mac remoto, p. ej. <code>alex@myhome.example.com</code>: el mismo <code>user@host</code>
+que darías a <code>ssh</code>.</li>
+<li><b><span class="ui">Puerto SSH remoto</span></b>: el puerto TCP por el que se alcanza el servidor SSH del Mac remoto.
+A menudo no es 22, porque los routers suelen redirigir un puerto externo personalizado (como 22022) al puerto SSH del Mac
+dentro de la red doméstica.</li>
+</ul>
+
+<h2>Puertos</h2>
+<ul>
+<li><b><span class="ui">Puerto local reenviado</span></b>: un puerto libre en <i>este</i> Mac. El puerto de Compartir en casa de la biblioteca
+remota se tuneliza hasta aquí, de modo que una app que mire <code>localhost</code> en este puerto
+alcanza la biblioteca remota.</li>
+<li><b><span class="ui">Puerto remoto de Media Sharing</span></b>: el puerto en el que Compartir en casa escucha allá, en el
+Mac remoto; normalmente 3689, el puerto DAAP / Compartir en casa estándar. Cámbialo solo para una configuración
+inusual.</li>
+</ul>
+
+<h2>Comportamiento del túnel</h2>
+<ul>
+<li><b><span class="ui">Ruta del socket de control SSH</span></b>: una ruta de archivo local para el socket de control en segundo plano de <code>ssh</code>,
+que permite a la app cerrar el túnel limpiamente (<code>ssh -O exit</code>) en lugar de
+matar el proceso.</li>
+<li><b><span class="ui">Server Alive Interval</span></b>: cada cuánto, en segundos, <code>ssh</code> hace ping al
+extremo remoto para mantener el túnel a través de routers y cortafuegos y notar pronto si muere.</li>
+<li><b><span class="ui">Intervalo de sondeo de tráfico</span></b>: cada cuánto, en segundos, el panel Tráfico vuelve a muestrear
+<code>nettop</code>. Cada muestra tarda unos segundos; un intervalo más corto simplemente las encadena.</li>
+<li><b><span class="ui">Compresión SSH</span></b>: activa la compresión de <code>ssh</code> (<code>-C</code>).
+Cambia un poco de CPU por un flujo de datos más pequeño, lo que puede suavizar notablemente la reproducción por una
+conexión doméstica lenta o de alta latencia. Puede dejarse activada sin problema.</li>
+</ul>
+<div class="see"><h3>Consulta también</h3><ul><li><a href="connect.html">Configurar e iniciar una conexión</a></li><li><a href="traffic-log.html">Tráfico y registro</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

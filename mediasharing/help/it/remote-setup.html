@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sul Mac a casa</title>
+<meta name="description" content="Attiva la Condivisione in casa e il login remoto sul Mac remoto e rendilo raggiungibile dall'esterno." />
+<meta name="keywords" content="condivisione in casa, media sharing, login remoto, SSH, inoltro porte, DNS dinamico, router" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="remote-setup"></a>
+<nav class="crumbs"><a href="index.html">Aiuto di Media Sharing GUI</a> › Introduzione</nav>
+<h1>Sul Mac a casa</h1>
+<p class="lead">Fai questo una volta sul Mac la cui libreria vuoi raggiungere.</p>
+
+<h2>Attivare la condivisione della libreria</h2>
+<ul>
+<li>Nell'app <span class="ui">Apple TV</span> o <span class="ui">Musica</span>, attiva la <b>Condivisione in casa</b> (i sistemi più vecchi la chiamano
+<b>Media Sharing</b>), con il tuo account Apple collegato.</li>
+<li>Lascia quel Mac sveglio, o impostalo per consentire l'accesso alla rete durante lo stop, così può rispondere quando ti
+connetti.</li>
+</ul>
+
+<h2>Attivare il login remoto (SSH)</h2>
+<ol>
+<li>Sul Mac remoto, apri <span class="ui">Impostazioni di Sistema</span> › <span class="ui">Generali</span> › <span class="ui">Condivisione</span>.</li>
+<li>Attiva <span class="ui">Login remoto</span>. Annota l'account utente a cui è consentito l'accesso.</li>
+</ol>
+<div class="note"><b>Consiglio:</b> Configura una chiave SSH per non aver bisogno di una password ogni volta. Copia la
+chiave pubblica di questo Mac su quello remoto (<code>ssh-copy-id user@host</code>). Media Sharing GUI accetta
+comunque una password come riserva: vedi <a href="authentication.html">Chiavi e password SSH</a>.</div>
+
+<h2>Renderlo raggiungibile dall'esterno</h2>
+<ul>
+<li><b>Inoltro delle porte:</b> sul router di casa, inoltra una porta esterna alla porta SSH del Mac remoto
+(22). Molti inoltrano una porta esterna insolita, come 22022, per evitare rumore: quella porta esterna
+è ciò che inserisci in <a href="settings.html">Porta SSH remota</a>.</li>
+<li><b>Un nome che segue l'IP di casa:</b> gli indirizzi internet domestici cambiano, quindi un nome DNS dinamico
+(come <code>myhome.example.com</code>) che lo segue ti evita di rincorrere i numeri.</li>
+</ul>
+<p>Una volta che il login remoto funziona dall'esterno — provalo con <code>ssh user@host -p PORT</code>
+nel Terminale — Media Sharing GUI può usarlo.</p>
+<div class="see"><h3>Vedi anche</h3><ul><li><a href="connect.html">Configurare e avviare una connessione</a></li><li><a href="authentication.html">Chiavi e password SSH</a></li><li><a href="settings.html">Riferimento della configurazione</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

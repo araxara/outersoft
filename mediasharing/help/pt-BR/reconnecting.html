@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Reconexão e repouso</title>
+<meta name="description" content="Como o Media Sharing GUI mantém a conexão de pé: keep-alives, reconexão automática e sobreviver ao repouso." />
+<meta name="keywords" content="reconectar, repouso, acordar, keep-alive, verificação de saúde, queda, automático" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="reconnecting"></a>
+<nav class="crumbs"><a href="index.html">Ajuda do Media Sharing GUI</a> › Referência</nav>
+<h1>Reconexão e repouso</h1>
+<p class="lead">Uma conexão de casa nem sempre é estável. O app aguenta os solavancos por você.</p>
+
+<h2>Manter-se vivo</h2>
+<p>Enquanto conectado, o <code>ssh</code> envia um ping à ponta remota a cada <span class="ui">Server Alive Interval</span> segundos
+(consulte <a href="settings.html">Referência da configuração</a>). Isso impede que roteadores e firewalls
+derrubem um túnel ocioso e permite ao app perceber logo quando uma conexão realmente morreu.</p>
+
+<h2>Reconexão automática</h2>
+<p>Se a conexão cair, a situação muda para <span class="ui">RECONECTANDO</span> e o Media Sharing GUI tenta de novo por
+conta própria, esperando um pouco mais entre as tentativas e registrando cada uma. Aperte <span class="ui">Parar</span> para
+cancelar as tentativas.</p>
+
+<h2>Depois que o Mac entra em repouso</h2>
+<p>Quando este Mac acorda do repouso, o app verifica se o túnel sobreviveu. Se sim, ele continua;
+se não, faz uma reinicialização completa — o mesmo que Parar e depois Iniciar — e traz a biblioteca
+de volta por conta própria.</p>
+<div class="see"><h3>Consulte também</h3><ul><li><a href="status.html">Status e situação</a></li><li><a href="troubleshooting.html">Se não conectar</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

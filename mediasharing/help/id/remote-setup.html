@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Di Mac di rumah</title>
+<meta name="description" content="Nyalakan Berbagi Rumah dan login jarak jauh di Mac jarak jauh, dan buat agar bisa dijangkau dari luar." />
+<meta name="keywords" content="berbagi rumah, media sharing, login jarak jauh, SSH, penerusan port, DNS dinamis, router" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="remote-setup"></a>
+<nav class="crumbs"><a href="index.html">Bantuan Media Sharing GUI</a> › Memulai</nav>
+<h1>Di Mac di rumah</h1>
+<p class="lead">Lakukan ini sekali di Mac yang pustakanya ingin Anda jangkau.</p>
+
+<h2>Nyalakan berbagi pustaka</h2>
+<ul>
+<li>Di app <span class="ui">Apple TV</span> atau <span class="ui">Musik</span>, nyalakan <b>Berbagi Rumah</b> (sistem lama menyebutnya
+<b>Media Sharing</b>), dengan Akun Apple Anda masuk.</li>
+<li>Biarkan Mac itu terjaga, atau atur agar mengizinkan akses jaringan saat tidur, sehingga ia bisa menjawab saat Anda
+tersambung.</li>
+</ul>
+
+<h2>Nyalakan login jarak jauh (SSH)</h2>
+<ol>
+<li>Di Mac jarak jauh, buka <span class="ui">Pengaturan Sistem</span> › <span class="ui">Umum</span> › <span class="ui">Berbagi</span>.</li>
+<li>Nyalakan <span class="ui">Login Jarak Jauh</span>. Catat akun pengguna yang diizinkan masuk.</li>
+</ol>
+<div class="note"><b>Tips:</b> Siapkan kunci SSH agar tidak perlu kata sandi setiap kali. Salin kunci
+publik Mac ini ke Mac jarak jauh (<code>ssh-copy-id user@host</code>). Media Sharing GUI tetap
+menerima kata sandi sebagai cadangan — lihat <a href="authentication.html">Kunci dan kata sandi SSH</a>.</div>
+
+<h2>Buat agar bisa dijangkau dari luar</h2>
+<ul>
+<li><b>Penerusan port:</b> di router rumah, teruskan sebuah port eksternal ke port SSH Mac jarak jauh
+(22). Banyak orang meneruskan port eksternal yang tidak lazim, seperti 22022, untuk menghindari derau — port eksternal
+itulah yang Anda isikan di <a href="settings.html">Port SSH jarak jauh</a>.</li>
+<li><b>Nama yang mengikuti IP rumah:</b> alamat internet rumah berubah, jadi nama DNS dinamis
+(seperti <code>myhome.example.com</code>) yang mengikutinya menyelamatkan Anda dari mengejar angka.</li>
+</ul>
+<p>Begitu login jarak jauh berfungsi dari luar — uji dengan <code>ssh user@host -p PORT</code>
+di Terminal — Media Sharing GUI bisa menggunakannya.</p>
+<div class="see"><h3>Lihat juga</h3><ul><li><a href="connect.html">Menyiapkan dan memulai koneksi</a></li><li><a href="authentication.html">Kunci dan kata sandi SSH</a></li><li><a href="settings.html">Referensi konfigurasi</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

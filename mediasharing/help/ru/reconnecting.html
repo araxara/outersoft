@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Переподключение и сон</title>
+<meta name="description" content="Как Media Sharing GUI держит подключение: keep-alive, автоматическое переподключение и переживание сна." />
+<meta name="keywords" content="переподключение, сон, пробуждение, keep-alive, проверка состояния, обрыв, автоматически" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="reconnecting"></a>
+<nav class="crumbs"><a href="index.html">Справка Media Sharing GUI</a> › Справка</nav>
+<h1>Переподключение и сон</h1>
+<p class="lead">Домашнее соединение не всегда стабильно. Приложение переживает толчки за вас.</p>
+
+<h2>Оставаться в живых</h2>
+<p>Во время подключения <code>ssh</code> пингует удалённую сторону каждые <span class="ui">Server Alive Interval</span> секунд
+(см. <a href="settings.html">Справочник по конфигурации</a>). Это не даёт роутерам и файрволам
+сбрасывать простаивающий туннель и позволяет приложению быстро заметить, когда подключение действительно умерло.</p>
+
+<h2>Автоматическое переподключение</h2>
+<p>Если подключение обрывается, состояние меняется на <span class="ui">ПЕРЕПОДКЛЮЧЕНИЕ</span>, и Media Sharing GUI повторяет
+попытки само, выжидая немного дольше между ними и записывая каждую. Нажмите <span class="ui">Остановить</span>, чтобы
+прекратить попытки.</p>
+
+<h2>После сна Mac</h2>
+<p>Когда этот Mac просыпается, приложение проверяет, пережил ли туннель сон. Если да — продолжает;
+если нет — делает полный сброс (то же, что «Остановить», затем «Запустить») и возвращает библиотеку
+само.</p>
+<div class="see"><h3>См. также</h3><ul><li><a href="status.html">Статус и состояние</a></li><li><a href="troubleshooting.html">Если не подключается</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

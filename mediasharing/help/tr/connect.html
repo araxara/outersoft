@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bir bağlantı kurma ve başlatma</title>
+<meta name="description" content="Yapılandırma kutusunu doldurun, Başlat'a basın, istenirse oturum açın; uzaktaki kitaplık yerel olarak görünür." />
+<meta name="keywords" content="bağlanma, yapılandırma, başlat, uzaktan oturum açma, yerel bağlantı noktası, başlama" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI Yardımı</a> › Başlarken</nav>
+<h1>Bir bağlantı kurma ve başlatma</h1>
+<p class="lead">Kitaplığın nerede olduğunu belirtin, sonra Başlat'a basın.</p>
+
+<h2>Bağlantıyı doldurma</h2>
+<p><span class="ui">Yapılandırma (düzenlemek için tıklayın)</span> kutusuna tıklayın ve en azından şunu ayarlayın:</p>
+<ul>
+<li><span class="ui">Bağlantı adı</span> — kendi başvurunuz için bir etiket, kenar çubuğunda gösterilir.</li>
+<li><span class="ui">Uzak oturum açma (kullanıcı@host)</span> — <code>ssh</code>'ye vereceğiniz <code>user@host</code>'un aynısı,
+örneğin <code>alex@myhome.example.com</code>.</li>
+<li><span class="ui">Uzak SSH bağlantı noktası</span> — yönlendiricinizin uzaktaki Mac'in SSH'sine ilettiği bağlantı noktası (çoğu zaman 22 değil).</li>
+</ul>
+<p>Diğer alanların makul öntanımlı değerleri vardır; herhangi birinin yanındaki <span class="ui">(i)</span>'ye tıklayın ya da
+<a href="settings.html">Yapılandırma başvurusu</a>'na bakarak her birinin ne yaptığını öğrenin.</p>
+
+<h2>Başlat'a basma</h2>
+<ol>
+<li>Pencerenin altındaki <span class="ui">Başlat</span>'a tıklayın.</li>
+<li>Anahtar tabanlı oturum açma geçmezse hâl <span class="ui">PAROLA GEREKLİ</span>'ye döner: hesabın
+parolasını <span class="ui">SSH Kimlik Doğrulama</span>'ya yazın ve <span class="ui">Gönder</span>'e basın. Anahtar Zincirinize
+kaydedilir, böylece bir daha sorulmaz.</li>
+<li>Uygulama tüneli açar, uzaktaki Mac'e ne paylaştığını sorar ve burada yayımlar.
+Hâl <span class="ui">ÇALIŞIYOR</span> gösterdiğinde kitaplık yayındadır.</li>
+</ol>
+
+<h2>Apple TV veya Müzik uygulamasında görme</h2>
+<p>Bu Mac'te <span class="ui">Apple TV</span> veya <span class="ui">Müzik</span> uygulamasını açın. Uzaktaki kitaplık, tıpkı
+kendi ağınızdaki bir bilgisayar gibi kaynak listesinde görünür. Birden çok kitaplık bulunduysa, hangilerinin
+gösterileceğini <a href="libraries.html">Kitaplıklar kutusu</a>nda seçin.</p>
+<p>Tüneli kapatıp yayımı durdurmak için <span class="ui">Durdur</span>'a tıklayın. Media Sharing GUI bağlantıyı
+bir sonraki sefer için hatırlar.</p>
+<div class="see"><h3>Ayrıca bakın</h3><ul><li><a href="libraries.html">Hangi kitaplıkların yayımlanacağını seçme</a></li><li><a href="status.html">Durum ve hâl</a></li><li><a href="authentication.html">SSH anahtarları ve parolalar</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

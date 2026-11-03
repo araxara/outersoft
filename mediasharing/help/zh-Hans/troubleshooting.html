@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>如果无法连接</title>
+<meta name="description" content="Media Sharing GUI 报告的常见错误，以及如何应对。" />
+<meta name="keywords" content="疑难解答, 错误, 无法连接, 没有资料库, 身份验证, 睡眠中, 帮助" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="troubleshooting"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI 帮助</a> › 参考</nav>
+<h1>如果无法连接</h1>
+<p class="lead">阅读 <span class="ui">日志</span> 框——以 <span class="ui">ERROR:</span> 开头的那行通常会说明出了什么问题。以下是常见情况。</p>
+
+<h2>它无法登录</h2>
+<ul>
+<li><b>身份验证一再失败。</b>检查 <span class="ui">远程登录</span> 和 <span class="ui">远程 SSH 端口</span>，以及对端是否已开启远程登录。
+在终端中尝试同样的操作：<code>ssh user@host -p PORT</code>。如果你更改了远程密码，点按
+<span class="ui">忘记已保存的密码</span> 并输入新的。</li>
+<li><b>隧道在连接后立即中断。</b>远程 Mac 可能处于睡眠——每次连接只短暂唤醒——或在拒绝连接。
+将其设为保持唤醒，或睡眠时允许网络访问。</li>
+</ul>
+
+<h2>它连接了，但找不到任何资料库</h2>
+<ul>
+<li><b>“未找到 _home-sharing 记录。”</b>“家庭共享”（或媒体共享）未开启，或该网络上没有在线的 Apple TV / 音乐 / iTunes 资料库。
+登录你的 Apple 账户并开启“家庭共享”，并确保那里有一个资料库处于唤醒状态。请参阅<a href="remote-setup.html">在家里的 Mac 上</a>。</li>
+<li><b>找到了资料库，但没有一个能发布。</b>日志会按资料库列出原因；通常是某个本地端口不可用。请重试，或更改
+<span class="ui">本地转发端口</span>。</li>
+</ul>
+
+<h2>当一切都无效时</h2>
+<p>停止再开始连接（或从它边栏菜单中的 <span class="ui">重新启动</span>）可解决大多数短暂的麻烦。
+若你想更仔细地查看，<a href="traffic-log.html">日志文件</a>记录了细节。</p>
+<div class="see"><h3>另请参阅</h3><ul><li><a href="authentication.html">SSH 密钥与密码</a></li><li><a href="remote-setup.html">在家里的 Mac 上</a></li><li><a href="reconnecting.html">重新连接与睡眠</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

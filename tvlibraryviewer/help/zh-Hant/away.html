@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>在外觀看</title>
+<meta name="description" content="從其他網路連線至資料庫的三種方式：SSH、VPN 或通訊埠轉送。" />
+<meta name="keywords" content="遠端, 在外, 旅行, SSH, VPN, Tailscale, 通訊埠轉送, 路由器, 47100, 離線" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="away"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer 說明</a> › 入門</nav>
+<h1>在外觀看</h1>
+<p class="lead">你的資料庫一直留在家中的 Mac 上。請選擇一種從其他地方連線的方式。</p>
+
+<h2>透過 SSH</h2>
+<p>如果你已經可以透過 SSH 登入那台 Mac 或其網路上的某部電腦，這是最好的方式。不需要其他設定。在「連線至共享資料庫」中使用<span class="ui">遠端（SSH）</span>。所有資料都會透過 SSH 連線傳輸。</p>
+
+<h2>透過 VPN</h2>
+<p>如果兩部裝置都使用 Tailscale 等 VPN，請在<span class="ui">位址</span>中使用 Mac 的 VPN 位址和通訊埠 47100。</p>
+
+<h2>透過通訊埠轉送</h2>
+<ol>
+<li>在路由器上，將通訊埠 47100（或<span class="ui">設定 › 共享</span>中的通訊埠）轉送至存有資料庫的 Mac。</li>
+<li>在<span class="ui">設定 › 帳號</span>中加入使用高強度密碼的帳號。</li>
+<li>在另一部裝置上，於<span class="ui">位址</span>中使用你家的公用位址和通訊埠。</li>
+</ol>
+<div class="note"><b>注意：</b>無論從何處連線，連線一律經過加密，裝置也會檢查資料庫的憑證。同一個位址在 5 分鐘內輸入錯誤密碼 10 次後，之後的嘗試會不經檢查直接遭到拒絕。</div>
+
+<h2>完全沒有網路時</h2>
+<p>出門前先下載單集（Mac、iPad 和 iPhone）。無法連線至資料庫時，App 會依上次看到的樣子打開資料庫，顯示<span class="ui">離線</span>，並播放你的下載項目。你的觀看紀錄會在可以連線至 Mac 後傳送給它。</p>
+<div class="see"><h3>另請參閱</h3><ul><li><a href="connect.html">連線至共享資料庫</a></li><li><a href="downloads.html">下載與離線觀看</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

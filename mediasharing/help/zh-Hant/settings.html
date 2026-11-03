@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>設定參考</title>
+<meta name="description" content="「設定」框中每個欄位的作用，以及何時更改它。" />
+<meta name="keywords" content="設定, 設定, 欄位, 連接埠, 控制通訊端, keep-alive, 壓縮, 參考" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI 輔助說明</a> › 參考</nav>
+<h1>設定參考</h1>
+<p class="lead">在 App 中點一下任一欄位旁的 <span class="ui">(i)</span> 可看到相同的說明。大多數欄位都可保持預設值。</p>
+
+<h2>連線到何處</h2>
+<ul>
+<li><b><span class="ui">連線名稱</span></b>——顯示在側邊欄中的標籤，僅供你參考。它不影響連線的運作方式。</li>
+<li><b><span class="ui">遠端登入（使用者@主機）</span></b>——遠端 Mac 的 SSH 使用者名稱和主機（或動態 DNS 名稱），
+例如 <code>alex@myhome.example.com</code>——與你給 <code>ssh</code> 的相同的 <code>user@host</code>。</li>
+<li><b><span class="ui">遠端 SSH 連接埠</span></b>——到達遠端 Mac SSH 伺服器所用的 TCP 連接埠。通常不是 22，因為路由器常把一個自訂的外部連接埠
+（如 22022）轉送到家庭網路內 Mac 的 SSH 連接埠。</li>
+</ul>
+
+<h2>連接埠</h2>
+<ul>
+<li><b><span class="ui">本機轉送連接埠</span></b>——<i>這台</i> Mac 上的一個空閒連接埠。遠端資料庫的「家庭共享」連接埠會被導入這裡，
+因此查看該連接埠 <code>localhost</code> 的 App 便可到達遠端資料庫。</li>
+<li><b><span class="ui">遠端媒體共享連接埠</span></b>——「家庭共享」在遠端 Mac 那頭聆聽的連接埠——通常是 3689，標準的 DAAP /「家庭共享」連接埠。
+僅在設定不尋常時才更改它。</li>
+</ul>
+
+<h2>通道行為</h2>
+<ul>
+<li><b><span class="ui">SSH 控制通訊端路徑</span></b>——<code>ssh</code> 背景控制通訊端的本機檔案路徑，
+它讓 App 能乾淨地關閉通道（<code>ssh -O exit</code>），而不是強行終止程序。</li>
+<li><b><span class="ui">Server Alive Interval</span></b>——<code>ssh</code> 每隔多少秒向遠端發送一次 ping，
+以便穿過路由器和防火牆保持通道存活，並在它中斷時迅速察覺。</li>
+<li><b><span class="ui">流量輪詢間隔</span></b>——流量面板每隔多少秒重新取樣 <code>nettop</code>。
+每次取樣需要幾秒；更短的間隔只會讓取樣一個接一個地進行。</li>
+<li><b><span class="ui">SSH 壓縮</span></b>——開啟 <code>ssh</code> 的壓縮（<code>-C</code>）。
+它以少量 CPU 換取更小的資料流，在緩慢或高延遲的家庭連線上可以明顯地使播放更流暢。保持開啟即可。</li>
+</ul>
+<div class="see"><h3>另請參閱</h3><ul><li><a href="connect.html">設定並啟動連線</a></li><li><a href="traffic-log.html">流量與日誌</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

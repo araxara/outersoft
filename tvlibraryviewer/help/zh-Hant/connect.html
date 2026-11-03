@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>連線至共享資料庫</title>
+<meta name="description" content="將另一台 Mac、iPad、iPhone 或 Apple TV 連線至共享其資料庫的 Mac。" />
+<meta name="keywords" content="連線, Bonjour, 網路, SSH, 位址, 憑證, 指紋, 信任, 登入, 密碼" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="connect"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer 說明</a> › 入門</nav>
+<h1>連線至共享資料庫</h1>
+<p class="lead">每部裝置只需連線一次。之後它會自動重新打開同一個資料庫。</p>
+
+<h2>打開「連線至共享資料庫」</h2>
+<ul>
+<li><b>Mac：</b>選擇<span class="ui">檔案 › 連線至共享資料庫⋯</span>（<kbd>⌘K</kbd>）。</li>
+<li><b>iPad 和 iPhone：</b>點一下側邊欄中的<span class="ui">連線至共享資料庫⋯</span>（使用鍵盤時按 <kbd>⌘K</kbd>）。</li>
+<li><b>Apple TV：</b>第一次使用時，TV Library 會連線至網路上第一台不需密碼即可共享的 Mac。否則，請前往<span class="ui">資料庫 › 連線至其他資料庫⋯</span>。</li>
+</ul>
+
+<h2>選擇連線至 Mac 的方式</h2>
+<h3>此網路</h3>
+<p>同一個網路上已開啟共享的 Mac 會依名稱列出。選擇其中一台即可。</p>
+<h3>遠端（SSH）</h3>
+<p>用於其他網路上的 Mac，例如另一個家中的 Mac。輸入你透過 SSH 連線至那台 Mac（或其網路上任何電腦）時使用的位址，若使用者名稱不同，也請輸入使用者名稱。TV Library Viewer 會登入、在該網路上找到資料庫，並透過 SSH 連線進行連線。</p>
+<ul>
+<li>第一次連線時，會顯示主機的密鑰供你比對和確認。</li>
+<li>在 Mac 上，若主機接受，就會使用你自己的 SSH 密鑰；否則會要求輸入密碼，並將其保存在你的鑰匙圈中。</li>
+<li>iPad、iPhone 或 Apple TV 有自己的密鑰。第一次使用密碼登入後，它會提議將該密鑰安裝到主機上，之後就不再需要密碼。</li>
+</ul>
+<h3>位址</h3>
+<p>用於此裝置可直接連線的 Mac：透過 Tailscale 等 VPN，或透過路由器轉送給它的通訊埠。輸入位址和通訊埠（除非已更改，否則為通訊埠 47100）；若資料庫設有帳號，也請輸入帳號名稱和密碼。</p>
+
+<h2>信任資料庫的憑證</h2>
+<p>第一次連線時會顯示資料庫的憑證指紋。請將它與存有資料庫的 Mac 上<span class="ui">設定 › 共享</span>中的指紋比對，然後選擇<span class="ui">信任並連線</span>。此後，裝置每次都會檢查該憑證，並拒絕憑證已變更的資料庫。</p>
+
+<h2>登入</h2>
+<p>若資料庫設有帳號，請輸入你在那台 Mac 上的帳號名稱和密碼。裝置會將它們保存在其鑰匙圈中。若沒有帳號，請將名稱留空，並使用資料庫密碼（若有的話）。</p>
+<div class="see"><h3>另請參閱</h3><ul><li><a href="away.html">在外觀看</a></li><li><a href="sidebar-libraries.html">在資料庫之間切換</a></li><li><a href="settings-accounts.html">帳號設定</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

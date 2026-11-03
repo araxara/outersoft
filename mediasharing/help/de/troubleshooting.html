@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Wenn keine Verbindung zustande kommt</title>
+<meta name="description" content="Die häufigen Fehler, die Media Sharing GUI meldet, und was dagegen zu tun ist." />
+<meta name="keywords" content="Fehlersuche, Fehler, keine Verbindung, keine Mediathek, Authentifizierung, Ruhezustand, Hilfe" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="troubleshooting"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI-Hilfe</a> › Referenz</nav>
+<h1>Wenn keine Verbindung zustande kommt</h1>
+<p class="lead">Lies das Feld <span class="ui">Protokoll</span> — die Zeile, die mit <span class="ui">ERROR:</span> beginnt, sagt meist, was
+falsch ist. Hier die häufigen Fälle.</p>
+
+<h2>Es kann sich nicht anmelden</h2>
+<ul>
+<li><b>Die Authentifizierung scheitert immer wieder.</b> Prüfe <span class="ui">Entfernte Anmeldung</span> und <span class="ui">Entfernter SSH-Port</span> und
+dass die entfernte Anmeldung am anderen Ende eingeschaltet ist. Versuche dasselbe im Terminal:
+<code>ssh user@host -p PORT</code>. Hast du das entfernte Passwort geändert, klicke auf
+<span class="ui">Gespeichertes Passwort vergessen</span> und gib das neue ein.</li>
+<li><b>Der Tunnel stirbt gleich nach dem Verbinden.</b> Der entfernte Mac ist vielleicht im Ruhezustand — wacht nur
+kurz für jede Verbindung auf — oder weist Verbindungen ab. Stelle ihn so ein, dass er wach bleibt oder im Ruhezustand Netzwerkzugriff
+erlaubt.</li>
+</ul>
+
+<h2>Es verbindet, findet aber keine Mediathek</h2>
+<ul>
+<li><b>„Kein _home-sharing-Eintrag gefunden.“</b> Home Sharing (oder Media Sharing) ist nicht eingeschaltet,
+oder es ist keine Apple TV- / Musik- / iTunes-Mediathek in diesem Netzwerk online. Schalte Home Sharing ein, angemeldet
+mit deinem Apple-Account, und sorge dafür, dass eine Mediathek dort wach ist. Siehe
+<a href="remote-setup.html">Auf dem Mac zu Hause</a>.</li>
+<li><b>Bibliotheken wurden gefunden, aber keine konnte veröffentlicht werden.</b> Das Protokoll nennt je Mediathek einen Grund;
+meist war ein lokaler Port nicht verfügbar. Versuche es erneut oder ändere den <span class="ui">Lokal weitergeleiteten Port</span>.</li>
+</ul>
+
+<h2>Wenn nichts hilft</h2>
+<p>Die Verbindung zu stoppen und zu starten (oder <span class="ui">Neu starten</span> aus ihrem Seitenleisten-Menü) behebt die meisten
+vorübergehenden Störungen. Die <a href="traffic-log.html">Protokolldatei</a> hält die Details fest, wenn du
+genauer hinsehen willst.</p>
+<div class="see"><h3>Siehe auch</h3><ul><li><a href="authentication.html">SSH-Schlüssel und Passwörter</a></li><li><a href="remote-setup.html">Auf dem Mac zu Hause</a></li><li><a href="reconnecting.html">Erneutes Verbinden und Ruhezustand</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

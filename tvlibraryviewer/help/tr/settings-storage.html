@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Depolama ayarları</title>
+<meta name="description" content="Arşivin ne kadar büyük olduğu ve TV Library Viewer’ın veritabanı ile önbelleklerinin kapladığı alan." />
+<meta name="keywords" content="ayarlar, depolama, veritabanı, boyut, alan, diziler, bölümler, oyuncular, oyuncu fotoğrafları, önbellek, TMDb, TVmaze" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings-storage"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer Yardımı</a> › Ayarlar</nav>
+<h1>Depolama ayarları</h1>
+<p class="lead"><span class="ui">TV Library Viewer › Ayarlar</span> komutunu seçin, sonra <span class="ui">Depolama</span> seçeneğini tıklayın.</p>
+
+<h2>Bu Mac’in TV arşivi</h2>
+<p>TV uygulamasının arşivindeki dizi ve bölüm sayısı ile veritabanının boyutu. Video
+dosyaları sayılmaz.</p>
+
+<h2>TV Library Viewer veritabanı</h2>
+<p>TV Library Viewer’ın bu Mac’teki kendi veritabanı; arşivi görüntüleyen her aygıtla paylaşılır.</p>
+<table>
+<tr><th>Bölüm</th><th>Neleri içerir?</th></tr>
+<tr><td><span class="ui">Dizi bilgileri</span></td><td>AppleScript ile verilen tam açıklamalar ve her dizinin
+oyuncuları: oyuncuların adları ve rolleri.</td></tr>
+<tr><td><span class="ui">Çeviriler</span></td><td>Uygulamaların ayarlı olduğu dillere çevrilmiş bölüm başlıkları ve açıklamaları.</td></tr>
+<tr><td><span class="ui">Oyuncular ve ekip</span></td><td>Her kişi için küçük bir fotoğraf ve TVmaze ile TMDb’deki
+sayfalarının adresleri.</td></tr>
+<tr><td><span class="ui">Hesaplar ve izleme</span></td><td>Hesaplar, ana hesap dışındaki her hesabın izlemeleri
+ve hesapların günlükleri.</td></tr>
+<tr><td><span class="ui">Veritabanı yapısı ve boş alan</span></td><td>SQLite’ın kendi kayıtları ve yeniden kullandığı alan.</td></tr>
+<tr><td><span class="ui">Son değişiklikler</span></td><td>Henüz veritabanına işlenmemiş değişiklikler. Bu işlem zaman
+zaman yapılır.</td></tr>
+</table>
+<p>Bir dizinin oyuncuları ve ekibi, sayfası burada veya herhangi bir aygıtta ilk kez açıldığında TVmaze ve TMDb’de
+aranır. Kişilerin ayrıntıları her açtığınızda alınır; böylece hiçbir zaman eskimez ve
+saklanmaz. Veritabanı dosyasını görmek için <span class="ui">Finder’da Göster</span> düğmesini tıklayın.</p>
+
+<h2><a name="tmdb"></a>Oyuncu ve ekip ayrıntıları: TMDb belirteci</h2>
+<p>TVmaze herhangi bir ayar gerektirmez. TMDb (The Movie Database) yönetmenleri ve senaristleri, TVmaze’de
+bulunmayan oyuncuları ve çoğu zaman sizin dilinizde biyografileri ekler. Bunun için size ait bir belirteç gerekir: TMDb,
+hesabı olan herkese kişisel ve ticari olmayan kullanım için ücretsiz bir belirteç verir. TV Library Viewer
+bir belirteçle birlikte gelmez.</p>
+<ol>
+<li>themoviedb.org’da ücretsiz bir hesap oluşturun ve giriş yapın.</li>
+<li>Hesap simgenizi tıklayın, <span class="ui">Settings</span> seçeneğini seçin, sonra <span class="ui">API</span> seçeneğini tıklayın.</li>
+<li>Bir API anahtarı isteyin: <span class="ui">Developer</span> seçeneğini seçin, koşulları kabul edin ve kullanımınızı kişisel
+ve ticari olmayan olarak tanımlayın (örneğin, “Show cast and biographies in my own TV library app”).</li>
+<li>Anahtar hazır olduğunda <span class="ui">API Read Access Token</span> değerini kopyalayın (daha kısa olan API Key’i değil, uzun olanı).</li>
+<li>Arşivin bulunduğu Mac’te <span class="ui">TV Library Viewer › Ayarlar</span> komutunu seçin, <span class="ui">Depolama</span> seçeneğini tıklayın ve
+belirteci <span class="ui">TMDb API Read Access Token</span> alanına yapıştırın.</li>
+<li><span class="ui">Sına</span> düğmesini tıklayın. “TMDb bu belirteci kabul ediyor.” iletisi çalıştığı anlamına gelir.</li>
+</ol>
+<p>Belirteç Mac’in Anahtar Zinciri’nde saklanır. Onu yalnızca arşivin bulunduğu Mac kullanır; diğer
+aygıtlarınız oyuncuları ve ayrıntıları o Mac’ten alır. Daha önce aranmış diziler, sayfaları bir sonraki açılışta
+TMDb’nin oyuncu ve ekip bilgilerini alır. Ayarlar’ı yeni bir belirteci sınamadan kapatırsanız belirteç o anda sınanır
+ve TMDb onu reddederse size bildirilir.</p>
+<div class="note"><b>Not:</b> Bu ürün TMDB API’sini kullanır ancak TMDB tarafından onaylanmamış veya sertifikalandırılmamıştır.</div>
+
+<h2><a name="google"></a>Çeviri: Google anahtarı</h2>
+<p>Bölüm adları ve açıklamaları, bu Mac’te Apple’ın Çeviri özelliğiyle ücretsiz olarak her aygıtın diline
+çevrilir. Ancak bu özellik Yunanca, Çekçe, Macarca, Romence, Farsça, Urduca veya Bengalceye çeviri yapamaz. Bu diller için
+kendi Google Cloud Translation API anahtarınızı ekleyin. Anahtar yalnızca arşivin bulunduğu Mac’te gerekir;
+arşivi görüntüleyen aygıtlarda gerekmez. Her ay ilk 500.000 karakter ücretsizdir ve her metin yalnızca
+bir kez çevrilir.</p>
+<ol>
+<li>console.cloud.google.com adresine gidin ve Google hesabınızla giriş yapın.</li>
+<li>Bir proje oluşturun: üstteki proje menüsünü tıklayın, sonra <span class="ui">New Project</span> seçeneğini tıklayın ve
+projeye “TV Library Viewer” gibi bir ad verin.</li>
+<li>Faturalandırmayı açın: ☰ menüsünde <span class="ui">Billing</span> seçeneğini seçin ve bir faturalandırma hesabı bağlayın. Google,
+ücretsiz kullanım için bile bir hesap ister. Güvende olmak için <span class="ui">Budgets &amp; alerts</span> bölümünde 1 $ gibi bir bütçe ekleyin.</li>
+<li>☰ › <span class="ui">APIs &amp; Services › Library</span> seçeneğini seçin, <span class="ui">Cloud Translation API</span> araması yapın ve
+<span class="ui">Enable</span> düğmesini tıklayın.</li>
+<li>☰ › <span class="ui">APIs &amp; Services › Credentials</span> seçeneğini, sonra <span class="ui">Create credentials › API key</span> seçeneğini seçin
+ve anahtarı kopyalayın (“AIza” ile başlar).</li>
+<li>Önerilir: anahtarın adını tıklayın, API restrictions altında <span class="ui">Restrict key</span> seçeneğini seçin,
+<span class="ui">Cloud Translation API</span> kutusunu işaretleyin ve <span class="ui">Save</span> düğmesini tıklayın; böylece anahtar yalnızca çeviri için çalışır.</li>
+<li>Arşivin bulunduğu Mac’te <span class="ui">TV Library Viewer › Ayarlar</span> komutunu seçin, <span class="ui">Depolama</span> seçeneğini tıklayın,
+anahtarı <span class="ui">Google Cloud Translation API anahtarı</span> alanına yapıştırın ve <span class="ui">Sına</span> düğmesini tıklayın.</li>
+</ol>
+<p>Anahtar Mac’in Anahtar Zinciri’nde saklanır ve yalnızca bu yedi dil için kullanılır. Anahtarı kimseyle
+paylaşmayın: onunla çevrilen her şey Google hesabınıza faturalandırılır.</p>
+
+<h2>Önbellekler</h2>
+<p>Resimler ve bu Mac’in diğer Mac’lerden görüntülediği arşivler. Önbellekler gerektiğinde yeniden oluşturulur
+ve macOS yer azaldığında onları boşaltır.</p>
+<div class="see"><h3>Ayrıca bakın</h3><ul><li><a href="show-page.html">Dizi sayfası ve oyuncular</a></li><li><a href="privacy.html">TV Library Viewer neleri okur, değiştirir ve saklar?</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

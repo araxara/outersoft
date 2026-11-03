@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>再接続とスリープ</title>
+<meta name="description" content="Media Sharing GUI が接続を維持するしくみ：キープアライブ、自動再接続、スリープを乗り切ること。" />
+<meta name="keywords" content="再接続, スリープ, 復帰, キープアライブ, ヘルスチェック, 切断, 自動" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="reconnecting"></a>
+<nav class="crumbs"><a href="index.html">Media Sharing GUI ヘルプ</a> › リファレンス</nav>
+<h1>再接続とスリープ</h1>
+<p class="lead">自宅の回線はいつも安定しているとは限りません。App が揺れを吸収します。</p>
+
+<h2>生かし続ける</h2>
+<p>接続中、<code>ssh</code> は <span class="ui">Server Alive Interval</span> 秒ごとにリモート側へ ping を送ります
+（<a href="settings.html">構成リファレンス</a>を参照）。これにより、ルーターやファイアウォールがアイドルのトンネルを
+落とすのを防ぎ、接続が本当に切れたときに App が素早く気づけます。</p>
+
+<h2>自動再接続</h2>
+<p>接続が切れると、状態が <span class="ui">再接続中</span> になり、Media Sharing GUI は試行の間隔を少しずつ延ばしながら、各試行を
+記録して、自動で再試行します。<span class="ui">停止</span> を押すと再試行を取りやめます。</p>
+
+<h2>Mac がスリープしたあと</h2>
+<p>この Mac がスリープから復帰すると、App はトンネルが生き残ったかを確認します。生きていれば続行し、そうでなければ
+完全リセット（停止してから開始するのと同じ）を行い、自動でライブラリを復帰させます。</p>
+<div class="see"><h3>関連項目</h3><ul><li><a href="status.html">状況と状態</a></li><li><a href="troubleshooting.html">接続できないとき</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

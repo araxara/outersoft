@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ro">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vizionarea departe de casă</title>
+<meta name="description" content="Trei moduri de a ajunge la biblioteca ta dintr-o altă rețea: SSH, o rețea VPN sau un port redirecționat." />
+<meta name="keywords" content="la distanță, departe, călătorie, SSH, VPN, Tailscale, redirecționare port, router, 47100, offline, TV Library" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="away"></a>
+<nav class="crumbs"><a href="index.html">Ajutor TV Library Viewer</a> › Primii pași</nav>
+<h1>Vizionarea departe de casă</h1>
+<p class="lead">Biblioteca ta rămâne pe Mac-ul de acasă. Alege un mod de a ajunge la ea din altă parte.</p>
+
+<h2>Prin SSH</h2>
+<p>Cea mai bună variantă dacă te poți deja autentifica prin SSH pe acel Mac sau pe un computer din rețeaua sa. Nu
+mai trebuie configurat nimic altceva. Folosește <span class="ui">La distanță (SSH)</span> în Conectează la biblioteca partajată. Totul trece prin
+conexiunea SSH.</p>
+
+<h2>Printr-o rețea VPN</h2>
+<p>Cu o rețea VPN precum Tailscale pe ambele dispozitive, folosește <span class="ui">Adresă</span> cu adresa VPN a Mac-ului și
+portul 47100.</p>
+
+<h2>Printr-un port redirecționat</h2>
+<ol>
+<li>Pe router, redirecționează portul 47100 (sau portul din <span class="ui">Configurări › Partajare</span>) către Mac-ul cu
+biblioteca.</li>
+<li>Adaugă conturi cu parole puternice în <span class="ui">Configurări › Conturi</span>.</li>
+<li>Pe celălalt dispozitiv, folosește <span class="ui">Adresă</span> cu adresa publică a casei tale și portul.</li>
+</ol>
+<div class="note"><b>Notă:</b> Conexiunile sunt întotdeauna criptate, iar dispozitivele verifică certificatul
+bibliotecii, de oriunde s-ar conecta. Zece parole greșite de la aceeași adresă în 5 minute duc la refuzarea
+încercărilor următoare fără verificare.</div>
+
+<h2>Fără nicio conexiune</h2>
+<p>Descarcă episoade înainte de plecare (Mac, iPad și iPhone). Când biblioteca nu poate fi accesată,
+aplicația o deschide așa cum a fost văzută ultima dată, afișează <span class="ui">Offline</span> și redă descărcările tale. Ce vizionezi este trimis
+la Mac după ce acesta poate fi accesat din nou.</p>
+<div class="see"><h3>Vezi și</h3><ul><li><a href="connect.html">Conectarea la o bibliotecă partajată</a></li><li><a href="downloads.html">Descărcări și vizionare offline</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

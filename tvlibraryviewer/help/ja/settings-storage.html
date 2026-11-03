@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ストレージ設定</title>
+<meta name="description" content="ライブラリの大きさと、TV Library Viewerのデータベースとキャッシュが使う容量。" />
+<meta name="keywords" content="設定, ストレージ, データベース, サイズ, 容量, 番組, エピソード, キャスト, 俳優の写真, キャッシュ" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="settings-storage"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer ヘルプ</a> › 設定</nav>
+<h1>ストレージ設定</h1>
+<p class="lead"><span class="ui">TV Library Viewer › 設定</span>を選択し、<span class="ui">ストレージ</span>をクリックします。</p>
+
+<h2>このMacのTVライブラリ</h2>
+<p>TVアプリのライブラリにある番組とエピソードの数、およびそのデータベースのサイズ。ビデオファイルは含まれません。</p>
+
+<h2>TV Library Viewerのデータベース</h2>
+<p>このMac上にあるTV Library Viewer独自のデータベースです。ライブラリを表示するすべてのデバイスと共有されます。</p>
+<table>
+<tr><th>項目</th><th>内容</th></tr>
+<tr><td><span class="ui">作品情報</span></td><td>AppleScriptで指定した詳しい説明と、各番組のキャスト（俳優の名前と役柄）。</td></tr>
+<tr><td><span class="ui">翻訳</span></td><td>アプリで設定された言語に翻訳されたエピソードのタイトルと説明。</td></tr>
+<tr><td><span class="ui">キャストとスタッフ</span></td><td>1人につき1枚の小さな写真と、TVmazeとTMDbにあるその人のページのアドレス。</td></tr>
+<tr><td><span class="ui">アカウントと視聴</span></td><td>アカウント、メインアカウント以外のすべてのアカウントの視聴状況、アカウントのログ。</td></tr>
+<tr><td><span class="ui">データベースの構造と空き領域</span></td><td>SQLite自体の記録と、再利用される領域。</td></tr>
+<tr><td><span class="ui">最近の変更</span></td><td>まだデータベースに統合されていない変更。統合はときどき自動的に行われます。</td></tr>
+</table>
+<p>番組のキャストとスタッフは、このMacまたはいずれかのデバイスでその番組のページが初めて開かれたときに、TVmazeとTMDbで調べられます。人物の詳細は開くたびに取得されるので常に最新で、保存はされません。データベースファイルを見るには、<span class="ui">Finderに表示</span>をクリックします。</p>
+
+<h2><a name="tmdb"></a>キャストとスタッフの詳細：TMDbのトークン</h2>
+<p>TVmazeは設定不要です。TMDb（The Movie Database）を使うと、監督や脚本家、TVmazeにない俳優、経歴が追加され、多くの場合あなたの言語で表示されます。TMDbには自分のトークンが必要です。TMDbはアカウントを持つ人なら誰にでも、個人的な非商用の利用のために無料でトークンを発行しています。TV Library Viewerにはトークンは付属していません。</p>
+<ol>
+<li>themoviedb.orgで無料のアカウントを作成し、サインインします。</li>
+<li>アカウントのアイコンをクリックし、<span class="ui">Settings</span>を選択してから、<span class="ui">API</span>をクリックします。</li>
+<li>APIキーをリクエストします。<span class="ui">Developer</span>を選択し、規約に同意して、用途を個人的な非商用の利用として説明します（例：「自分のテレビライブラリアプリでキャストと経歴を表示する」）。</li>
+<li>キーの準備ができたら、<span class="ui">API Read Access Token</span>（短いAPI Keyではなく、長いほう）をコピーします。</li>
+<li>ライブラリのあるMacで<span class="ui">TV Library Viewer › 設定</span>を選択し、<span class="ui">ストレージ</span>をクリックして、<span class="ui">TMDb API Read Access Token</span>にペーストします。</li>
+<li><span class="ui">テスト</span>をクリックします。「TMDbはこのトークンを受け付けます。」と表示されれば使えます。</li>
+</ol>
+<p>トークンはMacのキーチェーンに保存されます。トークンを使うのはライブラリのあるMacだけで、ほかのデバイスはそのMacからキャストと詳細を受け取ります。すでに調べた番組は、次にそのページが開かれたときにTMDbのキャストとスタッフが追加されます。新しいトークンをテストせずに設定を閉じた場合は、そのときにテストされ、TMDbが拒否すると通知されます。</p>
+<div class="note"><b>注記：</b>本製品はTMDB APIを使用していますが、TMDBによる承認または認定を受けたものではありません。</div>
+
+<h2><a name="google"></a>翻訳：Googleのキー</h2>
+<p>エピソードのタイトルと説明は、AppleのTranslationを使ってこのMac上で各デバイスの言語に無料で翻訳されます。ただし、ギリシャ語、チェコ語、ハンガリー語、ルーマニア語、ペルシャ語、ウルドゥー語、ベンガル語には翻訳できません。これらの言語には、自分のGoogle Cloud Translation APIキーを追加します。キーが必要なのはライブラリのあるMacだけで、ライブラリを表示するデバイスには必要ありません。毎月最初の50万文字までは無料で、各テキストが翻訳されるのは1回だけです。</p>
+<ol>
+<li>console.cloud.google.comにアクセスし、Googleアカウントでサインインします。</li>
+<li>プロジェクトを作成します。上部のプロジェクトメニューをクリックし、<span class="ui">New Project</span>をクリックして、「TV Library Viewer」などの名前を付けます。</li>
+<li>課金を有効にします。メニュー☰で<span class="ui">Billing</span>を選択し、請求先アカウントをリンクします。無料で使う場合でも、Googleは請求先アカウントを求めます。念のため、<span class="ui">Budgets &amp; alerts</span>で1ドルなどの予算を追加しておきます。</li>
+<li>☰ › <span class="ui">APIs &amp; Services › Library</span>を選択し、<span class="ui">Cloud Translation API</span>を検索して、<span class="ui">Enable</span>をクリックします。</li>
+<li>☰ › <span class="ui">APIs &amp; Services › Credentials</span>を選択し、<span class="ui">Create credentials › API key</span>を選んで、キー（「AIza」で始まります）をコピーします。</li>
+<li>推奨：キーの名前をクリックし、API restrictionsで<span class="ui">Restrict key</span>を選択して、<span class="ui">Cloud Translation API</span>にチェックを入れ、<span class="ui">Save</span>をクリックします。これで、キーは翻訳にしか使えなくなります。</li>
+<li>ライブラリのあるMacで<span class="ui">TV Library Viewer › 設定</span>を選択し、<span class="ui">ストレージ</span>をクリックして、<span class="ui">Google Cloud Translation APIキー</span>にキーをペーストし、<span class="ui">テスト</span>をクリックします。</li>
+</ol>
+<p>キーはMacのキーチェーンに保管され、これら7つの言語にだけ使われます。キーは他人と共有しないでください。キーを使って翻訳されたものはすべて、あなたのGoogleアカウントに請求されます。</p>
+
+<h2>キャッシュ</h2>
+<p>アートワークと、このMacがほかのMacから表示したライブラリ。キャッシュは必要に応じて作り直され、空き領域が少なくなるとmacOSが空にします。</p>
+<div class="see"><h3>関連項目</h3><ul><li><a href="show-page.html">番組ページとキャスト</a></li><li><a href="privacy.html">TV Library Viewerが読み取る情報、変更する情報、保存する情報</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>

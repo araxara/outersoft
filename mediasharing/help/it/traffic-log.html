@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Traffico e registro</title>
+<meta name="description" content="Osserva quanti dati trasporta il tunnel e leggi (o salva) un registro di tutto ciò che fa." />
+<meta name="keywords" content="traffico, nettop, byte, entrata, uscita, picco, registro, file, Finder" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="traffic-log"></a>
+<nav class="crumbs"><a href="index.html">Aiuto di Media Sharing GUI</a> › Utilizzo</nav>
+<h1>Traffico e registro</h1>
+<p class="lead">Due riquadri mostrano come va la connessione: quanto trasporta e cosa ha fatto.</p>
+
+<h2>Traffico sessione SSH</h2>
+<ul>
+<li><span class="ui">Entrata</span> e <span class="ui">Uscita</span> mostrano i byte che fluiscono nel processo del tunnel, con un valore di <span class="ui">Picco</span>
+per il momento più intenso.</li>
+<li>I numeri sono campionati con lo strumento di sistema <code>nettop</code>, non una cattura grezza dei pacchetti, quindi
+sono una guida approssimativa più che una misura esatta.</li>
+<li>Con quale frequenza ricampiona lo imposta <span class="ui">Intervallo di polling del traffico</span> nella
+<a href="settings.html">Configurazione</a>. Ogni campione impiega alcuni secondi; un intervallo più breve
+di quello esegue semplicemente i campioni uno dopo l'altro.</li>
+</ul>
+
+<h2>Registro</h2>
+<p>Il riquadro <span class="ui">Registro</span> annota ogni passo — aprire il tunnel, trovare le librerie, pubblicarle,
+riconnettersi ed eventuali errori. Viene anche scritto in un file sul disco; il riquadro mostra
+<span class="ui">Salvato in:</span> il suo percorso. Fai clic su quel percorso per <b>mostrare il registro nel Finder</b>, comodo quando vuoi
+inviarlo mentre risolvi un problema.</p>
+<div class="see"><h3>Vedi anche</h3><ul><li><a href="status.html">Stato e situazione</a></li><li><a href="troubleshooting.html">Se non si connette</a></li></ul></div>
+<script src="../shared/langnav.js"></script>
+</body>
+</html>
