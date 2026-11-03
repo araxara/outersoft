@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AppleScript</title>
+<meta name="description" content="Script TV Library Viewer to add episodes, set descriptions and manage accounts." />
+<meta name="keywords" content="AppleScript, script, automation, osascript, add episode, long description, accounts" />
+<link rel="stylesheet" href="../shared/style.css" />
+</head>
+<body>
+<a name="applescript"></a>
+<nav class="crumbs"><a href="index.html">TV Library Viewer Help</a> › Reference</nav>
+<h1>AppleScript</h1>
+<p class="lead">TV Library Viewer can be scripted, for example from a script that imports episodes.
+Open its dictionary in Script Editor (<span class="ui">File › Open Dictionary…</span>) for the details.</p>
+<table>
+<tr><th>Command</th><th>What it does</th></tr>
+<tr><td><span class="ui">add episode</span></td><td>Adds a video file to the TV app's library (or finds it there) with
+its show, season, episode, title, genre and descriptions, and returns its persistent ID.</td></tr>
+<tr><td><span class="ui">update episode</span></td><td>Changes an episode's details.</td></tr>
+<tr><td><span class="ui">remove episode</span></td><td>Removes an episode from the library. The file stays.</td></tr>
+<tr><td><span class="ui">refresh library</span></td><td>Reads the library again.</td></tr>
+<tr><td><span class="ui">create account</span>, <span class="ui">change account password</span>, <span class="ui">delete account</span>,
+<span class="ui">account names</span>, <span class="ui">account log</span></td><td>Manage accounts.</td></tr>
+</table>
+<p>Long descriptions given this way are kept in TV Library Viewer's database, and put back when the
+TV app forgets them.</p>
+</body>
+</html>
