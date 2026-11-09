@@ -12,6 +12,19 @@
     .rn h2 .when { font-size: 14px; font-weight: 400; color: var(--secondary); white-space: nowrap; }
     .rn .first { font-size: 14px; font-weight: 600; color: var(--accent); }
     .backlink { font-size: 15px; }
+    /* The current release shows on its own; the rest open from a button below it. */
+    details.more { margin-top: 30px; }
+    details.more > summary {
+      cursor: pointer; list-style: none; width: max-content; max-width: 100%; margin: 0 auto;
+      padding: 11px 24px; border-radius: 980px; font-weight: 600; font-size: 16px;
+      color: var(--accent); border: 1px solid var(--accent); text-align: center;
+    }
+    details.more > summary:hover { filter: brightness(1.07); }
+    details.more > summary::-webkit-details-marker { display: none; }
+    details.more > summary .open { display: none; }
+    details.more[open] > summary { margin-bottom: 8px; }
+    details.more[open] > summary .closed { display: none; }
+    details.more[open] > summary .open { display: inline; }
   </style>
 </head>
 <body>
@@ -40,6 +53,9 @@
       <li>Your cast and translation keys moved to their own <b>Keys</b> tab in Settings.</li>
       <li>Reliability fixes for watching in the car (CarPlay).</li>
     </ul>
+
+    <details class="more">
+      <summary><span class="closed">Earlier versions</span><span class="open">Hide earlier versions</span></summary>
 
     <h2>Version 1.2 <span class="when">November 2, 2026 · build 116</span></h2>
     <ul>
@@ -103,6 +119,8 @@
       <li>Full episode descriptions and a genre column, like the TV app.</li>
       <li>Choose a System, Light or Dark appearance.</li>
     </ul>
+
+    </details>
 
     <p class="backlink" style="margin-top:32px"><a href="/tvlibraryviewer.html">&larr; Back to TV Library Viewer</a></p>
   </main>
