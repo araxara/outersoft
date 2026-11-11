@@ -3,13 +3,13 @@
     <channel>
         <title>TV Library Viewer</title>
         <item>
-            <title>1.3.2</title>
-            <pubDate>Mon, 09 Nov 2026 11:55:38 -0700</pubDate>
-            <sparkle:version>129</sparkle:version>
-            <sparkle:shortVersionString>1.3.2</sparkle:shortVersionString>
+            <title>1.4</title>
+            <pubDate>Tue, 10 Nov 2026 17:26:18 -0700</pubDate>
+            <sparkle:version>133</sparkle:version>
+            <sparkle:shortVersionString>1.4</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://github.com/araxara/TVLibraryViewer-releases/releases/download/mac/TVLibraryViewer-1.3.2.zip" length="9174759" type="application/octet-stream" sparkle:edSignature="hWMkNqj2p33fUqy2x2ZLQfze/A5zLju5JssinruB+eggpUaElBM1BK6VhHMDNuSs9fPC9erfu+Nvm/jvZf6jBg=="/>
+            <enclosure url="https://github.com/araxara/TVLibraryViewer-releases/releases/download/mac/TVLibraryViewer-1.4.zip" length="9286571" type="application/octet-stream" sparkle:edSignature="IMbiFrrr116tW6kV0yJrobqhPLF7wDPHJjO5Tx2VFmSeob4TSA8xjMw45pWAnPON8/nWfzIn9SyMnquDAFF+DA=="/>
         </item>
     </channel>
 </rss>
