@@ -3,18 +3,25 @@
     <channel>
         <title>TV Library Viewer</title>
         <item>
-            <title>1.5.1</title>
-            <pubDate>Thu, 12 Nov 2026 14:54:28 -0700</pubDate>
-            <sparkle:version>137</sparkle:version>
-            <sparkle:shortVersionString>1.5.1</sparkle:shortVersionString>
+            <title>1.6.1</title>
+            <pubDate>Wed, 18 Nov 2026 01:11:57 -0700</pubDate>
+            <sparkle:version>150</sparkle:version>
+            <sparkle:shortVersionString>1.6.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description><![CDATA[<ul>
-  <li>In the sidebar on the Mac, iPad and iPhone, choosing a view's name (Recently Added, TV Shows and the others) shows the view with all its genres and opens its list, as in the web client. The name and All Genres both show as chosen.</li>
-  <li>CarPlay: fixed the app closing with a large library.</li>
-</ul>
+    <ul>
+      <li>Apple Vision Pro: the <b>Viewing</b> panel shows the theater and the 3D settings side by side,
+        each in a section of its own, sized to fit its words in every language, so nothing is cut short
+        and nothing needs scrolling. The ends of each slider are icons with their names under them, and
+        <b>Reset to Standard Settings</b> is a button of its own.</li>
+      <li>Apple Vision Pro: taking the headset off while watching now pauses the episode; put it back
+        on and it's there to go on with. (A 3D episode could be left black, without its controls.)</li>
+      <li>Liquid Glass buttons on the Mac, iPad and Apple TV (macOS 26, iPadOS 26, tvOS 26 and later),
+        and on Apple Vision Pro the <b>Viewing</b> button above the player.</li>
+    </ul>
 ]]></description>
-            <enclosure url="https://github.com/araxara/TVLibraryViewer-releases/releases/download/mac/TVLibraryViewer-1.5.1.zip" length="9398644" type="application/octet-stream" sparkle:edSignature="FioY1LYdK59xcprPU/8Sk4HPCu6akxipk+WeQQm2kfvqyHfALQbMfJNaayHy8QZSkcjBTt5up9tlULuK39SuCQ=="/>
+            <enclosure url="https://github.com/araxara/TVLibraryViewer-releases/releases/download/mac/TVLibraryViewer-1.6.1.zip" length="55459765" type="application/octet-stream" sparkle:edSignature="7vTRb6cNSdtC8zm1Gba2BW+/Q/Qkvkv4Bq06/Z8yEmipvkc89R1w6pg4djcJHmj75WKxPaCWSE1W+NQYTlihBQ=="/>
         </item>
     </channel>
 </rss>
