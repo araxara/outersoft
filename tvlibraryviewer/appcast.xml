@@ -10,7 +10,6 @@
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description><![CDATA[<ul>
-    <ul>
       <li>Apple Vision Pro: the <b>Viewing</b> panel shows the theater and the 3D settings side by side,
         each in a section of its own, sized to fit its words in every language, so nothing is cut short
         and nothing needs scrolling. The ends of each slider are icons with their names under them, and
