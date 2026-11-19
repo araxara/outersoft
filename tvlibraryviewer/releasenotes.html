@@ -42,8 +42,12 @@
     <p class="lead">What's new in each version, from the latest all the way back to the first. The Mac
     app updates itself; your other devices update through TestFlight.</p>
 
-    <h2>Version 1.6.1 <span class="when">November 19, 2026 · build 154</span></h2>
+    <h2>Version 1.6.1 <span class="when">November 19, 2026 · build 155</span></h2>
     <ul>
+      <li>Security: the library's web address (through a proxy such as Caddy) counts wrong passwords
+        for each visitor, so one visitor can't lock everyone out, and the library password can't be
+        guessed endlessly. Changes can't be sent from another site's pages, and requests a proxy
+        could misread are refused.</li>
       <li>A show's picture uses the cover in its video files when the TV app has none of its own,
         instead of a frame from the video, and is looked for again when an episode or new artwork
         is added (an added episode's cover didn't show in the grid, even after restarting).</li>
