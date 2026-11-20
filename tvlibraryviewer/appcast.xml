@@ -4,13 +4,19 @@
         <title>TV Library Viewer</title>
         <item>
             <title>1.6.1</title>
-            <pubDate>Fri, 20 Nov 2026 13:11:28 -0700</pubDate>
-            <sparkle:version>158</sparkle:version>
+            <pubDate>Fri, 20 Nov 2026 14:18:05 -0700</pubDate>
+            <sparkle:version>159</sparkle:version>
             <sparkle:shortVersionString>1.6.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description><![CDATA[    <h2>Version 1.6.1 <span class="when">November 20, 2026 · build 158</span></h2>
+            <description><![CDATA[    <h2>Version 1.6.1 <span class="when">November 20, 2026 · build 159</span></h2>
     <ul>
+      <li>An episode whose file has been moved, renamed or deleted no longer opens a player that waits
+        on and on. On the Mac with the library, playing it says the file can't be found and offers
+        <b>Locate…</b>, as Apple's TV app does: choose the file and the library uses it from then on,
+        on every device. If other episodes of the show are missing their files too and the folder you
+        chose has files with their names, it offers to use those as well. The iPad, iPhone, Apple TV,
+        Vision Pro, the web client and other Macs say the Mac can't find the file, and where it was.</li>
       <li>Vision Pro 3D: an episode no longer stops to spin partway through. When the Mac had made
         the 3D five minutes ahead and was waiting for the player to catch up, it took the quiet for
         no one watching and stopped, so the player ran dry and had to start the 3D over.</li>
@@ -81,7 +87,7 @@
       <li>Fixed QR codes showing blank when linking a device.</li>
     </ul>
 ]]></description>
-            <enclosure url="https://github.com/araxara/TVLibraryViewer-releases/releases/download/mac/TVLibraryViewer-1.6.1-158.zip" length="55455211" type="application/octet-stream" sparkle:edSignature="PjCbra73S70Lj0I3VzNCaAccuND9NPR/bSPj+4sBPLcN7rC57/b2gUT0s+5frm2R1LL7UeM4N1YvUjaC53TABg=="/>
+            <enclosure url="https://github.com/araxara/TVLibraryViewer-releases/releases/download/mac/TVLibraryViewer-1.6.1-159.zip" length="55530002" type="application/octet-stream" sparkle:edSignature="XQ8DP5IUiN+ck5el76yv0GIfen/r5SXjt88fyyYtf1306q8T359WW+Z3Sok5BVMqS1D9ONP0BPFNoKCOPcwABw=="/>
         </item>
     </channel>
 </rss>
