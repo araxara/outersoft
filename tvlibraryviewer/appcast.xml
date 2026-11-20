@@ -4,13 +4,22 @@
         <title>TV Library Viewer</title>
         <item>
             <title>1.6.1</title>
-            <pubDate>Thu, 19 Nov 2026 14:05:19 -0700</pubDate>
-            <sparkle:version>155</sparkle:version>
+            <pubDate>Thu, 19 Nov 2026 20:51:43 -0700</pubDate>
+            <sparkle:version>156</sparkle:version>
             <sparkle:shortVersionString>1.6.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description><![CDATA[    <h2>Version 1.6.1 <span class="when">November 19, 2026 · build 155</span></h2>
+            <description><![CDATA[    <h2>Version 1.6.1 <span class="when">November 19, 2026 · build 156</span></h2>
     <ul>
+      <li>Vision Pro 3D: subtitles now sit on the screen instead of far in front of it, and a new
+        <b>Subtitles</b> slider in the 3D settings moves them anywhere from in front of the screen to
+        behind it. (Needs the Mac on this build and the Vision Pro app's next TestFlight build.)</li>
+      <li>Vision Pro: the player's <b>Viewing</b> tab opens at its full size with the 3D settings the
+        first time, instead of as a small panel that came right only when opened again. In the
+        theater its controls sit lower, below the screen.</li>
+      <li>Vision Pro: after 3D stopped and an episode went on in 2D, the next episodes no longer play
+        in 2D without asking until the app is quit: the Mac answers whether it can make 3D at once,
+        and the Vision Pro asks again if it doesn't hear back.</li>
       <li>Security: the library's web address (through a proxy such as Caddy) counts wrong passwords
         for each visitor, so one visitor can't lock everyone out, and the library password can't be
         guessed endlessly. Changes can't be sent from another site's pages, and requests a proxy
@@ -59,7 +68,7 @@
       <li>Fixed QR codes showing blank when linking a device.</li>
     </ul>
 ]]></description>
-            <enclosure url="https://github.com/araxara/TVLibraryViewer-releases/releases/download/mac/TVLibraryViewer-1.6.1.zip" length="55427019" type="application/octet-stream" sparkle:edSignature="0jBV3e+t7E/1YBUY+vkx8UGuqDGa91yps9PH4EKHR8h1aLiayI5rMFnRUdQUy+SzKxhIZmXAzKF9pl5XcppUDA=="/>
+            <enclosure url="https://github.com/araxara/TVLibraryViewer-releases/releases/download/mac/TVLibraryViewer-1.6.1.zip" length="55435725" type="application/octet-stream" sparkle:edSignature="v2Uyj+e/Yck3IdRNn3AG/78AAwn7DiQjZebqPfi5SjWTeJXfjesRMxOpGLrjizWPNMYzkGCUIDPxZUubDDIjBw=="/>
         </item>
     </channel>
 </rss>
