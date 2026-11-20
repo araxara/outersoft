@@ -4,13 +4,17 @@
         <title>TV Library Viewer</title>
         <item>
             <title>1.6.1</title>
-            <pubDate>Thu, 19 Nov 2026 20:51:43 -0700</pubDate>
-            <sparkle:version>156</sparkle:version>
+            <pubDate>Thu, 19 Nov 2026 22:29:25 -0700</pubDate>
+            <sparkle:version>157</sparkle:version>
             <sparkle:shortVersionString>1.6.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description><![CDATA[    <h2>Version 1.6.1 <span class="when">November 19, 2026 · build 156</span></h2>
+            <description><![CDATA[    <h2>Version 1.6.1 <span class="when">November 19, 2026 · build 157</span></h2>
     <ul>
+      <li>Vision Pro 3D: dragging the position slider back and forth, past where you wanted and back,
+        no longer leaves the episode stuck. The Mac starts making 3D only once the slider has rested
+        for half a second, instead of for every place you pass, and the player waits for it where
+        you stopped instead of going back to where you started.</li>
       <li>Vision Pro 3D: subtitles now sit on the screen instead of far in front of it, and a new
         <b>Subtitles</b> slider in the 3D settings moves them anywhere from in front of the screen to
         behind it. (Needs the Mac on this build and the Vision Pro app's next TestFlight build.)</li>
@@ -68,7 +72,7 @@
       <li>Fixed QR codes showing blank when linking a device.</li>
     </ul>
 ]]></description>
-            <enclosure url="https://github.com/araxara/TVLibraryViewer-releases/releases/download/mac/TVLibraryViewer-1.6.1.zip" length="55435725" type="application/octet-stream" sparkle:edSignature="v2Uyj+e/Yck3IdRNn3AG/78AAwn7DiQjZebqPfi5SjWTeJXfjesRMxOpGLrjizWPNMYzkGCUIDPxZUubDDIjBw=="/>
+            <enclosure url="https://github.com/araxara/TVLibraryViewer-releases/releases/download/mac/TVLibraryViewer-1.6.1.zip" length="55440287" type="application/octet-stream" sparkle:edSignature="M4U54u0Lh9KpVugd0kCSzAhRlAhi9KIbLg2KSg3XgU2msNgaR2eeaOttB0c6Hy2/IOpBXdrBibZZ70IEi9N+BA=="/>
         </item>
     </channel>
 </rss>
