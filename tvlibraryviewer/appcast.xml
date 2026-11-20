@@ -4,13 +4,22 @@
         <title>TV Library Viewer</title>
         <item>
             <title>1.6.1</title>
-            <pubDate>Thu, 19 Nov 2026 22:29:25 -0700</pubDate>
-            <sparkle:version>157</sparkle:version>
+            <pubDate>Fri, 20 Nov 2026 13:11:28 -0700</pubDate>
+            <sparkle:version>158</sparkle:version>
             <sparkle:shortVersionString>1.6.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description><![CDATA[    <h2>Version 1.6.1 <span class="when">November 19, 2026 · build 157</span></h2>
+            <description><![CDATA[    <h2>Version 1.6.1 <span class="when">November 20, 2026 · build 158</span></h2>
     <ul>
+      <li>Vision Pro 3D: an episode no longer stops to spin partway through. When the Mac had made
+        the 3D five minutes ahead and was waiting for the player to catch up, it took the quiet for
+        no one watching and stopped, so the player ran dry and had to start the 3D over.</li>
+      <li>Vision Pro: in the theater, the controls fold away to a faint button low on your right
+        while you watch, instead of a bright panel that was always there. Look at it and it
+        brightens; select it to open the controls (smaller and closer to you than before), and their
+        <b>X</b> to fold them away again.</li>
+      <li>Mac updates: each build is published as a file of its own, so an update can't be refused
+        as "improperly signed" when a version is released again.</li>
       <li>Vision Pro 3D: dragging the position slider back and forth, past where you wanted and back,
         no longer leaves the episode stuck. The Mac starts making 3D only once the slider has rested
         for half a second, instead of for every place you pass, and the player waits for it where
@@ -72,7 +81,7 @@
       <li>Fixed QR codes showing blank when linking a device.</li>
     </ul>
 ]]></description>
-            <enclosure url="https://github.com/araxara/TVLibraryViewer-releases/releases/download/mac/TVLibraryViewer-1.6.1.zip" length="55440287" type="application/octet-stream" sparkle:edSignature="M4U54u0Lh9KpVugd0kCSzAhRlAhi9KIbLg2KSg3XgU2msNgaR2eeaOttB0c6Hy2/IOpBXdrBibZZ70IEi9N+BA=="/>
+            <enclosure url="https://github.com/araxara/TVLibraryViewer-releases/releases/download/mac/TVLibraryViewer-1.6.1-158.zip" length="55455211" type="application/octet-stream" sparkle:edSignature="PjCbra73S70Lj0I3VzNCaAccuND9NPR/bSPj+4sBPLcN7rC57/b2gUT0s+5frm2R1LL7UeM4N1YvUjaC53TABg=="/>
         </item>
     </channel>
 </rss>
