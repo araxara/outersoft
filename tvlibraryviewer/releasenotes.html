@@ -42,8 +42,14 @@
     <p class="lead">What's new in each version, from the latest all the way back to the first. The Mac
     app updates itself; your other devices update through TestFlight.</p>
 
-    <h2>Version 1.6.1 <span class="when">November 20, 2026 · build 159</span></h2>
+    <h2>Version 1.6.1 <span class="when">November 20, 2026 · build 160</span></h2>
     <ul>
+      <li>Streaming no longer stops on a spinner partway through an episode (seen in 3D on Vision
+        Pro) because another device at home kept failing to sign in. Every device at home reaches the
+        Mac from the same internet address, and ten failed sign-ins from it refused all of them for a
+        while, even one already watching. A device that signed in correctly now stays signed in while
+        it uses the library; new wrong guesses are still refused. Each failed sign-in now appears in
+        the account log with the device's name, so the one that keeps failing can be found.</li>
       <li>An episode whose file has been moved, renamed or deleted no longer opens a player that waits
         on and on. On the Mac with the library, playing it says the file can't be found and offers
         <b>Locate…</b>, as Apple's TV app does: choose the file and the library uses it from then on,
