@@ -4,13 +4,19 @@
         <title>TV Library Viewer</title>
         <item>
             <title>1.6.1</title>
-            <pubDate>Sat, 21 Nov 2026 18:45:49 -0700</pubDate>
-            <sparkle:version>161</sparkle:version>
+            <pubDate>Sun, 22 Nov 2026 15:57:59 -0700</pubDate>
+            <sparkle:version>162</sparkle:version>
             <sparkle:shortVersionString>1.6.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description><![CDATA[    <h2>Version 1.6.1 <span class="when">November 21, 2026 · build 161</span></h2>
+            <description><![CDATA[    <h2>Version 1.6.1 <span class="when">November 22, 2026 · build 162</span></h2>
     <ul>
+      <li>Apple TV: the <b>Top Shelf</b> lines up what to watch next: first the shows you've watched in
+        the last 30 days, the one you played last first, then the other shows with episodes left, newest
+        added first. Shows you've finished are left out, and drop off as soon as you finish them.</li>
+      <li>Vision Pro: in the theater, the next episode (played on when one ends) now goes onto the
+        screen too. Moving <b>Screen Height</b> during it no longer leaves the sound playing with no
+        picture. Changing the 3D settings twice in a row no longer can either.</li>
       <li><b>Send Log to Server</b>, on every device: with <b>Keep a Log</b> on, the log of what the
         player and the connection did goes to the server with one click, instead of being copied and
         pasted. The server keeps it in its Sent Logs folder (<b>Help › Show Logs Sent to This
@@ -100,7 +106,7 @@
       <li>Fixed QR codes showing blank when linking a device.</li>
     </ul>
 ]]></description>
-            <enclosure url="https://github.com/araxara/TVLibraryViewer-releases/releases/download/mac/TVLibraryViewer-1.6.1-161.zip" length="55607604" type="application/octet-stream" sparkle:edSignature="b+mrYyCtzpNmMZj6sE6RGv7Wy8y/eHL+e/LOrq3w2OfEJ7jNIHUo8cD+6R3SqjhFAjYHQlMmpw08cEbsUa+3Ag=="/>
+            <enclosure url="https://github.com/araxara/TVLibraryViewer-releases/releases/download/mac/TVLibraryViewer-1.6.1-162.zip" length="55619568" type="application/octet-stream" sparkle:edSignature="e98cGGEiH5Ppcj29HXHxzE5knAbltzSv+iY51+qWZwG3fAZFDEOSMuu2E8mn2nDXfHsHAI47F3MH2TOdZwoEAQ=="/>
         </item>
     </channel>
 </rss>
