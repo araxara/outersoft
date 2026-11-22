@@ -4,13 +4,20 @@
         <title>TV Library Viewer</title>
         <item>
             <title>1.6.1</title>
-            <pubDate>Fri, 20 Nov 2026 21:44:51 -0700</pubDate>
-            <sparkle:version>160</sparkle:version>
+            <pubDate>Sat, 21 Nov 2026 18:45:49 -0700</pubDate>
+            <sparkle:version>161</sparkle:version>
             <sparkle:shortVersionString>1.6.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description><![CDATA[    <h2>Version 1.6.1 <span class="when">November 20, 2026 · build 160</span></h2>
+            <description><![CDATA[    <h2>Version 1.6.1 <span class="when">November 21, 2026 · build 161</span></h2>
     <ul>
+      <li><b>Send Log to Server</b>, on every device: with <b>Keep a Log</b> on, the log of what the
+        player and the connection did goes to the server with one click, instead of being copied and
+        pasted. The server keeps it in its Sent Logs folder (<b>Help › Show Logs Sent to This
+        Server</b> on the Mac running it), so whoever looks after it can read it. The Apple TV now has
+        <b>Keep a Log</b> too, in About. The log also notes how fast video was arriving when the
+        player waits, so a slow network shows up plainly (an Apple TV that measured 0.9 Mbit/s until
+        it was restarted, say).</li>
       <li>Streaming no longer stops on a spinner partway through an episode (seen in 3D on Vision
         Pro) because another device at home kept failing to sign in. Every device at home reaches the
         Mac from the same internet address, and ten failed sign-ins from it refused all of them for a
@@ -93,7 +100,7 @@
       <li>Fixed QR codes showing blank when linking a device.</li>
     </ul>
 ]]></description>
-            <enclosure url="https://github.com/araxara/TVLibraryViewer-releases/releases/download/mac/TVLibraryViewer-1.6.1-160.zip" length="55532053" type="application/octet-stream" sparkle:edSignature="ePMp4rH+lNsHPb05runfL3rELHCeu13Hpc8kpXScfi+tiDVGDRCt2DvpK3xp1I0VBofe1cCKOK7T2Rx72uFcAQ=="/>
+            <enclosure url="https://github.com/araxara/TVLibraryViewer-releases/releases/download/mac/TVLibraryViewer-1.6.1-161.zip" length="55607604" type="application/octet-stream" sparkle:edSignature="b+mrYyCtzpNmMZj6sE6RGv7Wy8y/eHL+e/LOrq3w2OfEJ7jNIHUo8cD+6R3SqjhFAjYHQlMmpw08cEbsUa+3Ag=="/>
         </item>
     </channel>
 </rss>
