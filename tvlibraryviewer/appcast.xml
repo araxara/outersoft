@@ -4,12 +4,12 @@
         <title>TV Library Viewer</title>
         <item>
             <title>1.8</title>
-            <pubDate>Tue, 24 Nov 2026 04:22:46 -0700</pubDate>
-            <sparkle:version>165</sparkle:version>
+            <pubDate>Tue, 24 Nov 2026 16:46:32 -0700</pubDate>
+            <sparkle:version>166</sparkle:version>
             <sparkle:shortVersionString>1.8</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description><![CDATA[    <h2>Version 1.8 <span class="when">November 24, 2026 · build 165</span></h2>
+            <description><![CDATA[    <h2>Version 1.8 <span class="when">November 24, 2026 · build 166</span></h2>
     <ul>
       <li><b>Skip Intro</b>: during an episode's opening titles, a <b>Skip Intro</b> button appears at
         the bottom right of the picture and jumps to where the episode begins, on the Mac, iPad,
@@ -23,11 +23,18 @@
         intro; after that, as soon as the episode starts. Only seasons you play are looked at, a few
         seconds of video for each episode, so the library's disks aren't kept busy. Settings ›
         Storage shows what's been found.</li>
+      <li><b>Skip to End</b>: during the end credits of a show's last episode, where there's no next
+        episode to go on to, <b>Skip to End</b> finishes the episode, as reaching the end does.</li>
+      <li>Mac: once the player's controls fade away, they no longer leave an empty grey panel over the
+        picture and the subtitles.</li>
+      <li>Subtitles in the web client and at the smaller video sizes are read afresh when an
+        episode's file is replaced (with new subtitles, say), rather than the old ones being kept
+        until the server restarts.</li>
       <li>Web client: a video that fails is loaded afresh again, up to five times, as before 1.7
         (since 1.7 it gave up after the first failure).</li>
     </ul>
 ]]></description>
-            <enclosure url="https://github.com/araxara/TVLibraryViewer-releases/releases/download/mac/TVLibraryViewer-1.8-165.zip" length="55871647" type="application/octet-stream" sparkle:edSignature="YDh5L5zGVckqo3T0tyvI41B6zmJ/8vXqqaDLRtDbS/DO4yeXJJC1XRipL5EUuIE3gBjZFaqi954/Pf5WpSNfBw=="/>
+            <enclosure url="https://github.com/araxara/TVLibraryViewer-releases/releases/download/mac/TVLibraryViewer-1.8-166.zip" length="55876628" type="application/octet-stream" sparkle:edSignature="XDsqlvveMEtgbogRdsy23iBuZyMxNvWieJdcpCYPNjB+ApANJPRzzr0En6lCwZMUxmy6/ysRHe3luQmBbxlzAA=="/>
         </item>
     </channel>
 </rss>
