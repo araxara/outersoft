@@ -3,110 +3,32 @@
     <channel>
         <title>TV Library Viewer</title>
         <item>
-            <title>1.6.1</title>
-            <pubDate>Sun, 22 Nov 2026 15:57:59 -0700</pubDate>
-            <sparkle:version>162</sparkle:version>
-            <sparkle:shortVersionString>1.6.1</sparkle:shortVersionString>
+            <title>1.7</title>
+            <pubDate>Mon, 23 Nov 2026 20:41:14 -0700</pubDate>
+            <sparkle:version>163</sparkle:version>
+            <sparkle:shortVersionString>1.7</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description><![CDATA[    <h2>Version 1.6.1 <span class="when">November 22, 2026 · build 162</span></h2>
+            <description><![CDATA[    <h2>Version 1.7 <span class="when">November 23, 2026 · build 163</span></h2>
     <ul>
-      <li>Apple TV: the <b>Top Shelf</b> lines up what to watch next: first the shows you've watched in
-        the last 30 days, the one you played last first, then the other shows with episodes left, newest
-        added first. Shows you've finished are left out, and drop off as soon as you finish them.</li>
-      <li>Vision Pro: in the theater, the next episode (played on when one ends) now goes onto the
-        screen too. Moving <b>Screen Height</b> during it no longer leaves the sound playing with no
-        picture. Changing the 3D settings twice in a row no longer can either.</li>
-      <li><b>Send Log to Server</b>, on every device: with <b>Keep a Log</b> on, the log of what the
-        player and the connection did goes to the server with one click, instead of being copied and
-        pasted. The server keeps it in its Sent Logs folder (<b>Help › Show Logs Sent to This
-        Server</b> on the Mac running it), so whoever looks after it can read it. The Apple TV now has
-        <b>Keep a Log</b> too, in About. The log also notes how fast video was arriving when the
-        player waits, so a slow network shows up plainly (an Apple TV that measured 0.9 Mbit/s until
-        it was restarted, say).</li>
-      <li>Streaming no longer stops on a spinner partway through an episode (seen in 3D on Vision
-        Pro) because another device at home kept failing to sign in. Every device at home reaches the
-        Mac from the same internet address, and ten failed sign-ins from it refused all of them for a
-        while, even one already watching. A device that signed in correctly now stays signed in while
-        it uses the library; new wrong guesses are still refused. Each failed sign-in now appears in
-        the account log with the device's name, so the one that keeps failing can be found.</li>
-      <li>An episode whose file has been moved, renamed or deleted no longer opens a player that waits
-        on and on. On the Mac with the library, playing it says the file can't be found and offers
-        <b>Locate…</b>, as Apple's TV app does: choose the file and the library uses it from then on,
-        on every device. If other episodes of the show are missing their files too and the folder you
-        chose has files with their names, it offers to use those as well. The iPad, iPhone, Apple TV,
-        Vision Pro, the web client and other Macs say the Mac can't find the file, and where it was.</li>
-      <li>Vision Pro 3D: an episode no longer stops to spin partway through. When the Mac had made
-        the 3D five minutes ahead and was waiting for the player to catch up, it took the quiet for
-        no one watching and stopped, so the player ran dry and had to start the 3D over.</li>
-      <li>Vision Pro: in the theater, the controls fold away to a faint button low on your right
-        while you watch, instead of a bright panel that was always there. Look at it and it
-        brightens; select it to open the controls (smaller and closer to you than before), and their
-        <b>X</b> to fold them away again.</li>
-      <li>Mac updates: each build is published as a file of its own, so an update can't be refused
-        as "improperly signed" when a version is released again.</li>
-      <li>Vision Pro 3D: dragging the position slider back and forth, past where you wanted and back,
-        no longer leaves the episode stuck. The Mac starts making 3D only once the slider has rested
-        for half a second, instead of for every place you pass, and the player waits for it where
-        you stopped instead of going back to where you started.</li>
-      <li>Vision Pro 3D: subtitles now sit on the screen instead of far in front of it, and a new
-        <b>Subtitles</b> slider in the 3D settings moves them anywhere from in front of the screen to
-        behind it. (Needs the Mac on this build and the Vision Pro app's next TestFlight build.)</li>
-      <li>Vision Pro: the player's <b>Viewing</b> tab opens at its full size with the 3D settings the
-        first time, instead of as a small panel that came right only when opened again. In the
-        theater its controls sit lower, below the screen.</li>
-      <li>Vision Pro: after 3D stopped and an episode went on in 2D, the next episodes no longer play
-        in 2D without asking until the app is quit: the Mac answers whether it can make 3D at once,
-        and the Vision Pro asks again if it doesn't hear back.</li>
-      <li>Security: the library's web address (through a proxy such as Caddy) counts wrong passwords
-        for each visitor, so one visitor can't lock everyone out, and the library password can't be
-        guessed endlessly. Changes can't be sent from another site's pages, and requests a proxy
-        could misread are refused.</li>
-      <li>A show's picture uses the cover in its video files when the TV app has none of its own,
-        instead of a frame from the video, and is looked for again when an episode or new artwork
-        is added (an added episode's cover didn't show in the grid, even after restarting).</li>
-      <li>Web client: the language list scrolls all the way to its last language, on an iPhone too
-        (the last ones were left under Safari's toolbar), and long menus fit the window.</li>
-      <li>Web client: with artwork set to <b>Automatic</b>, the shows appear already in their
-        shapes, instead of standing tall and then shuffling down as each picture arrives.</li>
-      <li>The Mac app now needs <b>macOS 26</b> or later, and shows Liquid Glass throughout: the
-        <b>Play</b>, <b>Resume</b> and other buttons, and the toolbar. (In build 150 the buttons
-        kept their old look.)</li>
-      <li>Mac and iPad: a show's page has its artwork, softly blurred, behind the title.</li>
-      <li>Apple Vision Pro: if the Mac can't make an episode in 3D just then, the player says so
-        after about a minute and offers <b>Watch in 2D</b>, instead of waiting on and on.</li>
-      <li>Apple Vision Pro: the <b>Viewing</b> panel shows the theater and the 3D settings side by side,
-        each in a section of its own, sized to fit its words in every language, so nothing is cut short
-        and nothing needs scrolling. The ends of each slider are icons with their names under them, and
-        <b>Reset to Standard Settings</b> is a button of its own.</li>
-      <li>Apple Vision Pro: taking the headset off while watching now pauses the episode; put it back
-        on and it's there to go on with. (A 3D episode could be left black, without its controls.)</li>
-      <li>Liquid Glass buttons on the Mac, iPad and Apple TV,
-        and on Apple Vision Pro the <b>Viewing</b> button above the player.</li>
-    </ul>
-
-    <h2>Version 1.6 <span class="when">November 18, 2026 · build 149</span></h2>
-    <ul>
-      <li><b>Apple Vision Pro:</b> TV Library Viewer now runs on Apple Vision Pro. Watch
-        <b>In a Window</b>, <b>In the Theater</b> (a movie theater around you: choose your seat and
-        raise or lower the screen) or <b>Outdoors</b>, in the system's Environments.</li>
-      <li><b>Any episode in 3D</b> on Apple Vision Pro: the Mac with your library turns the episode
-        into 3D as it streams, with nothing to prepare ahead. Choose <b>Watch in 3D</b> or
-        <b>Watch in 2D</b> when an episode starts. The player's <b>Viewing</b> panel (with the
-        theater's seat and screen) sets the depth, whether the picture comes out in front of the
-        screen or goes in behind it, and the quality; a change carries on from where you are. Subtitles show over the 3D picture.</li>
-      <li><b>Recently Watched</b> now comes first, then Recently Added, in every app and the web
-        client.</li>
-      <li><b>Remove from Library</b> shows a progress bar while a season or a whole show is removed,
-        and the Mac no longer stops responding meanwhile.</li>
-      <li>iPad: beside the sidebar in a narrow window, the bar keeps the page's title; controls that
-        don't fit move into <b>View Options</b>.</li>
-      <li>CarPlay: fixed the app closing when a show was chosen from Recently Added.</li>
-      <li>Fixed a device sometimes offering to continue an episode already watched on another one.</li>
-      <li>Fixed QR codes showing blank when linking a device.</li>
+      <li><b>3D on every screen</b>: on a Mac, iPad, iPhone and Apple TV, and in Safari, episodes can
+        play in 3D, made by the server from the episode as it streams, as for Vision Pro. The new
+        <b>3D</b> button in the player turns it on or off where you are, with no question first, and
+        the next episodes play the same way. On the Mac it's at the right of the title bar; on the
+        iPad and iPhone at the top right, with the controls; on the Apple TV in the bar under the
+        picture; in the web client by the player's other buttons.</li>
+      <li><b>3D Settings</b>, beside the 3D button: <b>Viewing</b> is how you see it: with
+        <b>Red/Cyan Glasses</b> (the usual kind, red over the left eye), <b>Red/Blue</b>,
+        <b>Green/Magenta</b> or <b>Amber/Blue Glasses</b>, or without glasses, side by side:
+        <b>Cross-Eyed</b> (cross your eyes until the two pictures meet) or <b>Parallel</b> (look
+        through the screen into the distance). <b>Depth</b>, <b>Screen</b>, <b>Subtitles</b> and
+        <b>Quality</b> work as on Vision Pro, and a change carries on from where you are after a few
+        seconds. Side by side, the subtitles showing when you turned 3D on are drawn into both
+        pictures. A Mac playing its own library makes its 3D itself, whether or not it shares the
+        library.</li>
     </ul>
 ]]></description>
-            <enclosure url="https://github.com/araxara/TVLibraryViewer-releases/releases/download/mac/TVLibraryViewer-1.6.1-162.zip" length="55619568" type="application/octet-stream" sparkle:edSignature="e98cGGEiH5Ppcj29HXHxzE5knAbltzSv+iY51+qWZwG3fAZFDEOSMuu2E8mn2nDXfHsHAI47F3MH2TOdZwoEAQ=="/>
+            <enclosure url="https://github.com/araxara/TVLibraryViewer-releases/releases/download/mac/TVLibraryViewer-1.7-163.zip" length="55750096" type="application/octet-stream" sparkle:edSignature="Z+fu2nwqskPPJuoRqK293wKakdm7ZR10ikP/nMQkDF7Gla0FP9bchgJpGgqFpZ0ymY/wAGpHGJjHSJ0PGiutAA=="/>
         </item>
     </channel>
 </rss>
