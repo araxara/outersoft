@@ -4,12 +4,12 @@
         <title>TV Library Viewer</title>
         <item>
             <title>1.7</title>
-            <pubDate>Mon, 23 Nov 2026 20:41:14 -0700</pubDate>
-            <sparkle:version>163</sparkle:version>
+            <pubDate>Mon, 23 Nov 2026 23:51:56 -0700</pubDate>
+            <sparkle:version>164</sparkle:version>
             <sparkle:shortVersionString>1.7</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description><![CDATA[    <h2>Version 1.7 <span class="when">November 23, 2026 · build 163</span></h2>
+            <description><![CDATA[    <h2>Version 1.7 <span class="when">November 23, 2026 · build 164</span></h2>
     <ul>
       <li><b>3D on every screen</b>: on a Mac, iPad, iPhone and Apple TV, and in Safari, episodes can
         play in 3D, made by the server from the episode as it streams, as for Vision Pro. The new
@@ -26,9 +26,12 @@
         seconds. Side by side, the subtitles showing when you turned 3D on are drawn into both
         pictures. A Mac playing its own library makes its 3D itself, whether or not it shares the
         library.</li>
+      <li>Mac: the player's controls fade away again a few seconds after you stop moving the
+        pointer, in a small window too. In a small window (as side by side is watched) they covered
+        nearly all of it, and stayed while the pointer was anywhere over them.</li>
     </ul>
 ]]></description>
-            <enclosure url="https://github.com/araxara/TVLibraryViewer-releases/releases/download/mac/TVLibraryViewer-1.7-163.zip" length="55750096" type="application/octet-stream" sparkle:edSignature="Z+fu2nwqskPPJuoRqK293wKakdm7ZR10ikP/nMQkDF7Gla0FP9bchgJpGgqFpZ0ymY/wAGpHGJjHSJ0PGiutAA=="/>
+            <enclosure url="https://github.com/araxara/TVLibraryViewer-releases/releases/download/mac/TVLibraryViewer-1.7-164.zip" length="55751210" type="application/octet-stream" sparkle:edSignature="zFQvzkdOahS1lauCPLgEALQEDS9RQxotpnNZIKhUBtGofcZjaL6R+hBpzYsnOeCTY1fp8Ng1KdWryAgLCkLLCw=="/>
         </item>
     </channel>
 </rss>
